@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>titlw here</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <main>
+        <section id="intro">
+            <h1>some text here</h1>
+            <p>Text goes here...</p>
+        </section>
+
+        <section id="scrolly">
+            <article>
+                <section id="scrolly">
+                    <article id="steps-container">
+                        <div class="step" data-step="start">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                    </article>
+                </section>
+            </article>
+    
+            <div class="sticky">
+                <div id="graph-container" style="width: 100%; height: 600px;">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="outro"></section>
+    </main>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="script.js"></script>
+    <script>
+        var main = document.querySelector("main");
+        var scrolly = main.querySelector("#scrolly");
+        var sticky = scrolly.querySelector(".sticky-thing");
+        var article = scrolly.querySelector("article");
+        var steps = article.querySelectorAll(".step");
+
+        //????????????????????????????
+        var scroller = scrollama();
+ 
+        function handleStepEnter(response) {
+            var el = response.element;
+            steps.forEach(step => step.classList.remove('is-active'));
+            el.classList.add('is-active');
+
+            const id = el.getAttribute('data-step');
+            if(!circles[id]){
+                svg.transition().duration(750)
+                .attr("transform", `translate(${width / 2}, ${height / 2}) scale(1)`)
+            }
+            else{
+                svg.transition().duration(750)
+                .attr("transform", `translate(${width / 2}, ${height / 2}) scale(1)`)
+                .duration(750)
+                .attr("transform", `translate(${-circles[id].x * 2 + width / 2}, ${-circles[id].y * 2 + height / 2}) scale(2)`);
+            }
+        }
+
+
+        function init() {
+            scroller
+            .setup({
+                step: "#scrolly article .step",
+                offset: 0.4,
+                //debug: true
+        
+            })
+            .onStepEnter(handleStepEnter)
+            
+            window.addEventListener("resize", scroller.resize);
+        }
+        
+        init();
+
+    </script>
+</body>
+</html>
