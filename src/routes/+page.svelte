@@ -5,22 +5,17 @@
 	import Index from "$components/Index.svelte";
 	import copy from "$data/copy.json";
 	import version from "$utils/version.js";
+	import Main from "$components/Main.svelte"
 
 	export let data;
 
 	version();
-
-	const preloadFont = [
-		"https://pudding.cool/assets/fonts/tiempos/TiemposTextWeb-Regular.woff2",
-		"https://pudding.cool/assets/fonts/tiempos/TiemposTextWeb-Bold.woff2",
-		"https://pudding.cool/assets/fonts/national/National2Web-Regular.woff2",
-		"https://pudding.cool/assets/fonts/national/National2Web-Bold.woff2"
-	];
 
 	const { titleNoSpan, description, url, keywords } = copy;
 	setContext("copy", copy);
 	setContext("data", data.data);
 </script>
 
-<Meta title={titleNoSpan} {description} {url} {preloadFont} {keywords} />
-<Index />
+<Meta />
+<!-- <Index /> -->
+<Main/>

@@ -38,6 +38,7 @@
 	},
 	"browserslist": "> 0.5%, last 4 versions, not ie <= 11, not ie_mob <= 11",
 	"dependencies": {
+		"@lottiefiles/dotlottie-svelte": "^0.4.6",
 		"d3-force-cluster": "^0.1.2"
 	}
 }
