@@ -150,7 +150,7 @@
 
 {#if mounted}
   <div id="article">
-    <HeroComments {viewportHeight} notifications={commentsDivided} />
+    <!-- <HeroComments {viewportHeight} notifications={commentsDivided} />
     <div class="spacer"></div>
     <div class="title-section">
       <h1 class="title title-large" class:loaded>{@html copy.title}</h1>
@@ -165,10 +165,11 @@
     <Mosaic {viewportHeight} album="articles" height=75 /> 
     <div class="editorial-container">
       <Editorial copy={copy.intro_article_3} />
-    </div>  
+    </div>   -->
     <section>
       <Section {viewportHeight} copy={copy.viz_main} stepHandler={SectionMain} switcher="bubbles" />
     </section>
+<!--     
     <div class="editorial-container">
       <h3 class="sub-title">Common narratives that are winning on social media</h3>
       <Editorial copy={copy.debunk_intro} spacer="none"/>
@@ -186,12 +187,12 @@
     <div class="editorial-container">
       <h3 class="sub-title sub-title-smaller">Research: There is <span class="advocate">No Proof of Harm</span></h3>
       <Editorial copy={copy.debunk_sears} spacer="none" />
-    </div>
+    </div> -->
     <!-- <div class="img-container">
       <img src="assets/images/crib.webp" alt="Image of baby in crib" />
     </div> -->
     <!-- <div class="caption">Photo by Marie Despeyroux on <a href="https://unsplash.com/photos/babys-white-wooden-crib-lowlight-photography-2xuyxsLNFOU" target="_blank">Unsplash</a></div> -->
-    <div class="editorial-container">
+    <!-- <div class="editorial-container">
       <h3 class="sub-title sub-title-smaller">Narrative: It Creates <span class="oppose">Insecure Attachment</span></h3>
       <Editorial copy={copy.debunk_narvaez} spacer="none" notifications={commentsAttachment} />
       <Video video="cbum" caption="Chris Williamson"  aria-label="Fitness athlete and influencer Cbum talks to Chris about his opinion on sleep training, denouncing it as causing attachment issues for babies." />
@@ -204,7 +205,7 @@
       <Editorial copy={copy.editorial_conclusion_2} spacer="none" notifications={commentsConclusion} />
       <h3 id="methods" class="sub-title sub-title-smaller">Methods</h3>
       <Editorial methods={true} copy={copy.methodologies} />
-    </div>
+    </div> -->
   </div>
   <Footer backgroundColor={"#f7f7f7"} storyRecirculation={true} />
 {/if}

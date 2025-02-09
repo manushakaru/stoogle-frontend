@@ -1,14 +1,18 @@
 <script>
   import { DotLottieSvelte } from "@lottiefiles/dotlottie-svelte";
   import Popup from "$components/stoogle/Popup.svelte";
+  import Overview from "$components/stoogle/Overview.svelte";
+  import analysisData from "$data/analysis.json";
 
-  export let searchQuery = "";
+  export let searchQuery = "AI is a threat or not";
   export let htmlContent = "";
   export let isSticky = false;
   export let isLoading = false;
   export let isPopupOpen = false;
   export let web = "";
   export let pageCount = 5;
+  export let isDataLoading = false;
+  export let clusterData = {};
 
   const togglePopup = () => {
     isPopupOpen = !isPopupOpen;
@@ -22,18 +26,51 @@
     isPopupOpen = false;
   };
 
+  // Get data from the API
+  //   const handleSearch = async (e) => {
+  //     e.preventDefault();
+  //     isSticky = true;
+  //     isLoading = true;
+  //     try {
+  //       //   const response = await fetch(`http://127.0.0.1:8000/storyfile`);
+  //       const response = await fetch(
+  //         `http://127.0.0.1:8000/stories?query=${encodeURIComponent(
+  //           searchQuery
+  //         )}&web=${encodeURIComponent(web)}&page_count=${pageCount}`
+  //       );
+  //       if (!response.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
+  //       const data = await response.json(); // Parse JSON response
+  //       isDataLoading = true;
+  //       clusterData = data; // Assign fetched data
+  //       console.log("is loading", isDataLoading);
+  //       console.log("Fetched data:", clusterData);
+  //       htmlContent = data;
+  // 	//   htmlContent = await response.text();
+  //     } catch (error) {
+  //       console.error("Error fetching HTML:", error);
+  //     } finally {
+  //       isLoading = false;
+  //     }
+  //   };
+
+  function wait(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  // Get Dummy data
   const handleSearch = async (e) => {
     e.preventDefault();
-    console.log("tets");
     isSticky = true;
     isLoading = true;
     try {
-      const response = await fetch(`http://127.0.0.1:8000/storyfile`);
-      // const response = await fetch(`http://127.0.0.1:8000/stories?query=${encodeURIComponent(searchQuery)}&web=${encodeURIComponent(web)}&page_count=${pageCount}`);
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      htmlContent = await response.text();
+      // await wait(2000);
+      isDataLoading = true;
+      clusterData = analysisData;
+      console.log("is loading", isDataLoading);
+      console.log("Fetched data:", clusterData);
+      //   htmlContent = analysisData;
     } catch (error) {
       console.error("Error fetching HTML:", error);
     } finally {
@@ -86,14 +123,17 @@
     <Popup {web} {pageCount} {togglePopup} {handlePopupSubmit} />
   {/if}
 
-  {#if htmlContent && !isLoading}
+  {#if isDataLoading}
+    <Overview {clusterData} />
+  {/if}
+
+  <!-- {#if htmlContent && !isLoading}
     <iframe title="Injected HTML Content" srcdoc={htmlContent} class="iframe"
     ></iframe>
-  {/if}
+  {/if} -->
 </div>
 
 <style>
-
   .logo {
     height: 6em;
     padding: 1.5em;
