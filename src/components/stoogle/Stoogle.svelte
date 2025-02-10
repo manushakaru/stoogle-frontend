@@ -79,7 +79,7 @@
     isSticky = true;
     isLoading = true;
     try {
-      await wait(2000);
+      await wait(5000);
       isDataLoading = true;
       clusterData = analysisData;
       clusters = clusterData["clusters"];
@@ -131,7 +131,9 @@
   </form>
 
   {#if isLoading}
-    <DotLottieSvelte src="/assets/stoogle/searching.lottie" loop autoplay />
+    <div class="lottie-container">
+      <DotLottieSvelte src="/assets/stoogle/searching.lottie" loop autoplay />
+    </div>
   {/if}
 
   {#if isPopupOpen}
@@ -144,6 +146,17 @@
 </div>
 
 <style>
+  .lottie-container {
+    width: 100vw;
+    height: 100vh;
+    top: 100px;
+  }
+
+  .lottie-animation {
+    width: 100vw;
+    height: 100vh;
+  }
+
   .logo {
     height: 6em;
     padding: 1.5em;
