@@ -3,6 +3,8 @@
 	import Scrolly from "$components/helpers/Scrolly.svelte";
     import Timeline from "$components/article/Timeline.svelte";
     import Map from "$components/article/Map.svelte";
+    import VisCard from "$components/stoogle/VisCard.svelte";
+  import { json } from '@sveltejs/kit';
 
     export let copy;
     export let dataMap;
@@ -28,6 +30,8 @@
         } else {
             step = value;
         }
+
+        console.log(step)
 
         newValues = stepHandler(step);
         renderedData = newValues.renderedData;
@@ -58,12 +62,17 @@
         <!-- <ForceBubbles {renderedData} {focusHover} groupedBy={"position"} {step} /> -->
 
         <div class="steps">
-            <section id="scrolly">
+            <!-- <section id="scrolly"> -->
                 <Scrolly bind:value>
                     {#each Object.values(copy) as p, i}
                         {@const active = value === i}
                         {@const last = i == Object.values(copy).length - 1 ? true : false}
                         {@const first = i == 0 ? true : false}
+
+                        <!-- <div class="step" class:active class:last class:first >
+                            <VisCard ></VisCard>
+                        </div> -->
+                       
 
                         <div class="step" class:active class:last class:first
                             style="
@@ -75,7 +84,7 @@
                         </div>
                     {/each}
                 </Scrolly>
-            </section>
+            <!-- </section> -->
         </div>
     </div>
 {/if}

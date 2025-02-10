@@ -134,13 +134,13 @@
                     "order_id": 1,
                     "fact_type": "value",
                     "fact_content": "About 6 percent of US private-sector workers are unionized.",
-                    "narrative": "In the US, only about 6% of private-sector workers are unionized, a relatively small percentage that could influence how the workforce adapts to technological changes.",
+                    "narrative": "In the US, only about <span class=\"text-green-400 font-semibold bg-green-900 p-1 rounded\">6%</span> of private-sector workers are unionized, a relatively small percentage that could influence how the workforce adapts to technological changes.",
                     "vis_recommendation": "pie",
                     "vis_data": [
                         {
                             "x": "Unionized",
                             "y": "6%",
-                            "color": "#264653"
+                            "color": "#4FB477"
                         },
                         {
                             "x": "Non-Unionized",
