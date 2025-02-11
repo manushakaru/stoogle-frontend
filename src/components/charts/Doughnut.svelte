@@ -1,26 +1,28 @@
 <script>
-    import { Doughnut } from 'svelte-chartjs';
-    export let inputData = [];
-  
-    import {
-      Chart as ChartJS,
-      Title,
-      Tooltip,
-      Legend,
-      ArcElement,
-      CategoryScale,
-    } from 'chart.js';
-  
-    ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale);
+  import { Doughnut } from "svelte-chartjs";
+  export let inputData = [];
 
-    function transformData(inputData) {
+  import {
+    Chart as ChartJS,
+    Title,
+    Tooltip,
+    Legend,
+    ArcElement,
+    CategoryScale,
+  } from "chart.js";
+
+  ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale);
+
+  function transformData(inputData) {
     return {
-      labels: inputData.map(item => item.x),
+      labels: inputData.map((item) => item.x),
       datasets: [
         {
-          data: inputData.map(item => parseFloat(item.y)), 
-          backgroundColor: inputData.map(item => item.color),
-          hoverBackgroundColor: inputData.map(item => lightenColor(item.color, 20)), 
+          data: inputData.map((item) => parseFloat(item.y)),
+          backgroundColor: inputData.map((item) => item.color),
+          hoverBackgroundColor: inputData.map((item) =>
+            lightenColor(item.color, 20)
+          ),
         },
       ],
     };
@@ -35,7 +37,32 @@
   }
 
   let data = transformData(inputData);
-  </script>
-  
-  <Doughnut {data} options={{ responsive: true }} />
-  
+</script>
+
+<Doughnut
+  {data}
+  options={{
+    responsive: true,
+    plugins: {
+      legend: {
+        labels: {
+          boxWidth: 20,
+          padding: 10,
+          font: {
+            size: 14
+          },
+          color: 'rgba(255, 255, 255, 0.7)'
+        },
+
+      },
+    },
+    elements: {
+      arc: {
+        borderWidth: 3, // Outline color for the pie chart
+        borderColor: '#16213E', // Change to any color for the pie chart's outline
+      },
+    },
+  }}
+  style="width: 320px; height: 300px;"
+/>
+

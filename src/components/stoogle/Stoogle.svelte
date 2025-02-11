@@ -1,7 +1,7 @@
 <script>
   import { DotLottieSvelte } from "@lottiefiles/dotlottie-svelte";
   import Popup from "$components/stoogle/Popup.svelte";
-  import analysisData from "$data/analysis.json";
+  import analysisData from "$data/analysis-3.json";
   import Section from "$components/stoogle/Section.svelte";
 
   export let searchQuery = "AI is a threat or not";
@@ -36,7 +36,7 @@
     return step;
   };
 
-  // Get data from the API
+  // // Get data from the API
   // const handleSearch = async (e) => {
   //   e.preventDefault();
   //   isSticky = true;
@@ -79,7 +79,7 @@
     isSticky = true;
     isLoading = true;
     try {
-      await wait(5000);
+      // await wait(5000);
       isDataLoading = true;
       clusterData = analysisData;
       clusters = clusterData["clusters"];
