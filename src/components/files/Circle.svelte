@@ -1,8 +1,7 @@
 <script>
-  import { onMount } from 'svelte';
-  import * as d3 from 'd3';
-  import Facts from "$components/files/Facts.svelte";  
-  import Title from "$components/files/Title.svelte";  
+  import * as d3 from "d3";
+  import Facts from "$components/files/Facts.svelte";
+  import Title from "$components/files/Title.svelte";
 
   export let circles;
   export let cluster;
@@ -18,11 +17,11 @@
   let unusedArc;
   let usedPercentageArticle;
 
-  let usedArcId; 
-  let unusedArcId; 
+  let usedArcId;
+  let unusedArcId;
 
   function getCircleById(clusterId) {
-    return circles.find(circle => circle.id === clusterId);
+    return circles.find((circle) => circle.id === clusterId);
   }
 
   let isReady = false;
@@ -35,22 +34,28 @@
       let totArticle = stats.totoal_articles;
       let totFacts = stats.totoal_facts;
       radius = getRadiusBasedOnFacts(nFact);
-      color = "#DFF3FF";      
+      color = "#DFF3FF";
       usedPercentageArticle = cluster.number_of_articles / totArticle;
 
-      usedArcId = `usedArc${circle.id}`;  
+      usedArcId = `usedArc${circle.id}`;
       unusedArcId = `unusedArc${circle.id}`;
-      
-      usedArc = d3.arc()
-        .innerRadius(radius + 1)
-        .outerRadius(radius + 11) 
-        .startAngle(-Math.PI / 4)  
-        .endAngle(-Math.PI / 4 + (Math.PI / 180) * (usedPercentageArticle * 90));
 
-      unusedArc = d3.arc()
+      usedArc = d3
+        .arc()
         .innerRadius(radius + 1)
         .outerRadius(radius + 11)
-        .startAngle(-Math.PI / 4 + (Math.PI / 180) * (usedPercentageArticle * 90))
+        .startAngle(-Math.PI / 4)
+        .endAngle(
+          -Math.PI / 4 + (Math.PI / 180) * (usedPercentageArticle * 90)
+        );
+
+      unusedArc = d3
+        .arc()
+        .innerRadius(radius + 1)
+        .outerRadius(radius + 11)
+        .startAngle(
+          -Math.PI / 4 + (Math.PI / 180) * (usedPercentageArticle * 90)
+        )
         .endAngle(Math.PI / 4);
 
       isReady = true;
@@ -67,64 +72,69 @@
 
 {#if isReady}
   {#if circle}
-    <circle 
-        cx={circle?.x ?? 0} 
-        cy={circle?.y ?? 0} 
-        r={radius ?? 0} 
-        fill={color} 
-        class="circle-element"
+    <circle
+      cx={circle?.x ?? 0}
+      cy={circle?.y ?? 0}
+      r={radius ?? 0}
+      fill={color}
+      class="circle-element"
     />
-    <Facts {cluster} {radius} {circle} {stats} {yearColors} {width} {height}/>
-    <Title {cluster} {radius} {circle}/>
-    <svg width={width} height={height} class="percentage-ring">
+    <Facts {cluster} {radius} {circle} {stats} {yearColors} {width} {height} />
+    <Title {cluster} {radius} {circle} />
+    <svg {width} {height} class="percentage-ring">
       <g transform={`translate(${circle.x}, ${circle.y})`}>
+        <path id={usedArcId} class="used-arc" d={usedArc()} fill="#FF9696" />
+
         <path
-          id={usedArcId}  
-          class="used-arc"
-          d={usedArc()} 
-          fill="#FF9696" />
-        
-        <path
-          id = {unusedArcId}
+          id={unusedArcId}
           class="unused-arc"
-          d={unusedArc()} 
-          fill="#FFE6E6" />
-        
-        <text fill="black" font-size="10px">
-          <textPath href={`#${usedArcId}`}>
-            0
-          </textPath>
+          d={unusedArc()}
+          fill="#FFE6E6"
+        />
+
+        <text fill="white" font-size="10px" dy="-2">
+          <textPath href={`#${usedArcId}`} text-anchor="middle"> 0 </textPath>
         </text>
-        <text fill="#FF9696" font-size="10px" dy="9">
-        <textPath href={`#${unusedArcId}`} >
+        <text fill="#FF9696" font-size="10px" dy="9" dx="1">
+          <textPath href={`#${unusedArcId}`}>
             {cluster.number_of_articles}
           </textPath>
         </text>
-        <text fill="black" font-size="10px">
-          <textPath href={`#${unusedArcId}`} text-anchor="end" startOffset="47%">
+        <text fill="white" font-size="10px" dy="-2">
+          <textPath
+            href={`#${unusedArcId}`}
+            text-anchor="end"
+            startOffset="47%"
+          >
             {stats.totoal_articles}
           </textPath>
         </text>
       </g>
     </svg>
 
-    <text 
-        x={circle.x} 
-        y={circle.y} 
-        text-anchor="middle" 
-        dominant-baseline="middle" 
-        fill="black" 
-        font-size="12px">
+    <text
+      x={circle.x}
+      y={circle.y}
+      text-anchor="middle"
+      dominant-baseline="middle"
+      fill="black"
+      font-size="12px"
+    >
       {cluster.cluster_id}
     </text>
-
   {:else}
     <text x="700" y="900" fill="red">
       No circle found for cluster {cluster.cluster_id}
     </text>
   {/if}
 {:else}
-  <text x="50%" y="50%" fill="orange" text-anchor="middle" dominant-baseline="middle">
+  <text
+    x="50%"
+    y="50%"
+    fill="orange"
+    text-anchor="middle"
+    dominant-baseline="middle"
+  >
     Waiting for data...
   </text>
 {/if}
@@ -144,7 +154,8 @@
     pointer-events: none;
   }
 
-  .used-arc, .unused-arc {
+  .used-arc,
+  .unused-arc {
     transition: stroke-dashoffset 0.3s ease;
   }
 </style>

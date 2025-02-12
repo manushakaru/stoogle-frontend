@@ -2,6 +2,7 @@
   import Doughnut from "$components/charts/Doughnut.svelte";
   import Bar from "$components/charts/Bar.svelte";
   import Line from "$components/charts/Line.svelte";
+  import Isotype from "$components/charts/Isotype.svelte";
 
   export let fact = {};
 
@@ -66,10 +67,12 @@
       >
         {#if visRecommendation === "pie"}
           <Doughnut inputData={visData} />
-          {:else if visRecommendation === "bar"}
-           <Bar inputData={visData} {axisXTitle} {axisYTitle}/>
-           {:else if visRecommendation === "line"}
-           <Line inputData={visData} {axisXTitle} {axisYTitle}/>
+        {:else if visRecommendation === "bar"}
+          <Bar inputData={visData} {axisXTitle} {axisYTitle} />
+        {:else if visRecommendation === "line"}
+          <Line inputData={visData} {axisXTitle} {axisYTitle} />
+        {:else if visRecommendation === "isotype"}
+          <Isotype inputData={visData}></Isotype>
         {/if}
       </div>
     </div>

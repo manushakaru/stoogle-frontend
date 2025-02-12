@@ -1,9 +1,10 @@
 <script>
   import PieChart from "$components/stoogle/PieChart.svelte";
   import FactScroll from "$components/stoogle/FactScroll.svelte";
-  import BarChart from "$components/stoogle/BarChart.svelte";
+  import Overview from "$components/stoogle/Overview.svelte";
 
   export let viewportHeight;
+  export let viewportWidth;
   export let stepHandler;
 
   export let clusterData;
@@ -50,20 +51,19 @@
     }
     newValues = stepHandler(step);
   }
-
-
 </script>
 
 <div class="scroll-section matt-scroll">
-  <div class="sticky" style="max-height:{viewportHeight - 100}px;">
+  <div class="sticky" style="max-height:{viewportHeight - 200}px;">
     <!-- Here comes the cluster visulization -->
     <!-- Focusing to the each cluster machanism should be implemented -->
     {#if stepCounts}
       {@const previousLimit = stepCounts[0]}
       {#if step < previousLimit}
-        <PieChart></PieChart>
+        <Overview data={clusterData} {viewportHeight} {viewportWidth}
+        ></Overview>
       {:else if step > previousLimit}
-        <BarChart></BarChart>
+        <PieChart></PieChart>
       {/if}
     {/if}
   </div>

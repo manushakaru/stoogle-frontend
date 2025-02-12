@@ -1071,7 +1071,7 @@
                     "fact_type": "difference",
                     "fact_content": "AI detects anomalies in network traffic more accurately than traditional methods.",
                     "narrative": "AI provides superior accuracy in detecting network traffic anomalies compared to traditional methods.",
-                    "vis_recommendation": "line",
+                    "vis_recommendation": "isotype",
                     "vis_data": [
                         {
                             "x": "AI",

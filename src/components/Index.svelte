@@ -5,7 +5,7 @@
   import CenterPoint from "$components/files/CenterPoints.svelte";
   import Circle from "$components/files/Circle.svelte";   
   import Belt from "$components/files/Belt.svelte";  
-  import data from '$data/analysis.json';
+  import data from '$data/analysis-3.json';
 
   let years = data.stats.article_year_range;
   let numCircles = data.stats.totoal_clusters;

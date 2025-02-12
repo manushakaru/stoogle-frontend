@@ -18,6 +18,7 @@
   export let stats = {};
 
   export let viewportHeight;
+  export let viewportWidth;
 
   const togglePopup = () => {
     isPopupOpen = !isPopupOpen;
@@ -141,7 +142,7 @@
   {/if}
 
   {#if isDataLoading}
-    <Section {viewportHeight} {clusterData} {stepHandler} />
+    <Section {viewportHeight} {viewportWidth} {clusterData} {stepHandler} />
   {/if}
 </div>
 

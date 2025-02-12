@@ -4,14 +4,16 @@
     import {  onMount } from 'svelte';
 
     let viewportHeight;
+    let viewportWidth;
     let mounted;
 
     onMount(() => {
       viewportHeight = $viewport.height;
+      viewportWidth = $viewport.width;
       mounted = true;
     })
 </script>
 
 {#if mounted}
-<Stoogle {viewportHeight}/>
+<Stoogle {viewportHeight} {viewportWidth}/>
 {/if}

@@ -1,52 +1,52 @@
 <script>
-  import { onMount } from 'svelte';
-  import * as d3 from 'd3';
+  import { onMount } from "svelte";
+  import * as d3 from "d3";
 
-  export let circles;  // Circles array passed from parent
+  export let circles; // Circles array passed from parent
   export let width;
   export let height;
-  export let shared_articles;  // Shared articles array
+  export let shared_articles; // Shared articles array
 
   let lineData = []; // To store line data based on shared articles
 
   function getCircleById(clusterId) {
-    return circles.find(circle => circle.id === clusterId);
+    return circles.find((circle) => circle.id === clusterId);
   }
 
   $: if (circles && width && height && shared_articles) {
-    lineData = shared_articles.map(article => {
-      const startCircle = getCircleById(article.start_cluster);
-      const endCircle = getCircleById(article.end_cluster);
+    lineData = shared_articles
+      .map((article) => {
+        const startCircle = getCircleById(article.start_cluster);
+        const endCircle = getCircleById(article.end_cluster);
 
-      if (startCircle && endCircle) {
-        console.log(article.count)
-        return {
-          start: { x: startCircle.x, y: startCircle.y },
-          end: { x: endCircle.x, y: endCircle.y },
-          beltWidth: article.count * 3
-        };
-      }
-      return null;
-    }).filter(data => data !== null);
+        if (startCircle && endCircle) {
+          console.log(article.count);
+          return {
+            start: { x: startCircle.x, y: startCircle.y },
+            end: { x: endCircle.x, y: endCircle.y },
+            beltWidth: article.count * 3,
+          };
+        }
+        return null;
+      })
+      .filter((data) => data !== null);
   }
 
   $: console.log(lineData);
-  let curve = d3.linkHorizontal().x(d => d.x).y(d => d.y);
-
+  let curve = d3
+    .linkHorizontal()
+    .x((d) => d.x)
+    .y((d) => d.y);
 </script>
 
-
-  {#each lineData as { start, end, beltWidth }}
-    <path
-      d={curve({ source: start, target: end })}  
-      fill="none"
-      stroke="#DFF3FF"
-      stroke-width={Math.max(beltWidth, 1)}     
-    />
-  {/each}
-
-
-
+{#each lineData as { start, end, beltWidth }}
+  <path
+    d={curve({ source: start, target: end })}
+    fill="none"
+    stroke="#DFF3FF"
+    stroke-width={Math.max(beltWidth, 1)}
+  />
+{/each}
 
 <style>
   svg {
