@@ -2,7 +2,6 @@
   import { onMount } from "svelte";
   import * as d3 from "d3";
 
-  export let circle;
   export let cluster;
   export let stats;
   export let radius;
@@ -42,7 +41,6 @@
   let isReady = false;
 
   $: if (
-    circle &&
     cluster &&
     stats &&
     radius &&
@@ -75,8 +73,7 @@
 </script>
 
 {#if isReady}
-  <svg {width} {height}>
-    <g transform="translate({circle.x}, {circle.y})">
+
       {#each pathData as { startAngle, endAngle, color }}
         <path
           d={factArc.startAngle(startAngle).endAngle(endAngle)()}
@@ -85,8 +82,7 @@
           stroke-width="1"
         />
       {/each}
-    </g>
-  </svg>
+
 {/if}
 
 <style>

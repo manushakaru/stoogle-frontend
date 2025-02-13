@@ -32,8 +32,10 @@
 <CenterPoint {width} {height} {numCircles} {clusterIds} bind:circles />
 
 <svg {width} {height}>
-  <Belt {width} {height} {circles} {shared_articles} />
-  {#each clusters as cluster (cluster.cluster_id)}
-    <Circle {width} {height} {cluster} {circles} {stats} {yearColors} />
-  {/each}
+  <g>
+    <Belt {width} {height} {circles} {shared_articles} />
+    {#each clusters as cluster (cluster.cluster_id)}
+      <Circle {width} {height} {cluster} {circles} {stats} {yearColors} />
+    {/each}
+  </g>
 </svg>

@@ -72,17 +72,17 @@
 
 {#if isReady}
   {#if circle}
-    <circle
-      cx={circle?.x ?? 0}
-      cy={circle?.y ?? 0}
-      r={radius ?? 0}
-      fill={color}
-      class="circle-element"
-    />
-    <Facts {cluster} {radius} {circle} {stats} {yearColors} {width} {height} />
-    <Title {cluster} {radius} {circle} />
-    <svg {width} {height} class="percentage-ring">
+    <svg {width} {height} class="circle-svg">
       <g transform={`translate(${circle.x}, ${circle.y})`}>
+        <circle
+          cx={0}
+          cy={0}
+          r={radius ?? 0}
+          fill={color}
+          class="circle-element"
+        />
+        <Facts {cluster} {radius} {stats} {yearColors} {width} {height} />
+        <Title {cluster} {radius} />
         <path id={usedArcId} class="used-arc ring-element" d={usedArc()} fill="#8e74b3" />
 
         <path
@@ -155,7 +155,7 @@
     stroke-dasharray: 2, 2;
   }
 
-  .percentage-ring {
+  .circle-svg {
     position: absolute;
     pointer-events: none;
   }
