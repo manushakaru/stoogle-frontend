@@ -36,7 +36,7 @@
 
   function getColor(year) {
     let found = yearColors.find((entry) => entry.year == year);
-    return found ? found.color : "red";
+    return found ? found.color : "#d21890";
   }
 
   let isReady = false;
@@ -81,7 +81,7 @@
         <path
           d={factArc.startAngle(startAngle).endAngle(endAngle)()}
           fill={color}
-          stroke="white"
+          stroke="#292929"
           stroke-width="1"
         />
       {/each}

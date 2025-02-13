@@ -14,8 +14,7 @@
       rx="15"
       ry="15"
       fill="#E0EEFC"
-      stroke="black"
-      stroke-width="2"
+
     />
 
     <text

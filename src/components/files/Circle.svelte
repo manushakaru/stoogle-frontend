@@ -34,7 +34,7 @@
       let totArticle = stats.totoal_articles;
       let totFacts = stats.totoal_facts;
       radius = getRadiusBasedOnFacts(nFact);
-      color = "#DFF3FF";
+      color = "#1a2e3c";
       usedPercentageArticle = cluster.number_of_articles / totArticle;
 
       usedArcId = `usedArc${circle.id}`;
@@ -83,19 +83,19 @@
     <Title {cluster} {radius} {circle} />
     <svg {width} {height} class="percentage-ring">
       <g transform={`translate(${circle.x}, ${circle.y})`}>
-        <path id={usedArcId} class="used-arc" d={usedArc()} fill="#FF9696" />
+        <path id={usedArcId} class="used-arc ring-element" d={usedArc()} fill="#8e74b3" />
 
         <path
           id={unusedArcId}
-          class="unused-arc"
+          class="unused-arc ring-element"
           d={unusedArc()}
-          fill="#FFE6E6"
+          fill="#1a2e3c"
         />
 
         <text fill="white" font-size="10px" dy="-2">
           <textPath href={`#${usedArcId}`} text-anchor="middle"> 0 </textPath>
         </text>
-        <text fill="#FF9696" font-size="10px" dy="9" dx="1">
+        <text fill="white" font-size="10px" dy="9" dx="1">
           <textPath href={`#${unusedArcId}`}>
             {cluster.number_of_articles}
           </textPath>
@@ -117,7 +117,7 @@
       y={circle.y}
       text-anchor="middle"
       dominant-baseline="middle"
-      fill="black"
+      fill="#b8ccd6"
       font-size="12px"
     >
       {cluster.cluster_id}
@@ -143,8 +143,14 @@
   .circle-element {
     width: 100%;
     height: 100%;
-    border: 1px solid black;
-    stroke: black;
+
+    stroke: #b8ccd6;
+    stroke-width: 1px;
+    stroke-dasharray: 2, 2;
+  }
+
+  .ring-element {
+    stroke: #b8ccd6;
     stroke-width: 1px;
     stroke-dasharray: 2, 2;
   }

@@ -43,7 +43,7 @@
   <path
     d={curve({ source: start, target: end })}
     fill="none"
-    stroke="#DFF3FF"
+    stroke="#495e6e"
     stroke-width={Math.max(beltWidth, 1)}
   />
 {/each}

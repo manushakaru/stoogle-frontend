@@ -10,7 +10,8 @@
       const colorScale = d3
         .scaleSequential()
         .domain([years.earliest, years.latest])
-        .interpolator(d3.interpolateHsl("#AFF3FE", "#1791A5"));
+        .interpolator(d3.interpolateHsl("#a9c075", "#1881d9"));
+        //.interpolator(d3.interpolateHsl("#AFF3FE", "#1791A5"));
 
       for (let year = years.earliest; year <= years.latest; year++) {
         yearColors.push({ year, color: colorScale(year) });
@@ -34,6 +35,13 @@
           <span class="year-label">{yearColor.year}</span>
         </div>
       {/each}
+      <div class="year-item">
+        <div
+          class="color-box"
+          style="background-color: {"#d21890"}"
+        ></div>
+        <span class="year-label">unknown</span>
+      </div>
     </div>
   {:else}
     <p>Loading year data...</p>
