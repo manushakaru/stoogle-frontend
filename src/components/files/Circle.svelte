@@ -31,8 +31,8 @@
     if (circle) {
       //console.log(circles)
       let nFact = cluster.number_of_facts;
-      let totArticle = stats.totoal_articles;
-      let totFacts = stats.totoal_facts;
+      let totArticle = stats.total_articles;
+      let totFacts = stats.total_facts;
       radius = getRadiusBasedOnFacts(nFact);
       color = "#1a2e3c";
       usedPercentageArticle = cluster.number_of_articles / totArticle;
@@ -83,7 +83,7 @@
         />
         <Facts {cluster} {radius} {stats} {yearColors} {width} {height} />
         <Title {cluster} {radius} />
-        <path id={usedArcId} class="used-arc ring-element" d={usedArc()} fill="#8e74b3" />
+        <path id={usedArcId} class="used-arc ring-element" d={usedArc()} fill="#b785ff" />
 
         <path
           id={unusedArcId}
@@ -92,21 +92,21 @@
           fill="#1a2e3c"
         />
 
-        <text fill="white" font-size="10px" dy="-2">
+        <text fill="rgba(255, 255, 255, 0.8)" font-size="10px" dy="-3">
           <textPath href={`#${usedArcId}`} text-anchor="middle"> 0 </textPath>
         </text>
-        <text fill="white" font-size="10px" dy="9" dx="1">
+        <text fill="rgba(255, 255, 255, 0.8)" font-size="10px" dy="9" dx="2">
           <textPath href={`#${unusedArcId}`}>
             {cluster.number_of_articles}
           </textPath>
         </text>
-        <text fill="white" font-size="10px" dy="-2">
+        <text fill="rgba(255, 255, 255, 0.8)" font-size="10px" dy="-3">
           <textPath
             href={`#${unusedArcId}`}
             text-anchor="end"
-            startOffset="47%"
+            startOffset="45%"
           >
-            {stats.totoal_articles}
+            {stats.total_articles}
           </textPath>
         </text>
       </g>

@@ -3,13 +3,14 @@
   import CenterPoint from "$components/files/CenterPoints.svelte";
   import Circle from "$components/files/Circle.svelte";
   import Belt from "$components/files/Belt.svelte";
+  import Stats from "$components/stoogle/Stats.svelte";
 
   export let data;
   export let viewportHeight;
   export let viewportWidth;
 
   let years = data.stats.article_year_range;
-  let numCircles = data.stats.totoal_clusters;
+  let numCircles = data.stats.total_clusters;
   let clusters = data.clusters;
   let shared_facts = data.shared_facts;
   let shared_articles = data.shared_articles;
@@ -26,6 +27,8 @@
 
   let clusterIds = getClusterIds();
 </script>
+
+<Stats {stats} />
 
 <YearColor {years} bind:yearColors />
 

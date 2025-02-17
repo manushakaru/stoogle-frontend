@@ -4374,9 +4374,9 @@
         }
     ],
     "stats": {
-        "totoal_articles": 22,
-        "totoal_facts": 86,
-        "totoal_clusters": 4,
+        "total_articles": 22,
+        "total_facts": 86,
+        "total_clusters": 4,
         "article_year_range": {
             "earliest": 2017,
             "latest": 2025

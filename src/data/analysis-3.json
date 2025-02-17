@@ -1071,43 +1071,6 @@
                     "fact_type": "difference",
                     "fact_content": "AI detects anomalies in network traffic more accurately than traditional methods.",
                     "narrative": "AI provides superior accuracy in detecting network traffic anomalies compared to traditional methods.",
-                    "vis_recommendation": "isotype",
-                    "vis_data": [
-                        {
-                            "x": "AI",
-                            "y": "80",
-                            "color": "#EB3678"
-                        },
-                        {
-                            "x": "Traditional Methods",
-                            "y": "60",
-                            "color": "#FB773C"
-                        },
-                        {
-                            "x": "Traditional Methods",
-                            "y": "90",
-                            "color": "#FB773C"
-                        }
-                    ],
-                    "titles": {
-                        "chart_title": "Accuracy of Anomaly Detection",
-                        "x_axis": "Method",
-                        "y_axis": "Accuracy"
-                    },
-                    "fact_score": 0.4420225020124705,
-                    "article": {
-                        "title": "Is AI really a threat to human civilization?",
-                        "date": "26 Jun 2023",
-                        "url": "https://umdearborn.edu/news/ai-really-threat-human-civilization",
-                        "id": 23
-                    }
-                },
-                {
-                    "fact_id": "10_0",
-                    "order_id": 8,
-                    "fact_type": "difference",
-                    "fact_content": "AI detects anomalies in network traffic more accurately than traditional methods.",
-                    "narrative": "AI provides superior accuracy in detecting network traffic anomalies compared to traditional methods.",
                     "vis_recommendation": "bar",
                     "vis_data": [
                         {
@@ -1159,6 +1122,43 @@
                         "y_axis": "N/A"
                     },
                     "fact_score": 0.03946298439644036,
+                    "article": {
+                        "title": "Is AI really a threat to human civilization?",
+                        "date": "26 Jun 2023",
+                        "url": "https://umdearborn.edu/news/ai-really-threat-human-civilization",
+                        "id": 23
+                    }
+                },
+                {
+                    "fact_id": "10_0",
+                    "order_id": 8,
+                    "fact_type": "difference",
+                    "fact_content": "AI detects anomalies in network traffic more accurately than traditional methods.",
+                    "narrative": "AI provides superior accuracy in detecting network traffic anomalies compared to traditional methods.",
+                    "vis_recommendation": "isotype",
+                    "vis_data": [
+                        {
+                            "x": "AI",
+                            "y": "80",
+                            "color": "#EB3678"
+                        },
+                        {
+                            "x": "Traditional Methods",
+                            "y": "60",
+                            "color": "#FB773C"
+                        },
+                        {
+                            "x": "Traditional Methods",
+                            "y": "90",
+                            "color": "#FB773C"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Accuracy of Anomaly Detection",
+                        "x_axis": "Method",
+                        "y_axis": "Accuracy"
+                    },
+                    "fact_score": 0.4420225020124705,
                     "article": {
                         "title": "Is AI really a threat to human civilization?",
                         "date": "26 Jun 2023",
@@ -6818,9 +6818,9 @@
         }
     ],
     "stats": {
-        "totoal_articles": 26,
-        "totoal_facts": 103,
-        "totoal_clusters": 4,
+        "total_articles": 26,
+        "total_facts": 103,
+        "total_clusters": 4,
         "article_year_range": {
             "earliest": 2016,
             "latest": 2024

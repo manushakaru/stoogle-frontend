@@ -8,7 +8,7 @@
   import data from '$data/analysis-3.json';
 
   let years = data.stats.article_year_range;
-  let numCircles = data.stats.totoal_clusters;
+  let numCircles = data.stats.total_clusters;
   let clusters = data.clusters; 
   let shared_facts = data.shared_facts;
   let shared_articles = data.shared_articles;
