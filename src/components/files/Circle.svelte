@@ -2,6 +2,8 @@
   import * as d3 from "d3";
   import Facts from "$components/files/Facts.svelte";
   import Title from "$components/files/Title.svelte";
+  import { onMount } from "svelte";
+
 
   export let circles;
   export let cluster;
@@ -9,6 +11,8 @@
   export let width;
   export let height;
   export let yearColors;
+  export let action;
+
 
   let circle;
   let radius;
@@ -33,7 +37,7 @@
       let nFact = cluster.number_of_facts;
       let totArticle = stats.total_articles;
       let totFacts = stats.total_facts;
-      radius = getRadiusBasedOnFacts(nFact);
+      radius = Math.max(50 + nFact, getRadiusBasedOnFacts(nFact));
       color = "#1a2e3c";
       usedPercentageArticle = cluster.number_of_articles / totArticle;
 
@@ -66,20 +70,21 @@
   }
 
   function getRadiusBasedOnFacts(nFact) {
-    return nFact * 3;
+    return nFact * 4;
   }
 </script>
 
 {#if isReady}
   {#if circle}
-    <svg {width} {height} class="circle-svg">
-      <g transform={`translate(${circle.x}, ${circle.y})`}>
+      <g use:action id={"circle-" + cluster.cluster_id} transform={`translate(${circle.x}, ${circle.y})`}>        
+        
         <circle
+          use:action
           cx={0}
           cy={0}
           r={radius ?? 0}
           fill={color}
-          class="circle-element"
+          class="circle-element hit-area"
         />
         <Facts {cluster} {radius} {stats} {yearColors} {width} {height} />
         <Title {cluster} {radius} />
@@ -109,19 +114,21 @@
             {stats.total_articles}
           </textPath>
         </text>
+        
+        <text
+          x={0}
+          y={0}
+          text-anchor="middle"
+          dominant-baseline="middle"
+          fill="#b8ccd6"
+          font-size="12px"
+        >
+          {cluster.cluster_id}
+        </text>
       </g>
-    </svg>
 
-    <text
-      x={circle.x}
-      y={circle.y}
-      text-anchor="middle"
-      dominant-baseline="middle"
-      fill="#b8ccd6"
-      font-size="12px"
-    >
-      {cluster.cluster_id}
-    </text>
+
+    
   {:else}
     <text x="700" y="900" fill="red">
       No circle found for cluster {cluster.cluster_id}
@@ -140,6 +147,11 @@
 {/if}
 
 <style>
+  .hit-area {
+    pointer-events: all; 
+    cursor: grab; 
+  }
+
   .circle-element {
     width: 100%;
     height: 100%;

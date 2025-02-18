@@ -2,12 +2,12 @@
   import { onMount } from "svelte";
   import * as d3 from "d3";
 
-  export let circles; // Circles array passed from parent
+  export let circles;
   export let width;
   export let height;
-  export let shared_articles; // Shared articles array
+  export let shared_articles;
 
-  let lineData = []; // To store line data based on shared articles
+  let lineData = [];
 
   function getCircleById(clusterId) {
     return circles.find((circle) => circle.id === clusterId);
@@ -20,7 +20,6 @@
         const endCircle = getCircleById(article.end_cluster);
 
         if (startCircle && endCircle) {
-          console.log(article.count);
           return {
             start: { x: startCircle.x, y: startCircle.y },
             end: { x: endCircle.x, y: endCircle.y },
@@ -32,7 +31,6 @@
       .filter((data) => data !== null);
   }
 
-  $: console.log(lineData);
   let curve = d3
     .linkHorizontal()
     .x((d) => d.x)
@@ -49,11 +47,7 @@
 {/each}
 
 <style>
-  svg {
-    position: relative;
-  }
-
-  line {
-    transition: stroke-width 0.3s ease-in-out;
+  path {
+    transition: all 0.2s ease-out;
   }
 </style>

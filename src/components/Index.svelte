@@ -2,7 +2,6 @@
   import { getContext, onMount } from "svelte";
   import Footer from "$components/Footer.svelte";
   import YearColor from "$components/files/YearColorSpectrum.svelte";
-  import CenterPoint from "$components/files/CenterPoints.svelte";
   import Circle from "$components/files/Circle.svelte";   
   import Belt from "$components/files/Belt.svelte";  
   import data from '$data/analysis-3.json';
@@ -34,7 +33,6 @@
 
 <YearColor {years} bind:yearColors/>
 
-<CenterPoint {width} {height} {numCircles} {clusterIds} bind:circles />   
 
 
 <svg width={width} height={height}>

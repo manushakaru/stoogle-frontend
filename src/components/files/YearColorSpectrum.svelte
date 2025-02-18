@@ -10,7 +10,7 @@
       const colorScale = d3
         .scaleSequential()
         .domain([years.earliest, years.latest])
-        .interpolator(d3.interpolateHsl("#a9c075", "#1881d9"));
+        .interpolator(d3.interpolateHsl("#c1e079", "#1881d9"));
         //.interpolator(d3.interpolateHsl("#AFF3FE", "#1791A5"));
 
       for (let year = years.earliest; year <= years.latest; year++) {
