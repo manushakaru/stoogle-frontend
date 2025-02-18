@@ -3,6 +3,7 @@
   import Facts from "$components/files/Facts.svelte";
   import Title from "$components/files/Title.svelte";
   import { onMount } from "svelte";
+  import tippy from "tippy.js";  
 
 
   export let circles;
@@ -20,6 +21,7 @@
   let usedArc;
   let unusedArc;
   let usedPercentageArticle;
+  let totArticle;
 
   let usedArcId;
   let unusedArcId;
@@ -35,7 +37,7 @@
     if (circle) {
       //console.log(circles)
       let nFact = cluster.number_of_facts;
-      let totArticle = stats.total_articles;
+      totArticle = stats.total_articles;
       let totFacts = stats.total_facts;
       radius = Math.max(50 + nFact, getRadiusBasedOnFacts(nFact));
       color = "#1a2e3c";
@@ -72,6 +74,11 @@
   function getRadiusBasedOnFacts(nFact) {
     return nFact * 4;
   }
+  function tooltip(node, textHere) {
+    tippy(node, {
+      content: textHere,
+    });
+  }
 </script>
 
 {#if isReady}
@@ -88,7 +95,7 @@
         />
         <Facts {cluster} {radius} {stats} {yearColors} {width} {height} />
         <Title {cluster} {radius} />
-        <path id={usedArcId} class="used-arc ring-element" d={usedArc()} fill="#b785ff" />
+        <path id={usedArcId} class="used-arc ring-element" d={usedArc()} fill="#b785ff" use:tooltip={`number of related articles: ${cluster.number_of_articles} out of ${totArticle}`}/>
 
         <path
           id={unusedArcId}
@@ -176,4 +183,6 @@
   .unused-arc {
     transition: stroke-dashoffset 0.3s ease;
   }
+
+  :focus { outline: none; }
 </style>

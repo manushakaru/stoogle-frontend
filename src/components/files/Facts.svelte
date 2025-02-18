@@ -1,5 +1,6 @@
 <script>
   import * as d3 from "d3";
+  import tippy from "tippy.js";  
 
   export let cluster;
   export let stats;
@@ -14,6 +15,10 @@
   let color;
   let pathData = [];
 
+  function logcons(data) {
+    console.log(data);
+  }
+
   function getFactYear(cluster) {
     const yearMap = {};
     cluster.facts.forEach((fact) => {
@@ -26,7 +31,7 @@
         if (!yearMap[year]) {
           yearMap[year] = [];
         }
-        yearMap[year].push(fact.fact_id);
+        yearMap[year].push({ id: fact.fact_id, data: fact.fact_content });
       }
     });
     return yearMap;
@@ -56,33 +61,48 @@
       .arc()
       .innerRadius(radius + 2)
       .outerRadius(radius + 22);
-
     pathData = [];
     Object.keys(yearMap).forEach((year) => {
-      yearMap[year].forEach(() => {
+      yearMap[year].forEach((factdata) => {
         const startAngle = cumulativeAngle;
         const endAngle = cumulativeAngle + anglePerFact;
-        pathData.push({ startAngle, endAngle, color: getColor(year) });
+        pathData.push({ startAngle, endAngle, color: getColor(year), fact: factdata });
         cumulativeAngle = endAngle;
       });
     });
 
     isReady = true;
   }
+
+  
+  function tooltip(node, factData ) {
+    tippy(node, {
+      content: factData,
+      
+    });
+  }
 </script>
 
 {#if isReady}
-
-      {#each pathData as { startAngle, endAngle, color }}
-        <path
-          d={factArc.startAngle(startAngle).endAngle(endAngle)()}
-          fill={color}
-          stroke="#292929"
-          stroke-width="1"
-        />
-      {/each}
-
+  {#each pathData as { startAngle, endAngle, color, fact }}
+    <path
+      d={factArc.startAngle(startAngle).endAngle(endAngle)()}
+      fill={color}
+      stroke="#292929"
+      stroke-width="1"
+      id={`fact${fact.id}`}
+      use:tooltip={fact.data }
+    />
+  {/each}
 {/if}
 
 <style>
+  :global([data-tippy-root]) {
+    background-color: rgba(50,50,50,0.7);
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    font-size: 14px;
+  }
+
+  :focus { outline: none; }
 </style>

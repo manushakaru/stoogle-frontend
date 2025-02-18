@@ -29,7 +29,21 @@
   }
   
   let clusterIds = getClusterIds();
+  
+  const boundaryForce = (alpha) => {
+    circles.forEach(d => {
+      const xMin = 0 + d.radius + 40;
+      const xMax = width - d.radius - 40;
+      const yMin = 0 + d.radius + 80;
+      const yMax = height - d.radius - 40;
 
+      if (d.x < xMin) d.x = xMin;
+      if (d.x > xMax) d.x = xMax;
+      if (d.y < yMin) d.y = yMin;
+      if (d.y > yMax) d.y = yMax;
+    });
+  };
+  
   onMount(() => {
     if (!clusters.length) return;
 
@@ -44,6 +58,7 @@
       .force("center", d3.forceCenter(width / 2, height / 2))
       .force("collide", d3.forceCollide().strength(0.2).radius(d => d.radius + 60))
       .force("charge", d3.forceManyBody().strength(5)) 
+      .force("boundary", boundaryForce)
       .on("tick", () => circles = [...circles]);
     
     
