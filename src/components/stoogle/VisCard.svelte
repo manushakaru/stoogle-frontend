@@ -83,23 +83,26 @@
       >
         {chartTitle}
       </h6> -->
-      <p class="text-lg pb-3">
+      <p class="text-lg inline pb-3">
         {@html narrative}
       </p>
+      <a  href={readMoreLink} target="_blank" style="color: #000000;">
+        <div
+          class="inline-flex items-center justify-center w-5 h-5 bg-blue-400 text-white rounded-full text-xs"
+        >
+          10
+        </div>
+      </a>
     </div>
   </div>
 
-  <div class="absolute bottom-3 right-4 flex items-center">
-    <!-- <a
-      class="text-indigo-400 font-semibold text-sm hover:underline mr-3 cursor-pointer"
-      on:click={clicked}>Preview</a
-    > -->
+  <!-- <div class="absolute bottom-3 right-4 flex items-center">
     <a
       href={readMoreLink}
       target="_blank"
       class="text-indigo-400 font-semibold text-sm hover:underline">Read more</a
     >
-  </div>
+  </div> -->
 
   {#if showPreview}
     <div

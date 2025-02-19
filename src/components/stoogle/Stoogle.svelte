@@ -1,7 +1,7 @@
 <script>
   import { DotLottieSvelte } from "@lottiefiles/dotlottie-svelte";
   import Popup from "$components/stoogle/Popup.svelte";
-  import analysisData from "$data/analysis-4.json";
+  import analysisData from "$data/analysis-7.json";
   import Section from "$components/stoogle/Section.svelte";
 
   export let searchQuery = "AI is a threat or not";
@@ -61,7 +61,7 @@
   //     stats = clusterData['stats']
   //     console.log("is loading", isDataLoading);
   //     console.log("Fetched data:", clusterData);
-  //     htmlContent = data;
+  //     // htmlContent = data;
   // //   htmlContent = await response.text();
   //   } catch (error) {
   //     console.error("Error fetching HTML:", error);

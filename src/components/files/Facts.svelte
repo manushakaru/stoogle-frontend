@@ -91,16 +91,17 @@
       stroke="#292929"
       stroke-width="1"
       id={`fact${fact.id}`}
-      use:tooltip={fact.data }
+      use:tooltip={fact.data}
+      style="cursor: pointer;"
     />
   {/each}
 {/if}
 
 <style>
   :global([data-tippy-root]) {
-    background-color: rgba(50,50,50,0.7);
+    background-color: rgba(31, 31, 31, 0.7);
     border-radius: 0.2rem;
-    padding: 0.5rem;
+    padding: 1rem;
     font-size: 14px;
   }
 

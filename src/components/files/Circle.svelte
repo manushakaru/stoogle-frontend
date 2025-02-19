@@ -95,7 +95,7 @@
         />
         <Facts {cluster} {radius} {stats} {yearColors} {width} {height} />
         <Title {cluster} {radius} />
-        <path id={usedArcId} class="used-arc ring-element" d={usedArc()} fill="#b785ff" use:tooltip={`number of related articles: ${cluster.number_of_articles} out of ${totArticle}`}/>
+        <path id={usedArcId} class="used-arc ring-element" style="cursor: pointer;" d={usedArc()} fill="#b785ff" use:tooltip={`Number of Related Articles: ${cluster.number_of_articles} out of ${totArticle}`}/>
 
         <path
           id={unusedArcId}

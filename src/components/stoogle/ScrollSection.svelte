@@ -13,6 +13,7 @@
   let sharedArticles = [];
   let sharedFacts = [];
   let stats = {};
+  let allFacts = [];
 
   let value;
   let newValues;
@@ -22,15 +23,15 @@
   sharedArticles = clusterData["shared_articles"];
   sharedFacts = clusterData["shared_facts"];
   stats = clusterData["stats"];
+  allFacts = clusterData["all_facts_in_order"];
 
   let stepCounts = [];
-  let allFacts = [];
+
   let total = -1;
 
   const getSteps = () => {
     clusters.forEach((cluster) => {
       console.log("f", cluster.facts);
-      allFacts = allFacts.concat(cluster.facts);
       const numFacts = cluster.number_of_facts;
       total += numFacts;
       stepCounts.push(total);

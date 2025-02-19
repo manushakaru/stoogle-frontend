@@ -18,7 +18,7 @@
       labels: inputData.map((item) => item.x),
       datasets: [
         {
-          data: inputData.map((item) => parseFloat(item.y)),
+          data: inputData.map((item) => parseFloat(item.y.match(/\d+(\.\d+)?/g)[0])),
           backgroundColor: inputData.map((item) => item.color),
           hoverBackgroundColor: inputData.map((item) =>
             lightenColor(item.color, 20)
