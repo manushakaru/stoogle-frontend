@@ -14,10 +14,12 @@
   let sharedFacts = [];
   let stats = {};
   let allFacts = [];
+  let items = [];
 
   let value;
   let newValues;
   let step;
+  let curFactid;
 
   clusters = clusterData["clusters"];
   sharedArticles = clusterData["shared_articles"];
@@ -26,7 +28,6 @@
   allFacts = clusterData["all_facts_in_order"];
 
   let stepCounts = [];
-
   let total = -1;
 
   const getSteps = () => {
@@ -52,25 +53,34 @@
     }
     newValues = stepHandler(step);
   }
+
+  function handleFactChange(newValue) {
+    value = newValue;
+    const currentFact = allFacts[value];
+    if(currentFact) {
+      curFactid = currentFact.fact_id;
+      console.log("Current fact:", curFactid);
+    }
+  }
 </script>
 
 <div class="scroll-section matt-scroll">
   <div class="sticky" style="max-height:{viewportHeight - 200}px;">
-    <!-- Here comes the cluster visulization -->
-    <!-- Focusing to the each cluster machanism should be implemented -->
     {#if stepCounts}
       {@const previousLimit = stepCounts[0]}
       {#if step < previousLimit}
-        <Overview data={clusterData} {viewportHeight} {viewportWidth}
+        <Overview bind:value data={clusterData} {viewportHeight} {viewportWidth}{step}{curFactid}{items}
         ></Overview>
       {:else if step > previousLimit}
-        <PieChart></PieChart>
+              <Overview bind:value data={clusterData} {viewportHeight} {viewportWidth}{step}{curFactid}{items} ></Overview>
+
+        <!--<PieChart></PieChart>-->
       {/if}
     {/if}
   </div>
 
   <div class="steps">
-    <FactScroll bind:value facts={allFacts} />
+    <FactScroll bind:value={value} items={items} facts={allFacts} onFactChange={handleFactChange} />
   </div>
 </div>
 
@@ -81,7 +91,6 @@
     display: flex;
     justify-content: center;
     top: 100px;
-    /* display: none; */
   }
   .steps {
     position: relative;

@@ -1,14 +1,19 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount, onDestroy } from "svelte";
   import * as d3 from "d3";
   import YearColor from "$components/files/YearColorSpectrum.svelte";
   import Circle from "$components/files/Circle.svelte";
   import Belt from "$components/files/Belt.svelte";
   import Stats from "$components/stoogle/Stats.svelte";
+  import Scrolly from "$components/helpers/Scrolly.svelte";
 
   export let data;
   export let viewportHeight;
   export let viewportWidth;
+  export let step;
+  export let curFactid;
+  export let value;
+  export let items = [];
 
   let years = data.stats.article_year_range;
   let numCircles = data.stats.total_clusters;
@@ -16,6 +21,7 @@
   let shared_facts = data.shared_facts;
   let shared_articles = data.shared_articles;
   let stats = data.stats;
+  let steps = data.steps;
 
   let width = viewportWidth * 0.8;
   let height = viewportHeight - 100;
@@ -60,9 +66,43 @@
       .force("charge", d3.forceManyBody().strength(5)) 
       .force("boundary", boundaryForce)
       .on("tick", () => circles = [...circles]);
-    
-    
+
+    document.addEventListener('click', handleOutsideClick);
+    document.addEventListener('click', handleCircleClick);
   });
+
+  onDestroy(() => {
+    document.removeEventListener('click', handleOutsideClick);
+  });
+
+  function handleCircleClick(event){
+    const groupElement = event.target.closest('g[id^="circle-"]');
+    if (groupElement) {
+      const groupId = Number(groupElement.id.replace('circle-', ''));
+      const found = steps.find(step => step.cluster_id === groupId);
+
+      if (found) {
+        value = found.start_step;
+        jumpToItem(value);
+      }
+    }
+  }
+
+  function handleOutsideClick(event) {
+    const groupElement = event.target.closest('g[id^="circle-"]');
+    if (!groupElement) {
+      resetZoom();
+    }
+  }
+
+
+  function resetZoom() {
+    const initialTranslation = { x: width / 2, y: height / 2, scale: 1 };
+    d3.select("#visBack g")
+      .transition()
+      .duration(800)
+      .attr("transform", `translate(${initialTranslation.x - width / 2}, ${initialTranslation.y - height / 2 + 40}) scale(${initialTranslation.scale})`);
+  }
 
   function circleAction(node) {
     const circleId = Number(node.id.split("-")[1]); 
@@ -100,13 +140,55 @@
     d.fy = null;
   }
 
- 
+  function stepZoom(step) {
+    let id = null;
+    for (let i = 0; i < steps.length; i++) {
+      let { cluster_id, start_step, end_step } = steps[i];
+
+      if (step >= start_step && step <= end_step) {
+        id = cluster_id; 
+      }
+    }
+    if (id !== null) {
+      for (let i = 0; i < circles.length; i++) {
+        if (circles[i].id === id) {
+          return { x: circles[i].x, y: circles[i].y, scale: height * 0.9 / (2 * circles[i].radius + 100) };  
+        }
+      }
+    }
+    return {x: width/2, y: height/2, scale: 1};
+  }
+
+  $: {
+    const translation = stepZoom(step);
+    if (translation) {
+      const { x, y, scale } = translation;
+      d3.select("#visBack g")
+        .transition()
+        .duration(800) 
+        .attr("transform", `translate(${-x * scale + width / 2}, ${ -y * scale + height / 2 + 40}) scale(${scale})`);
+    }
+
+  }
+
+
+  const jumpToItem = (index) => {
+    console.log("item", items.length)
+      if (items[index]) {
+          items[index].scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+              inline: 'nearest'
+          });
+      }
+  };
+
 </script>
 
 <Stats {stats} />
 <YearColor {years} bind:yearColors />
 
-<svg {width} {height}>
+<svg id="visBack" {width} {height}>
   <g>
     <Belt {width} {height} {circles} {shared_articles} />
     {#each clusters as cluster (cluster.cluster_id)}

@@ -3232,11 +3232,12 @@
             }
         }
     ],
-    "steps": [
-        19,
-        22,
-        25,
-        28
+    "steps": 
+    [
+    { "cluster_id":2, "start_step": 1, "end_step": 19 },
+    { "cluster_id":3, "start_step": 20, "end_step": 22 },
+    { "cluster_id":1, "start_step": 23, "end_step": 25 },
+    { "cluster_id":4, "start_step": 26, "end_step": 28 }
     ],
     "shared_facts": [],
     "shared_articles": [

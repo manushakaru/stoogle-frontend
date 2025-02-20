@@ -4,6 +4,11 @@
   import Scrolly from "$components/helpers/Scrolly.svelte";
   export let facts;
   export let value = 0;
+  export let onFactChange;
+  export let items = []
+  
+  $: value, onFactChange(value); 
+
 </script>
 
 <Scrolly bind:value>
@@ -11,7 +16,7 @@
     {@const active = value === i}
     {@const last = i == facts.length - 1 ? true : false}
     {@const first = i == 0 ? true : false}
-    <div class="vis-card" class:active class:last class:first>
+    <div bind:this={items[i]} class="vis-card" class:active class:last class:first>
       {#if fact.vis_recommendation === "text"}
         <TextCard {fact} />
       {:else}
