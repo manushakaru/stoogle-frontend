@@ -152,7 +152,7 @@
     if (id !== null) {
       for (let i = 0; i < circles.length; i++) {
         if (circles[i].id === id) {
-          return { x: circles[i].x, y: circles[i].y, scale: height * 0.9 / (2 * circles[i].radius + 100) };  
+          return { x: circles[i].x, y: circles[i].y, scale: height * 0.7 / (2 * circles[i].radius + 100) };  
         }
       }
     }
@@ -166,7 +166,7 @@
       d3.select("#visBack g")
         .transition()
         .duration(800) 
-        .attr("transform", `translate(${-x * scale + width / 2}, ${ -y * scale + height / 2 + 40}) scale(${scale})`);
+        .attr("transform", `translate(${-x * scale +  4 * width / 6}, ${ - y * scale + height / 2 + 40}) scale(${scale})`);
     }
 
   }
