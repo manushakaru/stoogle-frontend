@@ -32,7 +32,8 @@
     padding: 20px;
     display: block;
     width: fit-content;
-    margin: 0 auto;
+    margin-left: 50px;
+    /* margin: 0 auto; */
     opacity: 0.3;
     transition: opacity 300ms ease;
     max-width: 700px;
