@@ -68,12 +68,10 @@
   <div class="sticky" style="max-height:{viewportHeight - 200}px;">
     {#if stepCounts}
       {@const previousLimit = stepCounts[0]}
-      {#if step < previousLimit}
-        <Overview bind:value data={clusterData} {viewportHeight} {viewportWidth}{step}{curFactid}{items}
+      <Overview bind:value data={clusterData} {viewportHeight} {viewportWidth}{step}{curFactid}{items}
         ></Overview>
-      {:else if step > previousLimit}
-              <Overview bind:value data={clusterData} {viewportHeight} {viewportWidth}{step}{curFactid}{items} ></Overview>
-
+      {#if step < previousLimit}
+      {:else if step >= previousLimit}
         <!--<PieChart></PieChart>-->
       {/if}
     {/if}

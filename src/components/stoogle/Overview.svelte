@@ -23,7 +23,7 @@
   let stats = data.stats;
   let steps = data.steps;
 
-  let width = viewportWidth * 0.8;
+  let width = viewportWidth;
   let height = viewportHeight - 100;
   let circles = [];
   let yearColors = [];
