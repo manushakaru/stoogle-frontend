@@ -45,8 +45,8 @@
   $: value, handleStepChange();
 
   function handleStepChange() {
-    if (step == 0 && value == undefined) {
-      step = 0;
+    if (value == undefined) {
+      step = undefined;
     } else if (step === total && value === undefined) {
       step = total;
     } else {

@@ -133,6 +133,12 @@
   }
 
   function stepZoom(step) {
+    
+    if (step === undefined) {
+      resetZoom(); 
+      return;
+    }
+    
     let id = null;
     for (let i = 0; i < steps.length; i++) {
       let { cluster_id, start_step, end_step } = steps[i];
