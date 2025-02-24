@@ -13,6 +13,7 @@
   export let curFactid;
   export let value;
   export let items = [];
+  export let sorted_article_ids;
 
   let years = data.stats.article_year_range;
   let numCircles = data.stats.total_clusters;
@@ -184,7 +185,7 @@
   <g>
     <Belt {width} {height} {circles} {shared_articles} />
     {#each clusters as cluster (cluster.cluster_id)}
-      <Circle {width} {height} {cluster} {circles} {stats} {yearColors} action={circleAction} />
+      <Circle {width} {height} {cluster} {circles} {stats} {yearColors} action={circleAction} sorted_article_ids={sorted_article_ids} />
     {/each}
   </g>
 </svg>

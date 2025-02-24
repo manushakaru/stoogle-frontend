@@ -12,7 +12,7 @@
   export let height;
   export let yearColors;
   export let action;
-
+  export let sorted_article_ids;
 
   let circle;
   let radius;
@@ -91,7 +91,7 @@
           fill={color}
           class="circle-element hit-area"
         />
-        <Facts {cluster} {radius} {stats} {yearColors} {width} {height} />
+        <Facts {cluster} {radius} {stats} {yearColors} {width} {height} sorted_article_ids={sorted_article_ids} />
         <Title {cluster} {radius} />
         <path id={usedArcId} class="used-arc ring-element" style="cursor: pointer;" d={usedArc()} fill="#b785ff" use:tooltip={`Number of Related Articles: ${cluster.number_of_articles} out of ${totArticle}`}/>
 

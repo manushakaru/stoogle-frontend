@@ -69,7 +69,7 @@
 <div class="scroll-section matt-scroll">
   <div class="sticky" style="max-height:{viewportHeight - 200}px;">
     {#if stepCounts}
-      <Overview bind:value data={clusterData} {viewportHeight} {viewportWidth} {step} {curFactid} {items}
+      <Overview bind:value data={clusterData} {viewportHeight} {viewportWidth} {step} {curFactid} {items} sorted_article_ids={sorted_article_ids}
         ></Overview>
     {/if}
   </div>
