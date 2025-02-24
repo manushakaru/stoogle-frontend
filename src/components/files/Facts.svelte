@@ -27,7 +27,7 @@
       if (!yearMap[year]) {
           yearMap[year] = [];
         }
-        yearMap[year].push({ id: fact_group.fact_group_id, data: fact_group.fact_group_content });
+        yearMap[year].push({ id: fact_group.fact_group_id, data: fact_group.fact_group_content, count: fact_group.number_of_similar_facts });
     });
     return yearMap;
   }
@@ -54,14 +54,15 @@
 
     factArc = d3
       .arc()
-      .innerRadius(radius + 2)
-      .outerRadius(radius + 22);
+      .innerRadius(radius + 2);
+      // .outerRadius(radius + 22);
     pathData = [];
     Object.keys(yearMap).forEach((year) => {
       yearMap[year].forEach((factdata) => {
         const startAngle = cumulativeAngle;
         const endAngle = cumulativeAngle + anglePerFact;
-        pathData.push({ startAngle, endAngle, color: getColor(year), fact: factdata });
+        const outerRadius = radius + 2 + (15 * factdata.count);
+        pathData.push({ startAngle, endAngle, outerRadius, color: getColor(year),  fact: factdata });
         cumulativeAngle = endAngle;
       });
     });
@@ -79,9 +80,9 @@
 </script>
 
 {#if isReady}
-  {#each pathData as { startAngle, endAngle, color, fact }}
+  {#each pathData as { startAngle, endAngle, outerRadius, color, fact }}
     <path
-      d={factArc.startAngle(startAngle).endAngle(endAngle)()}
+      d={factArc.outerRadius(outerRadius).startAngle(startAngle).endAngle(endAngle)()}
       fill={color}
       stroke="#292929"
       stroke-width="1"
