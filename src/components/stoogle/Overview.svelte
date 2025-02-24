@@ -4,7 +4,6 @@
   import YearColor from "$components/files/YearColorSpectrum.svelte";
   import Circle from "$components/files/Circle.svelte";
   import Belt from "$components/files/Belt.svelte";
-  import Stats from "$components/stoogle/Stats.svelte";
 
   export let data;
   export let viewportHeight;
@@ -178,8 +177,7 @@
 
 </script>
 
-<Stats {stats} />
-<YearColor {years} bind:yearColors />
+<YearColor {years} {stats}  bind:yearColors />
 
 <svg id="visBack" {width} {height}>
   <g>
