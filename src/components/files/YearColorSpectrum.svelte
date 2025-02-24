@@ -7,13 +7,27 @@
   let totalArticles = stats.total_articles;
   let totalFacts = stats.total_fact_groups;
 
+  const materialColors = [
+    "#03A9F4", // Light Blue
+    "#4CAF50", // Green
+    "#FFC107", // Amber
+    "#FF5722", // Deep Orange
+    "#E91E63", // Pink
+    "#9C27B0", // Purple
+    "#673AB7", // Deep Purple
+    "#00BCD4", // Cyan
+  ];
+
   $: {
     if (years && years.earliest && years.latest) {
       yearColors = [];
       const colorScale = d3
         .scaleSequential()
         .domain([parseInt(years.earliest), parseInt(years.latest)])
-        .interpolator(d3.interpolateHsl("#c1e079", "#1881d9"));
+        .range(materialColors);
+      // .interpolator(d3.interpolateHsl("#c1e079", "#1881d9"));
+      // .interpolator(d3.interpolateViridis)
+      // .interpolator(d3.interpolateHcl("#00FFFF", "#FFD700", "#FF1493"))
       //.interpolator(d3.interpolateHsl("#AFF3FE", "#1791A5"));
 
       for (let year = years.earliest; year <= years.latest; year++) {
@@ -42,7 +56,11 @@
       >
     </p>
 
-    <div class="mt-5 pb-2 text-black  font-semibold dark:text-[rgba(255,255,255,0.6)]">Published Years</div>
+    <div
+      class="mt-5 pb-2 text-black font-semibold dark:text-[rgba(255,255,255,0.6)]"
+    >
+      Published Years
+    </div>
     {#if yearColors.length > 0}
       <div class="years">
         {#each yearColors as yearColor}
@@ -51,12 +69,18 @@
               class="color-box"
               style="background-color: {yearColor.color}"
             ></div>
-            <span class="font-semibold text-black dark:text-[rgba(255,255,255,0.6)]">{yearColor.year}</span>
+            <span
+              class="font-semibold text-black dark:text-[rgba(255,255,255,0.6)]"
+              >{yearColor.year}</span
+            >
           </div>
         {/each}
         <div class="year-item">
           <div class="color-box" style="background-color: {'#d21890'}"></div>
-          <span class="font-semibold  text-black dark:text-[rgba(255,255,255,0.6)]">Unknown</span>
+          <span
+            class="font-semibold text-black dark:text-[rgba(255,255,255,0.6)]"
+            >Unknown</span
+          >
         </div>
       </div>
     {:else}
