@@ -60,7 +60,7 @@
     value = newValue;
     const currentFact = allFacts[value];
     if(currentFact) {
-      curFactid = currentFact.fact_id;
+      curFactid = currentFact.merged_id;
       console.log("Current fact:", curFactid);
     }
   }
@@ -75,7 +75,7 @@
   </div>
 
   <div class="steps">
-    <FactScroll bind:value={value} items={items} facts={allFacts} sorted_article_ids={sorted_article_ids} onFactChange={handleFactChange} />
+    <FactScroll bind:value items={items} facts={allFacts} sorted_article_ids={sorted_article_ids} onFactChange={handleFactChange} />
   </div>
 </div>
 

@@ -1,7 +1,7 @@
 <script>
   import { DotLottieSvelte } from "@lottiefiles/dotlottie-svelte";
   import Popup from "$components/stoogle/Popup.svelte";
-  import analysisData from "$data/analysis-7.json";
+  import analysisData from "$data/analysis-8.json";
   import Section from "$components/stoogle/Section.svelte";
 
   // export let searchQuery = "AI is a threat or not";
@@ -39,61 +39,61 @@
   };
 
   // // Get data from the API
-  const handleSearch = async (e) => {
-    e.preventDefault();
-    isSticky = true;
-    isLoading = true;
-    try {
-      //   const response = await fetch(`http://127.0.0.1:8000/storyfile`);
-      const response = await fetch(
-        `http://127.0.0.1:8000/stories?query=${encodeURIComponent(
-          searchQuery
-        )}&web=${encodeURIComponent(web)}&page_count=${pageCount}`
-      );
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await response.json(); // Parse JSON response
-      isDataLoading = true;
-      clusterData = data; // Assign fetched data
-      clusters = clusterData['clusters']
-      sharedArticles = clusterData['shared_articles']
-      sharedFacts = clusterData['shared_facts']
-      stats = clusterData['stats']
-      console.log("is loading", isDataLoading);
-      console.log("clusterData:", clusterData);
-      // htmlContent = data;
-  //   htmlContent = await response.text();
-    } catch (error) {
-      console.error("Error fetching HTML:", error);
-    } finally {
-      isLoading = false;
-    }
-  };
-
-  function wait(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
-
-  // Get Dummy data
   // const handleSearch = async (e) => {
   //   e.preventDefault();
   //   isSticky = true;
   //   isLoading = true;
   //   try {
-  //     // await wait(5000);
+  //     //   const response = await fetch(`http://127.0.0.1:8000/storyfile`);
+  //     const response = await fetch(
+  //       `http://127.0.0.1:8000/stories?query=${encodeURIComponent(
+  //         searchQuery
+  //       )}&web=${encodeURIComponent(web)}&page_count=${pageCount}`
+  //     );
+  //     if (!response.ok) {
+  //       throw new Error("Network response was not ok");
+  //     }
+  //     const data = await response.json(); // Parse JSON response
   //     isDataLoading = true;
-  //     clusterData = analysisData;
-  //     clusters = clusterData["clusters"];
-  //     sharedArticles = clusterData["shared_articles"];
-  //     sharedFacts = clusterData["shared_facts"];
-  //     stats = clusterData["stats"];
+  //     clusterData = data; // Assign fetched data
+  //     clusters = clusterData['clusters']
+  //     sharedArticles = clusterData['shared_articles']
+  //     sharedFacts = clusterData['shared_facts']
+  //     stats = clusterData['stats']
+  //     console.log("is loading", isDataLoading);
+  //     console.log("clusterData:", clusterData);
+  //     // htmlContent = data;
+  // //   htmlContent = await response.text();
   //   } catch (error) {
   //     console.error("Error fetching HTML:", error);
   //   } finally {
   //     isLoading = false;
   //   }
   // };
+
+  function wait(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  // Get Dummy data
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    isSticky = true;
+    isLoading = true;
+    try {
+      // await wait(5000);
+      isDataLoading = true;
+      clusterData = analysisData;
+      clusters = clusterData["clusters"];
+      sharedArticles = clusterData["shared_articles"];
+      sharedFacts = clusterData["shared_facts"];
+      stats = clusterData["stats"];
+    } catch (error) {
+      console.error("Error fetching HTML:", error);
+    } finally {
+      isLoading = false;
+    }
+  };
 </script>
 
 <div class={isSticky ? "" : "mainPage"}>
