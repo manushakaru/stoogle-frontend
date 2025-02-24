@@ -17,18 +17,17 @@
   function getFactYear(cluster) {
     const yearMap = {};
     cluster.all_fact_groups.forEach((fact_group) => {
-      const a = fact_group.article_ids[0]
-      // const [a, b] = fact.fact_id.split("_");
-      const article = cluster.articles.find(
-        (article) => article.id == a
-      );
-      if (article) {
-        const year = article.year;
-        if (!yearMap[year]) {
+      console.log('fact group', fact_group)
+      let yearData = []
+      fact_group.fact_group_articles.forEach((article) => {
+        yearData.push(parseInt(article.year));
+      });
+      // make either max or min year 
+      const year = Math.max(...yearData);
+      if (!yearMap[year]) {
           yearMap[year] = [];
         }
         yearMap[year].push({ id: fact_group.fact_group_id, data: fact_group.fact_group_content });
-      }
     });
     return yearMap;
   }
