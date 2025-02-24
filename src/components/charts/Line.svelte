@@ -26,8 +26,8 @@
   );
 
   const transformData = (inputData) => {
-    const labels = inputData.map((item) => item.x);
-    const data = inputData.map((item) => parseFloat(item.y.match(/\d+(\.\d+)?/g)[0]));
+    const labels = inputData.map((item) => item.label);
+    const data = inputData.map((item) => parseFloat(item.value.match(/\d+(\.\d+)?/g)[0]));
     const pointColors = inputData.map((item) => item.color || "#EB3678");
 
     return {

@@ -5,7 +5,6 @@
   import Circle from "$components/files/Circle.svelte";
   import Belt from "$components/files/Belt.svelte";
   import Stats from "$components/stoogle/Stats.svelte";
-  import Scrolly from "$components/helpers/Scrolly.svelte";
 
   export let data;
   export let viewportHeight;
@@ -27,14 +26,7 @@
   let height = viewportHeight - 100;
   let circles = [];
   let yearColors = [];
-
   let simulation;
-
-  function getClusterIds() {
-    return clusters.map((cluster) => cluster.cluster_id);
-  }
-  
-  let clusterIds = getClusterIds();
   
   const boundaryForce = (alpha) => {
     circles.forEach(d => {
@@ -57,7 +49,7 @@
       id: cluster.cluster_id,
       x: (0.2 + Math.random() * (0.8 - 0.2)) * width,
       y: (0.2 + Math.random() * (0.8 - 0.2)) * height,
-      radius: Math.max(40 + cluster.number_of_facts, cluster.number_of_facts * 4),
+      radius: Math.max(40 + cluster.number_of_fact_groups, cluster.number_of_fact_groups * 4),
     }));
 
     simulation = d3.forceSimulation(circles)

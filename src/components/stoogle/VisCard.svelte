@@ -5,6 +5,7 @@
   import Isotype from "$components/charts/Isotype.svelte";
 
   export let fact = {};
+  export let sorted_article_ids;
 
   let visRecommendation = fact.vis_recommendation;
   let titles = fact.titles;
@@ -13,37 +14,7 @@
   let axisYTitle = titles.y_axis;
   let visData = fact.vis_data;
   let narrative = fact.narrative;
-  let readMoreLink = fact.article.url || "#";
-
-  console.log("visData ", visData);
-
-  let showPreview = false;
-
-  const clicked = () => {
-    showPreview = !showPreview;
-  };
-
-  // Text coloring example
-  // let example = `
-  //   <div>
-  //       <span class="text-blue-400 font-semibold">Automotive giants</span> like
-  //       <span class="text-red-400 font-semibold">GM</span> are pivoting towards
-  //       <span class="text-green-400 font-semibold">electric vehicle production</span>,
-  //       signaling a broader shift from traditional
-  //       <span class="text-yellow-400 font-semibold">fuel economies</span> to
-  //       <span class="text-purple-400 font-semibold">electric ones</span>.
-  //   </div>`
-
-  // Text highligting example
-  // let example = `
-  //   <div>
-  //       <span class="text-blue-400 font-semibold bg-blue-900 p-1 rounded">Automotive giants</span> like
-  //       <span class="text-red-400 font-semibold bg-red-900 p-1 rounded">GM</span> are pivoting towards
-  //       <span class="text-green-400 font-semibold bg-green-900 p-1 rounded">electric vehicle production</span>,
-  //       signaling a broader shift from traditional
-  //       <span class="text-yellow-400 font-semibold bg-yellow-900 p-1 rounded">fuel economies</span> to
-  //       <span class="text-purple-400 font-semibold bg-purple-900 p-1 rounded">electric ones</span>.
-  //   </div>`
+  let merged_articles = fact.merged_articles.sort((a, b) => Number(a.id) - Number(b.id));
 </script>
 
 <!-- To remove border - dark:border-slate-500 and border-4 -->
@@ -77,50 +48,20 @@
       </div>
     </div>
 
-    <div class="w-1/2 pl-4 cursor-default">
-      <!-- <h6
-        class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-      >
-        {chartTitle}
-      </h6> -->
+    <div class="w-1/2 pl-4 cursor-default pt-4">
       <p class="text-lg inline pb-3">
         {@html narrative}
       </p>
-      <a  href={readMoreLink} target="_blank" style="color: #000000;">
+      {#each merged_articles as article }
+      <a  href={article.url} target="_blank" style="color: #000000;">
         <div
           class="inline-flex items-center justify-center w-5 h-5 bg-blue-400 text-white rounded-full text-xs"
         >
-          10
+            {sorted_article_ids[article.id]}
         </div>
       </a>
+      {/each}
+     
     </div>
   </div>
-
-  <!-- <div class="absolute bottom-3 right-4 flex items-center">
-    <a
-      href={readMoreLink}
-      target="_blank"
-      class="text-indigo-400 font-semibold text-sm hover:underline">Read more</a
-    >
-  </div> -->
-
-  {#if showPreview}
-    <div
-      class="fixed inset-0 flex justify-center items-center z-50 bg-black bg-opacity-50"
-    >
-      <div class="relative w-full max-w-3xl bg-white p-6 rounded-lg shadow-lg">
-        <iframe
-          src={readMoreLink}
-          class="w-full h-96 rounded-lg"
-          frameborder="0"
-        ></iframe>
-        <button
-          class="absolute top-2 right-2 text-white bg-red-500 p-2"
-          on:click={clicked}
-        >
-          X
-        </button>
-      </div>
-    </div>
-  {/if}
 </div>

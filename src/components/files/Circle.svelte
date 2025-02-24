@@ -2,7 +2,6 @@
   import * as d3 from "d3";
   import Facts from "$components/files/Facts.svelte";
   import Title from "$components/files/Title.svelte";
-  import { onMount } from "svelte";
   import tippy from "tippy.js";  
 
 
@@ -36,9 +35,8 @@
     circle = getCircleById(cluster.cluster_id);
     if (circle) {
       //console.log(circles)
-      let nFact = cluster.number_of_facts;
+      let nFact = cluster.number_of_fact_groups;
       totArticle = stats.total_articles;
-      let totFacts = stats.total_facts;
       radius = Math.max(50 + nFact, getRadiusBasedOnFacts(nFact));
       color = "#1a2e3c";
       usedPercentageArticle = cluster.number_of_articles / totArticle;

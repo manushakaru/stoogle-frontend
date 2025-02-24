@@ -1,7 +1,7 @@
 <script>
     export let stats = {};
     let totalArticles = stats.total_articles;
-    let totalFacts = stats.total_facts;
+    let totalFacts = stats.total_fact_groups;
 </script>
 
 <div class="absolute left-10 bg-transparent shadow-lg rounded-lg p-2 ">

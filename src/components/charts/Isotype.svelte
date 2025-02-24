@@ -14,13 +14,13 @@
     let cumulative = 0;
 
     inputData.forEach((d) => {
-      const percentage = parseFloat(d.y.match(/\d+(\.\d+)?/g)[0]);
+      const percentage = parseFloat(d.value.match(/\d+(\.\d+)?/g)[0]);
       const unitsCount = Math.round((percentage / 100) * totalUnits);
 
       for (let i = cumulative; i < cumulative + unitsCount; i++) {
         if (i < totalUnits) {
           dataUnits[i].color = d.color;
-          dataUnits[i].label = `${d.x} (${d.y})`;
+          dataUnits[i].label = `${d.label} (${d.value})`;
         }
       }
       cumulative += unitsCount;

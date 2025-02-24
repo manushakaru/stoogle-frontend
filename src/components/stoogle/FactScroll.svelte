@@ -6,6 +6,7 @@
   export let value = 0;
   export let onFactChange;
   export let items = []
+  export let sorted_article_ids;
   
   $: value, onFactChange(value); 
 
@@ -18,9 +19,9 @@
     {@const first = i == 0 ? true : false}
     <div bind:this={items[i]} class="vis-card" class:active class:last class:first>
       {#if fact.vis_recommendation === "text"}
-        <TextCard {fact} />
+        <TextCard  fact={fact} sorted_article_ids={sorted_article_ids} />
       {:else}
-        <VisCard {fact}></VisCard>
+        <VisCard fact={fact} sorted_article_ids={sorted_article_ids}></VisCard>
       {/if}
     </div>
   {/each}

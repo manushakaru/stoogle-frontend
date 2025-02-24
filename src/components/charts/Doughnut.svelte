@@ -15,11 +15,11 @@
 
   function transformData(inputData) {
     return {
-      labels: inputData.map((item) => item.x),
+      labels: inputData.map((item) => item.label),
       datasets: [
         {
-          data: inputData.map((item) => parseFloat(item.y.match(/\d+(\.\d+)?/g)[0])),
-          backgroundColor: inputData.map((item) => item.color),
+          data: inputData.map((item) => parseFloat(item.value.match(/\d+(\.\d+)?/g)[0])),
+          backgroundColor: inputData.map((item) => item.color || "#EB3678"),
           hoverBackgroundColor: inputData.map((item) =>
             lightenColor(item.color, 20)
           ),

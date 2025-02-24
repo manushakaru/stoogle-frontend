@@ -24,9 +24,9 @@
   );
 
   function transformData(input) {
-    const labels = input.map((item) => item.x); // Extract x values as labels
-    const data = input.map((item) => parseFloat(item.y.match(/\d+(\.\d+)?/g)[0])); // Extract y values and convert them to integers
-    const backgroundColor = input.map((item) => item.color); // Extract color values
+    const labels = input.map((item) => item.label); // Extract x values as labels
+    const data = input.map((item) => parseFloat(item.value.match(/\d+(\.\d+)?/g)[0])); // Extract y values and convert them to integers
+    const backgroundColor = input.map((item) => item.color || "#EB3678"); // Extract color values
 
     return {
       labels: labels,

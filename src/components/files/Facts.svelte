@@ -12,26 +12,22 @@
   let yearMap;
   let cumulativeAngle;
   let anglePerFact;
-  let color;
   let pathData = [];
-
-  function logcons(data) {
-    console.log(data);
-  }
 
   function getFactYear(cluster) {
     const yearMap = {};
-    cluster.facts.forEach((fact) => {
-      const [a, b] = fact.fact_id.split("_");
+    cluster.all_fact_groups.forEach((fact_group) => {
+      const a = fact_group.article_ids[0]
+      // const [a, b] = fact.fact_id.split("_");
       const article = cluster.articles.find(
-        (article) => article.article_id == a
+        (article) => article.id == a
       );
       if (article) {
         const year = article.year;
         if (!yearMap[year]) {
           yearMap[year] = [];
         }
-        yearMap[year].push({ id: fact.fact_id, data: fact.fact_content });
+        yearMap[year].push({ id: fact_group.fact_group_id, data: fact_group.fact_group_content });
       }
     });
     return yearMap;
@@ -52,7 +48,7 @@
     width &&
     height
   ) {
-    let nFact = cluster.number_of_facts;
+    let nFact = cluster.number_of_fact_groups;
     yearMap = getFactYear(cluster);
     anglePerFact = Math.PI / nFact;
     cumulativeAngle = Math.PI / 2;

@@ -1,5 +1,4 @@
 <script>
-  import PieChart from "$components/stoogle/PieChart.svelte";
   import FactScroll from "$components/stoogle/FactScroll.svelte";
   import Overview from "$components/stoogle/Overview.svelte";
 
@@ -20,12 +19,14 @@
   let newValues;
   let step;
   let curFactid;
+  let sorted_article_ids;
 
   clusters = clusterData["clusters"];
   sharedArticles = clusterData["shared_articles"];
   sharedFacts = clusterData["shared_facts"];
   stats = clusterData["stats"];
-  allFacts = clusterData["all_facts_in_order"];
+  allFacts = clusterData["all_merged_facts_in_order"];
+  sorted_article_ids = clusterData["sorted_article_ids"];
 
   let stepCounts = [];
   let total = -1;
@@ -55,6 +56,7 @@
   }
 
   function handleFactChange(newValue) {
+    if (allFacts === undefined) return;
     value = newValue;
     const currentFact = allFacts[value];
     if(currentFact) {
@@ -67,18 +69,13 @@
 <div class="scroll-section matt-scroll">
   <div class="sticky" style="max-height:{viewportHeight - 200}px;">
     {#if stepCounts}
-      {@const previousLimit = stepCounts[0]}
-      <Overview bind:value data={clusterData} {viewportHeight} {viewportWidth}{step}{curFactid}{items}
+      <Overview bind:value data={clusterData} {viewportHeight} {viewportWidth} {step} {curFactid} {items}
         ></Overview>
-      {#if step < previousLimit}
-      {:else if step >= previousLimit}
-        <!--<PieChart></PieChart>-->
-      {/if}
     {/if}
   </div>
 
   <div class="steps">
-    <FactScroll bind:value={value} items={items} facts={allFacts} onFactChange={handleFactChange} />
+    <FactScroll bind:value={value} items={items} facts={allFacts} sorted_article_ids={sorted_article_ids} onFactChange={handleFactChange} />
   </div>
 </div>
 
