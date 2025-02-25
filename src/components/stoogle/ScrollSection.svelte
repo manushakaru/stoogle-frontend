@@ -28,27 +28,25 @@
   allFacts = clusterData["all_merged_facts_in_order"];
   sorted_article_ids = clusterData["sorted_article_ids"];
 
-  let stepCounts = [];
-  let total = -1;
+  // let stepCounts = [];
+  // let total = -1;
 
-  const getSteps = () => {
-    clusters.forEach((cluster) => {
-      console.log("f", cluster.facts);
-      const numFacts = cluster.number_of_facts;
-      total += numFacts;
-      stepCounts.push(total);
-    });
-  };
+  // const getSteps = () => {
+  //   clusters.forEach((cluster) => {
+  //     console.log("f", cluster.facts);
+  //     const numFacts = cluster.number_of_facts;
+  //     total += numFacts;
+  //     stepCounts.push(total);
+  //   });
+  // };
 
-  getSteps();
+  // getSteps();
 
   $: value, handleStepChange();
 
   function handleStepChange() {
     if (value == undefined) {
       step = undefined;
-    } else if (step === total && value === undefined) {
-      step = total;
     } else {
       step = value;
     }
@@ -68,10 +66,8 @@
 
 <div class="scroll-section matt-scroll">
   <div class="sticky" style="max-height:{viewportHeight - 200}px;">
-    {#if stepCounts}
       <Overview bind:value data={clusterData} {viewportHeight} {viewportWidth} {step} {curFactid} {items} sorted_article_ids={sorted_article_ids}
         ></Overview>
-    {/if}
   </div>
 
   <div class="steps">

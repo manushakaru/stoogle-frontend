@@ -56,9 +56,9 @@
       .force("center", d3.forceCenter(width / 2, height / 2))
       .force("collide", d3.forceCollide().strength(0.2).radius(d => d.radius + 80))
       .force("charge", d3.forceManyBody().strength(5)) 
-      // .force("boundary", boundaryForce)
-      .force("x", d3.forceX(width / 2).strength(0.1))
-      .force("y", d3.forceY(height / 2).strength(0.1))
+      .force("boundary", boundaryForce)
+      // .force("x", d3.forceX(width / 2).strength(0.1))
+      // .force("y", d3.forceY(height / 2).strength(0.1))
       .on("tick", () => circles = [...circles]);
 
     document.addEventListener('click', handleOutsideClick);
