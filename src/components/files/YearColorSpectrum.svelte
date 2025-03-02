@@ -18,13 +18,16 @@
     "#00BCD4", // Cyan
   ];
 
+  const customBlueRange = [ "#08c1d2", "#08d283", "#75d208", "#90d208"];
+
   $: {
     if (years && years.earliest && years.latest) {
       yearColors = [];
       const colorScale = d3
         .scaleSequential()
         .domain([parseInt(years.earliest), parseInt(years.latest)])
-        .range(materialColors);
+        .range(customBlueRange);
+        // .range(materialColors);
       // .interpolator(d3.interpolateHsl("#c1e079", "#1881d9"));
       // .interpolator(d3.interpolateViridis)
       // .interpolator(d3.interpolateHcl("#00FFFF", "#FFD700", "#FF1493"))
@@ -33,8 +36,6 @@
       for (let year = years.earliest; year <= years.latest; year++) {
         yearColors.push({ year, color: colorScale(year) });
       }
-
-      console.log("Colors:", yearColors);
     }
   }
 </script>

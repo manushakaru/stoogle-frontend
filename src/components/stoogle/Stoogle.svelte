@@ -1,14 +1,14 @@
 <script>
   import { DotLottieSvelte } from "@lottiefiles/dotlottie-svelte";
   import Popup from "$components/stoogle/Popup.svelte";
-  import analysisData from "$data/analysis-8.json";
+  import analysisData from "$data/analysis-9.json";
   import Section from "$components/stoogle/Section.svelte";
 
-  // export let searchQuery = "AI is a threat or not";
+  export let searchQuery = "AI is a threat or not";
   // export let searchQuery = "Americans and TikTok";
   // export let searchQuery = "Pros and cons of homeschooling statistics";
   // export let searchQuery = "Trends and stats on tiktok worldwide";
-  export let searchQuery = "Social Media and Technology statistics";
+  // export let searchQuery = "Social Media and Technology statistics";
   export let isSticky = false;
   export let isLoading = false;
   export let isPopupOpen = false;

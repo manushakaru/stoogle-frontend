@@ -191,7 +191,7 @@
   <g>
     <Belt {width} {height} {circles} {shared_articles} />
     {#each clusters as cluster (cluster.cluster_id)}
-      <Circle {width} {height} {cluster} {circles} {stats} {yearColors} action={circleAction} sorted_article_ids={sorted_article_ids} />
+      <Circle {width} {height} {cluster} {circles} {stats} {yearColors} action={circleAction} sorted_article_ids={sorted_article_ids}/>
     {/each}
   </g>
 </svg>

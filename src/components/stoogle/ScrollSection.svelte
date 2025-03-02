@@ -28,25 +28,27 @@
   allFacts = clusterData["all_merged_facts_in_order"];
   sorted_article_ids = clusterData["sorted_article_ids"];
 
-  // let stepCounts = [];
-  // let total = -1;
+  let stepCounts = [];
+  let total = -1;
 
-  // const getSteps = () => {
-  //   clusters.forEach((cluster) => {
-  //     console.log("f", cluster.facts);
-  //     const numFacts = cluster.number_of_facts;
-  //     total += numFacts;
-  //     stepCounts.push(total);
-  //   });
-  // };
+  const getSteps = () => {
+    clusters.forEach((cluster) => {
+      // console.log("f", cluster.facts);
+      const numFacts = cluster.number_of_facts;
+      total += numFacts;
+      stepCounts.push(total);
+    });
+  };
 
-  // getSteps();
+  getSteps();
 
   $: value, handleStepChange();
 
   function handleStepChange() {
-    if (value == undefined) {
-      step = undefined;
+    if (step == 0 && value == undefined) {
+      step = 0;
+    } else if (step === total && value === undefined) {
+      step = total;
     } else {
       step = value;
     }
@@ -59,7 +61,7 @@
     const currentFact = allFacts[value];
     if(currentFact) {
       curFactid = currentFact.merged_id;
-      console.log("Current fact:", curFactid);
+      // console.log("Current fact:", curFactid);
     }
   }
 </script>

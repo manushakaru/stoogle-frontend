@@ -9,29 +9,9 @@
   export let width, height;
   export let sorted_article_ids;
 
-  let factArc;
-  let yearMap;
-  let cumulativeAngle;
-  let anglePerFact;
-  let pathData = [];
-
-  function getFactYear(cluster) {
-    const yearMap = {};
-    cluster.all_fact_groups.forEach((fact_group) => {
-      console.log("fact group", fact_group);
-      let yearData = [];
-      fact_group.fact_group_articles.forEach((article) => {
-        yearData.push(parseInt(article.year));
-      });
-      // make either max or min year
-      const year = Math.max(...yearData);
-      if (!yearMap[year]) {
-        yearMap[year] = [];
-      }
-      yearMap[year].push({ id: fact_group.fact_group_id, data: fact_group });
-    });
-    return yearMap;
-  }
+  let circleData = [];
+  const smallCircleRadius = 6;
+  const padding = 3;
 
   function getColor(year) {
     let found = yearColors.find((entry) => entry.year == year);
@@ -41,52 +21,52 @@
   let isReady = false;
 
   $: if (cluster && stats && radius && yearColors && width && height) {
-    let nFact = cluster.number_of_fact_groups;
-    yearMap = getFactYear(cluster);
-    anglePerFact = Math.PI / nFact;
-    cumulativeAngle = Math.PI / 2;
+    let max_fact_groups = stats.max_fact_groups;
+    const anglePerFact = Math.PI / (max_fact_groups - 1);
+    circleData = [];
 
-    factArc = d3.arc().innerRadius(radius + 2);
-    // .outerRadius(radius + 22);
-    pathData = [];
-    Object.keys(yearMap).forEach((year) => {
-      yearMap[year].forEach((factdata) => {
-        const startAngle = cumulativeAngle;
-        const endAngle = cumulativeAngle + anglePerFact;
-        const outerRadius =
-          radius + 2 + 15 * factdata.data.number_of_similar_facts;
-        pathData.push({
-          startAngle,
-          endAngle,
-          outerRadius,
-          color: getColor(year),
-          fact: factdata,
-        });
-        cumulativeAngle = endAngle;
+    cluster.all_fact_groups.forEach((factGroup, i) =>{
+      let smallCircles = [];
+      const angle = i * anglePerFact;
+      factGroup.fact_group_facts.forEach((fact, j) =>{
+          const distance = radius + (j + 1) * (2 * smallCircleRadius + padding);
+          const x = distance * Math.cos(angle);
+          const y = distance * Math.sin(angle);
+          const article = fact.article;
+          smallCircles.push({
+            x,
+            y,
+            color: getColor(parseInt(article.year)),
+            fact: fact,
+          });
       });
-    });
 
+      const lastCircle = smallCircles[smallCircles.length - 1];
+      const lineData ={
+        x: lastCircle.x,
+        y: lastCircle.y,
+      }
+      circleData.push({
+        lineData: lineData,
+          smallCircleData: smallCircles,
+        });
+    })
     isReady = true;
   }
 
-  function tooltip(node, factGroup) {
-    const articlesHTML = factGroup.fact_group_articles
-      .sort((a, b) => Number(a.id) - Number(b.id))
-      .map(
-        (article) => `
-        <div class="article-circle">
-          <span>${sorted_article_ids[article.id]}</span>
-        </div>
-      `
-      )
-      .join("");
-
+  function tooltip(node, fact) {
     tippy(node, {
       content: `
       <div class="tooltip-content">
-        <p>${factGroup.fact_group_content}</p>
-        <div class="articles-container">${articlesHTML}</div>
-        <span class="fact-count">Similar Fact Count: ${factGroup.number_of_similar_facts}</span>
+       
+        <p>${fact.fact_content}</p>
+        <div class="articles-container">
+          <div class="article-circle">
+            <span>${sorted_article_ids[fact.fact_id.split("_")[0]]}</span>
+          </div>
+          <span class="fact-count" style="color:${getColor(fact.article.year)};">${fact.article.year}</span>
+        </div>
+       
       </div>
     `,
       allowHTML: true,
@@ -99,19 +79,26 @@
 </script>
 
 {#if isReady}
-  {#each pathData as { startAngle, endAngle, outerRadius, color, fact }}
-    <path
-      d={factArc
-        .outerRadius(outerRadius)
-        .startAngle(startAngle)
-        .endAngle(endAngle)()}
-      fill={color}
-      stroke="#292929"
-      stroke-width="1"
-      id={`fact${fact.id}`}
-      use:tooltip={fact.data}
-      style="cursor: pointer;"
-    />
+  {#each circleData as { lineData, smallCircleData }}
+      <line
+        x1={0}
+        y1={0}
+        x2={lineData.x}
+        y2={lineData.y}
+        stroke="#b8ccd6"
+        stroke-width="1"
+      />
+    {#each smallCircleData as { x, y, color, fact }}
+      <circle
+        cx={x}
+        cy={y}
+        r={smallCircleRadius}
+        fill={color}
+        id={`fact${fact.fact_id}`}
+        use:tooltip={fact}
+        style="cursor: pointer;"
+      />
+    {/each}
   {/each}
 {/if}
 
@@ -148,10 +135,21 @@
     line-height: 1.4;
   }
 
-  :global(.tooltip-content .fact-count) {
+  :global(.tooltip-content) {
     font-weight: bold;
     font-size: 0.85rem;
     color: #76c7c0;
+    text-align:justify
+  }
+
+  :global(.fact-count) {
+    font-weight: bold;
+    font-size: 0.85rem;
+    position: absolute; 
+    bottom: 0; right: 0; padding: 2px 6px; border-radius: 4px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    background-color:#1b2d3d;
   }
 
   :global(.articles-container) {
@@ -166,7 +164,7 @@
     width: 20px;
     height: 20px;
     border-radius: 9999px;
-    background-color: #60a5fa;
+    background-color: #394c5f;
     display: flex;
     align-items: center;
     justify-content: center;

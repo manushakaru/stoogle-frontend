@@ -3406,6 +3406,8 @@
         "total_merged_facts": 7,
         "total_fact_groups": 18,
         "total_original_facts": 19,
+        "max_original_facts": 5,
+        "max_fact_groups":6,
         "article_year_range": {
             "earliest": "2023",
             "latest": "2025"
