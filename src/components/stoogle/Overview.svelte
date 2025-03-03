@@ -189,7 +189,7 @@
 
 <svg id="visBack" {width} {height}>
   <g>
-    <Belt {width} {height} {circles} {shared_articles} />
+    <Belt {width} {height} {circles} {shared_articles} {yearColors}  {sorted_article_ids}/>
     {#each clusters as cluster (cluster.cluster_id)}
       <Circle {width} {height} {cluster} {circles} {stats} {yearColors} action={circleAction} sorted_article_ids={sorted_article_ids}/>
     {/each}

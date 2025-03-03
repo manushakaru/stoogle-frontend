@@ -25,32 +25,32 @@
     const anglePerFact = Math.PI / (max_fact_groups - 1);
     circleData = [];
 
-    cluster.all_fact_groups.forEach((factGroup, i) =>{
+    cluster.all_fact_groups.forEach((factGroup, i) => {
       let smallCircles = [];
       const angle = i * anglePerFact;
-      factGroup.fact_group_facts.forEach((fact, j) =>{
-          const distance = radius + (j + 1) * (2 * smallCircleRadius + padding);
-          const x = distance * Math.cos(angle);
-          const y = distance * Math.sin(angle);
-          const article = fact.article;
-          smallCircles.push({
-            x,
-            y,
-            color: getColor(parseInt(article.year)),
-            fact: fact,
-          });
+      factGroup.fact_group_facts.forEach((fact, j) => {
+        const distance = radius + (j + 1) * (2 * smallCircleRadius + padding);
+        const x = distance * Math.cos(angle);
+        const y = distance * Math.sin(angle);
+        const article = fact.article;
+        smallCircles.push({
+          x,
+          y,
+          color: getColor(parseInt(article.year)),
+          fact: fact,
+        });
       });
 
       const lastCircle = smallCircles[smallCircles.length - 1];
-      const lineData ={
+      const lineData = {
         x: lastCircle.x,
         y: lastCircle.y,
-      }
+      };
       circleData.push({
         lineData: lineData,
-          smallCircleData: smallCircles,
-        });
-    })
+        smallCircleData: smallCircles,
+      });
+    });
     isReady = true;
   }
 
@@ -62,34 +62,38 @@
         <div class="articles-container">
           <div >
             <a target="_blank" href="${fact.article.url}"  >
-              <div class="article-circle">${sorted_article_ids[fact.fact_id.split("_")[0]]}</div>
+              <div class="article-circle">${
+                sorted_article_ids[fact.fact_id.split("_")[0]]
+              }</div>
               </a>
           </div>
-          <span class="fact-count" style="color:${getColor(fact.article.year)};">${fact.article.year}</span>
+          <span class="fact-count" style="color:${getColor(
+            fact.article.year
+          )};">${fact.article.year}</span>
         </div>
       </div>
     `,
       allowHTML: true,
       theme: "custom",
-      animation: 'scale',
+      animation: false,
       delay: [0, 0],
       interactive: true,
       placement: "top",
-      appendTo: () => document.body
+      appendTo: () => document.body,
     });
   }
 </script>
 
 {#if isReady}
   {#each circleData as { lineData, smallCircleData }}
-      <line
-        x1={0}
-        y1={0}
-        x2={lineData.x}
-        y2={lineData.y}
-        stroke="#b8ccd6"
-        stroke-width="1"
-      />
+    <line
+      x1={0}
+      y1={0}
+      x2={lineData.x}
+      y2={lineData.y}
+      stroke="#b8ccd6"
+      stroke-width="1"
+    />
     {#each smallCircleData as { x, y, color, fact }}
       <circle
         cx={x}
@@ -127,12 +131,6 @@
     z-index: 1000;
   }
 
-  :global(.tooltip-content h4) {
-    margin: 0;
-    font-size: 1rem;
-    color: #ff6f61;
-  }
-
   :global(.tooltip-content p) {
     margin: 0;
     line-height: 1.4;
@@ -142,17 +140,20 @@
     font-weight: bold;
     font-size: 0.85rem;
     color: #76c7c0;
-    text-align:justify
+    text-align: justify;
   }
 
   :global(.fact-count) {
     font-weight: bold;
     font-size: 0.85rem;
-    position: absolute; 
-    bottom: 0; right: 0; padding: 2px 6px; border-radius: 4px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 2px 6px;
+    border-radius: 4px;
     margin-bottom: 15px;
     margin-right: 10px;
-    background-color:#1b2d3d;
+    background-color: #1b2d3d;
   }
 
   :global(.articles-container) {
