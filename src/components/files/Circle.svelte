@@ -45,7 +45,6 @@
       totArticle = stats.total_articles;
       radius = 100;
       radius_inner = radiusScale(nFact);
-      console.log("radius_inner", radius_inner);
       color = "#1a2e3c";
       usedPercentageArticle = cluster.number_of_articles / totArticle;
 

@@ -58,22 +58,22 @@
     tippy(node, {
       content: `
       <div class="tooltip-content">
-       
         <p>${fact.fact_content}</p>
         <div class="articles-container">
           <div class="article-circle">
-            <span>${sorted_article_ids[fact.fact_id.split("_")[0]]}</span>
+            <a target="_blank" href="${fact.article.url}"  >${sorted_article_ids[fact.fact_id.split("_")[0]]}</a>
           </div>
           <span class="fact-count" style="color:${getColor(fact.article.year)};">${fact.article.year}</span>
         </div>
-       
       </div>
     `,
       allowHTML: true,
       theme: "custom",
-      animation: "scale",
+      animation: 'scale',
       delay: [0, 0],
+      interactive: true,
       placement: "top",
+      appendTo: () => document.body
     });
   }
 </script>
@@ -122,6 +122,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    z-index: 1000;
   }
 
   :global(.tooltip-content h4) {
