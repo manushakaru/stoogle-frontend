@@ -55,7 +55,7 @@
       {#each merged_articles as article }
       <a  href={article.url} target="_blank" style="color: #000000;">
         <div
-          class="inline-flex items-center justify-center w-5 h-5 bg-blue-400 text-white rounded-full text-xs"
+          class="inline-flex items-center justify-center w-5 h-5 bg-[#394c5f] text-[#adb2eb] rounded-full text-xs font-semibold"
         >
             {sorted_article_ids[article.id]}
         </div>

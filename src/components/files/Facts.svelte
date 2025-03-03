@@ -60,8 +60,10 @@
       <div class="tooltip-content">
         <p>${fact.fact_content}</p>
         <div class="articles-container">
-          <div class="article-circle">
-            <a target="_blank" href="${fact.article.url}"  >${sorted_article_ids[fact.fact_id.split("_")[0]]}</a>
+          <div >
+            <a target="_blank" href="${fact.article.url}"  >
+              <div class="article-circle">${sorted_article_ids[fact.fact_id.split("_")[0]]}</div>
+              </a>
           </div>
           <span class="fact-count" style="color:${getColor(fact.article.year)};">${fact.article.year}</span>
         </div>
@@ -169,8 +171,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #adb2eb;
     font-size: 0.75rem;
+    font-weight: 600;
     line-height: 1rem;
     text-decoration: none;
     cursor: pointer;
