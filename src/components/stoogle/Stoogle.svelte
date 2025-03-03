@@ -1,7 +1,7 @@
 <script>
   import { DotLottieSvelte } from "@lottiefiles/dotlottie-svelte";
   import Popup from "$components/stoogle/Popup.svelte";
-  import analysisData from "$data/analysis-9.json";
+  import analysisData from "$data/samples/AI_is_a_threat_or_not_2.json";
   import analysisData1 from "$data/samples/pros_cons_homeschooling_2.json";
   import analysisData2 from "$data/samples/pros_cons_homeschooling_2.json";
   import analysisData3 from "$data/samples/pros_cons_homeschooling_2.json";
