@@ -2,13 +2,13 @@
   import { DotLottieSvelte } from "@lottiefiles/dotlottie-svelte";
   import Popup from "$components/stoogle/Popup.svelte";
   import analysisData from "$data/analysis-9.json";
+  import analysisData1 from "$data/samples/pros_cons_homeschooling_2.json";
+  import analysisData2 from "$data/samples/pros_cons_homeschooling_2.json";
+  import analysisData3 from "$data/samples/pros_cons_homeschooling_2.json";
+  import analysisData4 from "$data/samples/pros_cons_homeschooling_2.json";
   import Section from "$components/stoogle/Section.svelte";
 
   export let searchQuery = "AI is a threat or not";
-  // export let searchQuery = "Americans and TikTok";
-  // export let searchQuery = "Pros and cons of homeschooling statistics";
-  // export let searchQuery = "Trends and stats on tiktok worldwide";
-  // export let searchQuery = "Social Media and Technology statistics";
   export let isSticky = false;
   export let isLoading = false;
   export let isPopupOpen = false;
@@ -20,9 +20,33 @@
   export let sharedArticles = [];
   export let sharedFacts = [];
   export let stats = {};
+  export let errorMessage = null;
 
   export let viewportHeight;
   export let viewportWidth;
+
+  const exampleQueries = [
+    {
+      query: "AI is a threat or not",
+      data: analysisData,
+    },
+    {
+      query: "Americans and TikTok",
+      data: analysisData2,
+    },
+    {
+      query: "Pros and cons of homeschooling statistics",
+      data: analysisData1,
+    },
+    {
+      query: "Trends and stats on tiktok worldwide",
+      data: analysisData3,
+    },
+    {
+      query: "Social Media and Technology statistics",
+      data: analysisData4,
+    },
+  ];
 
   const togglePopup = () => {
     isPopupOpen = !isPopupOpen;
@@ -31,13 +55,26 @@
   const handlePopupSubmit = (web_, pageCount_) => {
     web = web_;
     pageCount = pageCount_;
-    console.log("Web:", web);
-    console.log("Page Count:", pageCount);
     isPopupOpen = false;
   };
 
+  const validateDataStructure = (data) => {
+    if (!data || !data.clusters || !data.stats) {
+      throw new Error("Invalid data structure received from API");
+    }
+  };
+
+  const resetState = () => {
+    clusterData = {};
+    clusters = [];
+    sharedArticles = [];
+    sharedFacts = [];
+    stats = {};
+    isDataLoading = false;
+    errorMessage = null;
+  };
+
   const stepHandler = (step) => {
-    console.log("step handler: ", step);
     return step;
   };
 
@@ -46,29 +83,32 @@
     e.preventDefault();
     isSticky = true;
     isLoading = true;
+    resetState();
+
     try {
-      //   const response = await fetch(`http://127.0.0.1:8000/storyfile`);
       const response = await fetch(
         `http://127.0.0.1:8000/stories?query=${encodeURIComponent(
           searchQuery
         )}&web=${encodeURIComponent(web)}&page_count=${pageCount}`
       );
+
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      const data = await response.json(); // Parse JSON response
+
+      const data = await response.json();
+      validateDataStructure(data);
+
+      // Update all reactive states
+      clusterData = data;
+      clusters = data.clusters;
+      sharedArticles = data.shared_articles;
+      sharedFacts = data.shared_facts;
+      stats = data.stats;
       isDataLoading = true;
-      clusterData = { ...data };
-    clusters = [...clusterData['clusters']];
-    sharedArticles = [...clusterData['shared_articles']];
-    sharedFacts = [...clusterData['shared_facts']];
-    stats = { ...clusterData['stats'] };
-      console.log("is loading", isDataLoading);
-      console.log("clusterData:", clusterData);
-      // htmlContent = data;
-  //   htmlContent = await response.text();
     } catch (error) {
-      console.error("Error fetching HTML:", error);
+      errorMessage = error.message;
+      console.error("Fetch Error:", error);
     } finally {
       isLoading = false;
     }
@@ -78,25 +118,29 @@
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
-  // Get Dummy data
-  // const handleSearch = async (e) => {
-  //   e.preventDefault();
-  //   isSticky = true;
-  //   isLoading = true;
-  //   try {
-  //     // await wait(5000);
-  //     isDataLoading = true;
-  //     clusterData = analysisData;
-  //     clusters = clusterData["clusters"];
-  //     sharedArticles = clusterData["shared_articles"];
-  //     sharedFacts = clusterData["shared_facts"];
-  //     stats = clusterData["stats"];
-  //   } catch (error) {
-  //     console.error("Error fetching HTML:", error);
-  //   } finally {
-  //     isLoading = false;
-  //   }
-  // };
+  const loadExampleData = async (selectedExample) => {
+    searchQuery = selectedExample.query;
+    isSticky = true;
+    isLoading = true;
+    resetState();
+    try {
+      const exampleData = selectedExample.data;
+      validateDataStructure(exampleData);
+
+      setTimeout(() => {
+        clusterData = exampleData;
+        clusters = exampleData.clusters;
+        sharedArticles = exampleData.shared_articles;
+        sharedFacts = exampleData.shared_facts;
+        stats = exampleData.stats;
+        isDataLoading = true;
+        isLoading = false;
+      }, 500);
+    } catch (error) {
+      errorMessage = `Failed to load example: ${error.message}`;
+      isLoading = false;
+    }
+  };
 </script>
 
 <div class={isSticky ? "" : "mainPage"}>
@@ -133,10 +177,41 @@
         >Search</button
       >
     </div>
+    {#if !isSticky}
+      <div
+        class="flex pt-4 flex-wrap gap-2 mt-5 justify-center overflow-x-auto"
+      >
+        {#each exampleQueries as example}
+          <div
+            class="bg-gray-100 text-gray-600 px-4 py-2 rounded-full text-sm cursor-pointer
+                 transition-all hover:bg-gray-200 hover:-translate-y-1 active:translate-y-0
+                 border border-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-700
+                 dark:hover:bg-gray-700"
+            on:click={() => loadExampleData(example)}
+          >
+            {example.query}
+          </div>
+        {/each}
+      </div>
+    {/if}
   </form>
 
-  
-  {#if isLoading}
+  {#if errorMessage}
+    <div
+      class="fixed inset-0 bg-red-100/90 flex flex-col items-center justify-center z-50 p-4"
+    >
+      <div class="bg-red-500 text-white p-6 rounded-lg max-w-2xl text-center">
+        <h2 class="text-2xl font-bold mb-4">Error Loading Data</h2>
+        <p class="mb-4">{errorMessage}</p>
+        <button
+          class="bg-white text-red-600 px-4 py-2 rounded hover:bg-red-50 transition-colors"
+          on:click={() => (errorMessage = null)}
+        >
+          Try Again
+        </button>
+      </div>
+    </div>
+  {:else if isLoading}
     <div class="lottie-container">
       <DotLottieSvelte src="/assets/stoogle/searching.lottie" loop autoplay />
     </div>
