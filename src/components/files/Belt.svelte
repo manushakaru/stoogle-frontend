@@ -46,6 +46,7 @@
     .y((d) => d.y);
 
   function tooltip(node, articles) {
+    articles = d3.sort(articles, (a, b) => d3.ascending(a.year, b.year));
     tippy(node, {
       content: `
       <div class="tooltip-content">
@@ -104,7 +105,7 @@
 
   .tooltip-topic {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.85rem;
     margin-bottom: 10px;
     text-align: center;
     color: #adb2eb;
@@ -135,7 +136,7 @@
   }
 
   :global(.article-title) {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     margin-bottom: 8px !important;
     color: #d1e0eb;
   }

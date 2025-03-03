@@ -29,6 +29,7 @@
     return circles.find((circle) => circle.id === clusterId);
   }
 
+
   const radiusScale = d3
     .scaleLinear()
     .domain([1, stats.max_original_facts]) // max number of original facts
@@ -76,9 +77,48 @@
     }
   }
 
-  function tooltip(node, textHere) {
+  function getColor(year) {
+    let found = yearColors.find((entry) => entry.year == year);
+    return found ? found.color : "#d21890";
+  }
+
+
+  function tooltip(node, articles) {
+    articles = d3.sort(articles, (a, b) => d3.ascending(a.year, b.year));
     tippy(node, {
-      content: textHere,
+      content: `
+      <div class="tooltip-content">
+        <div class="tooltip-topic" style="color:#adb2eb">Related Articles: ${articles.length}/${stats.total_articles}</div>
+         ${articles
+           .map(
+             (article) => `
+        <div class="article-card">
+          <p class="article-title">${article.title}</p>
+          <div class="article-content_">
+            <a target="_blank" href="${
+              article.url
+            }" style="text-decoration: none; color:#1a2633" >
+              <div class="article-circle">${
+                sorted_article_ids[article.id]
+              }</div>
+            </a>
+            <span class="fact-count_" style="color:${getColor(article.year)};">${
+              article.year
+            }</span>
+          </div>
+        </div>
+         `
+           )
+           .join("")}
+      </div>
+    `,
+      allowHTML: true,
+      theme: "custom",
+      animation: false,
+      delay: [0, 0],
+      interactive: true,
+      placement: "top",
+      appendTo: () => document.body,
     });
   }
 </script>
@@ -124,7 +164,7 @@
         style="cursor: pointer;"
         d={usedArc()}
         fill="#b785ff"
-        use:tooltip={`Number of Related Articles: ${cluster.number_of_articles} out of ${totArticle}`}
+        use:tooltip={cluster.articles}
       />
 
       <path

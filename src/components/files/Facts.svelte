@@ -140,7 +140,7 @@
     font-weight: bold;
     font-size: 0.85rem;
     color: #76c7c0;
-    text-align: justify;
+    /* text-align: justify; */
   }
 
   :global(.fact-count) {
