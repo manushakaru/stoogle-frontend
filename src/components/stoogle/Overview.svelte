@@ -149,7 +149,6 @@
   }
 
   function stepZoom(step) {
-    console.log("step", step);
     if (step === undefined) {
       resetZoom();
       return;
@@ -196,11 +195,10 @@
   }
 
   const jumpToItem = (index) => {
-    console.log("item", items.length);
     if (items[index]) {
       items[index].scrollIntoView({
         behavior: "smooth",
-        block: "start",
+        block: "center",
         inline: "nearest",
       });
     }
