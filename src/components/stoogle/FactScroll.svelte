@@ -18,11 +18,11 @@
     {@const last = i == facts.length - 1 ? true : false}
     {@const first = i == 0 ? true : false}
     <div bind:this={items[i]} class="vis-card" class:active class:last class:first>
-      {#if fact.vis_recommendation === "text"}
+      <!-- {#if fact.vis_recommendation === "text"}
         <TextCard  fact={fact} sorted_article_ids={sorted_article_ids} />
-      {:else}
+      {:else} -->
         <VisCard fact={fact} sorted_article_ids={sorted_article_ids}></VisCard>
-      {/if}
+      <!-- {/if} -->
     </div>
   {/each}
 </Scrolly>

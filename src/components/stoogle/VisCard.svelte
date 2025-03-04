@@ -7,14 +7,17 @@
   export let fact = {};
   export let sorted_article_ids;
 
-  let visRecommendation = fact.vis_recommendation;
   let titles = fact.titles;
   let chartTitle = titles.chart_title;
   let axisXTitle = titles.x_axis;
   let axisYTitle = titles.y_axis;
   let visData = fact.vis_data;
   let narrative = fact.narrative;
-  let merged_articles = fact.merged_articles.sort((a, b) => Number(a.id) - Number(b.id));
+  let merged_articles = fact.merged_articles.sort(
+    (a, b) => Number(a.id) - Number(b.id)
+  );
+  let visRecommendation = visData.length > 1 ? fact.vis_recommendation : "text";
+  let dataVlue = visData[0];
 </script>
 
 <!-- To remove border - dark:border-slate-500 and border-4 -->
@@ -27,14 +30,11 @@
   >
     {chartTitle}
   </div>
-  <div class="flex items-center bottom-2">
+  <div class="flex items-center justify-center bottom-2">
     <div class="w-1/2">
       <div
-        class="chart-wrapper"
-        style="
-    width: 400px;
-    height: 250px;
-"
+        class="chart-wrapper flex items-center justify-center"
+        style="width: 300px; height: 250px;"
       >
         {#if visRecommendation === "pie"}
           <Doughnut inputData={visData} />
@@ -44,6 +44,17 @@
           <Line inputData={visData} {axisXTitle} {axisYTitle} />
         {:else if visRecommendation === "isotype"}
           <Isotype inputData={visData}></Isotype>
+        {:else}
+          <div
+            class="flex flex-col items-center w-full max-w-[300px] justify-center h-full"
+          >
+            <p
+              class="text-5xl sm:text-4xl md:text-7xl w-full font-bold text-[{dataVlue.color}] max-w-[300px] pl-7"
+            >
+              {dataVlue.value}
+              {dataVlue.unit}
+            </p>
+          </div>
         {/if}
       </div>
     </div>
@@ -52,16 +63,15 @@
       <p class="text-lg inline pb-3">
         {@html narrative}
       </p>
-      {#each merged_articles as article }
-      <a  href={article.url} target="_blank" style="color: #000000;">
-        <div
-          class="inline-flex items-center justify-center w-5 h-5 bg-[#394c5f] text-[#adb2eb] rounded-full text-xs font-semibold"
-        >
+      {#each merged_articles as article}
+        <a href={article.url} target="_blank" style="color: #000000;">
+          <div
+            class="inline-flex items-center justify-center w-5 h-5 bg-[#394c5f] text-[#adb2eb] rounded-full text-xs font-semibold"
+          >
             {sorted_article_ids[article.id]}
-        </div>
-      </a>
+          </div>
+        </a>
       {/each}
-     
     </div>
   </div>
 </div>
