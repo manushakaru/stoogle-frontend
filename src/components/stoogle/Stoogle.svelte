@@ -2,6 +2,7 @@
   import { DotLottieSvelte } from "@lottiefiles/dotlottie-svelte";
   import Popup from "$components/stoogle/Popup.svelte";
   import analysisData from "$data/samples/AI_is_a_threat_or_not_2.json";
+  import analysisData5 from "$data/samples/AI_is_a_threat_or_not_pew_research.json";
   import analysisData1 from "$data/samples/pros_cons_homeschooling_2.json";
   import analysisData2 from "$data/samples/pros_cons_homeschooling_2.json";
   import analysisData3 from "$data/samples/pros_cons_homeschooling_2.json";
@@ -28,7 +29,7 @@
   const exampleQueries = [
     {
       query: "AI is a threat or not",
-      data: analysisData,
+      data: analysisData5,
     },
     {
       query: "Americans and TikTok",

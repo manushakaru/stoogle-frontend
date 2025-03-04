@@ -40,7 +40,13 @@
 
     const activeFactGroupIds = getActiveFactGroupIds(cluster, curMergedId);
 
-    cluster.all_fact_groups.forEach((factGroup, i) => {
+    cluster.all_fact_groups
+    .sort((a, b) => {
+    const maxYearA = Math.max(...a.fact_group_facts.map(f => parseInt(f.article.year)));
+    const maxYearB = Math.max(...b.fact_group_facts.map(f => parseInt(f.article.year)));
+    return maxYearA - maxYearB;
+  })
+    .forEach((factGroup, i) => {
       const factGroupId = factGroup.fact_group_id;
       const isActive = activeFactGroupIds?.includes(factGroupId) ?? false;
       let smallCircles = [];
@@ -64,6 +70,7 @@
         x: lastCircle.x,
         y: lastCircle.y,
       };
+
       circleData.push({
         lineData: lineData,
         smallCircleData: smallCircles,
