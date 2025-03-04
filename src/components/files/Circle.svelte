@@ -2,7 +2,7 @@
   import * as d3 from "d3";
   import Facts from "$components/files/Facts.svelte";
   import Title from "$components/files/Title.svelte";
-  import tippy from "tippy.js";
+  import tippy, { followCursor } from "tippy.js";
 
   export let circles;
   export let cluster;
@@ -12,6 +12,7 @@
   export let yearColors;
   export let action;
   export let sorted_article_ids;
+  export let curMergedId;
 
   let circle;
   let radius;
@@ -29,14 +30,13 @@
     return circles.find((circle) => circle.id === clusterId);
   }
 
-
   const radiusScale = d3
     .scaleLinear()
     .domain([1, stats.max_original_facts]) // max number of original facts
     .range([5, 60]); // Output range (radius size)
 
   let isReady = false;
-  let wordCloud; 
+  let wordCloud;
 
   $: if (circles && cluster && width && height && stats && yearColors) {
     wordCloud = cluster.word_cloud;
@@ -82,13 +82,14 @@
     return found ? found.color : "#d21890";
   }
 
-
   function tooltip(node, articles) {
     articles = d3.sort(articles, (a, b) => d3.ascending(a.year, b.year));
     tippy(node, {
       content: `
       <div class="tooltip-content">
-        <div class="tooltip-topic" style="color:#adb2eb">Related Articles: ${articles.length}/${stats.total_articles}</div>
+        <div class="tooltip-topic" style="color:#adb2eb">Related Articles: ${
+          articles.length
+        }/${stats.total_articles}</div>
          ${articles
            .map(
              (article) => `
@@ -102,9 +103,9 @@
                 sorted_article_ids[article.id]
               }</div>
             </a>
-            <span class="fact-count_" style="color:${getColor(article.year)};">${
+            <span class="fact-count_" style="color:${getColor(
               article.year
-            }</span>
+            )};">${article.year}</span>
           </div>
         </div>
          `
@@ -116,8 +117,10 @@
       theme: "custom",
       animation: false,
       delay: [0, 0],
+      followCursor: true,
       interactive: true,
       placement: "top",
+      plugins: [followCursor],
       appendTo: () => document.body,
     });
   }
@@ -138,6 +141,7 @@
         {width}
         {height}
         {sorted_article_ids}
+        {curMergedId}
       />
 
       <circle
@@ -228,7 +232,6 @@
 
     stroke: #b8ccd6;
     stroke-width: 1px;
-
   }
 
   .ring-element {

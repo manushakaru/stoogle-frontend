@@ -8,14 +8,27 @@
   export let yearColors;
   export let width, height;
   export let sorted_article_ids;
+  export let curMergedId;
 
   let circleData = [];
   const smallCircleRadius = 6;
-  const padding = 3;
+  const padding = 5;
 
   function getColor(year) {
     let found = yearColors.find((entry) => entry.year == year);
     return found ? found.color : "#d21890";
+  }
+
+  function getActiveFactGroupIds(cluster, curMergedId) {
+    const mergedFact = cluster.merged_facts.find((mergedFact) => {
+      return mergedFact.merged_id === curMergedId;
+    });
+
+    if (mergedFact) {
+      return mergedFact.merged_fact_group_ids;
+    }
+
+    return null;
   }
 
   let isReady = false;
@@ -25,7 +38,11 @@
     const anglePerFact = Math.PI / (max_fact_groups - 1);
     circleData = [];
 
+    const activeFactGroupIds = getActiveFactGroupIds(cluster, curMergedId);
+
     cluster.all_fact_groups.forEach((factGroup, i) => {
+      const factGroupId = factGroup.fact_group_id;
+      const isActive = activeFactGroupIds?.includes(factGroupId) ?? false;
       let smallCircles = [];
       const angle = i * anglePerFact;
       factGroup.fact_group_facts.forEach((fact, j) => {
@@ -38,6 +55,7 @@
           y,
           color: getColor(parseInt(article.year)),
           fact: fact,
+          isActive: isActive,
         });
       });
 
@@ -94,7 +112,18 @@
       stroke="#b8ccd6"
       stroke-width="1"
     />
-    {#each smallCircleData as { x, y, color, fact }}
+    {#each smallCircleData as { x, y, color, fact, isActive }}
+      {#if isActive}
+        <circle
+          cx={x}
+          cy={y}
+          r={smallCircleRadius + 2}
+          fill="#ecf9ff"
+          id={`fact${fact.fact_id}`}
+          use:tooltip={fact}
+          style="cursor: pointer;"
+        />
+      {/if}
       <circle
         cx={x}
         cy={y}

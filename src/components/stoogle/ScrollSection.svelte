@@ -18,7 +18,7 @@
   let value;
   let newValues;
   let step;
-  let curFactid;
+  let curMergedId;
   let sorted_article_ids;
 
   clusters = clusterData["clusters"];
@@ -59,21 +59,34 @@
     if (allFacts === undefined) return;
     value = newValue;
     const currentFact = allFacts[value];
-    if(currentFact) {
-      curFactid = currentFact.merged_id;
-      // console.log("Current fact:", curFactid);
+    if (currentFact) {
+      curMergedId = currentFact.merged_id;
     }
   }
 </script>
 
 <div class="scroll-section matt-scroll">
   <div class="sticky" style="max-height:{viewportHeight - 200}px;">
-      <Overview bind:value data={clusterData} {viewportHeight} {viewportWidth} {step} {curFactid} {items} sorted_article_ids={sorted_article_ids}
-        ></Overview>
+    <Overview
+      bind:value
+      data={clusterData}
+      {viewportHeight}
+      {viewportWidth}
+      {step}
+      {curMergedId}
+      {items}
+      {sorted_article_ids}
+    ></Overview>
   </div>
 
   <div class="steps">
-    <FactScroll bind:value items={items} facts={allFacts} sorted_article_ids={sorted_article_ids} onFactChange={handleFactChange} />
+    <FactScroll
+      bind:value
+      {items}
+      facts={allFacts}
+      {sorted_article_ids}
+      onFactChange={handleFactChange}
+    />
   </div>
 </div>
 

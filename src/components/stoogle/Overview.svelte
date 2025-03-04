@@ -9,7 +9,7 @@
   export let viewportHeight;
   export let viewportWidth;
   export let step;
-  export let curFactid;
+  export let curMergedId;
   export let value;
   export let items = [];
   export let sorted_article_ids;
@@ -27,9 +27,9 @@
   let circles = [];
   let yearColors = [];
   let simulation;
-  
+
   const boundaryForce = (alpha) => {
-    circles.forEach(d => {
+    circles.forEach((d) => {
       const xMin = 0 + d.radius + 40;
       const xMax = width - d.radius - 40;
       const yMin = 0 + d.radius + 80;
@@ -41,39 +41,48 @@
       if (d.y > yMax) d.y = yMax;
     });
   };
-  
+
   onMount(() => {
     if (!clusters.length) return;
-
     circles = clusters.map((cluster) => ({
       id: cluster.cluster_id,
       x: (0.2 + Math.random() * (0.8 - 0.2)) * width,
       y: (0.2 + Math.random() * (0.8 - 0.2)) * height,
-      radius: Math.max(40 + cluster.number_of_fact_groups, cluster.number_of_fact_groups * 4),
+      radius: Math.max(
+        40 + cluster.number_of_fact_groups,
+        cluster.number_of_fact_groups * 4
+      ),
     }));
 
-    simulation = d3.forceSimulation(circles)
+    simulation = d3
+      .forceSimulation(circles)
       .force("center", d3.forceCenter(width / 2, height / 2))
-      .force("collide", d3.forceCollide().strength(0.2).radius(d => d.radius + 80))
-      .force("charge", d3.forceManyBody().strength(5)) 
+      .force(
+        "collide",
+        d3
+          .forceCollide()
+          .strength(0.2)
+          .radius((d) => d.radius + 80)
+      )
+      .force("charge", d3.forceManyBody().strength(5))
       .force("boundary", boundaryForce)
       // .force("x", d3.forceX(width / 2).strength(0.1))
       // .force("y", d3.forceY(height / 2).strength(0.1))
-      .on("tick", () => circles = [...circles]);
+      .on("tick", () => (circles = [...circles]));
 
-    document.addEventListener('click', handleOutsideClick);
-    document.addEventListener('click', handleCircleClick);
+    document.addEventListener("click", handleOutsideClick);
+    document.addEventListener("click", handleCircleClick);
   });
 
   onDestroy(() => {
-    document.removeEventListener('click', handleOutsideClick);
+    document.removeEventListener("click", handleOutsideClick);
   });
 
-  function handleCircleClick(event){
+  function handleCircleClick(event) {
     const groupElement = event.target.closest('g[id^="circle-"]');
     if (groupElement) {
-      const groupId = Number(groupElement.id.replace('circle-', ''));
-      const found = steps.find(step => step.cluster_id === groupId);
+      const groupId = Number(groupElement.id.replace("circle-", ""));
+      const found = steps.find((step) => step.cluster_id === groupId);
 
       if (found) {
         value = found.start_step;
@@ -89,29 +98,34 @@
     }
   }
 
-
   function resetZoom() {
     const initialTranslation = { x: width / 2, y: height / 2, scale: 1 };
     d3.select("#visBack g")
       .transition()
       .duration(800)
-      .attr("transform", `translate(${initialTranslation.x - width / 2}, ${initialTranslation.y - height / 2 + 40}) scale(${initialTranslation.scale})`);
+      .attr(
+        "transform",
+        `translate(${initialTranslation.x - width / 2}, ${
+          initialTranslation.y - height / 2 + 40
+        }) scale(${initialTranslation.scale})`
+      );
   }
 
   function circleAction(node) {
-    const circleId = Number(node.id.split("-")[1]); 
-    const circle = circles.find(c => c.id === circleId); 
-    
+    const circleId = Number(node.id.split("-")[1]);
+    const circle = circles.find((c) => c.id === circleId);
+
     if (!circle) {
       console.error("Circle not found:", circleId);
       return;
     }
 
     d3.select(node).call(
-      d3.drag()
-        .on("start", event => dragStarted(event, circle))
-        .on("drag", event => dragged(event, circle))
-        .on("end", event => dragEnded(event, circle))
+      d3
+        .drag()
+        .on("start", (event) => dragStarted(event, circle))
+        .on("drag", (event) => dragged(event, circle))
+        .on("end", (event) => dragEnded(event, circle))
     );
   }
 
@@ -119,44 +133,47 @@
     console.log("Drag started:", d.id);
 
     if (!event.active) simulation.alphaTarget(0.3).restart();
-    d.fx = event.x; 
+    d.fx = event.x;
     d.fy = event.y;
   }
 
   function dragged(event, d) {
-    d.fx = event.x; 
+    d.fx = event.x;
     d.fy = event.y;
   }
 
   function dragEnded(event, d) {
     if (!event.active) simulation.alphaTarget(0);
-    d.fx = null; 
+    d.fx = null;
     d.fy = null;
   }
 
   function stepZoom(step) {
-
     if (step === undefined) {
-      resetZoom(); 
+      resetZoom();
       return;
     }
-    
+
     let id = null;
     for (let i = 0; i < steps.length; i++) {
       let { cluster_id, start_step, end_step } = steps[i];
 
       if (step >= start_step && step <= end_step) {
-        id = cluster_id; 
+        id = cluster_id;
       }
     }
     if (id !== null) {
       for (let i = 0; i < circles.length; i++) {
         if (circles[i].id === id) {
-          return { x: circles[i].x, y: circles[i].y, scale: height * 0.7 / (2 * circles[i].radius + 100)/ 1.5 };  
+          return {
+            x: circles[i].x,
+            y: circles[i].y,
+            scale: (height * 0.7) / (2 * circles[i].radius + 100) / 1.5,
+          };
         }
       }
     }
-    return {x: width/2, y: height/2, scale: 1};
+    return { x: width / 2, y: height / 2, scale: 1 };
   }
 
   $: {
@@ -165,33 +182,52 @@
       const { x, y, scale } = translation;
       d3.select("#visBack g")
         .transition()
-        .duration(800) 
-        .attr("transform", `translate(${-x * scale +  4 * width / 6}, ${ - y * scale + height / 2 + 40}) scale(${scale})`);
+        .duration(800)
+        .attr(
+          "transform",
+          `translate(${-x * scale + (4 * width) / 6}, ${
+            -y * scale + height / 2 + 40
+          }) scale(${scale})`
+        );
     }
-
   }
 
-
   const jumpToItem = (index) => {
-    console.log("item", items.length)
-      if (items[index]) {
-          items[index].scrollIntoView({
-              behavior: 'smooth',
-              block: 'start',
-              inline: 'nearest'
-          });
-      }
+    console.log("item", items.length);
+    if (items[index]) {
+      items[index].scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    }
   };
-
 </script>
 
-<YearColor {years} {stats}  bind:yearColors />
+<YearColor {years} {stats} bind:yearColors />
 
 <svg id="visBack" {width} {height}>
   <g>
-    <Belt {width} {height} {circles} {shared_articles} {yearColors}  {sorted_article_ids}/>
+    <Belt
+      {width}
+      {height}
+      {circles}
+      {shared_articles}
+      {yearColors}
+      {sorted_article_ids}
+    />
     {#each clusters as cluster (cluster.cluster_id)}
-      <Circle {width} {height} {cluster} {circles} {stats} {yearColors} action={circleAction} sorted_article_ids={sorted_article_ids}/>
+      <Circle
+        {width}
+        {height}
+        {cluster}
+        {circles}
+        {stats}
+        {yearColors}
+        action={circleAction}
+        {sorted_article_ids}
+        {curMergedId}
+      />
     {/each}
   </g>
 </svg>

@@ -21,7 +21,6 @@
   }
 
   $: if (circles && width && height && shared_articles) {
-    console.log("shared_articles ", shared_articles);
     lineData = shared_articles
       .map((article) => {
         const startCircle = getCircleById(article.start_cluster);
@@ -64,9 +63,9 @@
                 sorted_article_ids[article.article_id]
               }</div>
             </a>
-            <span class="fact-count_" style="color:${getColor(article.year)};">${
+            <span class="fact-count_" style="color:${getColor(
               article.year
-            }</span>
+            )};">${article.year}</span>
           </div>
         </div>
          `
