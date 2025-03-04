@@ -168,7 +168,7 @@
           return {
             x: circles[i].x,
             y: circles[i].y,
-            scale: (height * 0.7) / (2 * circles[i].radius + 120) / 1.5,
+            scale: (height * 0.7) / (2 * circles[i].radius + 120) / 1.6, // 1.8 is the zoom factor
           };
         }
       }

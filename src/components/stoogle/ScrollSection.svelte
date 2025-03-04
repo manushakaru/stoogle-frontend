@@ -61,7 +61,6 @@
     curMergedId = undefined;
     if (currentFact) {
       curMergedId = currentFact.merged_id;
-      console.log("curMergedId", curMergedId);
     }
   }
 </script>
