@@ -67,7 +67,7 @@
 </script>
 
 <div class="scroll-section matt-scroll">
-  <div class="sticky" style="max-height:{viewportHeight - 200}px;">
+  <div class="sticky" style="max-height:{viewportHeight}px;">
     <Overview
       bind:value
       data={clusterData}

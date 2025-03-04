@@ -62,12 +62,12 @@
         d3
           .forceCollide()
           .strength(0.2)
-          .radius((d) => d.radius + 80)
+          .radius((d) => d.radius + 120)
       )
       .force("charge", d3.forceManyBody().strength(5))
-      .force("boundary", boundaryForce)
-      // .force("x", d3.forceX(width / 2).strength(0.1))
-      // .force("y", d3.forceY(height / 2).strength(0.1))
+      // .force("boundary", boundaryForce)
+      .force("x", d3.forceX(width / 2).strength(0.1))
+      .force("y", d3.forceY(height / 2).strength(0.1))
       .on("tick", () => (circles = [...circles]));
 
     document.addEventListener("click", handleOutsideClick);
@@ -169,7 +169,7 @@
           return {
             x: circles[i].x,
             y: circles[i].y,
-            scale: (height * 0.7) / (2 * circles[i].radius + 100) / 1.5,
+            scale: (height * 0.7) / (2 * circles[i].radius + 120) / 1.5,
           };
         }
       }
@@ -186,9 +186,11 @@
         .duration(800)
         .attr(
           "transform",
-          `translate(${-x * scale + (4 * width) / 6}, ${
+          `translate(${-x * scale + (4 * width) / 6 + 120}, ${
             -y * scale + height / 2 + 40
           }) scale(${scale})`
+           // change x : 120 for horizontal movement
+           // change y : 40 for vertical movement
         );
     }
   }
