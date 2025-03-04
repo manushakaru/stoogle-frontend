@@ -149,6 +149,7 @@
   }
 
   function stepZoom(step) {
+    console.log("step", step);
     if (step === undefined) {
       resetZoom();
       return;

@@ -33,7 +33,6 @@
 
   const getSteps = () => {
     clusters.forEach((cluster) => {
-      // console.log("f", cluster.facts);
       const numFacts = cluster.number_of_facts;
       total += numFacts;
       stepCounts.push(total);
@@ -46,7 +45,7 @@
 
   function handleStepChange() {
     if (step == 0 && value == undefined) {
-      step = 0;
+      step = undefined;
     } else if (step === total && value === undefined) {
       step = total;
     } else {
@@ -59,8 +58,10 @@
     if (allFacts === undefined) return;
     value = newValue;
     const currentFact = allFacts[value];
+    curMergedId = undefined;
     if (currentFact) {
       curMergedId = currentFact.merged_id;
+      console.log("curMergedId", curMergedId);
     }
   }
 </script>
