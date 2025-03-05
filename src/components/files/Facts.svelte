@@ -42,8 +42,17 @@
 
     cluster.all_fact_groups
     .sort((a, b) => {
-    const maxYearA = Math.max(...a.fact_group_facts.map(f => parseInt(f.article.year)));
-    const maxYearB = Math.max(...b.fact_group_facts.map(f => parseInt(f.article.year)));
+    const getMaxYear = (factGroup) => {
+      const years = factGroup.fact_group_facts.map(f => {
+        const year = parseInt(f.article.year);
+        return isNaN(year) ? Infinity : year; 
+      });
+      return Math.max(...years);
+    };
+
+    const maxYearA = getMaxYear(a);
+    const maxYearB = getMaxYear(b);
+
     return maxYearA - maxYearB;
   })
     .forEach((factGroup, i) => {
