@@ -44,7 +44,8 @@
   $: if (circles && cluster && width && height && stats && yearColors) {
     console.log("Circle.svelte: ", cluster);
     wordCloud = cluster.word_cloud;
-    text = cluster.cluster_summary.representative_fact;
+    // text = cluster.cluster_summary.representative_fact;
+    text = cluster['representative_facts'][0]['fact_content'];
     circle = getCircleById(cluster.cluster_id);
     if (circle) {
       let nFact = cluster.number_of_original_facts;
@@ -157,19 +158,19 @@
         class="circle-element hit-area"
       />
 
-      {@html wordCloud.outer}
+      <!-- {@html wordCloud.outer} -->
 
 
 
-      <circle
+      <!-- <circle
         cx={0}
         cy={0}
         r={radius_inner ?? 0}
         fill={color}
         class="circle-element hit-area"
-      />
+      /> -->
 
-      <TextCircle radius={radius_inner ?? 0} {text}/>
+      <TextCircle radius={radius ?? 0} {text}/>
       <!-- {@html wordCloud.inner} -->
 
       <Title {cluster} {radius} />
