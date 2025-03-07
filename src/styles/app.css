@@ -35,6 +35,16 @@
 	--color-input-fg: var(--color-gray-900);
 	--color-placeholder: var(--color-gray-500);
 
+	/* Arc colors */
+	--color-progress-arc-article: #b785ff;
+	--color-progress-arc-fact: #82d3f4;
+    --color-background-track: #2a3e4c;
+    --color-arc-label: rgba(255, 255, 255, 0.9);
+
+	/* Cluter title */
+	--cluster-title-bg: #E0EEFC; /* Background color */
+	--cluster-title-text: #333333; /* Title text color */
+
 	/* "1" second duration */
 	--1s: 1ms;
 }

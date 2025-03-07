@@ -4,6 +4,8 @@
   import Title from "$components/files/Title.svelte";
   import tippy, { followCursor } from "tippy.js";
   import TextCircle from "$components/files/TextCircle.svelte";
+  import { pack } from "d3-hierarchy";
+  import { onMount } from "svelte";
 
   export let circles;
   export let cluster;
@@ -21,13 +23,25 @@
   let radius;
   let radius_inner;
   let color;
-  let usedArc;
-  let unusedArc;
+  let activeArc;
+  let factActiveArc;
+  let backgroundArc;
+  let factBackgroundArc;
+  let textArc;
+  let centertextArc;
   let usedPercentageArticle;
   let totArticle;
+  let totalFacts;
+  let numFacts;
 
-  let usedArcId;
-  let unusedArcId;
+  let activeArcId;
+  let factActiveArcId;
+  let backgroundArcId;
+  let textArcId;
+  let centerTextArcId;
+  const arcHeight = 11;
+  const startAngle = -Math.PI / 4;
+  const endAngle = Math.PI / 4;
 
   function getCircleById(clusterId) {
     return circles.find((circle) => circle.id === clusterId);
@@ -41,40 +55,110 @@
   let isReady = false;
   let wordCloud;
 
+  // Circular packing variables
+  let packedFacts = [];
+  let packLayout;
+
+  onMount(() => {
+    // Initialize pack layout once when component mounts
+    if (cluster) {
+      const facts = cluster.representative_facts;
+      const root = d3
+        .hierarchy({ children: facts })
+        .sum((d) => Math.random() * 15 + 5);
+
+      packLayout = pack()
+        .size([radius * 2, radius * 2])
+        .padding(3);
+
+      packLayout(root);
+      packedFacts = root.descendants().slice(1);
+    }
+  });
+
+  $: if (cluster && radius) {
+    // Update only when cluster or radius changes
+    const facts = cluster.representative_facts;
+    const root = d3
+      .hierarchy({ children: facts })
+      .sum((d) => Math.random() * 15 + 5);
+
+    packLayout = pack()
+      .size([radius * 2, radius * 2])
+      .padding(3);
+
+    packLayout(root);
+    packedFacts = root.descendants().slice(1);
+  }
+
   $: if (circles && cluster && width && height && stats && yearColors) {
-    console.log("Circle.svelte: ", cluster);
     wordCloud = cluster.word_cloud;
-    // text = cluster.cluster_summary.representative_fact;
-    text = cluster['representative_facts'][0]['fact_content'];
+    text = cluster["representative_facts"][0]["fact_content"];
     circle = getCircleById(cluster.cluster_id);
     if (circle) {
-      let nFact = cluster.number_of_original_facts;
+      numFacts = cluster.number_of_original_facts;
       totArticle = stats.total_articles;
+      totalFacts = stats["total_original_facts"];
       radius = 100;
-      radius_inner = radiusScale(nFact);
+      radius_inner = radiusScale(numFacts);
       color = "#1a2e3c";
       usedPercentageArticle = cluster.number_of_articles / totArticle;
 
-      usedArcId = `usedArc${circle.id}`;
-      unusedArcId = `unusedArc${circle.id}`;
+      const factPercentage = numFacts / totalFacts;
 
-      usedArc = d3
+      activeArcId = `usedArc${circle.id}`;
+      factActiveArcId = `factActiveArc${circle.id}`;
+      backgroundArcId = `unusedArc${circle.id}`;
+      textArcId = `textArc${circle.id}`;
+      centerTextArcId = `centerTextArc${circle.id}`;
+
+      activeArc = d3
         .arc()
         .innerRadius(radius + 1)
-        .outerRadius(radius + 11)
-        .startAngle(-Math.PI / 4)
+        .outerRadius(radius + arcHeight + 1)
+        .startAngle(startAngle)
         .endAngle(
           -Math.PI / 4 + (Math.PI / 180) * (usedPercentageArticle * 90)
         );
 
-      unusedArc = d3
+      factActiveArc = d3
+        .arc()
+        .innerRadius(radius + arcHeight + 1)
+        .outerRadius(radius + arcHeight * 2 + 1)
+        .startAngle(startAngle)
+        .endAngle(-Math.PI / 4 + (Math.PI / 180) * (factPercentage * 90));
+
+      centertextArc = d3
+        .arc()
+        .innerRadius(radius)
+        .outerRadius(radius)
+        .startAngle(startAngle)
+        .endAngle(
+          -Math.PI / 4 +
+            (Math.PI / 180) * (usedPercentageArticle * 90) +
+            Math.PI / 15
+        );
+
+      backgroundArc = d3
         .arc()
         .innerRadius(radius + 1)
-        .outerRadius(radius + 11)
-        .startAngle(
-          -Math.PI / 4 + (Math.PI / 180) * (usedPercentageArticle * 90)
-        )
-        .endAngle(Math.PI / 4);
+        .outerRadius(radius + arcHeight + 1)
+        .startAngle(startAngle)
+        .endAngle(endAngle);
+
+      factBackgroundArc = d3
+        .arc()
+        .innerRadius(radius + arcHeight + 1)
+        .outerRadius(radius + arcHeight * 2 + 1)
+        .startAngle(startAngle)
+        .endAngle(endAngle);
+
+      textArc = d3
+        .arc()
+        .innerRadius(radius)
+        .outerRadius(radius)
+        .startAngle(startAngle - 0.05)
+        .endAngle(endAngle + Math.PI / 15);
 
       isReady = true;
     } else {
@@ -130,6 +214,22 @@
       appendTo: () => document.body,
     });
   }
+
+  function factTooltip(node, factContent) {
+    tippy(node, {
+      content: factContent,
+      allowHTML: true,
+      theme: "light",
+      placement: "top",
+      animation: "fade",
+      duration: 200,
+    });
+    return {
+      destroy() {
+        node._tippy?.destroy();
+      },
+    };
+  }
 </script>
 
 {#if isReady}
@@ -158,62 +258,92 @@
         class="circle-element hit-area"
       />
 
-      <!-- {@html wordCloud.outer} -->
+      <TextCircle radius={radius ?? 0} {text} />
 
-
-
-      <!-- <circle
-        cx={0}
-        cy={0}
-        r={radius_inner ?? 0}
-        fill={color}
-        class="circle-element hit-area"
-      /> -->
-
-      <TextCircle radius={radius ?? 0} {text}/>
-      <!-- {@html wordCloud.inner} -->
+      {#each packedFacts as node}
+        <g transform={`translate(${node.x - radius}, ${node.y - radius})`}>
+          <circle
+            cx={0}
+            cy={0}
+            r={node.r ?? 0}
+            stroke="#b8ccd6"
+            stroke-width="0.5"
+            class="circle-element hit-area"
+          />
+          <TextCircle radius={node.r ?? 0} text={node.data.fact_content} />
+        </g>
+      {/each}
 
       <Title {cluster} {radius} />
+
+      <path id={textArcId} class="" d={textArc()} style="display: none;" />
       <path
-        id={usedArcId}
+        id={centerTextArcId}
+        class=""
+        d={centertextArc()}
+        style="display: none;"
+      />
+
+      <path
+        id={backgroundArcId}
+        class="unused-arc ring-element"
+        d={backgroundArc()}
+        fill="var(--color-background-track)"
+      />
+
+      <path
+        class="unused-arc ring-element"
+        d={factBackgroundArc()}
+        fill="var(--color-background-track)"
+      />
+
+      <path
+        id={activeArcId}
         class="used-arc ring-element"
         style="cursor: pointer;"
-        d={usedArc()}
-        fill="#b785ff"
+        d={activeArc()}
+        fill="var(--color-progress-arc-article)"
         use:tooltip={cluster.articles}
       />
 
       <path
-        id={unusedArcId}
-        class="unused-arc ring-element"
-        d={unusedArc()}
-        fill="#1a2e3c"
+        id={factActiveArcId}
+        class="used-arc ring-element"
+        style="cursor: pointer;"
+        d={factActiveArc()}
+        fill="var(--color-progress-arc-fact)"
       />
 
-      <text fill="rgba(255, 255, 255, 0.8)" font-size="10px" dy="-3">
-        <textPath href={`#${usedArcId}`} text-anchor="middle"> 0 </textPath>
+      <!-- <text class="arc-label" dy="-2">
+        <textPath href={`#${textArcId}`} text-anchor="middle"> 0 </textPath>
       </text>
-      <text fill="rgba(255, 255, 255, 0.8)" font-size="10px" dy="9" dx="2">
-        <textPath href={`#${unusedArcId}`}>
+      <text class="arc-label" dy="-15">
+        <textPath href={`#${textArcId}`} text-anchor="middle"> 0 </textPath>
+      </text> -->
+      <text class="arc-label" dy="9">
+        <textPath href={`#${activeArcId}`} text-anchor="end" startOffset="35%">
           {cluster.number_of_articles}
         </textPath>
       </text>
-      <text fill="rgba(255, 255, 255, 0.8)" font-size="10px" dy="-3">
-        <textPath href={`#${unusedArcId}`} text-anchor="end" startOffset="45%">
+      <text class="arc-label" dy="9">
+        <textPath
+          href={`#${factActiveArcId}`}
+          text-anchor="end"
+          startOffset="35%"
+        >
+          {numFacts}
+        </textPath>
+      </text>
+      <text class="arc-label" dy="-3">
+        <textPath href={`#${textArcId}`} text-anchor="start" startOffset="45%">
           {stats.total_articles}
         </textPath>
       </text>
-
-      <!-- <text
-        x={0}
-        y={0}
-        text-anchor="middle"
-        dominant-baseline="middle"
-        fill="#b8ccd6"
-        font-size="12px"
-      >
-        {cluster.cluster_id}
-      </text> -->
+      <text class="arc-label" dy="-15">
+        <textPath href={`#${textArcId}`} text-anchor="start" startOffset="45%">
+          {totalFacts}
+        </textPath>
+      </text>
     </g>
   {:else}
     <text x="700" y="900" fill="red">
@@ -260,6 +390,12 @@
   .used-arc,
   .unused-arc {
     transition: stroke-dashoffset 0.3s ease;
+  }
+  .arc-label {
+    fill: var(--color-arc-label);
+    font-size: 10px;
+    font-weight: 200;
+    pointer-events: none;
   }
 
   :focus {
