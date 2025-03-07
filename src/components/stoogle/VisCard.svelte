@@ -49,7 +49,7 @@
             class="flex flex-col items-center w-full max-w-[300px] justify-center h-full"
           >
             <p
-              class="text-5xl sm:text-4xl md:text-7xl w-full font-bold text-[{dataVlue.color}] max-w-[300px] pl-7"
+              class="text-5xl sm:text-2xl md:text-5xl text-center w-full font-bold text-[{dataVlue.color}] max-w-[300px] pl-7"
             >
               {dataVlue.value}
               {dataVlue.unit}

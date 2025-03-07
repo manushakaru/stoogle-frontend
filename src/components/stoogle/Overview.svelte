@@ -168,7 +168,7 @@
           return {
             x: circles[i].x,
             y: circles[i].y,
-            scale: (height * 0.7) / (2 * circles[i].radius + 120) / 1.6, // 1.8 is the zoom factor
+            scale: (height * 0.7) / (2 * circles[i].radius + 120) / 1.5, // 1.8 is the zoom factor
           };
         }
       }
@@ -185,7 +185,7 @@
         .duration(800)
         .attr(
           "transform",
-          `translate(${-x * scale + (4 * width) / 6 + 120}, ${
+          `translate(${-x * scale + (4 * width) / 6 + 80}, ${
             -y * scale + height / 2 + 40
           }) scale(${scale})`
            // change x : 120 for horizontal movement

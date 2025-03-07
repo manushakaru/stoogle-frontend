@@ -3,8 +3,9 @@
   import Popup from "$components/stoogle/Popup.svelte";
   import analysisData from "$data/samples/AI_is_a_threat_or_not_2.json";
   import analysisData5 from "$data/samples/AI_is_a_threat_or_not_pew_research.json";
+  import analysisData6 from "$data/samples/Best_value_phones_in_2025.json";
   import analysisData1 from "$data/samples/pros_cons_homeschooling_2.json";
-  import analysisData2 from "$data/samples/pros_cons_homeschooling_2.json";
+  import analysisData2 from "$data/samples/Americans_and_tiktok.json";
   import analysisData3 from "$data/samples/pros_cons_homeschooling_2.json";
   import analysisData4 from "$data/samples/pros_cons_homeschooling_2.json";
   import Section from "$components/stoogle/Section.svelte";
@@ -29,16 +30,21 @@
   const exampleQueries = [
     {
       query: "AI is a threat or not",
-      data: analysisData5,
-    },
-    {
-      query: "Americans and TikTok",
-      data: analysisData2,
+      data: analysisData,
     },
     {
       query: "Pros and cons of homeschooling statistics",
       data: analysisData1,
     },
+    {
+      query: "Best value phones in 2025",
+      data: analysisData6,
+    },
+    {
+      query: "Americans and TikTok",
+      data: analysisData2,
+    },
+
     {
       query: "Trends and stats on tiktok worldwide",
       data: analysisData3,
@@ -47,6 +53,7 @@
       query: "Social Media and Technology statistics",
       data: analysisData4,
     },
+   
   ];
 
   const togglePopup = () => {

@@ -3,6 +3,7 @@
   import Facts from "$components/files/Facts.svelte";
   import Title from "$components/files/Title.svelte";
   import tippy, { followCursor } from "tippy.js";
+  import TextCircle from "$components/files/TextCircle.svelte";
 
   export let circles;
   export let cluster;
@@ -13,6 +14,8 @@
   export let action;
   export let sorted_article_ids;
   export let curMergedId;
+
+  let text = "Home schooling is fun!";
 
   let circle;
   let radius;
@@ -33,13 +36,15 @@
   const radiusScale = d3
     .scaleLinear()
     .domain([1, stats.max_original_facts]) // max number of original facts
-    .range([5, 60]); // Output range (radius size)
+    .range([40, 60]); // Output range (radius size)
 
   let isReady = false;
   let wordCloud;
 
   $: if (circles && cluster && width && height && stats && yearColors) {
+    console.log("Circle.svelte: ", cluster);
     wordCloud = cluster.word_cloud;
+    text = cluster.cluster_summary.representative_fact;
     circle = getCircleById(cluster.cluster_id);
     if (circle) {
       let nFact = cluster.number_of_original_facts;
@@ -152,7 +157,9 @@
         class="circle-element hit-area"
       />
 
-      {@html wordCloud}
+      {@html wordCloud.outer}
+
+
 
       <circle
         cx={0}
@@ -161,6 +168,10 @@
         fill={color}
         class="circle-element hit-area"
       />
+
+      <TextCircle radius={radius_inner ?? 0} {text}/>
+      <!-- {@html wordCloud.inner} -->
+
       <Title {cluster} {radius} />
       <path
         id={usedArcId}
