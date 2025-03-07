@@ -6,6 +6,7 @@
   import TextCircle from "$components/files/TextCircle.svelte";
   import { pack } from "d3-hierarchy";
   import { onMount } from "svelte";
+  import { fade, fly } from "svelte/transition";
 
   export let circles;
   export let cluster;
@@ -76,7 +77,7 @@
     }
   });
 
-  $: if (cluster && radius) {
+  $: if (cluster && radius && curMergedId) {
     // Update only when cluster or radius changes
     const facts = cluster.representative_facts;
     const root = d3
@@ -90,6 +91,8 @@
     packLayout(root);
     packedFacts = root.descendants().slice(1);
   }
+
+  $: isActive = curMergedId?.split("_")[0] === cluster.cluster_id.toString();
 
   $: if (circles && cluster && width && height && stats && yearColors) {
     wordCloud = cluster.word_cloud;
@@ -255,24 +258,28 @@
         cy={0}
         r={radius ?? 0}
         fill={color}
-        class="circle-element hit-area"
+        class="circle-element hit-area {isActive ? 'active' : ''}"
       />
 
-      <TextCircle radius={radius ?? 0} {text} />
+      {#if !isActive}
+        <TextCircle radius={radius ?? 0} {text} />
+      {/if}
 
-      {#each packedFacts as node}
-        <g transform={`translate(${node.x - radius}, ${node.y - radius})`}>
-          <circle
-            cx={0}
-            cy={0}
-            r={node.r ?? 0}
-            stroke="#b8ccd6"
-            stroke-width="0.5"
-            class="circle-element hit-area"
-          />
-          <TextCircle radius={node.r ?? 0} text={node.data.fact_content} />
-        </g>
-      {/each}
+      {#if isActive}
+        {#each packedFacts as node}
+          <g transform={`translate(${node.x - radius}, ${node.y - radius})`}>
+            <circle
+              cx={0}
+              cy={0}
+              r={node.r ?? 0}
+              stroke="#b8ccd6"
+              stroke-width="0.5"
+              class="circle-element hit-area"
+            />
+            <TextCircle radius={node.r ?? 0} text={node.data.fact_content} />
+          </g>
+        {/each}
+      {/if}
 
       <Title {cluster} {radius} />
 
@@ -366,6 +373,15 @@
   .hit-area {
     pointer-events: all;
     cursor: grab;
+    transition: fill 0.3s ease;
+  }
+
+  .circle-element {
+    fill: #1a2e3c;
+  }
+
+  .circle-element.active {
+    fill: #2a4e6c;
   }
 
   .circle-element {
@@ -379,7 +395,6 @@
   .ring-element {
     stroke: #b8ccd6;
     stroke-width: 1px;
-    /* stroke-dasharray: 2, 2; */
   }
 
   .circle-svg {

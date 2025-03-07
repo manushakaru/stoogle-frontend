@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import { fade, fly } from "svelte/transition";
 
   export let radius;
   export let text;
@@ -49,31 +50,42 @@
   }
 
   function isNumber(word) {
-  return /^[-$]?\d+(\.\d+)?%?$/.test(word);
-}
+    return /^[-$]?\d+(\.\d+)?%?$/.test(word);
+  }
 
   onMount(() => {
-    radius = radius - 2;
+    radius = radius - 4;
     const words = createWords(text);
     const targetWidth = Math.sqrt(measureWidth(text.trim()) * lineHeight);
     lines = createLines(words, targetWidth);
   });
+
+  $: if (text && radius) {
+    // Recalculate lines when text or radius changes
+    radius = radius - 2;
+    const words = createWords(text);
+    const targetWidth = Math.sqrt(measureWidth(text.trim()) * lineHeight);
+    lines = createLines(words, targetWidth);
+  }
 </script>
 
-<g style="font: 10px; font-family:Droid Sans Mono; fill:white; cursor:pointer;" text-anchor="middle">
+<g
+  style="font: 10px; font-family:Droid Sans Mono; fill:white; cursor:pointer;"
+  text-anchor="middle"
+  in:fly={{ y: 10, duration: 300 }}
+  out:fade={{ duration: 200 }}
+>
   {#if lines && radius}
     <text
       transform="translate(0,0) scale({radius / textRadius(lines, lineHeight)})"
     >
       {#each lines as line, i}
-        <tspan x="0" y={(i - lines.length / 2 + 0.8) * lineHeight} 
-          >
+        <tspan x="0" y={(i - lines.length / 2 + 0.8) * lineHeight}>
           <!-- {#each line.text.split(' ') as word}
             <tspan style="fill:{isNumber(word) ? 'red' : 'white'}">{ word + " "}</tspan>
           {/each} -->
           {line.text}
-          </tspan
-        >
+        </tspan>
       {/each}
     </text>
   {/if}
