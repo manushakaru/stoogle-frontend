@@ -16,7 +16,7 @@
 
   function getColor(year) {
     let found = yearColors.find((entry) => entry.year == year);
-    return found ? found.color : "#d21890";
+    return found ? found.color : "#A6AEBF";
   }
 
   function getActiveFactGroupIds(cluster, curMergedId) {
@@ -75,15 +75,17 @@
       });
 
       const lastCircle = smallCircles[smallCircles.length - 1];
-      const lineData = {
-        x: lastCircle.x,
-        y: lastCircle.y,
-      };
+      if(lastCircle) {
+        const lineData = {
+          x: lastCircle.x,
+          y: lastCircle.y,
+        };
 
-      circleData.push({
-        lineData: lineData,
-        smallCircleData: smallCircles,
-      });
+        circleData.push({
+          lineData: lineData,
+          smallCircleData: smallCircles,
+        });
+      }
     });
     isReady = true;
   }

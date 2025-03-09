@@ -53,7 +53,6 @@
       query: "Social Media and Technology statistics",
       data: analysisData4,
     },
-   
   ];
 
   const togglePopup = () => {
@@ -253,10 +252,10 @@
     transition: filter 300ms;
   }
   .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em var(--color-primary-alpha));
   }
   .logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
+    filter: drop-shadow(0 0 2em var(--color-secondary-alpha));
   }
 
   @keyframes logo-spin {
@@ -304,7 +303,7 @@
     flex-direction: raw;
     align-items: center;
     padding: 20px 0; /* Add some padding */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    box-shadow: 0 2px 5px var(--color-shadow); /* Optional shadow */
   }
 
   .inputContainer {
@@ -323,7 +322,7 @@
     width: 100%;
     padding: 12px 20px;
     font-size: 16px;
-    border: 1px solid #dfe1e5;
+    border: 1px solid var(--color-input-border);
     border-radius: 24px;
     box-shadow: none;
     outline: none;
@@ -350,9 +349,9 @@
   .button {
     padding: 10px 24px;
     font-size: 14px;
-    background-color: #f8f9fa;
-    color: #3c4043;
-    border: 1px solid #f8f9fa;
+    background-color: var(--color-button-bg);
+    color: var(--color-button-text);
+    border: 1px solid var(--color-button-bg);
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
@@ -364,9 +363,9 @@
   .stickyButton {
     padding: 10px 24px;
     font-size: 14px;
-    background-color: #f8f9fa;
-    color: #3c4043;
-    border: 1px solid #f8f9fa;
+    background-color: var(--color-button-bg);
+    color: var(--color-button-text);
+    border: 1px solid var(--color-button-bg);
     border-radius: 4px;
     cursor: pointer;
     transition:
@@ -384,8 +383,8 @@
   }
 
   .spinner {
-    border: 4px solid rgba(0, 0, 0, 0.1);
-    border-left-color: #09f;
+    border: 4px solid var(--color-spinner-bg);
+    border-left-color: var(--color-spinner-fg);
     border-radius: 50%;
     width: 24px;
     height: 24px;
@@ -415,7 +414,7 @@
     margin-left: -50px;
     position: relative;
     border-radius: 50%;
-    color: #ff3d00;
+    color: var(--color-loader);
     animation: fill 1s ease-in infinite alternate;
   }
 

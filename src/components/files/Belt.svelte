@@ -17,7 +17,7 @@
 
   function getColor(year) {
     let found = yearColors.find((entry) => entry.year == year);
-    return found ? found.color : "#d21890";
+    return found ? found.color : "#A6AEBF";
   }
 
   $: if (circles && width && height && shared_articles) {

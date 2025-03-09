@@ -7,6 +7,7 @@
   import { pack } from "d3-hierarchy";
   import { onMount } from "svelte";
   import { fade, fly } from "svelte/transition";
+  import { cubicOut } from 'svelte/easing';
 
   export let circles;
   export let cluster;
@@ -63,7 +64,7 @@
   onMount(() => {
     // Initialize pack layout once when component mounts
     if (cluster) {
-      const facts = cluster.representative_facts;
+      const facts = cluster.representative_facts || [];
       const root = d3
         .hierarchy({ children: facts })
         .sum((d) => Math.random() * 15 + 5);
@@ -79,7 +80,8 @@
 
   $: if (cluster && radius && curMergedId) {
     // Update only when cluster or radius changes
-    const facts = cluster.representative_facts;
+    const facts = cluster.representative_facts || [];
+    text = cluster.representative_facts?.[0]?.fact_content;
     const root = d3
       .hierarchy({ children: facts })
       .sum((d) => Math.random() * 15 + 5);
@@ -96,7 +98,6 @@
 
   $: if (circles && cluster && width && height && stats && yearColors) {
     wordCloud = cluster.word_cloud;
-    text = cluster["representative_facts"][0]["fact_content"];
     circle = getCircleById(cluster.cluster_id);
     if (circle) {
       numFacts = cluster.number_of_original_facts;
@@ -172,7 +173,7 @@
 
   function getColor(year) {
     let found = yearColors.find((entry) => entry.year == year);
-    return found ? found.color : "#d21890";
+    return found ? found.color : "#A6AEBF";
   }
 
   function tooltip(node, articles) {
@@ -233,6 +234,19 @@
       },
     };
   }
+
+    // Custom transition function for growing the circle
+    function grow(node, { duration = 500 }) {
+    const targetR = parseFloat(node.getAttribute('r'));
+    node.setAttribute('r', 0); // Start from 0
+    return {
+      duration,
+      easing: cubicOut,
+      tick: (t) => {
+        node.setAttribute('r', t * targetR); // Animate to target radius
+      }
+    };
+  }
 </script>
 
 {#if isReady}
@@ -275,6 +289,7 @@
               stroke="#b8ccd6"
               stroke-width="0.5"
               class="circle-element hit-area"
+              in:grow={{ duration: 5000 }}
             />
             <TextCircle radius={node.r ?? 0} text={node.data.fact_content} />
           </g>

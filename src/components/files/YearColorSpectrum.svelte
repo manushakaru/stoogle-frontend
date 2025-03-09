@@ -18,7 +18,8 @@
     "#00BCD4", // Cyan
   ];
 
-  const customBlueRange = [ "#08c1d2", "#08d283", "#75d208", "#90d208"];
+  // const customBlueRange = [ "#08c1d2", "#08d283", "#75d208", "#90d208"];
+  const customBlueRange = [ "#27374D", "#526D82", "#9DB2BF", "#DDE6ED"];
 
   $: {
     if (years && years.earliest && years.latest) {
@@ -77,7 +78,7 @@
           </div>
         {/each}
         <div class="year-item">
-          <div class="color-box" style="background-color: {'#d21890'}"></div>
+          <div class="color-box" style="background-color: {'#A6AEBF'}"></div>
           <span
             class="font-semibold text-black dark:text-[rgba(255,255,255,0.6)]"
             >Unknown</span

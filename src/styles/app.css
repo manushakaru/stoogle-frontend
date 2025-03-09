@@ -35,6 +35,42 @@
 	--color-input-fg: var(--color-gray-900);
 	--color-placeholder: var(--color-gray-500);
 
+	 /* Primary colors */
+	 --color-primary: #646cff;
+	 --color-primary-alpha: rgba(100, 108, 255, 0.67);
+	 --color-secondary: #61dafb;
+	 --color-secondary-alpha: rgba(97, 218, 251, 0.67);
+	 
+	 /* UI colors */
+	 --color-input-border: #dfe1e5;
+	 --color-button-bg: #f8f9fa;
+	 --color-button-text: #3c4043;
+	 --color-shadow: rgba(0, 0, 0, 0.1);
+	 
+	 /* Status colors */
+	 --color-error-bg: rgba(254, 226, 226, 0.9);
+	 --color-error-main: #ef4444;
+	 --color-error-text: #ffffff;
+	 --color-error-button-bg: #ffffff;
+	 --color-error-button-text: #dc2626;
+	 
+	 /* Loader colors */
+	 --color-loader: #ff3d00;
+	 --color-spinner-bg: rgba(0, 0, 0, 0.1);
+	 --color-spinner-fg: #0099ff;
+	 
+	 /* Example query colors */
+	 --color-example-bg: #f3f4f6;
+	 --color-example-text: #4b5563;
+	 --color-example-border: #e5e7eb;
+	 --color-example-hover-bg: #e5e7eb;
+	 
+	 /* Dark mode colors */
+	 --color-dark-example-bg: #1f2937;
+	 --color-dark-example-text: #d1d5db;
+	 --color-dark-example-border: #374151;
+	 --color-dark-example-hover-bg: #374151;
+
 	/* Arc colors */
 	--color-progress-arc-article: #b785ff;
 	--color-progress-arc-fact: #82d3f4;

@@ -130,8 +130,6 @@
   }
 
   function dragStarted(event, d) {
-    console.log("Drag started:", d.id);
-
     if (!event.active) simulation.alphaTarget(0.3).restart();
     d.fx = event.x;
     d.fy = event.y;
