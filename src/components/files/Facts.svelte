@@ -16,7 +16,15 @@
 
   function getColor(year) {
     let found = yearColors.find((entry) => entry.year == year);
-    return found ? found.color : "#A6AEBF";
+    return found ? found.color : "#c6bea9bf";
+  }
+
+  function getActiveColor(year, isActive, factsEmpty) {
+    const color = getColor(year);
+    if (factsEmpty || isActive) {
+      return color;
+    }
+    return "#ced4da69";
   }
 
   function getActiveFactGroupIds(cluster, curMergedId) {
@@ -41,52 +49,77 @@
     const activeFactGroupIds = getActiveFactGroupIds(cluster, curMergedId);
 
     cluster.all_fact_groups
-    .sort((a, b) => {
-    const getMaxYear = (factGroup) => {
-      const years = factGroup.fact_group_facts.map(f => {
-        const year = parseInt(f.article.year);
-        return isNaN(year) ? Infinity : year; 
-      });
-      return Math.max(...years);
-    };
-
-    const maxYearA = getMaxYear(a);
-    const maxYearB = getMaxYear(b);
-
-    return maxYearA - maxYearB;
-  })
-    .forEach((factGroup, i) => {
-      const factGroupId = factGroup.fact_group_id;
-      const isActive = activeFactGroupIds?.includes(factGroupId) ?? false;
-      let smallCircles = [];
-      const angle = i * anglePerFact;
-      factGroup.fact_group_facts.forEach((fact, j) => {
-        const distance = radius + (j + 1) * (2 * smallCircleRadius + padding);
-        const x = distance * Math.cos(angle);
-        const y = distance * Math.sin(angle);
-        const article = fact.article;
-        smallCircles.push({
-          x,
-          y,
-          color: getColor(parseInt(article.year)),
-          fact: fact,
-          isActive: isActive,
-        });
-      });
-
-      const lastCircle = smallCircles[smallCircles.length - 1];
-      if(lastCircle) {
-        const lineData = {
-          x: lastCircle.x,
-          y: lastCircle.y,
+      .sort((a, b) => {
+        const getMaxYear = (factGroup) => {
+          const years = factGroup.fact_group_facts.map((f) => {
+            const year = parseInt(f.article.year);
+            return isNaN(year) ? Infinity : year;
+          });
+          return Math.max(...years);
         };
 
-        circleData.push({
-          lineData: lineData,
-          smallCircleData: smallCircles,
+        const maxYearA = getMaxYear(a);
+        const maxYearB = getMaxYear(b);
+
+        return maxYearA - maxYearB;
+      })
+      .forEach((factGroup, i) => {
+        const factGroupId = factGroup.fact_group_id;
+        const factsEmpty = activeFactGroupIds === null;
+        const isActive = activeFactGroupIds?.includes(factGroupId) ?? false;
+        let smallCircles = [];
+        let lineSegments = [];
+        const angle = i * anglePerFact;
+        factGroup.fact_group_facts.forEach((fact, j) => {
+          let x1 = 0;
+          let y1 = 0;
+          let x2 = 0;
+          let y2 = 0;
+          if (j === 0) {
+            x1 = radius * Math.cos(angle);
+            y1 = radius * Math.sin(angle);
+          } else {
+            x1 = smallCircles[j - 1].x;
+            y1 = smallCircles[j - 1].y;
+            x1 = x1 + smallCircleRadius * Math.cos(angle);
+            y1 = y1 + smallCircleRadius * Math.sin(angle);
+          }
+
+          const distance = radius + (j + 1) * (2 * smallCircleRadius + padding);
+          const x = distance * Math.cos(angle);
+          const y = distance * Math.sin(angle);
+          x2 = x - smallCircleRadius * Math.cos(angle);
+          y2 = y - smallCircleRadius * Math.sin(angle);
+          const article = fact.article;
+          smallCircles.push({
+            x,
+            y,
+            color: getActiveColor(parseInt(article.year), isActive, factsEmpty),
+            fact: fact,
+            isActive: isActive,
+          });
+          lineSegments.push({ x1, y1, x2, y2 });
         });
-      }
-    });
+
+        const lastCircle = smallCircles[smallCircles.length - 1];
+        if (lastCircle) {
+          const angle = Math.atan2(lastCircle.y, lastCircle.x);
+
+          const adjustedX = lastCircle.x - smallCircleRadius * Math.cos(angle);
+          const adjustedY = lastCircle.y - smallCircleRadius * Math.sin(angle);
+
+          const lineData = {
+            x: adjustedX,
+            y: adjustedY,
+          };
+
+          circleData.push({
+            lineData: lineData,
+            lineSegments: lineSegments,
+            smallCircleData: smallCircles,
+          });
+        }
+      });
     isReady = true;
   }
 
@@ -97,7 +130,9 @@
         <p>${fact.fact_content}</p>
         <div class="articles-container">
           <div >
-            <a target="_blank" href="${fact.article.url}"  >
+            <a target="_blank" href="${
+              fact.article.url
+            }" style="color: transparent;" >
               <div class="article-circle">${
                 sorted_article_ids[fact.fact_id.split("_")[0]]
               }</div>
@@ -121,15 +156,10 @@
 </script>
 
 {#if isReady}
-  {#each circleData as { lineData, smallCircleData }}
-    <line
-      x1={0}
-      y1={0}
-      x2={lineData.x}
-      y2={lineData.y}
-      stroke="#b8ccd6"
-      stroke-width="1"
-    />
+  {#each circleData as { lineData, lineSegments, smallCircleData }}
+    {#each lineSegments as { x1, y1, x2, y2 }}
+      <line {x1} {y1} {x2} {y2} stroke="#b8ccd6" stroke-width="1" />
+    {/each}
     {#each smallCircleData as { x, y, color, fact, isActive }}
       {#if isActive}
         <circle

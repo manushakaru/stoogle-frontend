@@ -233,6 +233,12 @@
   {/if}
 </div>
 
+<footer
+  class="fixed bottom-0 w-full bg-[#1A2E3C] text-[#adb2b7] text-center py-2 text-sm"
+>
+  Stoogle can make mistakes. Check important info.
+</footer>
+
 <style>
   .lottie-container {
     width: 100vw;

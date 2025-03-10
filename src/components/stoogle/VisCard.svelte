@@ -22,7 +22,7 @@
 
 <!-- To remove border - dark:border-slate-500 and border-4 -->
 <div
-  class="relative block pointer-events-auto w-full p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:border-slate-900"
+  class="relative block pointer-events-auto backdrop-blur-md w-full flex h-[400px] p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:border-slate-900"
   style="background-color: rgba(17, 17, 17, 0.95);"
 >
   <div
@@ -34,7 +34,7 @@
     <div class="w-1/2">
       <div
         class="chart-wrapper flex items-center justify-center"
-        style="width: 300px; height: 250px;"
+        style="width: 350px; height: 300px;"
       >
         {#if visRecommendation === "pie"}
           <Doughnut inputData={visData} />
@@ -64,7 +64,7 @@
         {@html narrative}
       </p>
       {#each merged_articles as article}
-        <a href={article.url} target="_blank" style="color: #000000;">
+        <a href={article.url} target="_blank" style="color:  transparent;">
           <div
             class="inline-flex items-center justify-center w-5 h-5 bg-[#394c5f] text-[#adb2eb] rounded-full text-xs font-semibold"
           >

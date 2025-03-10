@@ -17,7 +17,7 @@
 
   function getColor(year) {
     let found = yearColors.find((entry) => entry.year == year);
-    return found ? found.color : "#A6AEBF";
+    return found ? found.color : "#c6bea9bf";
   }
 
   $: if (circles && width && height && shared_articles) {
@@ -54,11 +54,11 @@
            .map(
              (article) => `
         <div class="article-card">
-          <p class="article-title">${article.title}</p>
+          <p class="article-title text-clamp">${article.title}</p>
           <div class="article-content_">
             <a target="_blank" href="${
               article.url
-            }" style="text-decoration: none; color:#1a2633" >
+            }" style="text-decoration: none; color: transparent;" >
               <div class="article-circle">${
                 sorted_article_ids[article.article_id]
               }</div>
@@ -148,5 +148,13 @@
     border-radius: 4px;
     background-color: #2d4050;
     position: static;
+  }
+
+  :global(.text-clamp) {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 </style>

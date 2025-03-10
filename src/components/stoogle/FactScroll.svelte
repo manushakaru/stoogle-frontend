@@ -30,14 +30,14 @@
 <style>
   .vis-card {
     height: 60vh;
-    padding: 20px;
+    padding: 0px;
     display: block;
     width: fit-content;
     margin-left: 200px;
     /* margin: 0 auto; */
     opacity: 0.3;
     transition: opacity 300ms ease;
-    max-width: 700px;
+    max-width: 800px;
     z-index: 2;
   }
   .vis-card.active {

@@ -18,8 +18,8 @@
     "#00BCD4", // Cyan
   ];
 
-  // const customBlueRange = [ "#08c1d2", "#08d283", "#75d208", "#90d208"];
-  const customBlueRange = [ "#27374D", "#526D82", "#9DB2BF", "#DDE6ED"];
+  const customBlueRange = ["#08c1d2d1", "#08d283d1", "#75d208d1", "#90d208d1"];
+  // const customBlueRange = [ "#27374D", "#526D82", "#9DB2BF", "#DDE6ED"];
 
   $: {
     if (years && years.earliest && years.latest) {
@@ -28,7 +28,7 @@
         .scaleSequential()
         .domain([parseInt(years.earliest), parseInt(years.latest)])
         .range(customBlueRange);
-        // .range(materialColors);
+      // .range(materialColors);
       // .interpolator(d3.interpolateHsl("#c1e079", "#1881d9"));
       // .interpolator(d3.interpolateViridis)
       // .interpolator(d3.interpolateHcl("#00FFFF", "#FFD700", "#FF1493"))
@@ -78,7 +78,7 @@
           </div>
         {/each}
         <div class="year-item">
-          <div class="color-box" style="background-color: {'#A6AEBF'}"></div>
+          <div class="color-box" style="background-color: {'#c6bea9bf'}"></div>
           <span
             class="font-semibold text-black dark:text-[rgba(255,255,255,0.6)]"
             >Unknown</span

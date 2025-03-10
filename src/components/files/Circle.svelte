@@ -5,9 +5,9 @@
   import tippy, { followCursor } from "tippy.js";
   import TextCircle from "$components/files/TextCircle.svelte";
   import { pack } from "d3-hierarchy";
-  import { onMount } from "svelte";
-  import { fade, fly } from "svelte/transition";
-  import { cubicOut } from 'svelte/easing';
+  import { cubicOut } from "svelte/easing";
+  import { fly } from "svelte/transition";
+  import { backOut } from "svelte/easing";
 
   export let circles;
   export let cluster;
@@ -20,7 +20,6 @@
   export let curMergedId;
 
   let text = "Home schooling is fun!";
-
   let circle;
   let radius;
   let radius_inner;
@@ -35,7 +34,6 @@
   let totArticle;
   let totalFacts;
   let numFacts;
-
   let activeArcId;
   let factActiveArcId;
   let backgroundArcId;
@@ -61,30 +59,12 @@
   let packedFacts = [];
   let packLayout;
 
-  onMount(() => {
-    // Initialize pack layout once when component mounts
-    if (cluster) {
-      const facts = cluster.representative_facts || [];
-      const root = d3
-        .hierarchy({ children: facts })
-        .sum((d) => Math.random() * 15 + 5);
-
-      packLayout = pack()
-        .size([radius * 2, radius * 2])
-        .padding(3);
-
-      packLayout(root);
-      packedFacts = root.descendants().slice(1);
-    }
-  });
-
-  $: if (cluster && radius && curMergedId) {
-    // Update only when cluster or radius changes
+  $: if (cluster.cluster_id) {
     const facts = cluster.representative_facts || [];
     text = cluster.representative_facts?.[0]?.fact_content;
     const root = d3
       .hierarchy({ children: facts })
-      .sum((d) => Math.random() * 15 + 5);
+      .sum((d) => d.relatedness_score || 0.1);
 
     packLayout = pack()
       .size([radius * 2, radius * 2])
@@ -96,7 +76,7 @@
 
   $: isActive = curMergedId?.split("_")[0] === cluster.cluster_id.toString();
 
-  $: if (circles && cluster && width && height && stats && yearColors) {
+  $: if (circles && cluster && width && height) {
     wordCloud = cluster.word_cloud;
     circle = getCircleById(cluster.cluster_id);
     if (circle) {
@@ -173,7 +153,7 @@
 
   function getColor(year) {
     let found = yearColors.find((entry) => entry.year == year);
-    return found ? found.color : "#A6AEBF";
+    return found ? found.color : "#c6bea9bf";
   }
 
   function tooltip(node, articles) {
@@ -188,7 +168,7 @@
            .map(
              (article) => `
         <div class="article-card">
-          <p class="article-title">${article.title}</p>
+          <p class="article-title text-clamp">${article.title}</p>
           <div class="article-content_">
             <a target="_blank" href="${
               article.url
@@ -235,16 +215,16 @@
     };
   }
 
-    // Custom transition function for growing the circle
-    function grow(node, { duration = 500 }) {
-    const targetR = parseFloat(node.getAttribute('r'));
-    node.setAttribute('r', 0); // Start from 0
+  // Custom transition function for growing the circle
+  function grow(node, { duration = 500 }) {
+    const targetR = parseFloat(node.getAttribute("r"));
+    node.setAttribute("r", 0); // Start from 0
     return {
       duration,
       easing: cubicOut,
       tick: (t) => {
-        node.setAttribute('r', t * targetR); // Animate to target radius
-      }
+        node.setAttribute("r", t * targetR); // Animate to target radius
+      },
     };
   }
 </script>
@@ -279,9 +259,17 @@
         <TextCircle radius={radius ?? 0} {text} />
       {/if}
 
-      {#if isActive}
-        {#each packedFacts as node}
-          <g transform={`translate(${node.x - radius}, ${node.y - radius})`}>
+      {#each packedFacts as node, i}
+        {#if isActive}
+          <g
+            transform={`translate(${node.x - radius}, ${node.y - radius})`}
+            in:fly={{
+              delay: 300 + i * 100,
+              duration: 300,
+              easing: backOut,
+              y: 100,
+            }}
+          >
             <circle
               cx={0}
               cy={0}
@@ -289,12 +277,11 @@
               stroke="#b8ccd6"
               stroke-width="0.5"
               class="circle-element hit-area"
-              in:grow={{ duration: 5000 }}
             />
             <TextCircle radius={node.r ?? 0} text={node.data.fact_content} />
           </g>
-        {/each}
-      {/if}
+        {/if}
+      {/each}
 
       <Title {cluster} {radius} />
 
@@ -343,7 +330,7 @@
         <textPath href={`#${textArcId}`} text-anchor="middle"> 0 </textPath>
       </text> -->
       <text class="arc-label" dy="9">
-        <textPath href={`#${activeArcId}`} text-anchor="end" startOffset="35%">
+        <textPath href={`#${activeArcId}`} text-anchor="end" startOffset="30%">
           {cluster.number_of_articles}
         </textPath>
       </text>
@@ -351,7 +338,7 @@
         <textPath
           href={`#${factActiveArcId}`}
           text-anchor="end"
-          startOffset="35%"
+          startOffset="30%"
         >
           {numFacts}
         </textPath>
@@ -396,7 +383,7 @@
   }
 
   .circle-element.active {
-    fill: #2a4e6c;
+    /* fill: #2a4e6c; */
   }
 
   .circle-element {

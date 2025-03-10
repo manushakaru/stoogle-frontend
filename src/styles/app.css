@@ -5,84 +5,85 @@
 
 /* colors defined in variables.css */
 :root {
-	/* font */
-	--sans: "Atlas Grotesk", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-	--serif: "Tiempos Text Web", Iowan Old Style, Times New Roman, Times, serif;
-	--mono: Menlo, Consolas, Monaco, monospace;
+  /* font */
+  --sans: "Atlas Grotesk", -apple-system, BlinkMacSystemFont, Helvetica, Arial,
+    sans-serif;
+  --serif: "Tiempos Text Web", Iowan Old Style, Times New Roman, Times, serif;
+  --mono: Menlo, Consolas, Monaco, monospace;
 
-	/* z-index */
-	--z-bottom: -100;
-	--z-middle: 0;
-	--z-top: 100;
-	--z-overlay: 1000;
+  /* z-index */
+  --z-bottom: -100;
+  --z-middle: 0;
+  --z-top: 100;
+  --z-overlay: 1000;
 
-	/* presets (used in reset.css) */
-	--border-radius: 2px;
-	--font-body: var(--serif);
-	--font-form: var(--sans);
-	--color-bg: #222;
-	--color-fg: var(--color-gray-900);
-	--color-primary: var(--color-black);
-	--color-link: var(--color-black);
-	--color-focus: var(--color-red);
-	--color-mark: var(--color-yellow);
-	--color-selection: var(--color-gray-300);
-	--color-border: var(--color-gray-300);
-	--color-button-bg: var(--color-gray-300);
-	--color-button-fg: var(--color-gray-900);
-	--color-button-hover: var(--color-gray-400);
-	--color-input-bg: var(--color-gray-50);
-	--color-input-fg: var(--color-gray-900);
-	--color-placeholder: var(--color-gray-500);
+  /* presets (used in reset.css) */
+  --border-radius: 2px;
+  --font-body: var(--serif);
+  --font-form: var(--sans);
+  --color-bg: #222;
+  --color-fg: var(--color-gray-900);
+  --color-primary: var(--color-black);
+  --color-link: var(--color-black);
+  --color-focus: var(--color-red);
+  --color-mark: var(--color-yellow);
+  --color-selection: var(--color-gray-300);
+  --color-border: var(--color-gray-300);
+  --color-button-bg: var(--color-gray-300);
+  --color-button-fg: var(--color-gray-900);
+  --color-button-hover: var(--color-gray-400);
+  --color-input-bg: var(--color-gray-50);
+  --color-input-fg: var(--color-gray-900);
+  --color-placeholder: var(--color-gray-500);
 
-	 /* Primary colors */
-	 --color-primary: #646cff;
-	 --color-primary-alpha: rgba(100, 108, 255, 0.67);
-	 --color-secondary: #61dafb;
-	 --color-secondary-alpha: rgba(97, 218, 251, 0.67);
-	 
-	 /* UI colors */
-	 --color-input-border: #dfe1e5;
-	 --color-button-bg: #f8f9fa;
-	 --color-button-text: #3c4043;
-	 --color-shadow: rgba(0, 0, 0, 0.1);
-	 
-	 /* Status colors */
-	 --color-error-bg: rgba(254, 226, 226, 0.9);
-	 --color-error-main: #ef4444;
-	 --color-error-text: #ffffff;
-	 --color-error-button-bg: #ffffff;
-	 --color-error-button-text: #dc2626;
-	 
-	 /* Loader colors */
-	 --color-loader: #ff3d00;
-	 --color-spinner-bg: rgba(0, 0, 0, 0.1);
-	 --color-spinner-fg: #0099ff;
-	 
-	 /* Example query colors */
-	 --color-example-bg: #f3f4f6;
-	 --color-example-text: #4b5563;
-	 --color-example-border: #e5e7eb;
-	 --color-example-hover-bg: #e5e7eb;
-	 
-	 /* Dark mode colors */
-	 --color-dark-example-bg: #1f2937;
-	 --color-dark-example-text: #d1d5db;
-	 --color-dark-example-border: #374151;
-	 --color-dark-example-hover-bg: #374151;
+  /* Primary colors */
+  --color-primary: #646cff;
+  --color-primary-alpha: rgba(100, 108, 255, 0.67);
+  --color-secondary: #61dafb;
+  --color-secondary-alpha: rgba(97, 218, 251, 0.67);
 
-	/* Arc colors */
-	--color-progress-arc-article: #b785ff;
-	--color-progress-arc-fact: #82d3f4;
-    --color-background-track: #2a3e4c;
-    --color-arc-label: rgba(255, 255, 255, 0.9);
+  /* UI colors */
+  --color-input-border: #dfe1e5;
+  --color-button-bg: #f8f9fa;
+  --color-button-text: #3c4043;
+  --color-shadow: rgba(0, 0, 0, 0.1);
 
-	/* Cluter title */
-	--cluster-title-bg: #E0EEFC; /* Background color */
-	--cluster-title-text: #333333; /* Title text color */
+  /* Status colors */
+  --color-error-bg: rgba(254, 226, 226, 0.9);
+  --color-error-main: #ef4444;
+  --color-error-text: #ffffff;
+  --color-error-button-bg: #ffffff;
+  --color-error-button-text: #dc2626;
 
-	/* "1" second duration */
-	--1s: 1ms;
+  /* Loader colors */
+  --color-loader: #ff3d00;
+  --color-spinner-bg: rgba(0, 0, 0, 0.1);
+  --color-spinner-fg: #0099ff;
+
+  /* Example query colors */
+  --color-example-bg: #f3f4f6;
+  --color-example-text: #4b5563;
+  --color-example-border: #e5e7eb;
+  --color-example-hover-bg: #e5e7eb;
+
+  /* Dark mode colors */
+  --color-dark-example-bg: #1f2937;
+  --color-dark-example-text: #d1d5db;
+  --color-dark-example-border: #374151;
+  --color-dark-example-hover-bg: #374151;
+
+  /* Arc colors */
+  --color-progress-arc-article: #b785ffd1;
+  --color-progress-arc-fact: #fdb7ead1;
+  --color-background-track: #2a3e4c;
+  --color-arc-label: rgba(255, 255, 255, 0.9);
+
+  /* Cluter title */
+  --cluster-title-bg: #e0eefc; /* Background color */
+  --cluster-title-text: #333333; /* Title text color */
+
+  /* "1" second duration */
+  --1s: 1ms;
 }
 
 /* dark theme */
@@ -109,45 +110,45 @@
 } */
 
 @media screen and (prefers-reduced-motion: no-preference) {
-	:root {
-		--1s: 1s;
-	}
+  :root {
+    --1s: 1s;
+  }
 }
 
 h1 {
-	font-size: var(--48px, 48px);
+  font-size: var(--48px, 48px);
 }
 
 .title-large span {
-	display: block;
+  display: block;
 }
 
 h2 {
-	font-size: var(--36px, 36px);
+  font-size: var(--36px, 36px);
 }
 
 h3 {
-	font-size: var(--28px, 28px);
+  font-size: var(--28px, 28px);
 }
 
 h4 {
-	font-size: var(--24px, 24px);
+  font-size: var(--24px, 24px);
 }
 
 h5 {
-	font-size: var(--22px, 22px);
+  font-size: var(--22px, 22px);
 }
 
 h6 {
-	font-size: var(--20px, 20px);
+  font-size: var(--20px, 20px);
 }
 
 .step-content a {
-	color: white;
+  color: white;
 }
 
 #content .methods p {
-	font-family: var(--sans);
-	font-size: 14px;
-    margin-bottom: 1rem;
+  font-family: var(--sans);
+  font-size: 14px;
+  margin-bottom: 1rem;
 }

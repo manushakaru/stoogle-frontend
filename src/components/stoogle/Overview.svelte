@@ -4,6 +4,7 @@
   import YearColor from "$components/files/YearColorSpectrum.svelte";
   import Circle from "$components/files/Circle.svelte";
   import Belt from "$components/files/Belt.svelte";
+  import Articles from "$components/stoogle/Articles.svelte";
 
   export let data;
   export let viewportHeight;
@@ -14,6 +15,7 @@
   export let items = [];
   export let sorted_article_ids;
 
+  let showButton = false;
   let years = data.stats.article_year_range;
   let numCircles = data.stats.total_clusters;
   let clusters = data.clusters;
@@ -21,6 +23,7 @@
   let shared_articles = data.shared_articles;
   let stats = data.stats;
   let steps = data.steps;
+  let articles = data.all_mapped_articles;
 
   let width = viewportWidth;
   let height = viewportHeight - 100;
@@ -72,6 +75,8 @@
 
     document.addEventListener("click", handleOutsideClick);
     document.addEventListener("click", handleCircleClick);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   });
 
   onDestroy(() => {
@@ -93,8 +98,11 @@
 
   function handleOutsideClick(event) {
     const groupElement = event.target.closest('g[id^="circle-"]');
+    if (event.target.id === "open-button" || event.target.id === "close-button")
+      return;
     if (!groupElement) {
       resetZoom();
+      scrollToTop();
     }
   }
 
@@ -186,8 +194,8 @@
           `translate(${-x * scale + (4 * width) / 6 + 80}, ${
             -y * scale + height / 2 + 40
           }) scale(${scale})`
-           // change x : 120 for horizontal movement
-           // change y : 40 for vertical movement
+          // change x : 120 for horizontal movement
+          // change y : 40 for vertical movement
         );
     }
   }
@@ -201,6 +209,14 @@
       });
     }
   };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function handleScroll() {
+    showButton = window.scrollY > 100;
+  }
 </script>
 
 <YearColor {years} {stats} bind:yearColors />
@@ -230,3 +246,17 @@
     {/each}
   </g>
 </svg>
+
+<div
+  class="fixed bottom-4 z-[1001] right-12 transform -translate-y-1/2"
+  class:hidden={!showButton}
+>
+  <button
+    on:click={scrollToTop}
+    class="text-white text-1xl p-2 bg-gray-700 rounded-full shadow-lg hover:bg-gray-600 transition duration-300 relative z-50"
+  >
+    ↑
+  </button>
+</div>
+
+<Articles {articles} {sorted_article_ids} {yearColors} />
