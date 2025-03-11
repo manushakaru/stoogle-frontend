@@ -8,6 +8,25 @@
   export let shared_articles;
   export let yearColors;
   export let sorted_article_ids;
+  export let curMergedId;
+
+  const circleRadius = 98;
+
+  $: activeClusterId = curMergedId?.split("_")[0];
+
+  function getPerimeterPoint(start, end) {
+    const dx = end.x - start.x;
+    const dy = end.y - start.y;
+    const length = Math.sqrt(dx * dx + dy * dy);
+
+    if (length === 0) return start;
+
+    const scale = circleRadius / length;
+    return {
+      x: start.x + dx * scale,
+      y: start.y + dy * scale,
+    };
+  }
 
   let lineData = [];
 
@@ -27,11 +46,20 @@
         const endCircle = getCircleById(article.end_cluster);
 
         if (startCircle && endCircle) {
+          // Calculate perimeter points
+          const startPoint = getPerimeterPoint(
+            startCircle,
+            endCircle
+          );
+          const endPoint = getPerimeterPoint(endCircle, startCircle);
+
           return {
-            start: { x: startCircle.x, y: startCircle.y },
-            end: { x: endCircle.x, y: endCircle.y },
+            start: { x: startPoint.x, y: startPoint.y },
+            end: { x: endPoint.x, y: endPoint.y },
             beltWidth: article.count * 3,
             articles: article.articles,
+            startCluster: article.start_cluster,
+            endCluster: article.end_cluster,
           };
         }
         return null;
@@ -86,20 +114,32 @@
   }
 </script>
 
-{#each lineData as { start, end, beltWidth, articles }}
+{#each lineData as { start, end, beltWidth, articles, startCluster, endCluster }}
   <path
+    class:inactive={curMergedId &&
+      startCluster !== activeClusterId &&
+      endCluster !== activeClusterId}
     d={curve({ source: start, target: end })}
     fill="none"
     stroke="#495e6e"
     stroke-width={Math.max(beltWidth, 1)}
     use:tooltip={articles}
     style="cursor: pointer;"
+    stroke-linecap="butt"
   />
 {/each}
 
 <style>
   path {
     transition: all 0.2s ease-out;
+    stroke-linecap: butt;
+  }
+
+  path.inactive {
+    opacity: 0.2;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 0;
   }
 
   .tooltip-topic {

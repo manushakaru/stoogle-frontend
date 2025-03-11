@@ -231,6 +231,7 @@
       {shared_articles}
       {yearColors}
       {sorted_article_ids}
+      {curMergedId} 
     />
     {#each clusters as cluster (cluster.cluster_id)}
       <Circle

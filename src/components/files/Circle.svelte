@@ -8,6 +8,7 @@
   import { cubicOut } from "svelte/easing";
   import { fly } from "svelte/transition";
   import { backOut } from "svelte/easing";
+  import { fade } from "svelte/transition";
 
   export let circles;
   export let cluster;
@@ -75,6 +76,7 @@
   }
 
   $: isActive = curMergedId?.split("_")[0] === cluster.cluster_id.toString();
+  $: isAnyActive = !!curMergedId;
 
   $: if (circles && cluster && width && height) {
     wordCloud = cluster.word_cloud;
@@ -235,6 +237,9 @@
       use:action
       id={"circle-" + cluster.cluster_id}
       transform={`translate(${circle.x}, ${circle.y})`}
+      class:inactive={isAnyActive && !isActive}
+      in:fly={{ duration: 300 }}
+      out:fade={{ duration: 300 }}
     >
       <Facts
         {cluster}
@@ -417,5 +422,12 @@
 
   :focus {
     outline: none;
+  }
+  .inactive {
+    opacity: 0.2;
+    fill: red;
+    color: red;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
   }
 </style>
