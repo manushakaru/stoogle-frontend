@@ -111,6 +111,10 @@
                 class="color-box ml-1 h-4"
                 style="background-color: {yearColor.color}; width: {yearColor.width}px"
               ></div>
+              <span
+              style="color:{yearColor.color} ;"
+              >{yearColor.count}</span
+            >
             </div>
           {/if}
         {/each}
@@ -146,7 +150,7 @@
   .color-box {
     width: 15px;
     height: 15px;
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
   .year-label {

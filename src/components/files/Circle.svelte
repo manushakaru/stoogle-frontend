@@ -264,6 +264,7 @@
               easing: backOut,
               y: 100,
             }}
+            class:nonehighlight={!shouldHighlight}
           >
             <circle
               cx={0}
@@ -272,8 +273,7 @@
               stroke="#b8ccd6"
               stroke-width="0.5"
               class="circle-element hit-area"
-              class:highlight={shouldHighlight}
-              fill={shouldHighlight ? "var(--color-highlight)" : color}
+             
             />
             <TextCircle radius={node.r ?? 0} text={node.data.fact_content} />
           </g>
@@ -423,10 +423,8 @@
     pointer-events: none;
   }
 
-  .highlight {
-    filter: brightness(1.2);
-    stroke: #ffeb3b;
-    stroke-width: 1.5px;
+  .nonehighlight {
+    opacity: 0.5;
     transition: all 0.3s ease;
   }
 </style>
