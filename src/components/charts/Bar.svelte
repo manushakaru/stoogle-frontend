@@ -33,9 +33,9 @@
       datasets: [
         {
           data: data,
-          backgroundColor: backgroundColor.map((color) => `${color}80`), // Adjust opacity to 0.5
+          backgroundColor: backgroundColor.map((color) => `${color}d1`), // Adjust opacity to 0.5
           borderWidth: 2,
-          borderColor: backgroundColor,
+          // borderColor: backgroundColor,
         },
       ],
     };

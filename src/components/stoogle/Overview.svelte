@@ -81,6 +81,7 @@
 
   onDestroy(() => {
     document.removeEventListener("click", handleOutsideClick);
+    document.removeEventListener("click", handleCircleClick);
   });
 
   function handleCircleClick(event) {
@@ -100,7 +101,7 @@
     const groupElement = event.target.closest('g[id^="circle-"]');
     if (event.target.id === "open-button" || event.target.id === "close-button")
       return;
-    if (!groupElement) {
+    if (!groupElement && event.target.id === "visBack") {
       resetZoom();
       scrollToTop();
     }
@@ -219,7 +220,7 @@
   }
 </script>
 
-<YearColor {years} {stats} bind:yearColors />
+<YearColor {years} {stats} {articles} bind:yearColors />
 
 <svg id="visBack" {width} {height}>
   <g>

@@ -18,6 +18,20 @@
   );
   let visRecommendation = visData.length > 1 ? fact.vis_recommendation : "text";
   let dataVlue = visData[0];
+
+  $: vis_recommender();
+
+  function vis_recommender(){
+    if (visData.length > 1) {
+      return visRecommendation;
+    } 
+    else if (visData.length === 1 && (visData[0].type === "isotype" || visData[0].unit === "%" || visData[0].unit === "percentage")) {
+      visRecommendation = "isotype";
+    }
+    else {
+      visRecommendation = "text";
+    }
+  }
 </script>
 
 <!-- To remove border - dark:border-slate-500 and border-4 -->
@@ -49,7 +63,7 @@
             class="flex flex-col items-center w-full max-w-[300px] justify-center h-full"
           >
             <p
-              class="text-5xl sm:text-2xl md:text-5xl text-center w-full font-bold text-[{dataVlue.color}] max-w-[300px] pl-7"
+              class="text-5xl sm:text-2xl md:text-5xl text-center w-full font-bold text-[{dataVlue.color}d1] max-w-[300px] pl-7"
             >
               {dataVlue.value}
               {dataVlue.unit}

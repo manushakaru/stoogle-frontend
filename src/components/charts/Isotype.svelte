@@ -19,7 +19,7 @@
 
       for (let i = cumulative; i < cumulative + unitsCount; i++) {
         if (i < totalUnits) {
-          dataUnits[i].color = d.color;
+          dataUnits[i].color = `${d.color}d1`;
           dataUnits[i].label = `${d.label} (${d.value})`;
         }
       }
@@ -27,13 +27,13 @@
     });
 
     for (let i = cumulative; i < totalUnits; i++) {
-      dataUnits[i].color = "#e0e0e0";
+      dataUnits[i].color = "#e0e0e0d1";
       dataUnits[i].label = "Other";
     }
   });
 </script>
 
-<svg width={unitsPerRow * (unitSize + unitSpacing) + 150} height={Math.ceil(totalUnits / unitsPerRow) * (unitSize + unitSpacing) + 100}>
+<svg width={unitsPerRow * (unitSize + unitSpacing) } height={Math.ceil(totalUnits / unitsPerRow) * (unitSize + unitSpacing) + 50}>
   {#each dataUnits as d, i}
     <circle
       cx={(i % unitsPerRow) * (unitSize + unitSpacing) + unitSize / 2}
@@ -47,7 +47,7 @@
     {#each inputData as d, i}
       <g transform={`translate(10, ${i * 25})`}>
         <circle cx="0" cy="0" r="6" fill={d.color}></circle>
-        <text x="20" y="2" style="font-size: 12px; fill: white;" alignment-baseline="middle">{d.x} ({d.y})</text>
+        <text x="20" y="2" style="font-size: 12px; fill: white;" alignment-baseline="middle">{d.label} ({d.unit})</text>
       </g>
     {/each}
   </g>

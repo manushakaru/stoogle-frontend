@@ -28,7 +28,7 @@
   const transformData = (inputData) => {
     const labels = inputData.map((item) => item.label);
     const data = inputData.map((item) => parseFloat(item.value.match(/\d+(\.\d+)?/g)[0]));
-    const pointColors = inputData.map((item) => item.color || "#EB3678");
+    const pointColors = inputData.map((item) => `${item.color}d1` || "#EB3678");
 
     return {
       labels: labels,
@@ -36,8 +36,8 @@
         {
           fill: true,
           lineTension: 0.3,
-          backgroundColor: "#EB3678",
-          borderColor: "rgb(205, 130, 158)",
+          backgroundColor: "#EB3678d1",
+          borderColor: "rgba(205, 130, 158, 0.7)",
           borderCapStyle: "butt",
           borderDash: [],
           borderDashOffset: 0.0,
@@ -49,10 +49,10 @@
           pointBorderWidth: 10,
           pointHoverRadius: 5,
           pointHoverBackgroundColor: "rgb(0, 0, 0)",
-          pointHoverBorderColor: "rgba(220, 220, 220, 1)",
+          pointHoverBorderColor: "rgba(220, 220, 220, 0.8)",
           pointHoverBorderWidth: 2,
           pointRadius: 1,
-          pointHitRadius: 10,
+          pointHitRadius: 8,
           data: data,
         },
       ],
