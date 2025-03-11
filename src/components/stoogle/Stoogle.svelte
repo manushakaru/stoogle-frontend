@@ -103,7 +103,7 @@
       const response = await fetch(
         `http://127.0.0.1:8000/stories?query=${encodeURIComponent(
           searchQuery
-        )}&web=${encodeURIComponent(web)}&page_count=${pageCount}`
+        )}&web=${encodeURIComponent(web)}&page_count=${pageCount}&country_code=${countryCode}`
       );
 
       if (!response.ok) {
