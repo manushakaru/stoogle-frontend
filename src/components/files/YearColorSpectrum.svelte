@@ -81,14 +81,14 @@
     <p
       class="mb-1 text-black font-semibold dark:text-[rgba(255,255,255,0.6)] flex justify-between"
     >
-      Total Articles: <span class="font-bold text-[var(--color-progress-arc-article)] pl-4"
+      Total Articles: <span class="font-bold dark:text-[#b785ff] pl-4"
         >{totalArticles}</span
       >
     </p>
     <p
-      class="m-0 text-black font-semibold text-[rgba(255,255,255,0.6)] flex justify-between"
+      class="m-0 text-black font-semibold dark:text-[rgba(255,255,255,0.6)] flex justify-between"
     >
-      Total Facts: <span class="font-bold text-[var(--color-progress-arc-fact)]"
+      Total Facts: <span class="font-bold dark:text-[var(--color-progress-arc-fact)]"
         >{totalFacts}</span
       >
     </p>
@@ -129,6 +129,7 @@
   .year-spectrum {
     position: absolute;
     top: 10px;
+    /* right: 200px; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;

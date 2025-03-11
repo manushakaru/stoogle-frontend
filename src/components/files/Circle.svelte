@@ -164,7 +164,7 @@
     tippy(node, {
       content: `
       <div class="tooltip-content">
-        <div class="tooltip-topic" style="color:#adb2eb">Related Articles: ${
+        <div class="tooltip-topic" style="color:var(--color-progress-arc-article)">Related Articles: ${
           articles.length
         }/${stats.total_articles}</div>
          ${articles
@@ -195,6 +195,31 @@
            .join("")}
       </div>
     `,
+      allowHTML: true,
+      theme: "custom",
+      animation: false,
+      delay: [0, 0],
+      followCursor: true,
+      interactive: true,
+      placement: "top",
+      plugins: [followCursor],
+      appendTo: () => document.body,
+    });
+    return {
+      destroy() {
+        node._tippy?.destroy();
+      },
+    };
+  }
+
+  function factTooltip(node) {
+    tippy(node, {
+      content: `
+      <div class="tooltip-content">
+        <div class="tooltip-topic" style="color:var(--color-progress-arc-fact)">Related Facts: ${
+          numFacts
+        }/${totalFacts}</div>`
+        ,
       allowHTML: true,
       theme: "custom",
       animation: false,
@@ -318,6 +343,7 @@
         style="cursor: pointer;"
         d={factActiveArc()}
         fill="var(--color-progress-arc-fact)"
+        use:factTooltip={cluster.articles}
       />
 
       <!-- <text class="arc-label" dy="-2">
