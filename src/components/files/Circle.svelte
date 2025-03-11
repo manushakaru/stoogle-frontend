@@ -417,8 +417,6 @@
   }
   .inactive {
     opacity: 0.2;
-    fill: red;
-    color: red;
     transition: opacity 0.3s ease;
     pointer-events: none;
   }
