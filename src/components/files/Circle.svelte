@@ -5,7 +5,6 @@
   import tippy, { followCursor } from "tippy.js";
   import TextCircle from "$components/files/TextCircle.svelte";
   import { pack } from "d3-hierarchy";
-  import { cubicOut } from "svelte/easing";
   import { fly } from "svelte/transition";
   import { backOut } from "svelte/easing";
   import { fade } from "svelte/transition";
@@ -19,6 +18,7 @@
   export let action;
   export let sorted_article_ids;
   export let curMergedId;
+  export let articlesDict;
 
   let text = "Home schooling is fun!";
   let circle;
@@ -60,6 +60,9 @@
   let packedFacts = [];
   let packLayout;
 
+  $: isActive = curMergedId?.split("_")[0] === cluster.cluster_id.toString();
+  $: isAnyActive = !!curMergedId;
+
   $: if (cluster.cluster_id) {
     const facts = cluster.representative_facts || [];
     text = cluster.representative_facts?.[0]?.fact_content;
@@ -74,9 +77,6 @@
     packLayout(root);
     packedFacts = root.descendants().slice(1);
   }
-
-  $: isActive = curMergedId?.split("_")[0] === cluster.cluster_id.toString();
-  $: isAnyActive = !!curMergedId;
 
   $: if (circles && cluster && width && height) {
     wordCloud = cluster.word_cloud;
@@ -160,6 +160,7 @@
 
   function tooltip(node, articles) {
     articles = d3.sort(articles, (a, b) => d3.ascending(a.year, b.year));
+    console.log("articlesData", articlesDict);
     tippy(node, {
       content: `
       <div class="tooltip-content">
@@ -170,15 +171,20 @@
            .map(
              (article) => `
         <div class="article-card">
-          <p class="article-title text-clamp">${article.title}</p>
+          <p class="article-title text-clamp">${
+            articlesDict[article.id].result_title
+          }</p>
           <div class="article-content_">
             <a target="_blank" href="${
               article.url
-            }" style="text-decoration: none; color:#1a2633" >
-              <div class="article-circle">${
-                sorted_article_ids[article.id]
-              }</div>
+            }" style="text-decoration: none; color: transparent" >
+              <img src=${articlesDict[article.id].favicon} alt=${
+                articlesDict[article.id].source
+              } class="w-5 h-5 bg-[#f1f3f4] rounded-full " />
             </a>
+            <span class="text-xs text-gray-400 truncate block">${
+              articlesDict[article.id].source
+            }</span>
             <span class="fact-count_" style="color:${getColor(
               article.year
             )};">${article.year}</span>
@@ -199,33 +205,9 @@
       plugins: [followCursor],
       appendTo: () => document.body,
     });
-  }
-
-  function factTooltip(node, factContent) {
-    tippy(node, {
-      content: factContent,
-      allowHTML: true,
-      theme: "light",
-      placement: "top",
-      animation: "fade",
-      duration: 200,
-    });
     return {
       destroy() {
         node._tippy?.destroy();
-      },
-    };
-  }
-
-  // Custom transition function for growing the circle
-  function grow(node, { duration = 500 }) {
-    const targetR = parseFloat(node.getAttribute("r"));
-    node.setAttribute("r", 0); // Start from 0
-    return {
-      duration,
-      easing: cubicOut,
-      tick: (t) => {
-        node.setAttribute("r", t * targetR); // Animate to target radius
       },
     };
   }
@@ -250,6 +232,7 @@
         {height}
         {sorted_article_ids}
         {curMergedId}
+        {articlesDict}
       />
 
       <circle
@@ -266,6 +249,13 @@
 
       {#each packedFacts as node, i}
         {#if isActive}
+          {@const currentMergedFact = cluster.merged_facts?.find(
+            (mf) => mf.merged_id === curMergedId
+          )}
+          {@const shouldHighlight =
+            currentMergedFact?.merged_fact_group_ids.includes(
+              node.data.fact_id
+            )}
           <g
             transform={`translate(${node.x - radius}, ${node.y - radius})`}
             in:fly={{
@@ -282,6 +272,8 @@
               stroke="#b8ccd6"
               stroke-width="0.5"
               class="circle-element hit-area"
+              class:highlight={shouldHighlight}
+              fill={shouldHighlight ? "var(--color-highlight)" : color}
             />
             <TextCircle radius={node.r ?? 0} text={node.data.fact_content} />
           </g>
@@ -429,5 +421,12 @@
     color: red;
     transition: opacity 0.3s ease;
     pointer-events: none;
+  }
+
+  .highlight {
+    filter: brightness(1.2);
+    stroke: #ffeb3b;
+    stroke-width: 1.5px;
+    transition: all 0.3s ease;
   }
 </style>

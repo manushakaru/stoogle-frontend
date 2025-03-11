@@ -8,6 +8,7 @@
   export let shared_articles;
   export let yearColors;
   export let sorted_article_ids;
+  export let articlesDict;
   export let curMergedId;
 
   const circleRadius = 98;
@@ -47,10 +48,7 @@
 
         if (startCircle && endCircle) {
           // Calculate perimeter points
-          const startPoint = getPerimeterPoint(
-            startCircle,
-            endCircle
-          );
+          const startPoint = getPerimeterPoint(startCircle, endCircle);
           const endPoint = getPerimeterPoint(endCircle, startCircle);
 
           return {
@@ -82,15 +80,20 @@
            .map(
              (article) => `
         <div class="article-card">
-          <p class="article-title text-clamp">${article.title}</p>
+          <p class="article-title text-clamp">${
+            articlesDict[article.article_id].result_title
+          }</p>
           <div class="article-content_">
             <a target="_blank" href="${
               article.url
             }" style="text-decoration: none; color: transparent;" >
-              <div class="article-circle">${
-                sorted_article_ids[article.article_id]
-              }</div>
+            <img src=${articlesDict[article.article_id].favicon} alt=${
+              articlesDict[article.article_id].source
+            } class="w-5 h-5 bg-[#f1f3f4] rounded-full " />
             </a>
+            <span class="text-xs text-gray-400 truncate block">${
+              articlesDict[article.article_id].source
+            }</span>
             <span class="fact-count_" style="color:${getColor(
               article.year
             )};">${article.year}</span>

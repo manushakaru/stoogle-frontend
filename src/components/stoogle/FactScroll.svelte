@@ -5,11 +5,11 @@
   export let facts;
   export let value = 0;
   export let onFactChange;
-  export let items = []
+  export let items = [];
   export let sorted_article_ids;
-  
-  $: value, onFactChange(value); 
+  export let articlesDict;
 
+  $: value, onFactChange(value);
 </script>
 
 <Scrolly bind:value>
@@ -17,11 +17,17 @@
     {@const active = value === i}
     {@const last = i == facts.length - 1 ? true : false}
     {@const first = i == 0 ? true : false}
-    <div bind:this={items[i]} class="vis-card" class:active class:last class:first>
+    <div
+      bind:this={items[i]}
+      class="vis-card"
+      class:active
+      class:last
+      class:first
+    >
       <!-- {#if fact.vis_recommendation === "text"}
         <TextCard  fact={fact} sorted_article_ids={sorted_article_ids} />
       {:else} -->
-        <VisCard fact={fact} sorted_article_ids={sorted_article_ids}></VisCard>
+      <VisCard {fact} {sorted_article_ids} {articlesDict}></VisCard>
       <!-- {/if} -->
     </div>
   {/each}

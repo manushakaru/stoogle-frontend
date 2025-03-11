@@ -6,6 +6,7 @@
 
   export let fact = {};
   export let sorted_article_ids;
+  export let articlesDict;
 
   let titles = fact.titles;
   let chartTitle = titles.chart_title;
@@ -21,14 +22,17 @@
 
   $: vis_recommender();
 
-  function vis_recommender(){
+  function vis_recommender() {
     if (visData.length > 1) {
       return visRecommendation;
-    } 
-    else if (visData.length === 1 && (visData[0].type === "isotype" || visData[0].unit === "%" || visData[0].unit === "percentage")) {
+    } else if (
+      visData.length === 1 &&
+      (visData[0].type === "isotype" ||
+        visData[0].unit === "%" ||
+        visData[0].unit === "percentage")
+    ) {
       visRecommendation = "isotype";
-    }
-    else {
+    } else {
       visRecommendation = "text";
     }
   }
@@ -79,11 +83,11 @@
       </p>
       {#each merged_articles as article}
         <a href={article.url} target="_blank" style="color:  transparent;">
-          <div
-            class="inline-flex items-center justify-center w-5 h-5 bg-[#394c5f] text-[#adb2eb] rounded-full text-xs font-semibold"
-          >
-            {sorted_article_ids[article.id]}
-          </div>
+          <img
+            src={articlesDict[article.id].favicon}
+            alt={articlesDict[article.id].source}
+            class="inline-flex items-center justify-center w-5 h-5 bg-[#f1f3f4] rounded-full"
+          />
         </a>
       {/each}
     </div>

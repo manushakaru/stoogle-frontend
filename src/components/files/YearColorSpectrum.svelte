@@ -45,11 +45,11 @@
       //.interpolator(d3.interpolateHsl("#AFF3FE", "#1791A5"));
 
       yearColors.push({
-          year: "Unknown",
-          color: "#c6bea9bf",
-          count: articleCount["Unknown"] || 0,
-          width: widthScale(articleCount["Unknown"] || 0),
-        });
+        year: "Unknown",
+        color: "#c6bea9bf",
+        count: articleCount["Unknown"] || 0,
+        width: widthScale(articleCount["Unknown"] || 0),
+      });
 
       for (let year = years.earliest; year <= years.latest; year++) {
         yearColors.push({
@@ -76,27 +76,43 @@
   }
 </script>
 
-<div class="absolute left-10 bg-transparent shadow-lg rounded-lg p-2">
+<div class="absolute left-10 bg-[#1b2d3d] shadow-lg rounded-lg p-2">
   <div class="mt-1 text-sm">
-    <p class="mb-1 text-black font-semibold dark:text-[rgba(255,255,255,0.6)] flex justify-between">
-      Total Articles: <span class="font-bold dark:text-[#b785ff] pl-4">{totalArticles}</span>
+    <p
+      class="mb-1 text-black font-semibold dark:text-[rgba(255,255,255,0.6)] flex justify-between"
+    >
+      Total Articles: <span class="font-bold dark:text-[#b785ff] pl-4"
+        >{totalArticles}</span
+      >
     </p>
-    <p class="m-0 text-black font-semibold dark:text-[rgba(255,255,255,0.6)] flex justify-between">
-      Total Facts: <span class="font-bold dark:text-[rgba(255,255,255,0.6)]">{totalFacts}</span>
+    <p
+      class="m-0 text-black font-semibold dark:text-[rgba(255,255,255,0.6)] flex justify-between"
+    >
+      Total Facts: <span class="font-bold dark:text-[rgba(255,255,255,0.6)]"
+        >{totalFacts}</span
+      >
     </p>
 
-    <div class="mt-5 pb-2 text-black font-semibold dark:text-[rgba(255,255,255,0.6)]">
+    <div
+      class="mt-5 pb-2 text-black font-semibold dark:text-[rgba(255,255,255,0.6)]"
+    >
       Published Years
     </div>
     {#if yearColors.length > 0}
       <div class="years flex flex-col gap-1">
         {#each yearColors as yearColor}
-        {#if yearColor.count !== 0}
-          <div class="year-item flex items-center">
-            <span class="text-black dark:text-[rgba(255,255,255,0.6)] w-16 text-right">{yearColor.year}</span>
-            <div class="color-box ml-1 h-4" style="background-color: {yearColor.color}; width: {yearColor.width}px"></div>
-          </div>
-        {/if}
+          {#if yearColor.count !== 0}
+            <div class="year-item flex items-center">
+              <span
+                class="text-black dark:text-[rgba(255,255,255,0.6)] w-16 text-right"
+                >{yearColor.year}</span
+              >
+              <div
+                class="color-box ml-1 h-4"
+                style="background-color: {yearColor.color}; width: {yearColor.width}px"
+              ></div>
+            </div>
+          {/if}
         {/each}
       </div>
     {:else}

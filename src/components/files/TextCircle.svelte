@@ -54,7 +54,7 @@
   }
 
   onMount(() => {
-    radius = radius - 4;
+    radius = radius - 2;
     const words = createWords(text);
     const targetWidth = Math.sqrt(measureWidth(text.trim()) * lineHeight);
     lines = createLines(words, targetWidth);

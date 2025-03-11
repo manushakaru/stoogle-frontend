@@ -27,6 +27,10 @@
   stats = clusterData["stats"];
   allFacts = clusterData["all_merged_facts_in_order"];
   sorted_article_ids = clusterData["sorted_article_ids"];
+  let articles = clusterData["all_mapped_articles"];
+  let articlesDict = Object.fromEntries(
+    articles.map((item) => [item.id, item])
+  );
 
   let stepCounts = [];
   let total = -1;
@@ -85,6 +89,7 @@
       {items}
       facts={allFacts}
       {sorted_article_ids}
+      {articlesDict}
       onFactChange={handleFactChange}
     />
   </div>

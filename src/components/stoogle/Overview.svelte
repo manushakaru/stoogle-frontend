@@ -24,6 +24,9 @@
   let stats = data.stats;
   let steps = data.steps;
   let articles = data.all_mapped_articles;
+  let articlesDict = Object.fromEntries(
+    articles.map((item) => [item.id, item])
+  );
 
   let width = viewportWidth;
   let height = viewportHeight - 100;
@@ -32,11 +35,16 @@
   let simulation;
 
   const boundaryForce = (alpha) => {
+    console.log("boundaryForce", width, height);
     circles.forEach((d) => {
-      const xMin = 0 + d.radius + 40;
-      const xMax = width - d.radius - 40;
-      const yMin = 0 + d.radius + 80;
-      const yMax = height - d.radius - 40;
+      // const xMin = 0 + d.radius + 300;
+      // const xMax = width - d.radius - 400;
+      // const yMin = 0 + d.radius + 150;
+      // const yMax = height - d.radius - 150;
+      const xMin = width * 0.156 + d.radius; // 300px / 1920px
+      const xMax = width * 0.791 - d.radius; // (1920 - 400) / 1920
+      const yMin = height * 0.168 + d.radius; // 150px / 892px
+      const yMax = height * 0.832 - d.radius; // (892 - 150) / 892
 
       if (d.x < xMin) d.x = xMin;
       if (d.x > xMax) d.x = xMax;
@@ -68,7 +76,7 @@
           .radius((d) => d.radius + 120)
       )
       .force("charge", d3.forceManyBody().strength(5))
-      // .force("boundary", boundaryForce)
+      .force("boundary", boundaryForce)
       .force("x", d3.forceX(width / 2).strength(0.1))
       .force("y", d3.forceY(height / 2).strength(0.1))
       .on("tick", () => (circles = [...circles]));
@@ -231,7 +239,8 @@
       {shared_articles}
       {yearColors}
       {sorted_article_ids}
-      {curMergedId} 
+      {curMergedId}
+      {articlesDict}
     />
     {#each clusters as cluster (cluster.cluster_id)}
       <Circle
@@ -244,6 +253,7 @@
         action={circleAction}
         {sorted_article_ids}
         {curMergedId}
+        {articlesDict}
       />
     {/each}
   </g>

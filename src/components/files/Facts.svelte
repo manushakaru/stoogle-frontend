@@ -9,6 +9,7 @@
   export let width, height;
   export let sorted_article_ids;
   export let curMergedId;
+  export let articlesDict;
 
   let circleData = [];
   const smallCircleRadius = 6;
@@ -124,20 +125,22 @@
   }
 
   function tooltip(node, fact) {
+    const articleID = parseInt(fact.fact_id.split("_")[0]);
     tippy(node, {
       content: `
       <div class="tooltip-content">
         <p>${fact.fact_content}</p>
         <div class="articles-container">
-          <div >
             <a target="_blank" href="${
               fact.article.url
             }" style="color: transparent;" >
-              <div class="article-circle">${
-                sorted_article_ids[fact.fact_id.split("_")[0]]
-              }</div>
+             <img src=${articlesDict[articleID].favicon} alt=${
+               articlesDict[articleID].source
+             } class="w-5 h-5 bg-[#f1f3f4] rounded-full " />
               </a>
-          </div>
+          <span class="text-xs text-gray-400 truncate block">${
+            articlesDict[articleID].source
+          }</span>
           <span class="fact-count" style="color:${getColor(
             fact.article.year
           )};">${fact.article.year}</span>

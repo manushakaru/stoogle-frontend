@@ -2,13 +2,14 @@
   import { DotLottieSvelte } from "@lottiefiles/dotlottie-svelte";
   import Popup from "$components/stoogle/Popup.svelte";
   import analysisData from "$data/samples/AI_is_a_threat_or_not_2.json";
-  import analysisData5 from "$data/samples/AI_is_a_threat_or_not_pew_research.json";
+  import analysisData5 from "$data/samples/AI_is_a_threat_or_not.json";
   import analysisData6 from "$data/samples/Best_value_phones_in_2025.json";
   import analysisData1 from "$data/samples/pros_cons_homeschooling_2.json";
   import analysisData2 from "$data/samples/Americans_and_tiktok.json";
   import analysisData3 from "$data/samples/pros_cons_homeschooling_2.json";
   import analysisData4 from "$data/samples/pros_cons_homeschooling_2.json";
   import Section from "$components/stoogle/Section.svelte";
+  import Country from "$components/stoogle/Country.svelte";
 
   export let searchQuery = "AI is a threat or not";
   export let isSticky = false;
@@ -27,10 +28,16 @@
   export let viewportHeight;
   export let viewportWidth;
 
+  let countryCode;
+
   const exampleQueries = [
     {
       query: "AI is a threat or not",
       data: analysisData,
+    },
+    {
+      query: "AI is a threat or not -2",
+      data: analysisData5,
     },
     {
       query: "Pros and cons of homeschooling statistics",
@@ -232,6 +239,8 @@
     <Section {viewportHeight} {viewportWidth} {clusterData} {stepHandler} />
   {/if}
 </div>
+
+<Country bind:countryCode></Country>
 
 <footer
   class="fixed bottom-0 w-full bg-[#1A2E3C] text-[#adb2b7] text-center py-2 text-sm"

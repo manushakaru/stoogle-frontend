@@ -48,16 +48,28 @@
         class="bg-white bg-opacity-20 p-3 rounded-lg shadow-sm mb-3 last:mb-0 backdrop-blur-md"
       >
         <h3 class="text-sm font-semibold mt-0 text-white line-clamp-3">
-          {article.title}
+          {article.result_title}
         </h3>
         <p class="text-xs text-gray-300 mt-1">{article.meta_description}</p>
         <div class="flex items-center mt-2">
           <a href={article.url} target="_blank" style="color: transparent;">
-            <div
+            <img
+              src={article.favicon}
+              alt={article.source}
+              class="w-5 h-5 bg-[#f1f3f4] rounded-full mr-2"
+            />
+          </a>
+
+          <!-- <span class="text-xs text-gray-500">{article.source}</span> -->
+          <a href={article.url} target="_blank" style="color: transparent;">
+            <span class="text-xs text-gray-300 truncate max-w-[150px] block"
+              >{article.source}</span
+            >
+            <!-- <div
               class="inline-flex items-center justify-center w-5 h-5 bg-[#394c5f] text-[#adb2eb] rounded-full text-xs font-semibold"
             >
               {sorted_article_ids[article.id]}
-            </div>
+            </div> -->
           </a>
           <span class="fact-count_" style="color:{getColor(article.year)};"
             >{article.year}</span
