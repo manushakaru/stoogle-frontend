@@ -1,5 +1,6 @@
 <script>
   import { Line } from "svelte-chartjs";
+  import { theme } from "$stores/store.js";
   export let inputData = [];
   export let axisXTitle;
   export let axisYTitle;
@@ -25,10 +26,19 @@
     CategoryScale
   );
 
-  const transformData = (inputData) => {
-    const labels = inputData.map((item) => item.label);
-    const data = inputData.map((item) => parseFloat(item.value.match(/\d+(\.\d+)?/g)[0]));
-    const pointColors = inputData.map((item) => `${item.color}d1` || "#EB3678");
+  function hexToRgba(hex, alpha) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
+
+  const transformData = (input, isDarkMode) => {
+    const labels = input.map((item) => item.label);
+    const data = input.map((item) => parseFloat(item.value.match(/\d+(\.\d+)?/g)[0]));
+    const pointColors = input.map((item) => 
+      hexToRgba(item.color || "#EB3678", isDarkMode ? 0.82 : 0.5)
+    );
 
     return {
       labels: labels,
@@ -36,20 +46,18 @@
         {
           fill: true,
           lineTension: 0.3,
-          backgroundColor: "#EB3678d1",
-          borderColor: "rgba(205, 130, 158, 0.7)",
+          backgroundColor: hexToRgba("#EB3678", isDarkMode ? 0.15 : 0.3),
+          borderColor: hexToRgba("#CD829E", isDarkMode ? 0.7 : 0.5),
           borderCapStyle: "butt",
           borderDash: [],
           borderDashOffset: 0.0,
           borderJoinStyle: "miter",
-          // pointBorderColor: "#EB3678",
-          // pointBackgroundColor: "#EB3678",
-          pointBorderColor: pointColors, // Different color for each point's border
+          pointBorderColor: pointColors,
           pointBackgroundColor: pointColors,
           pointBorderWidth: 10,
           pointHoverRadius: 5,
-          pointHoverBackgroundColor: "rgb(0, 0, 0)",
-          pointHoverBorderColor: "rgba(220, 220, 220, 0.8)",
+          pointHoverBackgroundColor: isDarkMode ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+          pointHoverBorderColor: hexToRgba("#CD829E", 0.8),
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 8,
@@ -59,12 +67,7 @@
     };
   };
 
-  let data = transformData(inputData);
-</script>
-
-<Line
-  {data}
-  options={{
+  $: chartOptions = {
     responsive: true,
     plugins: {
       legend: { display: false },
@@ -73,31 +76,41 @@
       x: {
         title: {
           display: true,
-          text: axisXTitle, // Set your desired X-axis title here
-          color: 'rgba(255, 255, 255, 0.8)', // White color for the title
+          text: axisXTitle,
+          color: $theme === 'dark' ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.8)',
         },
-        ticks: { color: "rgba(255, 255, 255, 0.8)" }, // White text for X-axis labels
+        ticks: { 
+          color: $theme === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)' 
+        },
         grid: {
-          drawBorder: true, // Ensure the X-axis line is visible
-          drawOnChartArea: true, // Allow grid lines inside the chart
-          color: "rgba(255, 255, 255, 0.3)", // White axis line with some transparency
+          drawBorder: true,
+          drawOnChartArea: true,
+          color: $theme === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
         },
       },
       y: {
         title: {
           display: true,
-          text: axisYTitle, // Set your desired X-axis title here
-          color: 'rgba(255, 255, 255, 0.8)', // White color for the title
+          text: axisYTitle,
+          color: $theme === 'dark' ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.8)',
         },
-        // beginAtZero: true,
-        ticks: { color: "rgba(255, 255, 255, 0.8)" }, // White text for Y-axis labels
+        ticks: { 
+          color: $theme === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)' 
+        },
         grid: {
-          drawBorder: true, // Ensure the Y-axis line is visible
-          drawOnChartArea: true, // Allow grid lines inside the chart
-          color: "rgba(255, 255, 255, 0.3)", // White axis line with some transparency
+          drawBorder: true,
+          drawOnChartArea: true,
+          color: $theme === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
         },
       },
     },
-  }}
+  };
+
+  $: chartData = transformData(inputData, $theme === 'dark');
+</script>
+
+<Line
+  data={chartData}
+  options={chartOptions}
   style="width: 340px; height: 300px;"
 />

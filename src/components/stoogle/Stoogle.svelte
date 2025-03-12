@@ -87,7 +87,7 @@
     isDataLoading = false;
     errorMessage = null;
   };
-
+  
   const stepHandler = (step) => {
     return step;
   };
@@ -103,7 +103,9 @@
       const response = await fetch(
         `http://127.0.0.1:8000/stories?query=${encodeURIComponent(
           searchQuery
-        )}&web=${encodeURIComponent(web)}&page_count=${pageCount}&country_code=${countryCode}`
+        )}&web=${encodeURIComponent(
+          web
+        )}&page_count=${pageCount}&country_code=${countryCode}`
       );
 
       if (!response.ok) {
@@ -196,13 +198,16 @@
         class="flex pt-4 flex-wrap gap-2 mt-5 justify-center overflow-x-auto"
       >
         {#each exampleQueries as example}
-          <div
-            class="bg-gray-100 text-gray-600 px-4 py-2 rounded-full text-sm cursor-pointer
-                 transition-all hover:bg-gray-200 hover:-translate-y-1 active:translate-y-0
-                 border border-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-700
-                 dark:hover:bg-gray-700"
-            on:click={() => loadExampleData(example)}
-          >
+        <div
+        class="bg-gray-50 text-gray-700 px-4 py-2 rounded-full text-sm cursor-pointer
+               transition-all duration-200 hover:bg-gray-100 hover:-translate-y-1 
+               active:translate-y-0 border border-gray-200/80
+               dark:bg-gray-800 dark:text-gray-300 dark:border-gray-700/80
+               dark:hover:bg-gray-700 dark:hover:text-gray-200
+               focus:outline-none focus:ring-2 focus:ring-gray-400/50
+               dark:focus:ring-gray-500/50"
+        on:click={() => loadExampleData(example)}
+      >
             {example.query}
           </div>
         {/each}
@@ -243,7 +248,7 @@
 <Country bind:countryCode></Country>
 
 <footer
-  class="fixed bottom-0 w-full bg-[#1A2E3C] text-[#adb2b7] text-center py-2 text-sm"
+  class="fixed bottom-0 w-full text-black bg-white dark:bg-[var(--footer-bg)] dark:text-[var(--footer-text)] text-center py-2 text-sm cursor-none"
 >
   Stoogle can make mistakes. Check important info.
 </footer>

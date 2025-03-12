@@ -74,13 +74,63 @@
 
   /* Arc colors */
   --color-progress-arc-article: #b785ffd1;
+  --color-progress-arc-article-dark: #b785ffd1;
   --color-progress-arc-fact: #fdb7ead1;
-  --color-background-track: #2a3e4c;
-  --color-arc-label: rgba(255, 255, 255, 0.9);
+  --color-progress-arc-fact-dark: #fdb7ead1;
+  --color-background-track: #f6f7f9;
+  --color-background-track-dark: #2a3e4c;
+  --color-arc-label: rgba(79, 79, 79, 0.9);
+  --color-arc-label-dark: rgba(255, 255, 255, 0.9);
 
   /* Cluter title */
   --cluster-title-bg: #e0eefc; /* Background color */
+  --cluster-title-bg-dark: #e0eefc; /* Background color */
   --cluster-title-text: #333333; /* Title text color */
+  --cluster-title-text-dark: #333333; /* Title text color */
+
+  /* Footer */
+  --footer-bg: #1a2e3c;
+  --footer-text: #adb2b7;
+
+  /* Outer circle */
+  --outer-circle-fill: #f6f7f9;
+  --outer-circle-fill-dark: #2a3e4c;
+  --outer-circle-stroke: #b8ccd6;
+  --outer-circle-stroke-dark: #e5e7eb;
+
+  /* Inner circle */
+  --inner-circle-fill: #f3f4f6;
+  --inner-circle-fill-dark: #2a3e4c;
+  --inner-circle-stroke: #b8ccd6;
+  --inner-circle-stroke-dark: #efefef;
+
+  /* Circle text */
+  --circle-text-fill: #454545;
+  --circle-text-fill-dark: #d1d5db;
+
+  /* Belt */
+  --belt-fill: #f3f4f6;
+  --belt-fill-dark: #2a3e4c;
+  --belt-stroke: #dde1e3;
+  --belt-stroke-dark: #2a3e4c;
+
+  /* Fact */
+  --fact-circle-fill: #b8ccd6;
+  --fact-circle-fill-dark: #ecf9ff;
+  --fact-line-stroke: #b8ccd6;
+  --fact-line-stroke-dark: #e5e7eb;
+
+  /* Card */
+  --card-bg: #f2f5ff;
+  --card-bg-dark: rgba(17, 17, 17, 0.95);
+  --card-border: #f2f5ff;
+  --card-border-dark: #708090;
+  --card-title-bg: #5C6BC0;
+  --card-title-bg-dark: #5C6BC0;
+  --card-title-text: #ffffff;
+  --card-title-text-dark: #ffffff;
+  --card-narrative-text: #041d35;
+  --card-narrative-text-dark: #ffffff;
 
   /* "1" second duration */
   --1s: 1ms;

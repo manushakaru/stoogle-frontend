@@ -40,11 +40,10 @@
 
 <!-- To remove border - dark:border-slate-500 and border-4 -->
 <div
-  class="relative block pointer-events-auto backdrop-blur-md w-full flex h-[400px] p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:border-slate-900"
-  style="background-color: rgba(17, 17, 17, 0.95);"
+  class="relative block pointer-events-auto backdrop-blur-md w-full flex h-[400px] p-4 bg-[var(--card-bg)]  border border-[var(--card-border)] rounded-lg shadow-sm dark:bg-[var(--card-bg-dark)] dark:border-slate-900"
 >
   <div
-    class="absolute -top-3 right-4 bg-indigo-400 text-white font-bold text-sm px-3 py-1 rounded-lg max-w-[80%] truncate cursor-default"
+    class="absolute -top-3 right-4 bg-[var(--card-title-bg)] dark:bg-[var(--card-title-bg-dark)] text-[var(--card-title-text)] dark:text-[var(--card-title-text)] font-bold text-sm px-3 py-1 rounded-lg max-w-[80%] truncate cursor-default"
   >
     {chartTitle}
   </div>
@@ -78,7 +77,7 @@
     </div>
 
     <div class="w-1/2 pl-4 cursor-default pt-4">
-      <p class="text-lg inline pb-3">
+      <p class="text-lg inline pb-3 text-[var(--card-narrative-text)] dark:text-[var(--card-narrative-text-dark)]">
         {@html narrative}
       </p>
       {#each merged_articles as article}
@@ -86,7 +85,7 @@
           <img
             src={articlesDict[article.id].favicon}
             alt={articlesDict[article.id].source}
-            class="inline-flex items-center justify-center w-5 h-5 bg-[#f1f3f4] rounded-full"
+            class="inline-flex items-center justify-center w-5 h-5 bg-white dark:bg-[#f1f3f4] rounded-full"
           />
         </a>
       {/each}

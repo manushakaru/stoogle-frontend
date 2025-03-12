@@ -1,5 +1,6 @@
 <script>
   import { Bar } from "svelte-chartjs";
+  import { theme } from "$stores/store.js";
   export let inputData = [];
   export let axisXTitle;
   export let axisYTitle;
@@ -23,64 +24,68 @@
     LinearScale
   );
 
-  function transformData(input) {
-    const labels = input.map((item) => item.label); // Extract x values as labels
-    const data = input.map((item) => parseFloat(item.value.match(/\d+(\.\d+)?/g)[0])); // Extract y values and convert them to integers
-    const backgroundColor = input.map((item) => item.color || "#EB3678"); // Extract color values
+  function hexToRgba(hex, alpha) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
+
+  function transformData(input, isDarkMode) {
+    const labels = input.map((item) => item.label);
+    const data = input.map((item) => parseFloat(item.value.match(/\d+(\.\d+)?/g)[0]));
+    const backgroundColor = input.map((item) => item.color || "#EB3678");
 
     return {
       labels: labels,
-      datasets: [
-        {
-          data: data,
-          backgroundColor: backgroundColor.map((color) => `${color}d1`), // Adjust opacity to 0.5
-          borderWidth: 2,
-          // borderColor: backgroundColor,
-        },
-      ],
+      datasets: [{
+        data: data,
+        backgroundColor: backgroundColor.map(color => 
+          hexToRgba(color, isDarkMode ? 0.82 : 0.5)
+        ),
+        borderColor: backgroundColor,
+        borderWidth: 2,
+      }],
     };
   }
-  let data = transformData(inputData);
 
-</script>
-
-<Bar
-  {data}
-  options={{
+  $: chartOptions = {
     responsive: true,
-    plugins: {
-      legend: { display: false } 
-    },
+    plugins: { legend: { display: false } },
     scales: {
       x: { 
         title: {
           display: true,
-          text: axisXTitle, // Set your desired X-axis title here
-          color: 'rgba(255, 255, 255, 0.8)', // White color for the title
+          text: axisXTitle,
+          color: $theme === 'dark' ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.8)',
         },
-        ticks: { color: 'rgba(255, 255, 255, 0.7)' }, // White text for X-axis labels
+        ticks: { color: $theme === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)' },
         grid: { 
-          drawBorder: true, // Ensure the X-axis line is visible
-          drawOnChartArea: true, // Allow grid lines inside the chart
-          color: 'rgba(255, 255, 255, 0.1)' // White axis line with some transparency
+          color: $theme === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+          drawBorder: true
         }
       },
       y: { 
         title: {
           display: true,
-          text: axisYTitle, // Set your desired X-axis title here
-          color: 'rgba(255, 255, 255, 0.8)', // White color for the title
+          text: axisYTitle,
+          color: $theme === 'dark' ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.8)',
         },
         beginAtZero: true,
-        ticks: { color: 'rgba(255, 255, 255, 0.7)' }, // White text for Y-axis labels
+        ticks: { color: $theme === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)' },
         grid: { 
-          drawBorder: true, // Ensure the Y-axis line is visible
-          drawOnChartArea: true, // Allow grid lines inside the chart
-          color: 'rgba(255, 255, 255, 0.3)' // White axis line with some transparency
+          color: $theme === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+          drawBorder: true
         }
       }
     }
-  }}
+  };
 
-style="width: 320px; height: 300px;" 
+  $: chartData = transformData(inputData, $theme === 'dark');
+</script>
+
+<Bar
+  data={chartData}
+  options={chartOptions}
+  style="width: 320px; height: 300px;" 
 />

@@ -123,11 +123,9 @@
       startCluster !== activeClusterId &&
       endCluster !== activeClusterId}
     d={curve({ source: start, target: end })}
-    fill="none"
-    stroke="#495e6e"
+    class="fill-none stroke-[var(--belt-stroke)] dark:stroke-[var(--belt-stroke-dark)] cursoe-pointer"
     stroke-width={Math.max(beltWidth, 1)}
     use:tooltip={articles}
-    style="cursor: pointer;"
     stroke-linecap="butt"
   />
 {/each}

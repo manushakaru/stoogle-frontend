@@ -70,7 +70,8 @@
 </script>
 
 <g
-  style="font: 10px; font-family:Droid Sans Mono; fill:white; cursor:pointer;"
+  style="font: 10px; font-family:Droid Sans Mono; cursor:pointer;"
+  class="fill-[var(--circle-text-fill)] dark:fill-[var(--circle-text-fill-dark)]"
   text-anchor="middle"
   in:fly={{ y: 10, duration: 300 }}
   out:fade={{ duration: 200 }}

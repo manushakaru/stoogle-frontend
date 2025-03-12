@@ -161,7 +161,7 @@
 {#if isReady}
   {#each circleData as { lineData, lineSegments, smallCircleData }}
     {#each lineSegments as { x1, y1, x2, y2 }}
-      <line {x1} {y1} {x2} {y2} stroke="#b8ccd6" stroke-width="1" />
+      <line {x1} {y1} {x2} {y2} class="stroke-[var(--fact-line-stroke)] dark:stroke-[var(--fact-line-stroke-dark)] stroke-1"  />
     {/each}
     {#each smallCircleData as { x, y, color, fact, isActive }}
       {#if isActive}
@@ -169,10 +169,9 @@
           cx={x}
           cy={y}
           r={smallCircleRadius + 2}
-          fill="#ecf9ff"
+          class="fill-[var(--fact-circle-fill)] dark:fill-[var(--fact-circle-fill-dark)] cursor-pointer"
           id={`fact${fact.fact_id}`}
           use:tooltip={fact}
-          style="cursor: pointer;"
         />
       {/if}
       <circle

@@ -1,5 +1,6 @@
 <script>
   import { Doughnut } from "svelte-chartjs";
+  import { theme } from "$stores/store.js";
   export let inputData = [];
 
   import {
@@ -13,19 +14,11 @@
 
   ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale);
 
-  function transformData(inputData) {
-    return {
-      labels: inputData.map((item) => item.label),
-      datasets: [
-        {
-          data: inputData.map((item) => parseFloat(item.value.match(/\d+(\.\d+)?/g)[0])),
-          backgroundColor: inputData.map((item) =>  `${item.color}d1` || "#EB3678"),
-          hoverBackgroundColor: inputData.map((item) =>
-            lightenColor(item.color, 20)
-          ),
-        },
-      ],
-    };
+  function hexToRgba(hex, alpha) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   }
 
   function lightenColor(hex, percent) {
@@ -36,12 +29,24 @@
     return `rgb(${r},${g},${b})`;
   }
 
-  let data = transformData(inputData);
-</script>
+  function transformData(input, isDarkMode) {
+    return {
+      labels: input.map((item) => item.label),
+      datasets: [
+        {
+          data: input.map((item) => parseFloat(item.value.match(/\d+(\.\d+)?/g)[0])),
+          backgroundColor: input.map((item) =>  
+            hexToRgba(item.color || "#EB3678", isDarkMode ? 0.82 : 0.5)
+          ),
+          hoverBackgroundColor: input.map((item) =>
+            lightenColor(item.color || "#EB3678", 20)
+          ),
+        },
+      ],
+    };
+  }
 
-<Doughnut
-  {data}
-  options={{
+  $: chartOptions = {
     responsive: true,
     plugins: {
       legend: {
@@ -51,18 +56,23 @@
           font: {
             size: 14
           },
-          color: 'rgba(255, 255, 255, 0.7)'
+          color: $theme === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)'
         },
-
       },
     },
     elements: {
       arc: {
-        borderWidth: 3, // Outline color for the pie chart
-        borderColor: '#16213E', // Change to any color for the pie chart's outline
+        borderWidth: 3,
+        borderColor: $theme === 'dark' ? '#111214' : '#f2f5ff',
       },
     },
-  }}
+  };
+
+  $: chartData = transformData(inputData, $theme === 'dark');
+</script>
+
+<Doughnut
+  data={chartData}
+  options={chartOptions}
   style="width: 320px; height: 300px;"
 />
-

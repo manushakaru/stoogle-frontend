@@ -21,7 +21,7 @@
     <button
       id="open-button"
       on:click={togglePanel}
-      class="text-white text-1xl p-2 bg-gray-700 rounded-full shadow-lg hover:bg-gray-600 transition duration-300 relative z-50"
+      class="text-gray-900 dark:text-white text-1xl p-2 bg-gray-100 dark:bg-gray-700 rounded-full shadow-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition duration-300 relative z-50"
     >
       ←
     </button>
@@ -31,7 +31,7 @@
     <button
       id="close-button"
       on:click={togglePanel}
-      class="text-white text-1xl p-2 bg-gray-700 rounded-full shadow-lg hover:bg-gray-600 transition duration-300 relative z-50"
+      class="text-gray-900 dark:text-white text-1xl p-2 bg-gray-100 dark:bg-gray-700 rounded-full shadow-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition duration-300 relative z-50"
     >
       →
     </button>
@@ -41,43 +41,54 @@
 {#if isOpen}
   <!-- Panel Content -->
   <div
-    class="absolute right-0 bottom-5 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 backdrop-blur-lg p-4 rounded-xl shadow-md w-80 h-full overflow-y-auto z-10"
+    class="absolute right-0 bottom-5 top-1/2 transform -translate-y-1/2 bg-white/80 dark:bg-gray-800/50 backdrop-blur-lg p-4 rounded-xl shadow-md w-80 h-full overflow-y-auto z-10 border border-gray-200 dark:border-gray-700"
   >
     {#each articles as article}
       <div
-        class="bg-white bg-opacity-20 p-3 rounded-lg shadow-sm mb-3 last:mb-0 backdrop-blur-md"
+        class="bg-gray-100 dark:bg-white/20 p-3 rounded-lg shadow-sm mb-3 last:mb-0 backdrop-blur-md border border-gray-200 dark:border-gray-700"
       >
-        <h3 class="text-sm font-semibold mt-0 text-white line-clamp-3">
+        <h3
+          class="text-sm font-semibold mt-0 text-gray-900 dark:text-white line-clamp-3"
+        >
           {article.result_title}
         </h3>
-        <p class="text-xs text-gray-300 mt-1">{article.meta_description}</p>
+        <p class="text-xs text-gray-600 dark:text-gray-300 mt-1">
+          {article.meta_description}
+        </p>
         <div class="flex items-center mt-2">
           <a href={article.url} target="_blank" style="color: transparent;">
             <img
               src={article.favicon}
               alt={article.source}
-              class="w-5 h-5 bg-[#f1f3f4] rounded-full mr-2"
+              class="w-5 h-5 bg-gray-200 dark:bg-gray-700 rounded-full mr-2"
             />
           </a>
-
-          <!-- <span class="text-xs text-gray-500">{article.source}</span> -->
           <a href={article.url} target="_blank" style="color: transparent;">
-            <span class="text-xs text-gray-300 truncate max-w-[150px] block"
-              >{article.source}</span
+            <span
+              class="text-xs text-gray-600 dark:text-gray-300 truncate max-w-[150px] block"
             >
-            <!-- <div
-              class="inline-flex items-center justify-center w-5 h-5 bg-[#394c5f] text-[#adb2eb] rounded-full text-xs font-semibold"
-            >
-              {sorted_article_ids[article.id]}
-            </div> -->
+              {article.source}
+            </span>
           </a>
-          <span class="fact-count_" style="color:{getColor(article.year)};"
-            >{article.year}</span
+          <span
+            class="year-box ml-2 text-xs font-medium bg-[#f7fafc] dark:bg-[#2d4050]"
+            style="color:{getColor(article.year)};"
           >
-          <!-- <img src={article.icon} alt={article.source} class="w-5 h-5 rounded-full mr-2" /> -->
-          <!-- <span class="text-xs text-gray-400 ml-3">{article.year}</span> -->
+            {article.year}
+          </span>
         </div>
       </div>
     {/each}
   </div>
 {/if}
+
+<style>
+  .year-box {
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-left: auto;
+    padding: 2px 6px;
+    border-radius: 4px;
+    position: static;
+  }
+</style>

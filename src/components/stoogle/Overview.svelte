@@ -265,7 +265,7 @@
 >
   <button
     on:click={scrollToTop}
-    class="text-white text-1xl p-2 bg-gray-700 rounded-full shadow-lg hover:bg-gray-600 transition duration-300 relative z-50"
+    class="text-gray-900 dark:text-white text-1xl p-2 bg-gray-100 dark:bg-gray-700 rounded-full shadow-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition duration-300 relative z-50"
   >
     ↑
   </button>

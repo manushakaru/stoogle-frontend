@@ -264,8 +264,7 @@
         cx={0}
         cy={0}
         r={radius ?? 0}
-        fill={color}
-        class="circle-element hit-area {isActive ? 'active' : ''}"
+        class="fill-[var(--outer-circle-fill)] dark:fill-[var(--outer-circle-fill-dark)] hit-area stroke-[var(--outer-circle-stroke)] dark:stroke-[var(--outer-circle-stroke-dark)]  stroke-1 {isActive ? 'active' : ''}"
       />
 
       {#if !isActive}
@@ -295,10 +294,7 @@
               cx={0}
               cy={0}
               r={node.r ?? 0}
-              stroke="#b8ccd6"
-              stroke-width="0.5"
-              class="circle-element hit-area"
-             
+              class="fill-[var(--inner-circle-fill)] dark:fill-[var(--inner-circle-fill-dark)] stroke-[var(--outer-circle-stroke)] dark:stroke-[var(--outer-circle-stroke-dark)] stroke-1/2 hit-area"
             />
             <TextCircle radius={node.r ?? 0} text={node.data.fact_content} />
           </g>
@@ -317,32 +313,26 @@
 
       <path
         id={backgroundArcId}
-        class="unused-arc ring-element"
+        class="unused-arc ring-element fill-[var(--color-background-track)] dark:fill-[var(--color-background-track-dark)]"
         d={backgroundArc()}
-        fill="var(--color-background-track)"
       />
 
       <path
-        class="unused-arc ring-element"
+        class="unused-arc ring-element fill-[var(--color-background-track)] dark:fill-[var(--color-background-track-dark)]"
         d={factBackgroundArc()}
-        fill="var(--color-background-track)"
       />
 
       <path
         id={activeArcId}
-        class="used-arc ring-element"
-        style="cursor: pointer;"
+        class="used-arc ring-element cursor-pointer fill-[var(--color-progress-arc-article)] dark:fill-[var(--color-progress-arc-article-dark)]"
         d={activeArc()}
-        fill="var(--color-progress-arc-article)"
         use:tooltip={cluster.articles}
       />
 
       <path
         id={factActiveArcId}
-        class="used-arc ring-element"
-        style="cursor: pointer;"
+        class="used-arc ring-element cursor-pointer fill-[var(--color-progress-arc-fact)] dark:fill-[var(--color-progress-arc-fact-dark)]"
         d={factActiveArc()}
-        fill="var(--color-progress-arc-fact)"
         use:factTooltip={cluster.articles}
       />
 
@@ -352,12 +342,12 @@
       <text class="arc-label" dy="-15">
         <textPath href={`#${textArcId}`} text-anchor="middle"> 0 </textPath>
       </text> -->
-      <text class="arc-label" dy="9">
+      <text class="arc-label fill-[var(--color-arc-label)] dark:fill-[var(--color-arc-label-dark)]" dy="9">
         <textPath href={`#${activeArcId}`} text-anchor="end" startOffset="30%">
           {cluster.number_of_articles}
         </textPath>
       </text>
-      <text class="arc-label" dy="9">
+      <text class="arc-label fill-[var(--color-arc-label)] dark:fill-[var(--color-arc-label-dark)]" dy="9">
         <textPath
           href={`#${factActiveArcId}`}
           text-anchor="end"
@@ -366,12 +356,12 @@
           {numFacts}
         </textPath>
       </text>
-      <text class="arc-label" dy="-3">
+      <text class="arc-label fill-[var(--color-arc-label)] dark:fill-[var(--color-arc-label-dark)]" dy="-3">
         <textPath href={`#${textArcId}`} text-anchor="start" startOffset="45%">
           {stats.total_articles}
         </textPath>
       </text>
-      <text class="arc-label" dy="-15">
+      <text class="arc-label fill-[var(--color-arc-label)] dark:fill-[var(--color-arc-label-dark)]" dy="-15">
         <textPath href={`#${textArcId}`} text-anchor="start" startOffset="45%">
           {totalFacts}
         </textPath>
@@ -402,7 +392,7 @@
   }
 
   .circle-element {
-    fill: #1a2e3c;
+    /* fill: #1a2e3c; */
   }
 
   .circle-element.active {
@@ -410,8 +400,8 @@
   }
 
   .circle-element {
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
 
     stroke: #b8ccd6;
     stroke-width: 1px;
@@ -432,7 +422,7 @@
     transition: stroke-dashoffset 0.3s ease;
   }
   .arc-label {
-    fill: var(--color-arc-label);
+    /* fill: var(--color-arc-label); */
     font-size: 10px;
     font-weight: 200;
     pointer-events: none;

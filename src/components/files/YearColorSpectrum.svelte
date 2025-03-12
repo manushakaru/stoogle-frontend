@@ -76,25 +76,25 @@
   }
 </script>
 
-<div class="absolute left-10 bg-[#1b2d3d] shadow-lg rounded-lg p-2">
+<div class="absolute left-3 bg-white dark:bg-[#1b2d3d] shadow-lg rounded-lg p-2 pl-4 pr-4">
   <div class="mt-1 text-sm">
     <p
-      class="mb-1 text-black font-semibold dark:text-[rgba(255,255,255,0.6)] flex justify-between"
+      class="mb-1 text-gray-400 font-semibold dark:text-[rgba(255,255,255,0.6)] flex justify-between"
     >
-      Total Articles: <span class="font-bold dark:text-[#b785ff] pl-4"
+      Total Articles: <span class="font-bold text-[var(--color-progress-arc-article)]  dark:text-[var(--color-progress-arc-article)] pl-4"
         >{totalArticles}</span
       >
     </p>
     <p
-      class="m-0 text-black font-semibold dark:text-[rgba(255,255,255,0.6)] flex justify-between"
+      class="m-0 text-gray-400 font-semibold dark:text-[rgba(255,255,255,0.6)] flex justify-between"
     >
-      Total Facts: <span class="font-bold dark:text-[var(--color-progress-arc-fact)]"
+      Total Facts: <span class="font-bold text-[var(--color-progress-arc-fact)] dark:text-[var(--color-progress-arc-fact)]"
         >{totalFacts}</span
       >
     </p>
 
     <div
-      class="mt-5 pb-2 text-black font-semibold dark:text-[rgba(255,255,255,0.6)]"
+      class="mt-5 pb-2 text-gray-500 font-semibold dark:text-[rgba(255,255,255,0.6)]"
     >
       Published Years
     </div>
@@ -104,7 +104,7 @@
           {#if yearColor.count !== 0}
             <div class="year-item flex items-center">
               <span
-                class="text-black dark:text-[rgba(255,255,255,0.6)] w-16 text-right"
+                class="text-gray-500 dark:text-[rgba(255,255,255,0.6)] w-16 text-right"
                 >{yearColor.year}</span
               >
               <div

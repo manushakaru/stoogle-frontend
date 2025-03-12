@@ -14,7 +14,7 @@
     height="40"
     rx="15"
     ry="15"
-    fill="var(--cluster-title-bg)"
+    class="fill-[var(--cluster-title-bg)] dark:fill-[var(--cluster-title-bg-dark)]"
   />
 
   <text
@@ -22,7 +22,7 @@
     y={-radius - 45}
     text-anchor="middle"
     font-size="14px"
-    fill="var(--cluster-title-text)"
+    class="fill-[var(--cluster-title-text)] dark:fill-[var(--cluster-title-text-dark)]"
   >
     {cluster.title}
   </text>
