@@ -75,7 +75,7 @@
     tippy(node, {
       content: `
       <div class="tooltip-content">
-        <div class="tooltip-topic" style="color:#adb2eb">Shared Articles</div>
+        <div class="tooltip-topic">Shared Articles</div>
          ${articles
            .map(
              (article) => `
@@ -148,24 +148,29 @@
     font-size: 0.85rem;
     margin-bottom: 10px;
     text-align: center;
-    color: #adb2eb;
+    /* color: #adb2eb; */
+    color: var(--tooltip-text);
     text-transform: capitalize;
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
+    border-bottom: 1px solid var(--article-card-border);
     padding-bottom: 6px;
   }
 
   :global(.article-card) {
     position: relative;
-    background-color: #1a2633;
+    /* background-color: #1a2633; */
+    background-color: var(--article-card-bg);
     border-radius: 8px;
     padding: 10px;
     margin-bottom: 2px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+    border: 1px solid var(--article-card-border);
     transition: transform 0.2s ease;
   }
 
   :global(.article-card:hover) {
     transform: translateY(-2px);
+    border-color: var(--tooltip-text);
   }
 
   :global(.article-content_) {
@@ -178,7 +183,8 @@
   :global(.article-title) {
     font-size: 0.85rem;
     margin-bottom: 8px !important;
-    color: #d1e0eb;
+    /* color: #d1e0eb; */
+    color: var(--tooltip-text);
   }
 
   :global(.fact-count_) {
@@ -187,7 +193,9 @@
     margin-left: auto;
     padding: 2px 6px;
     border-radius: 4px;
-    background-color: #2d4050;
+    /* background-color: #2d4050; */
+    background-color: var(--article-card-bg);
+    border: 1px solid var(--article-card-border);
     position: static;
   }
 

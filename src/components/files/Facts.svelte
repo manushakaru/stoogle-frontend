@@ -138,10 +138,10 @@
                articlesDict[articleID].source
              } class="w-5 h-5 bg-[#f1f3f4] rounded-full " />
               </a>
-          <span class="text-xs text-gray-400 truncate block">${
+          <span class="text-xs text-gray-400 truncate max-w-[110px] pt-1 block">${
             articlesDict[articleID].source
           }</span>
-          <span class="fact-count" style="color:${getColor(
+          <span class="fact-count_" style="color:${getColor(
             fact.article.year
           )};">${fact.article.year}</span>
         </div>
@@ -189,18 +189,24 @@
 
 <style>
   :global([data-tippy-root]) {
-    background-color: rgba(0, 0, 0, 0.9);
+    /* background-color: rgba(0, 0, 0, 0.9); */
+    background-color: var(--tooltip-bg);
     border-radius: 0.5rem;
     padding: 1rem;
     font-size: 14px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
+    border: 1px solid var(--article-card-border);
     max-width: 250px;
-    color: #f5f5f5;
+    /* color: #f5f5f5; */
+    color: var(--tooltip-text);
   }
 
   :global(.tippy-box[data-theme~="custom"]) {
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #e0e0e0;
+    /* background-color: rgba(0, 0, 0, 0.9); */
+    background-color: var(--tooltip-bg);
+    color: var(--tooltip-text);
+    backdrop-filter: blur(4px);
+    /* color: #e0e0e0; */
   }
 
   :global(.tooltip-content) {
@@ -218,21 +224,26 @@
   :global(.tooltip-content) {
     font-weight: bold;
     font-size: 0.85rem;
-    color: #76c7c0;
+    /* color: #76c7c0; */
+    color: var(--tooltip-text);
     /* text-align: justify; */
   }
 
   :global(.fact-count) {
     font-weight: bold;
     font-size: 0.85rem;
-    position: absolute;
+    position: static;
     bottom: 0;
     right: 0;
     padding: 2px 6px;
     border-radius: 4px;
     margin-bottom: 15px;
     margin-right: 10px;
-    background-color: #1b2d3d;
+    border: 1px solid var(--article-card-border);
+    color: var(--tooltip-text);
+    /* background-color: #1b2d3d; */
+    background-color: var(--fact-count-bg);
+    margin: 0;
   }
 
   :global(.articles-container) {
