@@ -1,5 +1,6 @@
 <script>
   import * as d3 from "d3";
+  import { theme } from "$stores/store.js";
 
   export let years;
   export let yearColors = [];
@@ -23,10 +24,12 @@
   const customBlueRange = ["#08c1d2d1", "#08d283d1", "#75d208d1", "#90d208d1"];
   // const customBlueRange = [ "#27374D", "#526D82", "#9DB2BF", "#DDE6ED"];
 
+  const lightThemeColors = ["#08c1d2d1", "#08d283d1", "#75d208d1", "#90d208d1"];
+  const darkThemeColors = ["#08c1d2d1", "#08d283d1", "#75d208d1", "#90d208d1"];
+
+
   $: {
     if (years && years.earliest && years.latest && articles) {
-      console.log("years", years);
-      console.log("articles", articles);
       const articleCount = getYearArticleCount(articles);
       yearColors = [];
       const widthScale = d3
@@ -37,12 +40,18 @@
       const colorScale = d3
         .scaleSequential()
         .domain([parseInt(years.earliest), parseInt(years.latest)])
-        .range(customBlueRange);
+        // .range(customBlueRange);
       // .range(materialColors);
       // .interpolator(d3.interpolateHsl("#c1e079", "#1881d9"));
       // .interpolator(d3.interpolateViridis)
       // .interpolator(d3.interpolateHcl("#00FFFF", "#FFD700", "#FF1493"))
       //.interpolator(d3.interpolateHsl("#AFF3FE", "#1791A5"));
+
+      if ($theme === 'dark') {
+        colorScale.range(darkThemeColors);
+      } else {
+        colorScale.range(lightThemeColors);
+      }
 
       yearColors.push({
         year: "Unknown",
