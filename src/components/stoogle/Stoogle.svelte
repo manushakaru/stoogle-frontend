@@ -160,7 +160,7 @@
 </script>
 
 <div class={isSticky ? "" : "mainPage"}>
-  <form on:submit={handleSearch} class={isSticky ? "stickyForm" : "form"}>
+  <form on:submit={handleSearch} class="bg-white dark:bg-[#1a2e3c] {isSticky ? "stickyForm" : "form"}">
     <img
       src="/assets/stoogle/Stoogle.svg"
       class={isSticky ? "stickyLogo" : "logo"}
