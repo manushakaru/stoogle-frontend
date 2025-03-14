@@ -10,23 +10,8 @@
   let totalArticles = stats.total_articles;
   let totalFacts = stats.total_original_facts;
 
-  const materialColors = [
-    "#03A9F4", // Light Blue
-    "#4CAF50", // Green
-    "#FFC107", // Amber
-    "#FF5722", // Deep Orange
-    "#E91E63", // Pink
-    "#9C27B0", // Purple
-    "#673AB7", // Deep Purple
-    "#00BCD4", // Cyan
-  ];
-
-  const customBlueRange = ["#08c1d2d1", "#08d283d1", "#75d208d1", "#90d208d1"];
-  // const customBlueRange = [ "#27374D", "#526D82", "#9DB2BF", "#DDE6ED"];
-
-  const lightThemeColors = ["#08c1d2d1", "#08d283d1", "#75d208d1", "#90d208d1"];
-  const darkThemeColors = ["#08c1d2d1", "#08d283d1", "#75d208d1", "#90d208d1"];
-
+  const darkThemeColors = ["#D0E1F9d1", "#B0E0E6d1", "#4682B4d1", "#75a2f8d1"];
+  const lightThemeColors = ["#D0E1F9d1", "#B0E0E6d1", "#74b8f0d1", "#8ba2f0"];
 
   $: {
     if (years && years.earliest && years.latest && articles) {
@@ -39,18 +24,12 @@
 
       const colorScale = d3
         .scaleSequential()
-        .domain([parseInt(years.earliest), parseInt(years.latest)])
-        // .range(customBlueRange);
-      // .range(materialColors);
-      // .interpolator(d3.interpolateHsl("#c1e079", "#1881d9"));
-      // .interpolator(d3.interpolateViridis)
-      // .interpolator(d3.interpolateHcl("#00FFFF", "#FFD700", "#FF1493"))
-      //.interpolator(d3.interpolateHsl("#AFF3FE", "#1791A5"));
+        .domain([parseInt(years.earliest), parseInt(years.latest)]);
 
-      if ($theme === 'dark') {
-        colorScale.range(darkThemeColors);
+      if ($theme === "dark") {
+        colorScale.interpolator(d3.interpolateRgbBasis(darkThemeColors));
       } else {
-        colorScale.range(lightThemeColors);
+        colorScale.interpolator(d3.interpolateRgbBasis(lightThemeColors));
       }
 
       yearColors.push({
@@ -85,19 +64,23 @@
   }
 </script>
 
-<div class="absolute left-3 bg-white dark:bg-[#1b2d3d] shadow-lg rounded-lg p-2 pl-4 pr-4">
+<div
+  class="absolute left-3 bg-white dark:bg-[#1b2d3d] shadow-lg rounded-lg p-2 pl-4 pr-4"
+>
   <div class="mt-1 text-sm">
     <p
       class="mb-1 text-gray-400 font-semibold dark:text-[rgba(255,255,255,0.6)] flex justify-between"
     >
-      Total Articles: <span class="font-bold text-[var(--color-progress-arc-article)]  dark:text-[var(--color-progress-arc-article)] pl-4"
+      Total Articles: <span
+        class="font-bold text-[var(--color-progress-arc-article)] dark:text-[var(--color-progress-arc-article)] pl-4"
         >{totalArticles}</span
       >
     </p>
     <p
       class="m-0 text-gray-400 font-semibold dark:text-[rgba(255,255,255,0.6)] flex justify-between"
     >
-      Total Facts: <span class="font-bold text-[var(--color-progress-arc-fact)] dark:text-[var(--color-progress-arc-fact)]"
+      Total Facts: <span
+        class="font-bold text-[var(--color-progress-arc-fact)] dark:text-[var(--color-progress-arc-fact)]"
         >{totalFacts}</span
       >
     </p>
@@ -120,10 +103,7 @@
                 class="color-box ml-1 h-4"
                 style="background-color: {yearColor.color}; width: {yearColor.width}px"
               ></div>
-              <span
-              style="color:{yearColor.color} ;"
-              >{yearColor.count}</span
-            >
+              <span style="color:{yearColor.color} ;">{yearColor.count}</span>
             </div>
           {/if}
         {/each}

@@ -31,7 +31,7 @@
 
       for (let i = cumulative; i < cumulative + unitsCount; i++) {
         if (i < totalUnits) {
-          dataUnits[i].color = hexToRgba(d.color || "#EB3678", $theme === 'dark' ? 0.82 : 0.5);
+          dataUnits[i].color = hexToRgba(d.color || "#EB3678", $theme === 'dark' ? 0.82 : 0.7);
           dataUnits[i].label = `${d.label} (${d.value})`;
         }
       }
@@ -40,8 +40,8 @@
 
     for (let i = cumulative; i < totalUnits; i++) {
       dataUnits[i].color = getThemeColor(
-        hexToRgba("#e0e0e0", 0.5),
-        hexToRgba("#2d4059", 0.5)
+        hexToRgba("#d3d5d8", 0.9),
+        hexToRgba("#d3d5d8", 0.6)
       );
       dataUnits[i].label = "Other";
     }
@@ -64,7 +64,7 @@
   <g transform={`translate(10, ${Math.ceil(totalUnits / unitsPerRow) * (unitSize + unitSpacing) + 20})`}>
     {#each inputData as d, i}
       <g transform={`translate(10, ${i * 25})`}>
-        <circle cx="0" cy="0" r="6" fill={hexToRgba(d.color || "#EB3678", $theme === 'dark' ? 0.82 : 0.8)}></circle>
+        <circle cx="0" cy="0" r="6" fill={hexToRgba(d.color || "#EB3678", $theme === 'dark' ? 0.82 : 0.7)}></circle>
         <text 
           x="20" 
           y="2" 

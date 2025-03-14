@@ -16,7 +16,7 @@
   export let isLoading = false;
   export let isPopupOpen = false;
   export let web = "";
-  export let pageCount = 10;
+  export let pageCount = 5;
   export let isDataLoading = false;
   export let clusterData = {};
   export let clusters = [];
@@ -101,7 +101,7 @@
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/stories?query=${encodeURIComponent(
+        `http://0.0.0.0:8000/stories?query=${encodeURIComponent(
           searchQuery
         )}&web=${encodeURIComponent(
           web

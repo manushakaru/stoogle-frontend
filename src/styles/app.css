@@ -73,11 +73,11 @@
   --color-dark-example-hover-bg: #374151;
 
   /* Arc colors */
-  --color-progress-arc-article: #b785ffd1;
-  --color-progress-arc-article-dark: #b785ffd1;
+  --color-progress-arc-article: #ffdbdb;
+  --color-progress-arc-article-dark: #ffb2b2d1;
   --color-progress-arc-fact: #fdb7ead1;
   --color-progress-arc-fact-dark: #fdb7ead1;
-  --color-background-track: #f6f7f9;
+  --color-background-track: #fcfcfc;
   --color-background-track-dark: #2a3e4c;
   --color-arc-label: rgba(79, 79, 79, 0.9);
   --color-arc-label-dark: rgba(255, 255, 255, 0.9);
@@ -93,7 +93,7 @@
   --footer-text: #adb2b7;
 
   /* Outer circle */
-  --outer-circle-fill: #f6f7f9;
+  --outer-circle-fill: #fcfdfd;
   --outer-circle-fill-dark: #2a3e4c;
   --outer-circle-stroke: #b8ccd6;
   --outer-circle-stroke-dark: #e5e7eb;

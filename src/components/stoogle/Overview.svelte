@@ -195,14 +195,22 @@
     const translation = stepZoom(step);
     if (translation) {
       const { x, y, scale } = translation;
+      const responsiveX = -x * scale + width * 0.81;
+      const responsiveY = -y * scale + height * 0.55;
       d3.select("#visBack g")
         .transition()
         .duration(800)
+        // .attr(
+        //   "transform",
+        //   `translate(${-x * scale + (4 * width) / 6 + 200}, ${
+        //     -y * scale + height / 2 + 40
+        //   }) scale(${scale})`
+        //   // change x : 120 for horizontal movement
+        //   // change y : 40 for vertical movement
+        // );
         .attr(
           "transform",
-          `translate(${-x * scale + (4 * width) / 6 + 80}, ${
-            -y * scale + height / 2 + 40
-          }) scale(${scale})`
+          `translate(${responsiveX}, ${responsiveY}) scale(${scale})`
           // change x : 120 for horizontal movement
           // change y : 40 for vertical movement
         );
