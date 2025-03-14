@@ -171,7 +171,7 @@
         type="text"
         bind:value={searchQuery}
         placeholder="Search Stoogle..."
-        class="input text-black dark:text-white "
+        class="input text-black "
       />
       {#if isLoading}
         <img
