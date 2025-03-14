@@ -171,7 +171,7 @@
         type="text"
         bind:value={searchQuery}
         placeholder="Search Stoogle..."
-        class="input"
+        class="input text-black dark:text-white "
       />
       {#if isLoading}
         <img
@@ -182,7 +182,7 @@
       {:else}
         <img
           src="/assets/stoogle/options.svg"
-          class="options"
+          class="options color-primary"
           alt="Options"
           on:click={togglePopup}
         />
