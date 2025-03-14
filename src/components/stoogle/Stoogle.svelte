@@ -468,7 +468,7 @@
   .options {
     width: 22px;
     height: 22px;
-    margin-top: 10px;
+    margin-top: 13px;
     margin-left: -35px;
     position: relative;
     cursor: pointer;
