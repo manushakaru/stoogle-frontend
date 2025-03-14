@@ -1,0 +1,3145 @@
+{
+    "clusters": [
+        {
+            "cluster_id": 2,
+            "title": "AI Security",
+            "description": "The cybersecurity market is projected to grow by 12.4% annually until 2027, driven by increased investment in AI-enabled security tools, with over 70% of large organizations planning such investments. Meanwhile, phishing attacks have drastically increased by 1,265% due to generative AI platforms. Despite these threats, only 24% of generative AI initiatives are secured, and the average cost of data breaches is estimated at USD 4.88 million by 2024. Public concern over AI risks is high, with 59% of US adults prioritizing AI risk mitigation, though the median risk of extinction from AI is considered to be 5% and catastrophic outcomes 16%. Additionally, AI advancements are notable, with GPT-4 achieving top scores in a bar exam simulation and predictions for AI surpassing human intelligence moving from 2060 to 2047. China's social credit system will assign a personal score to its citizens based on behavior, affecting their social standing.",
+            "number_of_articles": 5,
+            "number_of_facts": 14,
+            "article_date_range": {
+                "earliest": "2023-12-07",
+                "latest": "2025-02-07"
+            },
+            "article_year_range": {
+                "earliest": 2023,
+                "latest": 2025
+            },
+            "number_of_clickbaits": 10,
+            "articles": [
+                {
+                    "article_id": 19,
+                    "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                    "date": "2025-02-07",
+                    "year": 2025,
+                    "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                    "number_of_facts": 3,
+                    "average_fact_score": 0.33738851910083545,
+                    "facts": [
+                        {
+                            "fact_id": "19_0_0",
+                            "order_id": 1,
+                            "fact_type": "trend",
+                            "fact_content": "The market for cybersecurity tools will grow 12.4% annually through 2027.",
+                            "narrative": "As the digital landscape evolves, the cybersecurity tools market is projected to experience significant growth, expanding at an annual rate of 12.4% through 2027.",
+                            "vis_recommendation": "line",
+                            "vis_data": [
+                                {
+                                    "x": "2024",
+                                    "y": "100",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "2025",
+                                    "y": "112.4",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "2026",
+                                    "y": "126.39",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "2027",
+                                    "y": "142.09",
+                                    "color": "#22d3ee"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Cybersecurity Tools Market Growth",
+                                "x_axis": "Year",
+                                "y_axis": "Market Index"
+                            },
+                            "fact_score": 0.2101040370043774,
+                            "article": {
+                                "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                                "date": "2025-02-07",
+                                "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                                "id": 19
+                            }
+                        },
+                        {
+                            "fact_id": "19_0_1",
+                            "order_id": 2,
+                            "fact_type": "proportion",
+                            "fact_content": "Over 70% of large organizations across industries plan to invest in AI-enabled security tools.",
+                            "narrative": "In response to rising cyber threats, over 70% of large organizations are planning to invest in AI-enabled security tools, highlighting a strategic shift towards more advanced protective measures.",
+                            "vis_recommendation": "pie",
+                            "vis_data": [
+                                {
+                                    "x": "Investing",
+                                    "y": "70%",
+                                    "color": "#2dd4bf"
+                                },
+                                {
+                                    "x": "Not Investing",
+                                    "y": "30%",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "AI-enabled Security Tools Investment",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.40987510396142657,
+                            "article": {
+                                "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                                "date": "2025-02-07",
+                                "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                                "id": 19
+                            }
+                        },
+                        {
+                            "fact_id": "19_0_2",
+                            "order_id": 3,
+                            "fact_type": "trend",
+                            "fact_content": "Phishing attacks have risen by 1,265% since the inception of widely available generative AI platforms in 2022.",
+                            "narrative": "The advent of generative AI platforms in 2022 has led to a staggering 1,265% increase in phishing attacks, underscoring the urgent need for enhanced cybersecurity.",
+                            "vis_recommendation": "line",
+                            "vis_data": [
+                                {
+                                    "x": "2022",
+                                    "y": "100",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "2025",
+                                    "y": "1365",
+                                    "color": "#facc15"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Rise in Phishing Attacks",
+                                "x_axis": "Year",
+                                "y_axis": "Attack Index"
+                            },
+                            "fact_score": 0.39218641633670226,
+                            "article": {
+                                "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                                "date": "2025-02-07",
+                                "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                                "id": 19
+                            }
+                        }
+                    ]
+                },
+                {
+                    "article_id": 27,
+                    "title": "10 AI Dangers and Risks and How to Manage Them",
+                    "date": "2024-09-03",
+                    "year": 2024,
+                    "url": "https://www.ibm.com/think/insights/10-ai-dangers-and-risks-and-how-to-manage-them",
+                    "number_of_facts": 2,
+                    "average_fact_score": 0.37894565952203907,
+                    "facts": [
+                        {
+                            "fact_id": "27_0_0",
+                            "order_id": 4,
+                            "fact_type": "proportion",
+                            "fact_content": "Only 24% of generative AI initiatives are secured.",
+                            "narrative": "Despite the growing reliance on AI, only 24% of generative AI initiatives have adequate security, posing significant risks to sensitive data and operations.",
+                            "vis_recommendation": "pie",
+                            "vis_data": [
+                                {
+                                    "x": "Secured Gen AI Initiatives",
+                                    "y": "24%",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "Unsecured Gen AI Initiatives",
+                                    "y": "76%",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Security of Generative AI Initiatives",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.42332194759577413,
+                            "article": {
+                                "title": "10 AI Dangers and Risks and How to Manage Them",
+                                "date": "2024-09-03",
+                                "url": "https://www.ibm.com/think/insights/10-ai-dangers-and-risks-and-how-to-manage-them",
+                                "id": 27
+                            }
+                        },
+                        {
+                            "fact_id": "27_0_1",
+                            "order_id": 5,
+                            "fact_type": "value",
+                            "fact_content": "The global average cost of data and AI model breaches is USD 4.88 million in 2024.",
+                            "narrative": "Data and AI model breaches are costly, with the global average reaching USD 4.88 million in 2024, emphasizing the financial impact of insufficient security measures.",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "Global Avg Cost of Breaches",
+                                    "y": "USD 4.88M",
+                                    "color": "#facc15"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Average Cost of AI Breaches in 2024",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.334569371448304,
+                            "article": {
+                                "title": "10 AI Dangers and Risks and How to Manage Them",
+                                "date": "2024-09-03",
+                                "url": "https://www.ibm.com/think/insights/10-ai-dangers-and-risks-and-how-to-manage-them",
+                                "id": 27
+                            }
+                        }
+                    ]
+                },
+                {
+                    "article_id": 20,
+                    "title": "A Real Risk for Artificial Intelligence",
+                    "date": "2024-06-11",
+                    "year": 2024,
+                    "url": "https://www.csis.org/analysis/real-risk-artificial-intelligence",
+                    "number_of_facts": 2,
+                    "average_fact_score": 0.2218056492029472,
+                    "facts": [
+                        {
+                            "fact_id": "20_0_0",
+                            "order_id": 6,
+                            "fact_type": "trend",
+                            "fact_content": "Investments in AI technologies have quadrupled in the last year.",
+                            "narrative": "The past year has seen a fourfold increase in AI technology investments, reflecting a robust commitment to AI-driven advancements across industries.",
+                            "vis_recommendation": "bar",
+                            "vis_data": [
+                                {
+                                    "x": "Previous Year",
+                                    "y": "1",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "Current Year",
+                                    "y": "4",
+                                    "color": "#2dd4bf"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "AI Investment Growth",
+                                "x_axis": "Year",
+                                "y_axis": "Multiplier"
+                            },
+                            "fact_score": 0.3625651917536338,
+                            "article": {
+                                "title": "A Real Risk for Artificial Intelligence",
+                                "date": "2024-06-11",
+                                "url": "https://www.csis.org/analysis/real-risk-artificial-intelligence",
+                                "id": 20
+                            }
+                        },
+                        {
+                            "fact_id": "20_1_1",
+                            "order_id": 7,
+                            "fact_type": "difference",
+                            "fact_content": "GDP of France and Germany grew at a quarter of the rate of the United States' and China's due to regulations.",
+                            "narrative": "Regulatory constraints have resulted in France and Germany's GDP growing at just a quarter of the rate of the United States and China, highlighting the economic impact of policy frameworks.",
+                            "vis_recommendation": "bar",
+                            "vis_data": [
+                                {
+                                    "x": "France & Germany",
+                                    "y": "0.25",
+                                    "color": "#f87171"
+                                },
+                                {
+                                    "x": "US & China",
+                                    "y": "1",
+                                    "color": "#facc15"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "GDP Growth Rate Comparison",
+                                "x_axis": "Region",
+                                "y_axis": "Growth Rate"
+                            },
+                            "fact_score": 0.08104610665226064,
+                            "article": {
+                                "title": "A Real Risk for Artificial Intelligence",
+                                "date": "2024-06-11",
+                                "url": "https://www.csis.org/analysis/real-risk-artificial-intelligence",
+                                "id": 20
+                            }
+                        }
+                    ]
+                },
+                {
+                    "article_id": 2,
+                    "title": "Three key misconceptions in the debate about AI and existential risk",
+                    "date": "2024-07-15",
+                    "year": 2024,
+                    "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                    "number_of_facts": 6,
+                    "average_fact_score": 0.38159922390631085,
+                    "facts": [
+                        {
+                            "fact_id": "2_0_0",
+                            "order_id": 8,
+                            "fact_type": "proportion",
+                            "fact_content": "59 percent of US adults support prioritizing mitigating the risk of extinction from AI.",
+                            "narrative": "A majority of 59% of US adults believe it is crucial to prioritize mitigating the existential risks posed by AI.",
+                            "vis_recommendation": "pie",
+                            "vis_data": [
+                                {
+                                    "x": "Support",
+                                    "y": "59%",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "Disagree",
+                                    "y": "26%",
+                                    "color": "#f87171"
+                                },
+                                {
+                                    "x": "Neutral/Other",
+                                    "y": "15%",
+                                    "color": "#facc15"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "US Public Opinion on AI Risk Mitigation",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.4164100526304294,
+                            "article": {
+                                "title": "Three key misconceptions in the debate about AI and existential risk",
+                                "date": "2024-07-15",
+                                "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                                "id": 2
+                            }
+                        },
+                        {
+                            "fact_id": "2_0_1",
+                            "order_id": 9,
+                            "fact_type": "proportion",
+                            "fact_content": "26 percent of US adults disagree with prioritizing mitigating the risk of extinction from AI.",
+                            "narrative": "Conversely, 26% of US adults do not agree with focusing efforts on mitigating AI's existential risks, indicating a divided public opinion.",
+                            "vis_recommendation": "pie",
+                            "vis_data": [
+                                {
+                                    "x": "Support",
+                                    "y": "59%",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "Disagree",
+                                    "y": "26%",
+                                    "color": "#f87171"
+                                },
+                                {
+                                    "x": "Neutral/Other",
+                                    "y": "15%",
+                                    "color": "#facc15"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "US Public Opinion on AI Risk Mitigation",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.3991779870954677,
+                            "article": {
+                                "title": "Three key misconceptions in the debate about AI and existential risk",
+                                "date": "2024-07-15",
+                                "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                                "id": 2
+                            }
+                        },
+                        {
+                            "fact_id": "2_1_2",
+                            "order_id": 10,
+                            "fact_type": "value",
+                            "fact_content": "Median risk of human extinction by AI is five percent according to a poll by AI Impacts.",
+                            "narrative": "A poll by AI Impacts suggests a median risk of 5% for human extinction due to AI, reflecting concerns within the scientific community.",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "Median Risk",
+                                    "y": "5%",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Perceived AI Extinction Risk",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.4908247068153344,
+                            "article": {
+                                "title": "Three key misconceptions in the debate about AI and existential risk",
+                                "date": "2024-07-15",
+                                "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                                "id": 2
+                            }
+                        },
+                        {
+                            "fact_id": "2_2_3",
+                            "order_id": 11,
+                            "fact_type": "value",
+                            "fact_content": "Mean responses suggest a nearly 16 percent chance of catastrophic outcomes from AI.",
+                            "narrative": "On average, respondents estimate a nearly 16% chance of catastrophic AI outcomes, signaling significant apprehension about future AI developments.",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "Mean Risk",
+                                    "y": "16%",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Perceived AI Catastrophic Risk",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.4273720938139358,
+                            "article": {
+                                "title": "Three key misconceptions in the debate about AI and existential risk",
+                                "date": "2024-07-15",
+                                "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                                "id": 2
+                            }
+                        },
+                        {
+                            "fact_id": "2_3_4",
+                            "order_id": 12,
+                            "fact_type": "rank",
+                            "fact_content": "GPT-4 scored near the top 10 percent in a simulated bar exam.",
+                            "narrative": "Demonstrating its advanced capabilities, GPT-4 scored in the top 10% of a simulated bar exam, showcasing AI's growing proficiency.",
+                            "vis_recommendation": "isotype",
+                            "vis_data": [
+                                {
+                                    "x": "GPT-4 Bar Exam Rank",
+                                    "y": "Top 10%",
+                                    "color": "#22d3ee"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "GPT-4 Exam Performance",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.16389550343211623,
+                            "article": {
+                                "title": "Three key misconceptions in the debate about AI and existential risk",
+                                "date": "2024-07-15",
+                                "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                                "id": 2
+                            }
+                        },
+                        {
+                            "fact_id": "2_4_5",
+                            "order_id": 13,
+                            "fact_type": "trend",
+                            "fact_content": "Median guess for AI overtaking human intelligence changed from 2060 to 2047 in one year.",
+                            "narrative": "The timeline for AI surpassing human intelligence has accelerated, with median predictions shifting from 2060 to 2047 within a year.",
+                            "vis_recommendation": "line",
+                            "vis_data": [
+                                {
+                                    "x": "Year 2023",
+                                    "y": "2060",
+                                    "color": "#f87171"
+                                },
+                                {
+                                    "x": "Year 2024",
+                                    "y": "2047",
+                                    "color": "#22d3ee"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "AI Overtaking Human Intelligence Timeline",
+                                "x_axis": "Survey Year",
+                                "y_axis": "Timeline Year"
+                            },
+                            "fact_score": 0.39191499965058163,
+                            "article": {
+                                "title": "Three key misconceptions in the debate about AI and existential risk",
+                                "date": "2024-07-15",
+                                "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                                "id": 2
+                            }
+                        }
+                    ]
+                },
+                {
+                    "article_id": 32,
+                    "title": "7 ways AI could bring more harm than good",
+                    "date": "2023-12-07",
+                    "year": 2023,
+                    "url": "https://www.techtarget.com/whatis/feature/Ways-AI-could-bring-more-harm-than-good",
+                    "number_of_facts": 1,
+                    "average_fact_score": 0.1568422769622242,
+                    "facts": [
+                        {
+                            "fact_id": "32_1_1",
+                            "order_id": 14,
+                            "fact_type": "value",
+                            "fact_content": "China's social credit system will allocate a personal score to each of its 1.4 billion citizens based on their behavior and activities.",
+                            "narrative": "China's social credit system plans to assign personal scores to its 1.4 billion citizens, influencing public behavior and societal norms through comprehensive monitoring.",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "Citizens Evaluated",
+                                    "y": "1.4 billion",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "China's Social Credit System",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.1568422769622242,
+                            "article": {
+                                "title": "7 ways AI could bring more harm than good",
+                                "date": "2023-12-07",
+                                "url": "https://www.techtarget.com/whatis/feature/Ways-AI-could-bring-more-harm-than-good",
+                                "id": 32
+                            }
+                        }
+                    ]
+                }
+            ],
+            "facts": [
+                {
+                    "fact_id": "19_0_0",
+                    "order_id": 1,
+                    "fact_type": "trend",
+                    "fact_content": "The market for cybersecurity tools will grow 12.4% annually through 2027.",
+                    "narrative": "As the digital landscape evolves, the cybersecurity tools market is projected to experience significant growth, expanding at an annual rate of 12.4% through 2027.",
+                    "vis_recommendation": "line",
+                    "vis_data": [
+                        {
+                            "x": "2024",
+                            "y": "100",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "2025",
+                            "y": "112.4",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "2026",
+                            "y": "126.39",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "2027",
+                            "y": "142.09",
+                            "color": "#22d3ee"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Cybersecurity Tools Market Growth",
+                        "x_axis": "Year",
+                        "y_axis": "Market Index"
+                    },
+                    "fact_score": 0.2101040370043774,
+                    "article": {
+                        "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                        "date": "2025-02-07",
+                        "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                        "id": 19
+                    }
+                },
+                {
+                    "fact_id": "19_0_1",
+                    "order_id": 2,
+                    "fact_type": "proportion",
+                    "fact_content": "Over 70% of large organizations across industries plan to invest in AI-enabled security tools.",
+                    "narrative": "In response to rising cyber threats, over 70% of large organizations are planning to invest in AI-enabled security tools, highlighting a strategic shift towards more advanced protective measures.",
+                    "vis_recommendation": "pie",
+                    "vis_data": [
+                        {
+                            "x": "Investing",
+                            "y": "70%",
+                            "color": "#2dd4bf"
+                        },
+                        {
+                            "x": "Not Investing",
+                            "y": "30%",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "AI-enabled Security Tools Investment",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.40987510396142657,
+                    "article": {
+                        "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                        "date": "2025-02-07",
+                        "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                        "id": 19
+                    }
+                },
+                {
+                    "fact_id": "19_0_2",
+                    "order_id": 3,
+                    "fact_type": "trend",
+                    "fact_content": "Phishing attacks have risen by 1,265% since the inception of widely available generative AI platforms in 2022.",
+                    "narrative": "The advent of generative AI platforms in 2022 has led to a staggering 1,265% increase in phishing attacks, underscoring the urgent need for enhanced cybersecurity.",
+                    "vis_recommendation": "line",
+                    "vis_data": [
+                        {
+                            "x": "2022",
+                            "y": "100",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "2025",
+                            "y": "1365",
+                            "color": "#facc15"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Rise in Phishing Attacks",
+                        "x_axis": "Year",
+                        "y_axis": "Attack Index"
+                    },
+                    "fact_score": 0.39218641633670226,
+                    "article": {
+                        "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                        "date": "2025-02-07",
+                        "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                        "id": 19
+                    }
+                },
+                {
+                    "fact_id": "27_0_0",
+                    "order_id": 4,
+                    "fact_type": "proportion",
+                    "fact_content": "Only 24% of generative AI initiatives are secured.",
+                    "narrative": "Despite the growing reliance on AI, only 24% of generative AI initiatives have adequate security, posing significant risks to sensitive data and operations.",
+                    "vis_recommendation": "pie",
+                    "vis_data": [
+                        {
+                            "x": "Secured Gen AI Initiatives",
+                            "y": "24%",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "Unsecured Gen AI Initiatives",
+                            "y": "76%",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Security of Generative AI Initiatives",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.42332194759577413,
+                    "article": {
+                        "title": "10 AI Dangers and Risks and How to Manage Them",
+                        "date": "2024-09-03",
+                        "url": "https://www.ibm.com/think/insights/10-ai-dangers-and-risks-and-how-to-manage-them",
+                        "id": 27
+                    }
+                },
+                {
+                    "fact_id": "27_0_1",
+                    "order_id": 5,
+                    "fact_type": "value",
+                    "fact_content": "The global average cost of data and AI model breaches is USD 4.88 million in 2024.",
+                    "narrative": "Data and AI model breaches are costly, with the global average reaching USD 4.88 million in 2024, emphasizing the financial impact of insufficient security measures.",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "Global Avg Cost of Breaches",
+                            "y": "USD 4.88M",
+                            "color": "#facc15"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Average Cost of AI Breaches in 2024",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.334569371448304,
+                    "article": {
+                        "title": "10 AI Dangers and Risks and How to Manage Them",
+                        "date": "2024-09-03",
+                        "url": "https://www.ibm.com/think/insights/10-ai-dangers-and-risks-and-how-to-manage-them",
+                        "id": 27
+                    }
+                },
+                {
+                    "fact_id": "20_0_0",
+                    "order_id": 6,
+                    "fact_type": "trend",
+                    "fact_content": "Investments in AI technologies have quadrupled in the last year.",
+                    "narrative": "The past year has seen a fourfold increase in AI technology investments, reflecting a robust commitment to AI-driven advancements across industries.",
+                    "vis_recommendation": "bar",
+                    "vis_data": [
+                        {
+                            "x": "Previous Year",
+                            "y": "1",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "Current Year",
+                            "y": "4",
+                            "color": "#2dd4bf"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "AI Investment Growth",
+                        "x_axis": "Year",
+                        "y_axis": "Multiplier"
+                    },
+                    "fact_score": 0.3625651917536338,
+                    "article": {
+                        "title": "A Real Risk for Artificial Intelligence",
+                        "date": "2024-06-11",
+                        "url": "https://www.csis.org/analysis/real-risk-artificial-intelligence",
+                        "id": 20
+                    }
+                },
+                {
+                    "fact_id": "20_1_1",
+                    "order_id": 7,
+                    "fact_type": "difference",
+                    "fact_content": "GDP of France and Germany grew at a quarter of the rate of the United States' and China's due to regulations.",
+                    "narrative": "Regulatory constraints have resulted in France and Germany's GDP growing at just a quarter of the rate of the United States and China, highlighting the economic impact of policy frameworks.",
+                    "vis_recommendation": "bar",
+                    "vis_data": [
+                        {
+                            "x": "France & Germany",
+                            "y": "0.25",
+                            "color": "#f87171"
+                        },
+                        {
+                            "x": "US & China",
+                            "y": "1",
+                            "color": "#facc15"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "GDP Growth Rate Comparison",
+                        "x_axis": "Region",
+                        "y_axis": "Growth Rate"
+                    },
+                    "fact_score": 0.08104610665226064,
+                    "article": {
+                        "title": "A Real Risk for Artificial Intelligence",
+                        "date": "2024-06-11",
+                        "url": "https://www.csis.org/analysis/real-risk-artificial-intelligence",
+                        "id": 20
+                    }
+                },
+                {
+                    "fact_id": "2_0_0",
+                    "order_id": 8,
+                    "fact_type": "proportion",
+                    "fact_content": "59 percent of US adults support prioritizing mitigating the risk of extinction from AI.",
+                    "narrative": "A majority of 59% of US adults believe it is crucial to prioritize mitigating the existential risks posed by AI.",
+                    "vis_recommendation": "pie",
+                    "vis_data": [
+                        {
+                            "x": "Support",
+                            "y": "59%",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "Disagree",
+                            "y": "26%",
+                            "color": "#f87171"
+                        },
+                        {
+                            "x": "Neutral/Other",
+                            "y": "15%",
+                            "color": "#facc15"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "US Public Opinion on AI Risk Mitigation",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.4164100526304294,
+                    "article": {
+                        "title": "Three key misconceptions in the debate about AI and existential risk",
+                        "date": "2024-07-15",
+                        "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                        "id": 2
+                    }
+                },
+                {
+                    "fact_id": "2_0_1",
+                    "order_id": 9,
+                    "fact_type": "proportion",
+                    "fact_content": "26 percent of US adults disagree with prioritizing mitigating the risk of extinction from AI.",
+                    "narrative": "Conversely, 26% of US adults do not agree with focusing efforts on mitigating AI's existential risks, indicating a divided public opinion.",
+                    "vis_recommendation": "pie",
+                    "vis_data": [
+                        {
+                            "x": "Support",
+                            "y": "59%",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "Disagree",
+                            "y": "26%",
+                            "color": "#f87171"
+                        },
+                        {
+                            "x": "Neutral/Other",
+                            "y": "15%",
+                            "color": "#facc15"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "US Public Opinion on AI Risk Mitigation",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.3991779870954677,
+                    "article": {
+                        "title": "Three key misconceptions in the debate about AI and existential risk",
+                        "date": "2024-07-15",
+                        "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                        "id": 2
+                    }
+                },
+                {
+                    "fact_id": "2_1_2",
+                    "order_id": 10,
+                    "fact_type": "value",
+                    "fact_content": "Median risk of human extinction by AI is five percent according to a poll by AI Impacts.",
+                    "narrative": "A poll by AI Impacts suggests a median risk of 5% for human extinction due to AI, reflecting concerns within the scientific community.",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "Median Risk",
+                            "y": "5%",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Perceived AI Extinction Risk",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.4908247068153344,
+                    "article": {
+                        "title": "Three key misconceptions in the debate about AI and existential risk",
+                        "date": "2024-07-15",
+                        "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                        "id": 2
+                    }
+                },
+                {
+                    "fact_id": "2_2_3",
+                    "order_id": 11,
+                    "fact_type": "value",
+                    "fact_content": "Mean responses suggest a nearly 16 percent chance of catastrophic outcomes from AI.",
+                    "narrative": "On average, respondents estimate a nearly 16% chance of catastrophic AI outcomes, signaling significant apprehension about future AI developments.",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "Mean Risk",
+                            "y": "16%",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Perceived AI Catastrophic Risk",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.4273720938139358,
+                    "article": {
+                        "title": "Three key misconceptions in the debate about AI and existential risk",
+                        "date": "2024-07-15",
+                        "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                        "id": 2
+                    }
+                },
+                {
+                    "fact_id": "2_3_4",
+                    "order_id": 12,
+                    "fact_type": "rank",
+                    "fact_content": "GPT-4 scored near the top 10 percent in a simulated bar exam.",
+                    "narrative": "Demonstrating its advanced capabilities, GPT-4 scored in the top 10% of a simulated bar exam, showcasing AI's growing proficiency.",
+                    "vis_recommendation": "isotype",
+                    "vis_data": [
+                        {
+                            "x": "GPT-4 Bar Exam Rank",
+                            "y": "Top 10%",
+                            "color": "#22d3ee"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "GPT-4 Exam Performance",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.16389550343211623,
+                    "article": {
+                        "title": "Three key misconceptions in the debate about AI and existential risk",
+                        "date": "2024-07-15",
+                        "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                        "id": 2
+                    }
+                },
+                {
+                    "fact_id": "2_4_5",
+                    "order_id": 13,
+                    "fact_type": "trend",
+                    "fact_content": "Median guess for AI overtaking human intelligence changed from 2060 to 2047 in one year.",
+                    "narrative": "The timeline for AI surpassing human intelligence has accelerated, with median predictions shifting from 2060 to 2047 within a year.",
+                    "vis_recommendation": "line",
+                    "vis_data": [
+                        {
+                            "x": "Year 2023",
+                            "y": "2060",
+                            "color": "#f87171"
+                        },
+                        {
+                            "x": "Year 2024",
+                            "y": "2047",
+                            "color": "#22d3ee"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "AI Overtaking Human Intelligence Timeline",
+                        "x_axis": "Survey Year",
+                        "y_axis": "Timeline Year"
+                    },
+                    "fact_score": 0.39191499965058163,
+                    "article": {
+                        "title": "Three key misconceptions in the debate about AI and existential risk",
+                        "date": "2024-07-15",
+                        "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                        "id": 2
+                    }
+                },
+                {
+                    "fact_id": "32_1_1",
+                    "order_id": 14,
+                    "fact_type": "value",
+                    "fact_content": "China's social credit system will allocate a personal score to each of its 1.4 billion citizens based on their behavior and activities.",
+                    "narrative": "China's social credit system plans to assign personal scores to its 1.4 billion citizens, influencing public behavior and societal norms through comprehensive monitoring.",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "Citizens Evaluated",
+                            "y": "1.4 billion",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "China's Social Credit System",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.1568422769622242,
+                    "article": {
+                        "title": "7 ways AI could bring more harm than good",
+                        "date": "2023-12-07",
+                        "url": "https://www.techtarget.com/whatis/feature/Ways-AI-could-bring-more-harm-than-good",
+                        "id": 32
+                    }
+                }
+            ],
+            "clickbait_list": [
+                {
+                    "clickbait": "Cybersecurity tools market to boom by 2027",
+                    "related_facts": [
+                        {
+                            "fact_content": "The market for cybersecurity tools will grow 12.4% annually through 2027.",
+                            "fact_id": "19_0_0"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Investments in AI security tools on the rise",
+                    "related_facts": [
+                        {
+                            "fact_content": "Over 70% of large organizations across industries plan to invest in AI-enabled security tools.",
+                            "fact_id": "19_0_1"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Phishing attacks skyrocket with generative AI rise",
+                    "related_facts": [
+                        {
+                            "fact_content": "Phishing attacks have risen by 1,265% since the inception of widely available generative AI platforms in 2022.",
+                            "fact_id": "19_0_2"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Generative AI initiatives largely unsecured",
+                    "related_facts": [
+                        {
+                            "fact_content": "Only 24% of generative AI initiatives are secured.",
+                            "fact_id": "27_0_0"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Data breaches cost millions globally in 2024",
+                    "related_facts": [
+                        {
+                            "fact_content": "The global average cost of data and AI model breaches is USD 4.88 million in 2024.",
+                            "fact_id": "27_0_1"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "AI investments quadruple in just one year",
+                    "related_facts": [
+                        {
+                            "fact_content": "Investments in AI technologies have quadrupled in the last year.",
+                            "fact_id": "20_0_0"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "US supports AI risk mitigation against extinction",
+                    "related_facts": [
+                        {
+                            "fact_content": "59 percent of US adults support prioritizing mitigating the risk of extinction from AI.",
+                            "fact_id": "2_0_0"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Poll warns of AI extinction risks",
+                    "related_facts": [
+                        {
+                            "fact_content": "Median risk of human extinction by AI is five percent according to a poll by AI Impacts.",
+                            "fact_id": "2_1_2"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "GPT-4 excels in simulated bar exam",
+                    "related_facts": [
+                        {
+                            "fact_content": "GPT-4 scored near the top 10 percent in a simulated bar exam.",
+                            "fact_id": "2_3_4"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "China's social credit scores 1.4 billion citizens",
+                    "related_facts": [
+                        {
+                            "fact_content": "China's social credit system will allocate a personal score to each of its 1.4 billion citizens based on their behavior and activities.",
+                            "fact_id": "32_1_1"
+                        }
+                    ],
+                    "number_of_facts": 1
+                }
+            ]
+        },
+        {
+            "cluster_id": 3,
+            "title": "AI Displacement",
+            "description": "Between 2016 and 2030, AI is expected to significantly impact the workforce, potentially displacing 15% of workers and automating 30% of human work hours. This could result in the loss of 400 million jobs globally, with advanced economies facing up to 60% job loss. AI's capabilities are rapidly advancing, already achieving superhuman performance in many areas, and are expected to continue improving. By 2030, AI-human collaboration will be essential to manage these changes, though it might also lead to permanent job loss for many and be used in warfare.",
+            "number_of_articles": 5,
+            "number_of_facts": 11,
+            "article_date_range": {
+                "earliest": "2018-12-10",
+                "latest": "2024-06-26"
+            },
+            "article_year_range": {
+                "earliest": 2018,
+                "latest": 2024
+            },
+            "number_of_clickbaits": 10,
+            "articles": [
+                {
+                    "article_id": 13,
+                    "title": "Pros and Cons of Artificial Intelligence",
+                    "date": "2023-04-14",
+                    "year": 2023,
+                    "url": "https://theweek.com/news/technology/960453/pros-and-cons-of-artificial-intelligence",
+                    "number_of_facts": 2,
+                    "average_fact_score": 0.4770131935808236,
+                    "facts": [
+                        {
+                            "fact_id": "13_0_0",
+                            "order_id": 1,
+                            "fact_type": "value",
+                            "fact_content": "AI could displace roughly 15% of workers worldwide between 2016 and 2030.",
+                            "narrative": "By 2030, AI could significantly impact the global workforce, displacing approximately 15% of workers worldwide.",
+                            "vis_recommendation": "pie",
+                            "vis_data": [
+                                {
+                                    "x": "Displaced Workers",
+                                    "y": "15%",
+                                    "color": "#f87171"
+                                },
+                                {
+                                    "x": "Remaining Workers",
+                                    "y": "85%",
+                                    "color": "#22d3ee"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Potential Workforce Displacement by AI",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.4548371575204002,
+                            "article": {
+                                "title": "Pros and Cons of Artificial Intelligence",
+                                "date": "2023-04-14",
+                                "url": "https://theweek.com/news/technology/960453/pros-and-cons-of-artificial-intelligence",
+                                "id": 13
+                            }
+                        },
+                        {
+                            "fact_id": "13_0_1",
+                            "order_id": 2,
+                            "fact_type": "value",
+                            "fact_content": "AI could displace 400 million people worldwide between 2016 and 2030.",
+                            "narrative": "This technological shift could result in the displacement of a staggering 400 million people across the globe.",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "Displaced People",
+                                    "y": "400 million",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "People Displaced by AI",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.499189229641247,
+                            "article": {
+                                "title": "Pros and Cons of Artificial Intelligence",
+                                "date": "2023-04-14",
+                                "url": "https://theweek.com/news/technology/960453/pros-and-cons-of-artificial-intelligence",
+                                "id": 13
+                            }
+                        }
+                    ]
+                },
+                {
+                    "article_id": 1,
+                    "title": "AI Is an Exciting Opportunity, Not a Threat",
+                    "date": "2024-06-26",
+                    "year": 2024,
+                    "url": "https://www.aacsb.edu/insights/articles/2024/06/ai-is-an-exciting-opportunity-not-a-threat",
+                    "number_of_facts": 2,
+                    "average_fact_score": 0.21498378921514721,
+                    "facts": [
+                        {
+                            "fact_id": "1_0_0",
+                            "order_id": 3,
+                            "fact_type": "value",
+                            "fact_content": "30 percent of human work hours could be entirely automated according to the McKinsey Global Institute.",
+                            "narrative": "According to the McKinsey Global Institute, 30% of human work hours have the potential to be fully automated, reshaping job structures.",
+                            "vis_recommendation": "pie",
+                            "vis_data": [
+                                {
+                                    "x": "Automated Work Hours",
+                                    "y": "30%",
+                                    "color": "#2dd4bf"
+                                },
+                                {
+                                    "x": "Non-Automated Work Hours",
+                                    "y": "70%",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Potential Automation of Work Hours",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.21183201126733642,
+                            "article": {
+                                "title": "AI Is an Exciting Opportunity, Not a Threat",
+                                "date": "2024-06-26",
+                                "url": "https://www.aacsb.edu/insights/articles/2024/06/ai-is-an-exciting-opportunity-not-a-threat",
+                                "id": 1
+                            }
+                        },
+                        {
+                            "fact_id": "1_0_1",
+                            "order_id": 4,
+                            "fact_type": "value",
+                            "fact_content": "60 percent of jobs could be lost in advanced economies according to the International Monetary Fund.",
+                            "narrative": "The International Monetary Fund warns that 60% of jobs in advanced economies might vanish due to automation.",
+                            "vis_recommendation": "pie",
+                            "vis_data": [
+                                {
+                                    "x": "Jobs Lost",
+                                    "y": "60%",
+                                    "color": "#f87171"
+                                },
+                                {
+                                    "x": "Jobs Retained",
+                                    "y": "40%",
+                                    "color": "#22d3ee"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Job Loss in Advanced Economies",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.218135567162958,
+                            "article": {
+                                "title": "AI Is an Exciting Opportunity, Not a Threat",
+                                "date": "2024-06-26",
+                                "url": "https://www.aacsb.edu/insights/articles/2024/06/ai-is-an-exciting-opportunity-not-a-threat",
+                                "id": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "article_id": 29,
+                    "title": "The impact of artificial intelligence on human society and its implications for bioethics",
+                    "date": "Unknown",
+                    "year": "",
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7605294/",
+                    "number_of_facts": 1,
+                    "average_fact_score": 0.17600085931102527,
+                    "facts": [
+                        {
+                            "fact_id": "29_0_0",
+                            "order_id": 5,
+                            "fact_type": "value",
+                            "fact_content": "Many automobile assembly lines have been filled with machineries and robots.",
+                            "narrative": "Automobile assembly lines exemplify this trend, increasingly populated by machinery and robots.",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "Automobile Assembly Lines",
+                                    "y": "Filled with robots",
+                                    "color": "#22d3ee"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Automation in Assembly Lines",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.17600085931102527,
+                            "article": {
+                                "title": "The impact of artificial intelligence on human society and its implications for bioethics",
+                                "date": "Unknown",
+                                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7605294/",
+                                "id": 29
+                            }
+                        }
+                    ]
+                },
+                {
+                    "article_id": 32,
+                    "title": "7 ways AI could bring more harm than good",
+                    "date": "2023-12-07",
+                    "year": 2023,
+                    "url": "https://www.techtarget.com/whatis/feature/Ways-AI-could-bring-more-harm-than-good",
+                    "number_of_facts": 1,
+                    "average_fact_score": 0.2000034727493637,
+                    "facts": [
+                        {
+                            "fact_id": "32_0_0",
+                            "order_id": 6,
+                            "fact_type": "trend",
+                            "fact_content": "By 2030, activities that account for 30% of the hours currently worked in the U.S. economy have the potential to be automated.",
+                            "narrative": "By 2030, the U.S. economy could see 30% of current work hours potentially automated, indicating a major shift in labor dynamics.",
+                            "vis_recommendation": "line",
+                            "vis_data": [
+                                {
+                                    "x": "Automatable Hours",
+                                    "y": "30%",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "Non-Automatable Hours",
+                                    "y": "70%",
+                                    "color": "#2dd4bf"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Potential Automation of U.S. Work Hours by 2030",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.2000034727493637,
+                            "article": {
+                                "title": "7 ways AI could bring more harm than good",
+                                "date": "2023-12-07",
+                                "url": "https://www.techtarget.com/whatis/feature/Ways-AI-could-bring-more-harm-than-good",
+                                "id": 32
+                            }
+                        }
+                    ]
+                },
+                {
+                    "article_id": 34,
+                    "title": "Artificial Intelligence and the Future of Humans",
+                    "date": "2018-12-10",
+                    "year": 2018,
+                    "url": "https://www.pewresearch.org/internet/2018/12/10/artificial-intelligence-and-the-future-of-humans/",
+                    "number_of_facts": 5,
+                    "average_fact_score": 0.4399170084973264,
+                    "facts": [
+                        {
+                            "fact_id": "34_0_0",
+                            "order_id": 7,
+                            "fact_type": "trend",
+                            "fact_content": "AI and related technologies have already achieved superhuman performance in many areas, and their capabilities will probably improve very significantly by 2030.",
+                            "narrative": "AI's capabilities, already surpassing human performance in various sectors, are expected to advance significantly by 2030.",
+                            "vis_recommendation": "line",
+                            "vis_data": [
+                                {
+                                    "x": "2018",
+                                    "y": "1",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "2030",
+                                    "y": "2",
+                                    "color": "#2dd4bf"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "AI Capability Improvement by 2030",
+                                "x_axis": "Year",
+                                "y_axis": "Capability Level"
+                            },
+                            "fact_score": 0.4942730508184201,
+                            "article": {
+                                "title": "Artificial Intelligence and the Future of Humans",
+                                "date": "2018-12-10",
+                                "url": "https://www.pewresearch.org/internet/2018/12/10/artificial-intelligence-and-the-future-of-humans/",
+                                "id": 34
+                            }
+                        },
+                        {
+                            "fact_id": "34_1_1",
+                            "order_id": 8,
+                            "fact_type": "trend",
+                            "fact_content": "The transition through AI will last the next 50 years or more.",
+                            "narrative": "This AI-driven transition is predicted to span over the next 50 years or longer, indicating a long-term evolution.",
+                            "vis_recommendation": "line",
+                            "vis_data": [
+                                {
+                                    "x": "2018",
+                                    "y": "1",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "2068",
+                                    "y": "2",
+                                    "color": "#2dd4bf"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "AI Transition Duration",
+                                "x_axis": "Year",
+                                "y_axis": "Transition Phase"
+                            },
+                            "fact_score": 0.4088930195615279,
+                            "article": {
+                                "title": "Artificial Intelligence and the Future of Humans",
+                                "date": "2018-12-10",
+                                "url": "https://www.pewresearch.org/internet/2018/12/10/artificial-intelligence-and-the-future-of-humans/",
+                                "id": 34
+                            }
+                        },
+                        {
+                            "fact_id": "34_1_2",
+                            "order_id": 9,
+                            "fact_type": "extreme",
+                            "fact_content": "AI will eventually cause a large number of people to be permanently out of work.",
+                            "narrative": "The widespread adoption of AI could lead to many individuals being permanently unemployed.",
+                            "vis_recommendation": "bar",
+                            "vis_data": [
+                                {
+                                    "x": "Current Workforce",
+                                    "y": "1",
+                                    "color": "#f87171"
+                                },
+                                {
+                                    "x": "Future Workforce (Post-AI)",
+                                    "y": "2",
+                                    "color": "#facc15"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "AI Impact on Employment",
+                                "x_axis": "Workforce",
+                                "y_axis": "Employment Status"
+                            },
+                            "fact_score": 0.4491143937010562,
+                            "article": {
+                                "title": "Artificial Intelligence and the Future of Humans",
+                                "date": "2018-12-10",
+                                "url": "https://www.pewresearch.org/internet/2018/12/10/artificial-intelligence-and-the-future-of-humans/",
+                                "id": 34
+                            }
+                        },
+                        {
+                            "fact_id": "34_2_3",
+                            "order_id": 10,
+                            "fact_type": "trend",
+                            "fact_content": "By 2030 the human-machine/AI collaboration will be a necessary tool to manage and counter the effects of multiple simultaneous accelerations.",
+                            "narrative": "Human-machine collaboration will become crucial by 2030 to navigate and mitigate the effects of rapid technological and economic changes.",
+                            "vis_recommendation": "line",
+                            "vis_data": [
+                                {
+                                    "x": "2018",
+                                    "y": "1",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "2030",
+                                    "y": "2",
+                                    "color": "#2dd4bf"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Human-AI Collaboration by 2030",
+                                "x_axis": "Year",
+                                "y_axis": "Collaboration Level"
+                            },
+                            "fact_score": 0.4097553400095937,
+                            "article": {
+                                "title": "Artificial Intelligence and the Future of Humans",
+                                "date": "2018-12-10",
+                                "url": "https://www.pewresearch.org/internet/2018/12/10/artificial-intelligence-and-the-future-of-humans/",
+                                "id": 34
+                            }
+                        },
+                        {
+                            "fact_id": "34_3_4",
+                            "order_id": 11,
+                            "fact_type": "trend",
+                            "fact_content": "In 2030 AI will be in routine use to fight wars and kill people far more effectively than we can currently kill.",
+                            "narrative": "By 2030, AI could also be routinely utilized in warfare, enhancing the efficiency of military operations to unprecedented levels.",
+                            "vis_recommendation": "line",
+                            "vis_data": [
+                                {
+                                    "x": "2018",
+                                    "y": "1",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "2030",
+                                    "y": "2",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "AI in Military Use by 2030",
+                                "x_axis": "Year",
+                                "y_axis": "Military Effectiveness"
+                            },
+                            "fact_score": 0.43754923839603377,
+                            "article": {
+                                "title": "Artificial Intelligence and the Future of Humans",
+                                "date": "2018-12-10",
+                                "url": "https://www.pewresearch.org/internet/2018/12/10/artificial-intelligence-and-the-future-of-humans/",
+                                "id": 34
+                            }
+                        }
+                    ]
+                }
+            ],
+            "facts": [
+                {
+                    "fact_id": "13_0_0",
+                    "order_id": 1,
+                    "fact_type": "value",
+                    "fact_content": "AI could displace roughly 15% of workers worldwide between 2016 and 2030.",
+                    "narrative": "By 2030, AI could significantly impact the global workforce, displacing approximately 15% of workers worldwide.",
+                    "vis_recommendation": "pie",
+                    "vis_data": [
+                        {
+                            "x": "Displaced Workers",
+                            "y": "15%",
+                            "color": "#f87171"
+                        },
+                        {
+                            "x": "Remaining Workers",
+                            "y": "85%",
+                            "color": "#22d3ee"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Potential Workforce Displacement by AI",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.4548371575204002,
+                    "article": {
+                        "title": "Pros and Cons of Artificial Intelligence",
+                        "date": "2023-04-14",
+                        "url": "https://theweek.com/news/technology/960453/pros-and-cons-of-artificial-intelligence",
+                        "id": 13
+                    }
+                },
+                {
+                    "fact_id": "13_0_1",
+                    "order_id": 2,
+                    "fact_type": "value",
+                    "fact_content": "AI could displace 400 million people worldwide between 2016 and 2030.",
+                    "narrative": "This technological shift could result in the displacement of a staggering 400 million people across the globe.",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "Displaced People",
+                            "y": "400 million",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "People Displaced by AI",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.499189229641247,
+                    "article": {
+                        "title": "Pros and Cons of Artificial Intelligence",
+                        "date": "2023-04-14",
+                        "url": "https://theweek.com/news/technology/960453/pros-and-cons-of-artificial-intelligence",
+                        "id": 13
+                    }
+                },
+                {
+                    "fact_id": "1_0_0",
+                    "order_id": 3,
+                    "fact_type": "value",
+                    "fact_content": "30 percent of human work hours could be entirely automated according to the McKinsey Global Institute.",
+                    "narrative": "According to the McKinsey Global Institute, 30% of human work hours have the potential to be fully automated, reshaping job structures.",
+                    "vis_recommendation": "pie",
+                    "vis_data": [
+                        {
+                            "x": "Automated Work Hours",
+                            "y": "30%",
+                            "color": "#2dd4bf"
+                        },
+                        {
+                            "x": "Non-Automated Work Hours",
+                            "y": "70%",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Potential Automation of Work Hours",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.21183201126733642,
+                    "article": {
+                        "title": "AI Is an Exciting Opportunity, Not a Threat",
+                        "date": "2024-06-26",
+                        "url": "https://www.aacsb.edu/insights/articles/2024/06/ai-is-an-exciting-opportunity-not-a-threat",
+                        "id": 1
+                    }
+                },
+                {
+                    "fact_id": "1_0_1",
+                    "order_id": 4,
+                    "fact_type": "value",
+                    "fact_content": "60 percent of jobs could be lost in advanced economies according to the International Monetary Fund.",
+                    "narrative": "The International Monetary Fund warns that 60% of jobs in advanced economies might vanish due to automation.",
+                    "vis_recommendation": "pie",
+                    "vis_data": [
+                        {
+                            "x": "Jobs Lost",
+                            "y": "60%",
+                            "color": "#f87171"
+                        },
+                        {
+                            "x": "Jobs Retained",
+                            "y": "40%",
+                            "color": "#22d3ee"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Job Loss in Advanced Economies",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.218135567162958,
+                    "article": {
+                        "title": "AI Is an Exciting Opportunity, Not a Threat",
+                        "date": "2024-06-26",
+                        "url": "https://www.aacsb.edu/insights/articles/2024/06/ai-is-an-exciting-opportunity-not-a-threat",
+                        "id": 1
+                    }
+                },
+                {
+                    "fact_id": "29_0_0",
+                    "order_id": 5,
+                    "fact_type": "value",
+                    "fact_content": "Many automobile assembly lines have been filled with machineries and robots.",
+                    "narrative": "Automobile assembly lines exemplify this trend, increasingly populated by machinery and robots.",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "Automobile Assembly Lines",
+                            "y": "Filled with robots",
+                            "color": "#22d3ee"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Automation in Assembly Lines",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.17600085931102527,
+                    "article": {
+                        "title": "The impact of artificial intelligence on human society and its implications for bioethics",
+                        "date": "Unknown",
+                        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7605294/",
+                        "id": 29
+                    }
+                },
+                {
+                    "fact_id": "32_0_0",
+                    "order_id": 6,
+                    "fact_type": "trend",
+                    "fact_content": "By 2030, activities that account for 30% of the hours currently worked in the U.S. economy have the potential to be automated.",
+                    "narrative": "By 2030, the U.S. economy could see 30% of current work hours potentially automated, indicating a major shift in labor dynamics.",
+                    "vis_recommendation": "line",
+                    "vis_data": [
+                        {
+                            "x": "Automatable Hours",
+                            "y": "30%",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "Non-Automatable Hours",
+                            "y": "70%",
+                            "color": "#2dd4bf"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Potential Automation of U.S. Work Hours by 2030",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.2000034727493637,
+                    "article": {
+                        "title": "7 ways AI could bring more harm than good",
+                        "date": "2023-12-07",
+                        "url": "https://www.techtarget.com/whatis/feature/Ways-AI-could-bring-more-harm-than-good",
+                        "id": 32
+                    }
+                },
+                {
+                    "fact_id": "34_0_0",
+                    "order_id": 7,
+                    "fact_type": "trend",
+                    "fact_content": "AI and related technologies have already achieved superhuman performance in many areas, and their capabilities will probably improve very significantly by 2030.",
+                    "narrative": "AI's capabilities, already surpassing human performance in various sectors, are expected to advance significantly by 2030.",
+                    "vis_recommendation": "line",
+                    "vis_data": [
+                        {
+                            "x": "2018",
+                            "y": "1",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "2030",
+                            "y": "2",
+                            "color": "#2dd4bf"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "AI Capability Improvement by 2030",
+                        "x_axis": "Year",
+                        "y_axis": "Capability Level"
+                    },
+                    "fact_score": 0.4942730508184201,
+                    "article": {
+                        "title": "Artificial Intelligence and the Future of Humans",
+                        "date": "2018-12-10",
+                        "url": "https://www.pewresearch.org/internet/2018/12/10/artificial-intelligence-and-the-future-of-humans/",
+                        "id": 34
+                    }
+                },
+                {
+                    "fact_id": "34_1_1",
+                    "order_id": 8,
+                    "fact_type": "trend",
+                    "fact_content": "The transition through AI will last the next 50 years or more.",
+                    "narrative": "This AI-driven transition is predicted to span over the next 50 years or longer, indicating a long-term evolution.",
+                    "vis_recommendation": "line",
+                    "vis_data": [
+                        {
+                            "x": "2018",
+                            "y": "1",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "2068",
+                            "y": "2",
+                            "color": "#2dd4bf"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "AI Transition Duration",
+                        "x_axis": "Year",
+                        "y_axis": "Transition Phase"
+                    },
+                    "fact_score": 0.4088930195615279,
+                    "article": {
+                        "title": "Artificial Intelligence and the Future of Humans",
+                        "date": "2018-12-10",
+                        "url": "https://www.pewresearch.org/internet/2018/12/10/artificial-intelligence-and-the-future-of-humans/",
+                        "id": 34
+                    }
+                },
+                {
+                    "fact_id": "34_1_2",
+                    "order_id": 9,
+                    "fact_type": "extreme",
+                    "fact_content": "AI will eventually cause a large number of people to be permanently out of work.",
+                    "narrative": "The widespread adoption of AI could lead to many individuals being permanently unemployed.",
+                    "vis_recommendation": "bar",
+                    "vis_data": [
+                        {
+                            "x": "Current Workforce",
+                            "y": "1",
+                            "color": "#f87171"
+                        },
+                        {
+                            "x": "Future Workforce (Post-AI)",
+                            "y": "2",
+                            "color": "#facc15"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "AI Impact on Employment",
+                        "x_axis": "Workforce",
+                        "y_axis": "Employment Status"
+                    },
+                    "fact_score": 0.4491143937010562,
+                    "article": {
+                        "title": "Artificial Intelligence and the Future of Humans",
+                        "date": "2018-12-10",
+                        "url": "https://www.pewresearch.org/internet/2018/12/10/artificial-intelligence-and-the-future-of-humans/",
+                        "id": 34
+                    }
+                },
+                {
+                    "fact_id": "34_2_3",
+                    "order_id": 10,
+                    "fact_type": "trend",
+                    "fact_content": "By 2030 the human-machine/AI collaboration will be a necessary tool to manage and counter the effects of multiple simultaneous accelerations.",
+                    "narrative": "Human-machine collaboration will become crucial by 2030 to navigate and mitigate the effects of rapid technological and economic changes.",
+                    "vis_recommendation": "line",
+                    "vis_data": [
+                        {
+                            "x": "2018",
+                            "y": "1",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "2030",
+                            "y": "2",
+                            "color": "#2dd4bf"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Human-AI Collaboration by 2030",
+                        "x_axis": "Year",
+                        "y_axis": "Collaboration Level"
+                    },
+                    "fact_score": 0.4097553400095937,
+                    "article": {
+                        "title": "Artificial Intelligence and the Future of Humans",
+                        "date": "2018-12-10",
+                        "url": "https://www.pewresearch.org/internet/2018/12/10/artificial-intelligence-and-the-future-of-humans/",
+                        "id": 34
+                    }
+                },
+                {
+                    "fact_id": "34_3_4",
+                    "order_id": 11,
+                    "fact_type": "trend",
+                    "fact_content": "In 2030 AI will be in routine use to fight wars and kill people far more effectively than we can currently kill.",
+                    "narrative": "By 2030, AI could also be routinely utilized in warfare, enhancing the efficiency of military operations to unprecedented levels.",
+                    "vis_recommendation": "line",
+                    "vis_data": [
+                        {
+                            "x": "2018",
+                            "y": "1",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "2030",
+                            "y": "2",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "AI in Military Use by 2030",
+                        "x_axis": "Year",
+                        "y_axis": "Military Effectiveness"
+                    },
+                    "fact_score": 0.43754923839603377,
+                    "article": {
+                        "title": "Artificial Intelligence and the Future of Humans",
+                        "date": "2018-12-10",
+                        "url": "https://www.pewresearch.org/internet/2018/12/10/artificial-intelligence-and-the-future-of-humans/",
+                        "id": 34
+                    }
+                }
+            ],
+            "clickbait_list": [
+                {
+                    "clickbait": "AI threatens 400 million jobs by 2030",
+                    "related_facts": [
+                        {
+                            "fact_content": "AI could displace roughly 15% of workers worldwide between 2016 and 2030.",
+                            "fact_id": "13_0_0"
+                        },
+                        {
+                            "fact_content": "AI could displace 400 million people worldwide between 2016 and 2030.",
+                            "fact_id": "13_0_1"
+                        }
+                    ],
+                    "number_of_facts": 2
+                },
+                {
+                    "clickbait": "30% of work hours at risk of automation",
+                    "related_facts": [
+                        {
+                            "fact_content": "30 percent of human work hours could be entirely automated according to the McKinsey Global Institute.",
+                            "fact_id": "1_0_0"
+                        },
+                        {
+                            "fact_content": "By 2030, activities that account for 30% of the hours currently worked in the U.S. economy have the potential to be automated.",
+                            "fact_id": "32_0_0"
+                        }
+                    ],
+                    "number_of_facts": 2
+                },
+                {
+                    "clickbait": "60% of jobs in advanced economies could vanish",
+                    "related_facts": [
+                        {
+                            "fact_content": "60 percent of jobs could be lost in advanced economies according to the International Monetary Fund.",
+                            "fact_id": "1_0_1"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Robots take over automobile assembly lines",
+                    "related_facts": [
+                        {
+                            "fact_content": "Many automobile assembly lines have been filled with machineries and robots.",
+                            "fact_id": "29_0_0"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "AI to achieve superhuman performance by 2030",
+                    "related_facts": [
+                        {
+                            "fact_content": "AI and related technologies have already achieved superhuman performance in many areas, and their capabilities will probably improve very significantly by 2030.",
+                            "fact_id": "34_0_0"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "AI revolution to last over 50 years",
+                    "related_facts": [
+                        {
+                            "fact_content": "The transition through AI will last the next 50 years or more.",
+                            "fact_id": "34_1_1"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "AI to cause permanent unemployment for many",
+                    "related_facts": [
+                        {
+                            "fact_content": "AI will eventually cause a large number of people to be permanently out of work.",
+                            "fact_id": "34_1_2"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Human-machine collaboration essential by 2030",
+                    "related_facts": [
+                        {
+                            "fact_content": "By 2030 the human-machine/AI collaboration will be a necessary tool to manage and counter the effects of multiple simultaneous accelerations.",
+                            "fact_id": "34_2_3"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "AI in routine use for warfare by 2030",
+                    "related_facts": [
+                        {
+                            "fact_content": "In 2030 AI will be in routine use to fight wars and kill people far more effectively than we can currently kill.",
+                            "fact_id": "34_3_4"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "AI's impact on employment and warfare by 2030",
+                    "related_facts": [
+                        {
+                            "fact_content": "AI could displace roughly 15% of workers worldwide between 2016 and 2030.",
+                            "fact_id": "13_0_0"
+                        },
+                        {
+                            "fact_content": "AI could displace 400 million people worldwide between 2016 and 2030.",
+                            "fact_id": "13_0_1"
+                        },
+                        {
+                            "fact_content": "AI and related technologies have already achieved superhuman performance in many areas, and their capabilities will probably improve very significantly by 2030.",
+                            "fact_id": "34_0_0"
+                        },
+                        {
+                            "fact_content": "AI will eventually cause a large number of people to be permanently out of work.",
+                            "fact_id": "34_1_2"
+                        },
+                        {
+                            "fact_content": "In 2030 AI will be in routine use to fight wars and kill people far more effectively than we can currently kill.",
+                            "fact_id": "34_3_4"
+                        }
+                    ],
+                    "number_of_facts": 5
+                }
+            ]
+        },
+        {
+            "cluster_id": 1,
+            "title": "Economic Inequality",
+            "description": "The cluster highlights the issue of growing economic inequality, specifically focusing on the widening gap between the rich and the poor.",
+            "number_of_articles": 1,
+            "number_of_facts": 1,
+            "article_date_range": null,
+            "article_year_range": null,
+            "number_of_clickbaits": 1,
+            "articles": [
+                {
+                    "article_id": 29,
+                    "title": "The impact of artificial intelligence on human society and its implications for bioethics",
+                    "date": "Unknown",
+                    "year": "",
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7605294/",
+                    "number_of_facts": 1,
+                    "average_fact_score": 0.08960567396626229,
+                    "facts": [
+                        {
+                            "fact_id": "29_1_1",
+                            "order_id": 1,
+                            "fact_type": "difference",
+                            "fact_content": "The gap between the rich and the poor will be widened.",
+                            "narrative": "Economic disparities are on the rise, as the gap between the wealthy and the underprivileged is expected to widen significantly.",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "Wealth Gap",
+                                    "y": "Widened",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Widening Wealth Gap",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.08960567396626229,
+                            "article": {
+                                "title": "The impact of artificial intelligence on human society and its implications for bioethics",
+                                "date": "Unknown",
+                                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7605294/",
+                                "id": 29
+                            }
+                        }
+                    ]
+                }
+            ],
+            "facts": [
+                {
+                    "fact_id": "29_1_1",
+                    "order_id": 1,
+                    "fact_type": "difference",
+                    "fact_content": "The gap between the rich and the poor will be widened.",
+                    "narrative": "Economic disparities are on the rise, as the gap between the wealthy and the underprivileged is expected to widen significantly.",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "Wealth Gap",
+                            "y": "Widened",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Widening Wealth Gap",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.08960567396626229,
+                    "article": {
+                        "title": "The impact of artificial intelligence on human society and its implications for bioethics",
+                        "date": "Unknown",
+                        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7605294/",
+                        "id": 29
+                    }
+                }
+            ],
+            "clickbait_list": [
+                {
+                    "clickbait": "Income inequality set to increase further",
+                    "related_facts": [
+                        {
+                            "fact_content": "The gap between the rich and the poor will be widened.",
+                            "fact_id": "29_1_1"
+                        }
+                    ],
+                    "number_of_facts": 1
+                }
+            ]
+        },
+        {
+            "cluster_id": 4,
+            "title": "ChatGPT Glitch",
+            "description": "In March 2023, a glitch in ChatGPT allowed active users to see titles of other users' chat history, raising privacy concerns.",
+            "number_of_articles": 1,
+            "number_of_facts": 1,
+            "article_date_range": {
+                "earliest": "2023-12-07",
+                "latest": "2023-12-07"
+            },
+            "article_year_range": {
+                "earliest": 2023,
+                "latest": 2023
+            },
+            "number_of_clickbaits": 10,
+            "articles": [
+                {
+                    "article_id": 32,
+                    "title": "7 ways AI could bring more harm than good",
+                    "date": "2023-12-07",
+                    "year": 2023,
+                    "url": "https://www.techtarget.com/whatis/feature/Ways-AI-could-bring-more-harm-than-good",
+                    "number_of_facts": 1,
+                    "average_fact_score": 0.19339569608580875,
+                    "facts": [
+                        {
+                            "fact_id": "32_2_2",
+                            "order_id": 1,
+                            "fact_type": "value",
+                            "fact_content": "In March 2023, a glitch in ChatGPT enabled certain active users to access the titles of other users' chat history.",
+                            "narrative": "In March 2023, ChatGPT experienced a glitch that allowed some active users to see the chat history titles of others, raising concerns over user privacy and data security.",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "Month of Glitch",
+                                    "y": "March 2023",
+                                    "color": "#facc15"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "ChatGPT Glitch in March 2023",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.19339569608580875,
+                            "article": {
+                                "title": "7 ways AI could bring more harm than good",
+                                "date": "2023-12-07",
+                                "url": "https://www.techtarget.com/whatis/feature/Ways-AI-could-bring-more-harm-than-good",
+                                "id": 32
+                            }
+                        }
+                    ]
+                }
+            ],
+            "facts": [
+                {
+                    "fact_id": "32_2_2",
+                    "order_id": 1,
+                    "fact_type": "value",
+                    "fact_content": "In March 2023, a glitch in ChatGPT enabled certain active users to access the titles of other users' chat history.",
+                    "narrative": "In March 2023, ChatGPT experienced a glitch that allowed some active users to see the chat history titles of others, raising concerns over user privacy and data security.",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "Month of Glitch",
+                            "y": "March 2023",
+                            "color": "#facc15"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "ChatGPT Glitch in March 2023",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.19339569608580875,
+                    "article": {
+                        "title": "7 ways AI could bring more harm than good",
+                        "date": "2023-12-07",
+                        "url": "https://www.techtarget.com/whatis/feature/Ways-AI-could-bring-more-harm-than-good",
+                        "id": 32
+                    }
+                }
+            ],
+            "clickbait_list": [
+                {
+                    "clickbait": "ChatGPT's March 2023 glitch exposed user chat titles",
+                    "related_facts": [
+                        {
+                            "fact_content": "In March 2023, a glitch in ChatGPT enabled certain active users to access the titles of other users' chat history.",
+                            "fact_id": "32_2_2"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "March 2023: ChatGPT's chat history glitch uncovered",
+                    "related_facts": [
+                        {
+                            "fact_content": "In March 2023, a glitch in ChatGPT enabled certain active users to access the titles of other users' chat history.",
+                            "fact_id": "32_2_2"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Unseen ChatGPT titles revealed by March 2023 glitch",
+                    "related_facts": [
+                        {
+                            "fact_content": "In March 2023, a glitch in ChatGPT enabled certain active users to access the titles of other users' chat history.",
+                            "fact_id": "32_2_2"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "ChatGPT glitch in March 2023 exposed chat titles",
+                    "related_facts": [
+                        {
+                            "fact_content": "In March 2023, a glitch in ChatGPT enabled certain active users to access the titles of other users' chat history.",
+                            "fact_id": "32_2_2"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "March 2023: ChatGPT user chat titles exposed",
+                    "related_facts": [
+                        {
+                            "fact_content": "In March 2023, a glitch in ChatGPT enabled certain active users to access the titles of other users' chat history.",
+                            "fact_id": "32_2_2"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "ChatGPT chat history titles leaked in March glitch",
+                    "related_facts": [
+                        {
+                            "fact_content": "In March 2023, a glitch in ChatGPT enabled certain active users to access the titles of other users' chat history.",
+                            "fact_id": "32_2_2"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Glitch exposed ChatGPT chat titles in March 2023",
+                    "related_facts": [
+                        {
+                            "fact_content": "In March 2023, a glitch in ChatGPT enabled certain active users to access the titles of other users' chat history.",
+                            "fact_id": "32_2_2"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "March 2023: ChatGPT glitch reveals chat titles",
+                    "related_facts": [
+                        {
+                            "fact_content": "In March 2023, a glitch in ChatGPT enabled certain active users to access the titles of other users' chat history.",
+                            "fact_id": "32_2_2"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "ChatGPT titles exposed by March 2023 glitch",
+                    "related_facts": [
+                        {
+                            "fact_content": "In March 2023, a glitch in ChatGPT enabled certain active users to access the titles of other users' chat history.",
+                            "fact_id": "32_2_2"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Unexpected ChatGPT glitch revealed chat history titles",
+                    "related_facts": [
+                        {
+                            "fact_content": "In March 2023, a glitch in ChatGPT enabled certain active users to access the titles of other users' chat history.",
+                            "fact_id": "32_2_2"
+                        }
+                    ],
+                    "number_of_facts": 1
+                }
+            ]
+        }
+    ],
+    "stats": {
+        "total_articles": 9,
+        "total_facts": 27,
+        "total_clusters": 4,
+        "article_year_range": {
+            "earliest": 2018,
+            "latest": 2025
+        }
+    },
+    "all_facts_in_order": [
+        {
+            "fact_id": "19_0_0",
+            "order_id": 1,
+            "fact_type": "trend",
+            "fact_content": "The market for cybersecurity tools will grow 12.4% annually through 2027.",
+            "narrative": "As the digital landscape evolves, the cybersecurity tools market is projected to experience significant growth, expanding at an annual rate of <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">12.4%</span> through 2027.",
+            "vis_recommendation": "line",
+            "vis_data": [
+                {
+                    "x": "2024",
+                    "y": "100",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "2025",
+                    "y": "112.4",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "2026",
+                    "y": "126.39",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "2027",
+                    "y": "142.09",
+                    "color": "#22d3ee"
+                }
+            ],
+            "titles": {
+                "chart_title": "Cybersecurity Tools Market Growth",
+                "x_axis": "Year",
+                "y_axis": "Market Index"
+            },
+            "fact_score": 0.2101040370043774,
+            "article": {
+                "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                "date": "2025-02-07",
+                "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                "id": 19
+            }
+        },
+        {
+            "fact_id": "19_0_1",
+            "order_id": 2,
+            "fact_type": "proportion",
+            "fact_content": "Over 70% of large organizations across industries plan to invest in AI-enabled security tools.",
+            "narrative": "In response to rising cyber threats, over <span class=\"text-green-400 font-semibold bg-green-900 p-1 rounded\">70%</span> of large organizations are planning to invest in AI-enabled security tools, highlighting a strategic shift towards more advanced protective measures.",
+            "vis_recommendation": "pie",
+            "vis_data": [
+                {
+                    "x": "Investing",
+                    "y": "70%",
+                    "color": "#2dd4bf"
+                },
+                {
+                    "x": "Not Investing",
+                    "y": "30%",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "AI-enabled Security Tools Investment",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.40987510396142657,
+            "article": {
+                "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                "date": "2025-02-07",
+                "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                "id": 19
+            }
+        },
+        {
+            "fact_id": "19_0_2",
+            "order_id": 3,
+            "fact_type": "trend",
+            "fact_content": "Phishing attacks have risen by 1,265% since the inception of widely available generative AI platforms in 2022.",
+            "narrative": "The advent of generative AI platforms in 2022 has led to a staggering <span class=\"text-yellow-400 font-semibold bg-yellow-900 p-1 rounded\">1,265%</span> increase in phishing attacks, underscoring the urgent need for enhanced cybersecurity.",
+            "vis_recommendation": "line",
+            "vis_data": [
+                {
+                    "x": "2022",
+                    "y": "100",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "2025",
+                    "y": "1365",
+                    "color": "#facc15"
+                }
+            ],
+            "titles": {
+                "chart_title": "Rise in Phishing Attacks",
+                "x_axis": "Year",
+                "y_axis": "Attack Index"
+            },
+            "fact_score": 0.39218641633670226,
+            "article": {
+                "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                "date": "2025-02-07",
+                "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                "id": 19
+            }
+        },
+        {
+            "fact_id": "27_0_0",
+            "order_id": 4,
+            "fact_type": "proportion",
+            "fact_content": "Only 24% of generative AI initiatives are secured.",
+            "narrative": "Despite the growing reliance on AI, only <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">24%</span> of generative AI initiatives have adequate security, posing significant risks to sensitive data and operations.",
+            "vis_recommendation": "pie",
+            "vis_data": [
+                {
+                    "x": "Secured Gen AI Initiatives",
+                    "y": "24%",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "Unsecured Gen AI Initiatives",
+                    "y": "76%",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "Security of Generative AI Initiatives",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.42332194759577413,
+            "article": {
+                "title": "10 AI Dangers and Risks and How to Manage Them",
+                "date": "2024-09-03",
+                "url": "https://www.ibm.com/think/insights/10-ai-dangers-and-risks-and-how-to-manage-them",
+                "id": 27
+            }
+        },
+        {
+            "fact_id": "27_0_1",
+            "order_id": 5,
+            "fact_type": "value",
+            "fact_content": "The global average cost of data and AI model breaches is USD 4.88 million in 2024.",
+            "narrative": "Data and AI model breaches are costly, with the global average reaching <span class=\"text-yellow-400 font-semibold bg-yellow-900 p-1 rounded\">USD 4.88 million</span> in 2024, emphasizing the financial impact of insufficient security measures.",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "Global Avg Cost of Breaches",
+                    "y": "USD 4.88M",
+                    "color": "#facc15"
+                }
+            ],
+            "titles": {
+                "chart_title": "Average Cost of AI Breaches in 2024",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.334569371448304,
+            "article": {
+                "title": "10 AI Dangers and Risks and How to Manage Them",
+                "date": "2024-09-03",
+                "url": "https://www.ibm.com/think/insights/10-ai-dangers-and-risks-and-how-to-manage-them",
+                "id": 27
+            }
+        },
+        {
+            "fact_id": "20_0_0",
+            "order_id": 6,
+            "fact_type": "trend",
+            "fact_content": "Investments in AI technologies have quadrupled in the last year.",
+            "narrative": "The past year has seen a <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">fourfold</span> increase in AI technology investments, reflecting a robust commitment to AI-driven advancements across industries.",
+            "vis_recommendation": "bar",
+            "vis_data": [
+                {
+                    "x": "Previous Year",
+                    "y": "1",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "Current Year",
+                    "y": "4",
+                    "color": "#2dd4bf"
+                }
+            ],
+            "titles": {
+                "chart_title": "AI Investment Growth",
+                "x_axis": "Year",
+                "y_axis": "Multiplier"
+            },
+            "fact_score": 0.3625651917536338,
+            "article": {
+                "title": "A Real Risk for Artificial Intelligence",
+                "date": "2024-06-11",
+                "url": "https://www.csis.org/analysis/real-risk-artificial-intelligence",
+                "id": 20
+            }
+        },
+        {
+            "fact_id": "20_1_1",
+            "order_id": 7,
+            "fact_type": "difference",
+            "fact_content": "GDP of France and Germany grew at a quarter of the rate of the United States' and China's due to regulations.",
+            "narrative": "Regulatory constraints have resulted in France and Germany's GDP growing at just <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">a quarter</span> of the rate of the United States and China, highlighting the economic impact of policy frameworks.",
+            "vis_recommendation": "bar",
+            "vis_data": [
+                {
+                    "x": "France & Germany",
+                    "y": "0.25",
+                    "color": "#f87171"
+                },
+                {
+                    "x": "US & China",
+                    "y": "1",
+                    "color": "#facc15"
+                }
+            ],
+            "titles": {
+                "chart_title": "GDP Growth Rate Comparison",
+                "x_axis": "Region",
+                "y_axis": "Growth Rate"
+            },
+            "fact_score": 0.08104610665226064,
+            "article": {
+                "title": "A Real Risk for Artificial Intelligence",
+                "date": "2024-06-11",
+                "url": "https://www.csis.org/analysis/real-risk-artificial-intelligence",
+                "id": 20
+            }
+        },
+        {
+            "fact_id": "2_0_0",
+            "order_id": 8,
+            "fact_type": "proportion",
+            "fact_content": "59 percent of US adults support prioritizing mitigating the risk of extinction from AI.",
+            "narrative": "A majority of <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">59%</span> of US adults believe it is crucial to prioritize mitigating the existential risks posed by AI.",
+            "vis_recommendation": "pie",
+            "vis_data": [
+                {
+                    "x": "Support",
+                    "y": "59%",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "Disagree",
+                    "y": "26%",
+                    "color": "#f87171"
+                },
+                {
+                    "x": "Neutral/Other",
+                    "y": "15%",
+                    "color": "#facc15"
+                }
+            ],
+            "titles": {
+                "chart_title": "US Public Opinion on AI Risk Mitigation",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.4164100526304294,
+            "article": {
+                "title": "Three key misconceptions in the debate about AI and existential risk",
+                "date": "2024-07-15",
+                "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                "id": 2
+            }
+        },
+        {
+            "fact_id": "2_0_1",
+            "order_id": 9,
+            "fact_type": "proportion",
+            "fact_content": "26 percent of US adults disagree with prioritizing mitigating the risk of extinction from AI.",
+            "narrative": "Conversely, <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">26%</span> of US adults do not agree with focusing efforts on mitigating AI's existential risks, indicating a divided public opinion.",
+            "vis_recommendation": "pie",
+            "vis_data": [
+                {
+                    "x": "Support",
+                    "y": "59%",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "Disagree",
+                    "y": "26%",
+                    "color": "#f87171"
+                },
+                {
+                    "x": "Neutral/Other",
+                    "y": "15%",
+                    "color": "#facc15"
+                }
+            ],
+            "titles": {
+                "chart_title": "US Public Opinion on AI Risk Mitigation",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.3991779870954677,
+            "article": {
+                "title": "Three key misconceptions in the debate about AI and existential risk",
+                "date": "2024-07-15",
+                "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                "id": 2
+            }
+        },
+        {
+            "fact_id": "2_1_2",
+            "order_id": 10,
+            "fact_type": "value",
+            "fact_content": "Median risk of human extinction by AI is five percent according to a poll by AI Impacts.",
+            "narrative": "A poll by AI Impacts suggests a median risk of <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">5%</span> for human extinction due to AI, reflecting concerns within the scientific community.",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "Median Risk",
+                    "y": "5%",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "Perceived AI Extinction Risk",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.4908247068153344,
+            "article": {
+                "title": "Three key misconceptions in the debate about AI and existential risk",
+                "date": "2024-07-15",
+                "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                "id": 2
+            }
+        },
+        {
+            "fact_id": "2_2_3",
+            "order_id": 11,
+            "fact_type": "value",
+            "fact_content": "Mean responses suggest a nearly 16 percent chance of catastrophic outcomes from AI.",
+            "narrative": "On average, respondents estimate a nearly <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">16%</span> chance of catastrophic AI outcomes, signaling significant apprehension about future AI developments.",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "Mean Risk",
+                    "y": "16%",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "Perceived AI Catastrophic Risk",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.4273720938139358,
+            "article": {
+                "title": "Three key misconceptions in the debate about AI and existential risk",
+                "date": "2024-07-15",
+                "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                "id": 2
+            }
+        },
+        {
+            "fact_id": "2_3_4",
+            "order_id": 12,
+            "fact_type": "rank",
+            "fact_content": "GPT-4 scored near the top 10 percent in a simulated bar exam.",
+            "narrative": "Demonstrating its advanced capabilities, <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">GPT-4 scored in the top 10%</span> of a simulated bar exam, showcasing AI's growing proficiency.",
+            "vis_recommendation": "isotype",
+            "vis_data": [
+                {
+                    "x": "GPT-4 Bar Exam Rank",
+                    "y": "Top 10%",
+                    "color": "#22d3ee"
+                }
+            ],
+            "titles": {
+                "chart_title": "GPT-4 Exam Performance",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.16389550343211623,
+            "article": {
+                "title": "Three key misconceptions in the debate about AI and existential risk",
+                "date": "2024-07-15",
+                "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                "id": 2
+            }
+        },
+        {
+            "fact_id": "2_4_5",
+            "order_id": 13,
+            "fact_type": "trend",
+            "fact_content": "Median guess for AI overtaking human intelligence changed from 2060 to 2047 in one year.",
+            "narrative": "The timeline for AI surpassing human intelligence has accelerated, with median predictions shifting from <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">2060</span> in 2023 to <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">2047</span> in 2024 within a year.",
+            "vis_recommendation": "line",
+            "vis_data": [
+                {
+                    "x": "Year 2023",
+                    "y": "2060",
+                    "color": "#f87171"
+                },
+                {
+                    "x": "Year 2024",
+                    "y": "2047",
+                    "color": "#22d3ee"
+                }
+            ],
+            "titles": {
+                "chart_title": "AI Overtaking Human Intelligence Timeline",
+                "x_axis": "Survey Year",
+                "y_axis": "Timeline Year"
+            },
+            "fact_score": 0.39191499965058163,
+            "article": {
+                "title": "Three key misconceptions in the debate about AI and existential risk",
+                "date": "2024-07-15",
+                "url": "https://thebulletin.org/2024/07/three-key-misconceptions-in-the-debate-about-ai-and-existential-risk/",
+                "id": 2
+            }
+        },
+        {
+            "fact_id": "32_1_1",
+            "order_id": 14,
+            "fact_type": "value",
+            "fact_content": "China's social credit system will allocate a personal score to each of its 1.4 billion citizens based on their behavior and activities.",
+            "narrative": "China's social credit system plans to assign personal scores to its <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">1.4 billion</span> citizens, influencing public behavior and societal norms through comprehensive monitoring.",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "Citizens Evaluated",
+                    "y": "1.4 billion",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "China's Social Credit System",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.1568422769622242,
+            "article": {
+                "title": "7 ways AI could bring more harm than good",
+                "date": "2023-12-07",
+                "url": "https://www.techtarget.com/whatis/feature/Ways-AI-could-bring-more-harm-than-good",
+                "id": 32
+            }
+        },
+        {
+            "fact_id": "13_0_0",
+            "order_id": 1,
+            "fact_type": "value",
+            "fact_content": "AI could displace roughly 15% of workers worldwide between 2016 and 2030.",
+            "narrative": "By 2030, AI could significantly impact the global workforce, displacing approximately <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">15%</span> of workers worldwide.",
+            "vis_recommendation": "pie",
+            "vis_data": [
+                {
+                    "x": "Displaced Workers",
+                    "y": "15%",
+                    "color": "#f87171"
+                },
+                {
+                    "x": "Remaining Workers",
+                    "y": "85%",
+                    "color": "#22d3ee"
+                }
+            ],
+            "titles": {
+                "chart_title": "Potential Workforce Displacement by AI",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.4548371575204002,
+            "article": {
+                "title": "Pros and Cons of Artificial Intelligence",
+                "date": "2023-04-14",
+                "url": "https://theweek.com/news/technology/960453/pros-and-cons-of-artificial-intelligence",
+                "id": 13
+            }
+        },
+        {
+            "fact_id": "13_0_1",
+            "order_id": 2,
+            "fact_type": "value",
+            "fact_content": "AI could displace 400 million people worldwide between 2016 and 2030.",
+            "narrative": "This technological shift could result in the displacement of a staggering <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">400 million</span> people across the globe.",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "Displaced People",
+                    "y": "400 million",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "People Displaced by AI",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.499189229641247,
+            "article": {
+                "title": "Pros and Cons of Artificial Intelligence",
+                "date": "2023-04-14",
+                "url": "https://theweek.com/news/technology/960453/pros-and-cons-of-artificial-intelligence",
+                "id": 13
+            }
+        },
+        {
+            "fact_id": "1_0_0",
+            "order_id": 3,
+            "fact_type": "value",
+            "fact_content": "30 percent of human work hours could be entirely automated according to the McKinsey Global Institute.",
+            "narrative": "According to the McKinsey Global Institute, <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">30%</span> of human work hours have the potential to be fully automated, reshaping job structures.",
+            "vis_recommendation": "pie",
+            "vis_data": [
+                {
+                    "x": "Automated Work Hours",
+                    "y": "30%",
+                    "color": "#2dd4bf"
+                },
+                {
+                    "x": "Non-Automated Work Hours",
+                    "y": "70%",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "Potential Automation of Work Hours",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.21183201126733642,
+            "article": {
+                "title": "AI Is an Exciting Opportunity, Not a Threat",
+                "date": "2024-06-26",
+                "url": "https://www.aacsb.edu/insights/articles/2024/06/ai-is-an-exciting-opportunity-not-a-threat",
+                "id": 1
+            }
+        },
+        {
+            "fact_id": "1_0_1",
+            "order_id": 4,
+            "fact_type": "value",
+            "fact_content": "60 percent of jobs could be lost in advanced economies according to the International Monetary Fund.",
+            "narrative": "The International Monetary Fund warns that <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">60%</span> of jobs in advanced economies might vanish due to automation.",
+            "vis_recommendation": "pie",
+            "vis_data": [
+                {
+                    "x": "Jobs Lost",
+                    "y": "60%",
+                    "color": "#f87171"
+                },
+                {
+                    "x": "Jobs Retained",
+                    "y": "40%",
+                    "color": "#22d3ee"
+                }
+            ],
+            "titles": {
+                "chart_title": "Job Loss in Advanced Economies",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.218135567162958,
+            "article": {
+                "title": "AI Is an Exciting Opportunity, Not a Threat",
+                "date": "2024-06-26",
+                "url": "https://www.aacsb.edu/insights/articles/2024/06/ai-is-an-exciting-opportunity-not-a-threat",
+                "id": 1
+            }
+        },
+        {
+            "fact_id": "29_0_0",
+            "order_id": 5,
+            "fact_type": "value",
+            "fact_content": "Many automobile assembly lines have been filled with machineries and robots.",
+            "narrative": "<p>Automobile assembly lines exemplify this trend, increasingly populated by <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">machinery and robots</span>.</p>",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "Automobile Assembly Lines",
+                    "y": "Filled with robots",
+                    "color": "#22d3ee"
+                }
+            ],
+            "titles": {
+                "chart_title": "Automation in Assembly Lines",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.17600085931102527,
+            "article": {
+                "title": "The impact of artificial intelligence on human society and its implications for bioethics",
+                "date": "Unknown",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7605294/",
+                "id": 29
+            }
+        },
+        {
+            "fact_id": "32_0_0",
+            "order_id": 6,
+            "fact_type": "trend",
+            "fact_content": "By 2030, activities that account for 30% of the hours currently worked in the U.S. economy have the potential to be automated.",
+            "narrative": "By 2030, the U.S. economy could see <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">30%</span> of current work hours potentially automated, indicating a major shift in labor dynamics.",
+            "vis_recommendation": "line",
+            "vis_data": [
+                {
+                    "x": "Automatable Hours",
+                    "y": "30%",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "Non-Automatable Hours",
+                    "y": "70%",
+                    "color": "#2dd4bf"
+                }
+            ],
+            "titles": {
+                "chart_title": "Potential Automation of U.S. Work Hours by 2030",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.2000034727493637,
+            "article": {
+                "title": "7 ways AI could bring more harm than good",
+                "date": "2023-12-07",
+                "url": "https://www.techtarget.com/whatis/feature/Ways-AI-could-bring-more-harm-than-good",
+                "id": 32
+            }
+        },
+        {
+            "fact_id": "34_0_0",
+            "order_id": 7,
+            "fact_type": "trend",
+            "fact_content": "AI and related technologies have already achieved superhuman performance in many areas, and their capabilities will probably improve very significantly by 2030.",
+            "narrative": "AI's capabilities, already surpassing human performance in various sectors, are expected to advance significantly by <span class=\"text-teal-400 font-semibold bg-teal-900 p-1 rounded\">2030</span>.",
+            "vis_recommendation": "line",
+            "vis_data": [
+                {
+                    "x": "2018",
+                    "y": "1",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "2030",
+                    "y": "2",
+                    "color": "#2dd4bf"
+                }
+            ],
+            "titles": {
+                "chart_title": "AI Capability Improvement by 2030",
+                "x_axis": "Year",
+                "y_axis": "Capability Level"
+            },
+            "fact_score": 0.4942730508184201,
+            "article": {
+                "title": "Artificial Intelligence and the Future of Humans",
+                "date": "2018-12-10",
+                "url": "https://www.pewresearch.org/internet/2018/12/10/artificial-intelligence-and-the-future-of-humans/",
+                "id": 34
+            }
+        },
+        {
+            "fact_id": "34_1_1",
+            "order_id": 8,
+            "fact_type": "trend",
+            "fact_content": "The transition through AI will last the next 50 years or more.",
+            "narrative": "The AI-driven transition is predicted to span over the next <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">50 years</span> or longer, indicating a long-term evolution.",
+            "vis_recommendation": "line",
+            "vis_data": [
+                {
+                    "x": "2018",
+                    "y": "1",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "2068",
+                    "y": "2",
+                    "color": "#2dd4bf"
+                }
+            ],
+            "titles": {
+                "chart_title": "AI Transition Duration",
+                "x_axis": "Year",
+                "y_axis": "Transition Phase"
+            },
+            "fact_score": 0.4088930195615279,
+            "article": {
+                "title": "Artificial Intelligence and the Future of Humans",
+                "date": "2018-12-10",
+                "url": "https://www.pewresearch.org/internet/2018/12/10/artificial-intelligence-and-the-future-of-humans/",
+                "id": 34
+            }
+        },
+        {
+            "fact_id": "34_1_2",
+            "order_id": 9,
+            "fact_type": "extreme",
+            "fact_content": "AI will eventually cause a large number of people to be permanently out of work.",
+            "narrative": "The widespread adoption of AI could lead to many individuals being <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">permanently unemployed</span>.",
+            "vis_recommendation": "bar",
+            "vis_data": [
+                {
+                    "x": "Current Workforce",
+                    "y": "1",
+                    "color": "#f87171"
+                },
+                {
+                    "x": "Future Workforce (Post-AI)",
+                    "y": "2",
+                    "color": "#facc15"
+                }
+            ],
+            "titles": {
+                "chart_title": "AI Impact on Employment",
+                "x_axis": "Workforce",
+                "y_axis": "Employment Status"
+            },
+            "fact_score": 0.4491143937010562,
+            "article": {
+                "title": "Artificial Intelligence and the Future of Humans",
+                "date": "2018-12-10",
+                "url": "https://www.pewresearch.org/internet/2018/12/10/artificial-intelligence-and-the-future-of-humans/",
+                "id": 34
+            }
+        },
+        {
+            "fact_id": "34_2_3",
+            "order_id": 10,
+            "fact_type": "trend",
+            "fact_content": "By 2030 the human-machine/AI collaboration will be a necessary tool to manage and counter the effects of multiple simultaneous accelerations.",
+            "narrative": "<p>Human-machine collaboration will become crucial by <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">2030</span> to navigate and mitigate the effects of rapid technological and economic changes.</p>",
+            "vis_recommendation": "line",
+            "vis_data": [
+                {
+                    "x": "2018",
+                    "y": "1",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "2030",
+                    "y": "2",
+                    "color": "#2dd4bf"
+                }
+            ],
+            "titles": {
+                "chart_title": "Human-AI Collaboration by 2030",
+                "x_axis": "Year",
+                "y_axis": "Collaboration Level"
+            },
+            "fact_score": 0.4097553400095937,
+            "article": {
+                "title": "Artificial Intelligence and the Future of Humans",
+                "date": "2018-12-10",
+                "url": "https://www.pewresearch.org/internet/2018/12/10/artificial-intelligence-and-the-future-of-humans/",
+                "id": 34
+            }
+        },
+        {
+            "fact_id": "34_3_4",
+            "order_id": 11,
+            "fact_type": "trend",
+            "fact_content": "In 2030 AI will be in routine use to fight wars and kill people far more effectively than we can currently kill.",
+            "narrative": "By <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">2030</span>, AI could also be routinely utilized in warfare, enhancing the efficiency of military operations to unprecedented levels.",
+            "vis_recommendation": "line",
+            "vis_data": [
+                {
+                    "x": "2018",
+                    "y": "1",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "2030",
+                    "y": "2",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "AI in Military Use by 2030",
+                "x_axis": "Year",
+                "y_axis": "Military Effectiveness"
+            },
+            "fact_score": 0.43754923839603377,
+            "article": {
+                "title": "Artificial Intelligence and the Future of Humans",
+                "date": "2018-12-10",
+                "url": "https://www.pewresearch.org/internet/2018/12/10/artificial-intelligence-and-the-future-of-humans/",
+                "id": 34
+            }
+        },
+        {
+            "fact_id": "29_1_1",
+            "order_id": 1,
+            "fact_type": "difference",
+            "fact_content": "The gap between the rich and the poor will be widened.",
+            "narrative": "<span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">Economic disparities</span> are on the rise, as the gap between the wealthy and the underprivileged is expected to widen significantly.",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "Wealth Gap",
+                    "y": "Widened",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "Widening Wealth Gap",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.08960567396626229,
+            "article": {
+                "title": "The impact of artificial intelligence on human society and its implications for bioethics",
+                "date": "Unknown",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7605294/",
+                "id": 29
+            }
+        },
+        {
+            "fact_id": "32_2_2",
+            "order_id": 1,
+            "fact_type": "value",
+            "fact_content": "In March 2023, a glitch in ChatGPT enabled certain active users to access the titles of other users' chat history.",
+            "narrative": "In <span class=\"text-yellow-400 font-semibold bg-yellow-900 p-1 rounded\">March 2023</span>, ChatGPT experienced a glitch that allowed some active users to see the chat history titles of others, raising concerns over user privacy and data security.",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "Month of Glitch",
+                    "y": "March 2023",
+                    "color": "#facc15"
+                }
+            ],
+            "titles": {
+                "chart_title": "ChatGPT Glitch in March 2023",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.19339569608580875,
+            "article": {
+                "title": "7 ways AI could bring more harm than good",
+                "date": "2023-12-07",
+                "url": "https://www.techtarget.com/whatis/feature/Ways-AI-could-bring-more-harm-than-good",
+                "id": 32
+            }
+        }
+    ],
+    "steps": [
+        13,
+        24,
+        25,
+        26
+    ],
+    "shared_facts": [],
+    "shared_articles": [
+        {
+            "start_cluster": 2,
+            "end_cluster": 3,
+            "count": 1,
+            "articles": [
+                {
+                    "article_id": 32,
+                    "title": "7 ways AI could bring more harm than good",
+                    "url": "https://www.techtarget.com/whatis/feature/Ways-AI-could-bring-more-harm-than-good",
+                    "date": "2023-12-07",
+                    "year": 2023
+                }
+            ]
+        },
+        {
+            "start_cluster": 2,
+            "end_cluster": 4,
+            "count": 1,
+            "articles": [
+                {
+                    "article_id": 32,
+                    "title": "7 ways AI could bring more harm than good",
+                    "url": "https://www.techtarget.com/whatis/feature/Ways-AI-could-bring-more-harm-than-good",
+                    "date": "2023-12-07",
+                    "year": 2023
+                }
+            ]
+        },
+        {
+            "start_cluster": 3,
+            "end_cluster": 1,
+            "count": 1,
+            "articles": [
+                {
+                    "article_id": 29,
+                    "title": "The impact of artificial intelligence on human society and its implications for bioethics",
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7605294/",
+                    "date": "Unknown",
+                    "year": ""
+                }
+            ]
+        },
+        {
+            "start_cluster": 3,
+            "end_cluster": 4,
+            "count": 1,
+            "articles": [
+                {
+                    "article_id": 32,
+                    "title": "7 ways AI could bring more harm than good",
+                    "url": "https://www.techtarget.com/whatis/feature/Ways-AI-could-bring-more-harm-than-good",
+                    "date": "2023-12-07",
+                    "year": 2023
+                }
+            ]
+        }
+    ]
+}

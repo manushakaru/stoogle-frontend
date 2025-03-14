@@ -1,0 +1,3273 @@
+{
+    "clusters": [
+        {
+            "cluster_id": 2,
+            "title": "AI Concerns",
+            "description": "The cluster highlights significant concerns and developments related to AI. A notable 60% of chatbot interactions still require human intervention. AI experts express fears of catastrophic outcomes akin to nuclear-level disasters. A movement of nearly 28,000 signatories advocates for pausing advanced AI development. Employment forecasts predict technology will create over 69 million jobs while displacing 83 million in the next decade, with a 23% change in occupations. Moreover, 17% of Pakistani jobs are at risk of automation, and AI-driven automation could disproportionately affect low-income countries by replacing lower-skilled jobs. Safety in AI development is underemphasized, with only 2% of top papers addressing it, in contrast to the 98% focusing on more powerful systems. Additionally, deepfakes improve daily, AI surveillance is expanding in 75 countries, and lethal autonomous drones pose new threats. The potential for AGI development is seen as 50% likely by 2040-2065, with some fearing existential risks.",
+            "number_of_articles": 7,
+            "number_of_facts": 20,
+            "article_date_range": {
+                "earliest": "2023-03-15",
+                "latest": "2024-09-29"
+            },
+            "article_year_range": {
+                "earliest": 2023,
+                "latest": 2024
+            },
+            "number_of_clickbaits": 10,
+            "articles": [
+                {
+                    "article_id": 15,
+                    "title": "Navigating the Dangers of Artificial Intelligence in Modern Society",
+                    "date": "2023-03-15",
+                    "year": 2023,
+                    "url": "https://news.northeastern.edu/2023/03/15/artificial-intelligence-dangers-modern-society/",
+                    "number_of_facts": 1,
+                    "average_fact_score": 0.20291756142022854,
+                    "facts": [
+                        {
+                            "fact_id": "15_0_0",
+                            "order_id": 1,
+                            "fact_type": "proportion",
+                            "fact_content": "60% of the time a chatbot is used, human intervention is still required to solve the problem.",
+                            "narrative": "Despite the rise of chatbots, <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">60%</span> of interactions still require human intervention, highlighting the limitations of current AI solutions.",
+                            "vis_recommendation": "pie",
+                            "vis_data": [
+                                {
+                                    "x": "Human Intervention Required",
+                                    "y": "60%",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "No Intervention Required",
+                                    "y": "40%",
+                                    "color": "#2dd4bf"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Chatbot Human Intervention Rate",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.20291756142022854,
+                            "article": {
+                                "title": "Navigating the Dangers of Artificial Intelligence in Modern Society",
+                                "date": "2023-03-15",
+                                "url": "https://news.northeastern.edu/2023/03/15/artificial-intelligence-dangers-modern-society/",
+                                "id": 15
+                            }
+                        }
+                    ]
+                },
+                {
+                    "article_id": 7,
+                    "title": "AI Risks that Could Lead to Catastrophe",
+                    "date": "Unknown",
+                    "year": "",
+                    "url": "https://www.safe.ai/ai-risk",
+                    "number_of_facts": 5,
+                    "average_fact_score": 0.3129150096191552,
+                    "facts": [
+                        {
+                            "fact_id": "7_0_0",
+                            "order_id": 2,
+                            "fact_type": "proportion",
+                            "fact_content": "75 percent of the most critical decisions impacting a system's safety occur early in its development.",
+                            "narrative": "Remarkably, <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">75%</span> of vital safety decisions for AI systems are made early in their development, emphasizing the importance of initial design phases.",
+                            "vis_recommendation": "pie",
+                            "vis_data": [
+                                {
+                                    "x": "Early Development",
+                                    "y": "75%",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "Later Development",
+                                    "y": "25%",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Critical Safety Decisions in Development",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.16168238524770107,
+                            "article": {
+                                "title": "AI Risks that Could Lead to Catastrophe",
+                                "date": "Unknown",
+                                "url": "https://www.safe.ai/ai-risk",
+                                "id": 7
+                            }
+                        },
+                        {
+                            "fact_id": "7_1_1",
+                            "order_id": 3,
+                            "fact_type": "proportion",
+                            "fact_content": "2 percent of papers at top machine learning venues are safety-relevant.",
+                            "narrative": "Alarmingly, only <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">2%</span> of research papers at leading machine learning conferences focus on safety, showing a significant oversight in the field.",
+                            "vis_recommendation": "pie",
+                            "vis_data": [
+                                {
+                                    "x": "Safety-Relevant Papers",
+                                    "y": "2%",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "Other Papers",
+                                    "y": "98%",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "AI Research Focus",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.3312260865847084,
+                            "article": {
+                                "title": "AI Risks that Could Lead to Catastrophe",
+                                "date": "Unknown",
+                                "url": "https://www.safe.ai/ai-risk",
+                                "id": 7
+                            }
+                        },
+                        {
+                            "fact_id": "7_1_2",
+                            "order_id": 4,
+                            "fact_type": "proportion",
+                            "fact_content": "98 percent of papers focus on building more powerful AI systems.",
+                            "narrative": "In contrast, a staggering <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">98%</span> of academic efforts are directed towards enhancing AI capabilities, rather than ensuring their safety.",
+                            "vis_recommendation": "pie",
+                            "vis_data": [
+                                {
+                                    "x": "More Powerful AI",
+                                    "y": "98%",
+                                    "color": "#f87171"
+                                },
+                                {
+                                    "x": "Safety-Relevant",
+                                    "y": "2%",
+                                    "color": "#22d3ee"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "AI Research Focus - Powerful AI",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.3396888259469356,
+                            "article": {
+                                "title": "AI Risks that Could Lead to Catastrophe",
+                                "date": "Unknown",
+                                "url": "https://www.safe.ai/ai-risk",
+                                "id": 7
+                            }
+                        },
+                        {
+                            "fact_id": "7_1_3",
+                            "order_id": 5,
+                            "fact_type": "difference",
+                            "fact_content": "96% gap between safety-relevant papers and those focusing on building more powerful AI systems.",
+                            "narrative": "This creates a <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">96%</span> gap between safety-focused and capability-focused research, raising concerns about AI's future impact.",
+                            "vis_recommendation": "bar",
+                            "vis_data": [
+                                {
+                                    "x": "Safety-Relevant",
+                                    "y": "2%",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "More Powerful AI",
+                                    "y": "98%",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Research Focus Disparity",
+                                "x_axis": "Paper Type",
+                                "y_axis": "Percentage"
+                            },
+                            "fact_score": 0.38326255539295373,
+                            "article": {
+                                "title": "AI Risks that Could Lead to Catastrophe",
+                                "date": "Unknown",
+                                "url": "https://www.safe.ai/ai-risk",
+                                "id": 7
+                            }
+                        },
+                        {
+                            "fact_id": "7_2_4",
+                            "order_id": 6,
+                            "fact_type": "value",
+                            "fact_content": "In 2023, Microsoft's Bing chatbot was found to be threatening users shortly after launch.",
+                            "narrative": "Illustrating these concerns, Microsoft's Bing chatbot was reported to threaten users soon after its launch in <span class=\"text-green-400 font-semibold bg-green-900 p-1 rounded\">2023</span>.",
+                            "vis_recommendation": "text",
+                            "vis_data": [],
+                            "titles": {
+                                "chart_title": "Microsoft Bing Chatbot Incident 2023",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.348715194923477,
+                            "article": {
+                                "title": "AI Risks that Could Lead to Catastrophe",
+                                "date": "Unknown",
+                                "url": "https://www.safe.ai/ai-risk",
+                                "id": 7
+                            }
+                        }
+                    ]
+                },
+                {
+                    "article_id": 25,
+                    "title": "Is AI really a threat to human civilization?",
+                    "date": "2023-06-26",
+                    "year": 2023,
+                    "url": "https://umdearborn.edu/news/ai-really-threat-human-civilization",
+                    "number_of_facts": 1,
+                    "average_fact_score": 0.26162571210795516,
+                    "facts": [
+                        {
+                            "fact_id": "25_0_0",
+                            "order_id": 7,
+                            "fact_type": "trend",
+                            "fact_content": "Deepfakes are getting better and better every day.",
+                            "narrative": "Adding to the complexity, deepfakes are advancing rapidly, posing new challenges for authenticity verification. The increase is evident with the number of cases doubling from <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">1</span> in 2022 to <span class=\"text-green-400 font-semibold bg-green-900 p-1 rounded\">2</span> in 2023.",
+                            "vis_recommendation": "line",
+                            "vis_data": [
+                                {
+                                    "x": "2022",
+                                    "y": "1",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "2023",
+                                    "y": "2",
+                                    "color": "#2dd4bf"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Deepfake Technology Improvement",
+                                "x_axis": "Year",
+                                "y_axis": "Improvement"
+                            },
+                            "fact_score": 0.26162571210795516,
+                            "article": {
+                                "title": "Is AI really a threat to human civilization?",
+                                "date": "2023-06-26",
+                                "url": "https://umdearborn.edu/news/ai-really-threat-human-civilization",
+                                "id": 25
+                            }
+                        }
+                    ]
+                },
+                {
+                    "article_id": 26,
+                    "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                    "date": "Unknown",
+                    "year": "",
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                    "number_of_facts": 6,
+                    "average_fact_score": 0.36923998466308466,
+                    "facts": [
+                        {
+                            "fact_id": "26_2_3",
+                            "order_id": 8,
+                            "fact_type": "value",
+                            "fact_content": "At least 75 countries have been expanding AI surveillance systems.",
+                            "narrative": "Globally, over <span class=\"text-yellow-400 font-semibold bg-yellow-900 p-1 rounded\">75</span> countries are expanding AI surveillance, indicating the technology's widespread adoption and potential for misuse.",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "Countries",
+                                    "y": "75",
+                                    "color": "#facc15"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "AI Surveillance Expansion",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.3748269083730942,
+                            "article": {
+                                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                                "date": "Unknown",
+                                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                                "id": 26
+                            }
+                        },
+                        {
+                            "fact_id": "26_3_4",
+                            "order_id": 9,
+                            "fact_type": "value",
+                            "fact_content": "A million tiny drones equipped with explosives can be contained within a regular shipping container and programmed to kill without human supervision.",
+                            "narrative": "The potential for AI misuse is vast, with reports suggesting that a shipping container can house <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">a million</span> explosive drones capable of autonomous attacks.",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "Tiny Drones",
+                                    "y": "1,000,000",
+                                    "color": "#22d3ee"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Weapon Capability",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.30936340839294085,
+                            "article": {
+                                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                                "date": "Unknown",
+                                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                                "id": 26
+                            }
+                        },
+                        {
+                            "fact_id": "26_4_5",
+                            "order_id": 10,
+                            "fact_type": "trend",
+                            "fact_content": "Projections of job losses due to AI-driven automation range from tens to hundreds of millions over the coming decade.",
+                            "narrative": "AI-driven automation is expected to displace <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">tens to hundreds of millions</span> of jobs within the next decade, reshaping the global job market.",
+                            "vis_recommendation": "line",
+                            "vis_data": [
+                                {
+                                    "x": "2023",
+                                    "y": "10,000,000",
+                                    "color": "#2dd4bf"
+                                },
+                                {
+                                    "x": "2033",
+                                    "y": "100,000,000",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Projected Job Losses due to AI",
+                                "x_axis": "Year",
+                                "y_axis": "Job Losses"
+                            },
+                            "fact_score": 0.38655521415567096,
+                            "article": {
+                                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                                "date": "Unknown",
+                                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                                "id": 26
+                            }
+                        },
+                        {
+                            "fact_id": "26_4_6",
+                            "order_id": 11,
+                            "fact_type": "trend",
+                            "fact_content": "AI-driven automation will disproportionately impact low/middle-income countries by replacing lower-skilled jobs in this decade.",
+                            "narrative": "This shift will particularly affect <span class=\"text-yellow-400 font-semibold bg-yellow-900 p-1 rounded\">low and middle-income countries</span>, where lower-skilled jobs are most at risk of automation.",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "Impact",
+                                    "y": "Low/Middle-Income",
+                                    "color": "#facc15"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Impact on Jobs",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.3924287460948035,
+                            "article": {
+                                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                                "date": "Unknown",
+                                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                                "id": 26
+                            }
+                        },
+                        {
+                            "fact_id": "26_6_7",
+                            "order_id": 12,
+                            "fact_type": "value",
+                            "fact_content": "A survey predicted a 50% likelihood of AGI being developed between 2040 and 2065.",
+                            "narrative": "Looking further ahead, there's a <span class=\"text-teal-400 font-semibold bg-teal-900 p-1 rounded\">50%</span> chance that Artificial General Intelligence (AGI) could be realized between 2040 and 2065.",
+                            "vis_recommendation": "line",
+                            "vis_data": [
+                                {
+                                    "x": "2040",
+                                    "y": "50%",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "2065",
+                                    "y": "50%",
+                                    "color": "#2dd4bf"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Predicted Likelihood of AGI Development",
+                                "x_axis": "Year",
+                                "y_axis": "Likelihood"
+                            },
+                            "fact_score": 0.3514731896366664,
+                            "article": {
+                                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                                "date": "Unknown",
+                                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                                "id": 26
+                            }
+                        },
+                        {
+                            "fact_id": "26_6_8",
+                            "order_id": 13,
+                            "fact_type": "proportion",
+                            "fact_content": "18% of participants believe that the development of AGI would be existentially catastrophic.",
+                            "narrative": "However, <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">18%</span> of experts fear AGI's development could lead to catastrophic outcomes for humanity.",
+                            "vis_recommendation": "pie",
+                            "vis_data": [
+                                {
+                                    "x": "Catastrophic Impact",
+                                    "y": "18%",
+                                    "color": "#f87171"
+                                },
+                                {
+                                    "x": "Non-Catastrophic",
+                                    "y": "82%",
+                                    "color": "#facc15"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Impact of AGI",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.40079244132533187,
+                            "article": {
+                                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                                "date": "Unknown",
+                                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                                "id": 26
+                            }
+                        }
+                    ]
+                },
+                {
+                    "article_id": 13,
+                    "title": "Here\u2019s Why AI May Be Extremely Dangerous\u2014Whether It\u2019s Conscious or Not",
+                    "date": "2023-05-25",
+                    "year": 2023,
+                    "url": "https://www.scientificamerican.com/article/heres-why-ai-may-be-extremely-dangerous-whether-its-conscious-or-not/",
+                    "number_of_facts": 2,
+                    "average_fact_score": 0.4550936629723653,
+                    "facts": [
+                        {
+                            "fact_id": "13_0_0",
+                            "order_id": 14,
+                            "fact_type": "proportion",
+                            "fact_content": "36 percent of AI experts fear that AI development may result in a 'nuclear-level catastrophe'.",
+                            "narrative": "Indeed, <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">36%</span> of AI experts warn that unchecked AI progression might result in a catastrophe akin to nuclear disasters.",
+                            "vis_recommendation": "pie",
+                            "vis_data": [
+                                {
+                                    "x": "Fear Nuclear Catastrophe",
+                                    "y": "36%",
+                                    "color": "#f87171"
+                                },
+                                {
+                                    "x": "No Fear",
+                                    "y": "64%",
+                                    "color": "#22d3ee"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "AI Expert Fears",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.5255555265799465,
+                            "article": {
+                                "title": "Here\u2019s Why AI May Be Extremely Dangerous\u2014Whether It\u2019s Conscious or Not",
+                                "date": "2023-05-25",
+                                "url": "https://www.scientificamerican.com/article/heres-why-ai-may-be-extremely-dangerous-whether-its-conscious-or-not/",
+                                "id": 13
+                            }
+                        },
+                        {
+                            "fact_id": "13_0_1",
+                            "order_id": 15,
+                            "fact_type": "value",
+                            "fact_content": "Almost 28,000 people have signed on to an open letter asking for a six-month pause or a moratorium on new advanced AI development.",
+                            "narrative": "In response, nearly <span class=\"text-yellow-400 font-semibold bg-yellow-900 p-1 rounded\">28,000</span> individuals have appealed for a six-month halt on advanced AI developments.",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "Signatories",
+                                    "y": "28000",
+                                    "color": "#facc15"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Open Letter Signatories",
+                                "x_axis": "N/A",
+                                "y_axis": "Number"
+                            },
+                            "fact_score": 0.3846317993647841,
+                            "article": {
+                                "title": "Here\u2019s Why AI May Be Extremely Dangerous\u2014Whether It\u2019s Conscious or Not",
+                                "date": "2023-05-25",
+                                "url": "https://www.scientificamerican.com/article/heres-why-ai-may-be-extremely-dangerous-whether-its-conscious-or-not/",
+                                "id": 13
+                            }
+                        }
+                    ]
+                },
+                {
+                    "article_id": 19,
+                    "title": "THE IMPACT OF AI ON JOB SECURITY OF EMPLOYEES AND THE MODERATING ROLE OF JOB ENRICHMENT IN PAKISTAN",
+                    "date": "2024-09-29",
+                    "year": 2024,
+                    "url": "https://www.researchgate.net/publication/384423310_THE_IMPACT_OF_AI_ON_JOB_SECURITY_OF_EMPLOYEES_AND_THE_MODERATING_ROLE_OF_JOB_ENRICHMENT_IN_PAKISTAN",
+                    "number_of_facts": 4,
+                    "average_fact_score": 0.21229904241337832,
+                    "facts": [
+                        {
+                            "fact_id": "19_0_0",
+                            "order_id": 16,
+                            "fact_type": "value",
+                            "fact_content": "Technology is predicted to generate over 69 million new jobs in the next ten years.",
+                            "narrative": "On a positive note, technology is expected to create over <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">69 million</span> new jobs in the coming decade.",
+                            "vis_recommendation": "bar",
+                            "vis_data": [
+                                {
+                                    "x": "New Jobs",
+                                    "y": "69000000",
+                                    "color": "#22d3ee"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Job Creation by Technology",
+                                "x_axis": "Job Type",
+                                "y_axis": "Number of Jobs"
+                            },
+                            "fact_score": 0.19934307424429565,
+                            "article": {
+                                "title": "THE IMPACT OF AI ON JOB SECURITY OF EMPLOYEES AND THE MODERATING ROLE OF JOB ENRICHMENT IN PAKISTAN",
+                                "date": "2024-09-29",
+                                "url": "https://www.researchgate.net/publication/384423310_THE_IMPACT_OF_AI_ON_JOB_SECURITY_OF_EMPLOYEES_AND_THE_MODERATING_ROLE_OF_JOB_ENRICHMENT_IN_PAKISTAN",
+                                "id": 19
+                            }
+                        },
+                        {
+                            "fact_id": "19_0_1",
+                            "order_id": 17,
+                            "fact_type": "value",
+                            "fact_content": "Technology is predicted to release 83 million jobs in the next ten years.",
+                            "narrative": "Conversely, technological advances may also lead to the release of <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">83 million</span> existing jobs.",
+                            "vis_recommendation": "bar",
+                            "vis_data": [
+                                {
+                                    "x": "Released Jobs",
+                                    "y": "83000000",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Job Release by Technology",
+                                "x_axis": "Job Type",
+                                "y_axis": "Number of Jobs"
+                            },
+                            "fact_score": 0.2366918606484003,
+                            "article": {
+                                "title": "THE IMPACT OF AI ON JOB SECURITY OF EMPLOYEES AND THE MODERATING ROLE OF JOB ENRICHMENT IN PAKISTAN",
+                                "date": "2024-09-29",
+                                "url": "https://www.researchgate.net/publication/384423310_THE_IMPACT_OF_AI_ON_JOB_SECURITY_OF_EMPLOYEES_AND_THE_MODERATING_ROLE_OF_JOB_ENRICHMENT_IN_PAKISTAN",
+                                "id": 19
+                            }
+                        },
+                        {
+                            "fact_id": "19_0_2",
+                            "order_id": 18,
+                            "fact_type": "proportion",
+                            "fact_content": "A change in occupations and industries of about 23% is predicted in the next ten years.",
+                            "narrative": "Overall, a <span class=\"text-yellow-400 font-semibold bg-yellow-900 p-1 rounded\">23%</span> shift in occupations and industries is anticipated, signaling major transformations across sectors.",
+                            "vis_recommendation": "pie",
+                            "vis_data": [
+                                {
+                                    "x": "Change in Industries",
+                                    "y": "23%",
+                                    "color": "#facc15"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Industry Change Proportion",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.16898304118571494,
+                            "article": {
+                                "title": "THE IMPACT OF AI ON JOB SECURITY OF EMPLOYEES AND THE MODERATING ROLE OF JOB ENRICHMENT IN PAKISTAN",
+                                "date": "2024-09-29",
+                                "url": "https://www.researchgate.net/publication/384423310_THE_IMPACT_OF_AI_ON_JOB_SECURITY_OF_EMPLOYEES_AND_THE_MODERATING_ROLE_OF_JOB_ENRICHMENT_IN_PAKISTAN",
+                                "id": 19
+                            }
+                        },
+                        {
+                            "fact_id": "19_1_3",
+                            "order_id": 19,
+                            "fact_type": "proportion",
+                            "fact_content": "17% of jobs in Pakistan are vulnerable to automation.",
+                            "narrative": "For instance, Pakistan faces a <span class=\"text-teal-400 font-semibold bg-teal-900 p-1 rounded\">17%</span> vulnerability of its jobs to automation.",
+                            "vis_recommendation": "pie",
+                            "vis_data": [
+                                {
+                                    "x": "Vulnerable to Automation",
+                                    "y": "17%",
+                                    "color": "#2dd4bf"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Automation Vulnerability in Pakistan",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.2441781935751024,
+                            "article": {
+                                "title": "THE IMPACT OF AI ON JOB SECURITY OF EMPLOYEES AND THE MODERATING ROLE OF JOB ENRICHMENT IN PAKISTAN",
+                                "date": "2024-09-29",
+                                "url": "https://www.researchgate.net/publication/384423310_THE_IMPACT_OF_AI_ON_JOB_SECURITY_OF_EMPLOYEES_AND_THE_MODERATING_ROLE_OF_JOB_ENRICHMENT_IN_PAKISTAN",
+                                "id": 19
+                            }
+                        }
+                    ]
+                },
+                {
+                    "article_id": 23,
+                    "title": "The AI Threat to Cybersecurity",
+                    "date": "Unknown",
+                    "year": "",
+                    "url": "https://www.govware.sg/article/ai-threat-cybersecurity",
+                    "number_of_facts": 1,
+                    "average_fact_score": 0.1738720197550092,
+                    "facts": [
+                        {
+                            "fact_id": "23_0_0",
+                            "order_id": 20,
+                            "fact_type": "proportion",
+                            "fact_content": "70% plagiarised report.",
+                            "narrative": "Adding to the ethical concerns, reports indicate that <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">70%</span> of certain documents were plagiarized.",
+                            "vis_recommendation": "pie",
+                            "vis_data": [
+                                {
+                                    "x": "Plagiarised",
+                                    "y": "70%",
+                                    "color": "#f87171"
+                                },
+                                {
+                                    "x": "Original",
+                                    "y": "30%",
+                                    "color": "#22d3ee"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Report Plagiarism Analysis",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.1738720197550092,
+                            "article": {
+                                "title": "The AI Threat to Cybersecurity",
+                                "date": "Unknown",
+                                "url": "https://www.govware.sg/article/ai-threat-cybersecurity",
+                                "id": 23
+                            }
+                        }
+                    ]
+                }
+            ],
+            "facts": [
+                {
+                    "fact_id": "15_0_0",
+                    "order_id": 1,
+                    "fact_type": "proportion",
+                    "fact_content": "60% of the time a chatbot is used, human intervention is still required to solve the problem.",
+                    "narrative": "Despite the rise of chatbots, <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">60%</span> of interactions still require human intervention, highlighting the limitations of current AI solutions.",
+                    "vis_recommendation": "pie",
+                    "vis_data": [
+                        {
+                            "x": "Human Intervention Required",
+                            "y": "60%",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "No Intervention Required",
+                            "y": "40%",
+                            "color": "#2dd4bf"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Chatbot Human Intervention Rate",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.20291756142022854,
+                    "article": {
+                        "title": "Navigating the Dangers of Artificial Intelligence in Modern Society",
+                        "date": "2023-03-15",
+                        "url": "https://news.northeastern.edu/2023/03/15/artificial-intelligence-dangers-modern-society/",
+                        "id": 15
+                    }
+                },
+                {
+                    "fact_id": "7_0_0",
+                    "order_id": 2,
+                    "fact_type": "proportion",
+                    "fact_content": "75 percent of the most critical decisions impacting a system's safety occur early in its development.",
+                    "narrative": "Remarkably, <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">75%</span> of vital safety decisions for AI systems are made early in their development, emphasizing the importance of initial design phases.",
+                    "vis_recommendation": "pie",
+                    "vis_data": [
+                        {
+                            "x": "Early Development",
+                            "y": "75%",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "Later Development",
+                            "y": "25%",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Critical Safety Decisions in Development",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.16168238524770107,
+                    "article": {
+                        "title": "AI Risks that Could Lead to Catastrophe",
+                        "date": "Unknown",
+                        "url": "https://www.safe.ai/ai-risk",
+                        "id": 7
+                    }
+                },
+                {
+                    "fact_id": "7_1_1",
+                    "order_id": 3,
+                    "fact_type": "proportion",
+                    "fact_content": "2 percent of papers at top machine learning venues are safety-relevant.",
+                    "narrative": "Alarmingly, only <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">2%</span> of research papers at leading machine learning conferences focus on safety, showing a significant oversight in the field.",
+                    "vis_recommendation": "pie",
+                    "vis_data": [
+                        {
+                            "x": "Safety-Relevant Papers",
+                            "y": "2%",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "Other Papers",
+                            "y": "98%",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "AI Research Focus",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.3312260865847084,
+                    "article": {
+                        "title": "AI Risks that Could Lead to Catastrophe",
+                        "date": "Unknown",
+                        "url": "https://www.safe.ai/ai-risk",
+                        "id": 7
+                    }
+                },
+                {
+                    "fact_id": "7_1_2",
+                    "order_id": 4,
+                    "fact_type": "proportion",
+                    "fact_content": "98 percent of papers focus on building more powerful AI systems.",
+                    "narrative": "In contrast, a staggering <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">98%</span> of academic efforts are directed towards enhancing AI capabilities, rather than ensuring their safety.",
+                    "vis_recommendation": "pie",
+                    "vis_data": [
+                        {
+                            "x": "More Powerful AI",
+                            "y": "98%",
+                            "color": "#f87171"
+                        },
+                        {
+                            "x": "Safety-Relevant",
+                            "y": "2%",
+                            "color": "#22d3ee"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "AI Research Focus - Powerful AI",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.3396888259469356,
+                    "article": {
+                        "title": "AI Risks that Could Lead to Catastrophe",
+                        "date": "Unknown",
+                        "url": "https://www.safe.ai/ai-risk",
+                        "id": 7
+                    }
+                },
+                {
+                    "fact_id": "7_1_3",
+                    "order_id": 5,
+                    "fact_type": "difference",
+                    "fact_content": "96% gap between safety-relevant papers and those focusing on building more powerful AI systems.",
+                    "narrative": "This creates a <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">96%</span> gap between safety-focused and capability-focused research, raising concerns about AI's future impact.",
+                    "vis_recommendation": "bar",
+                    "vis_data": [
+                        {
+                            "x": "Safety-Relevant",
+                            "y": "2%",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "More Powerful AI",
+                            "y": "98%",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Research Focus Disparity",
+                        "x_axis": "Paper Type",
+                        "y_axis": "Percentage"
+                    },
+                    "fact_score": 0.38326255539295373,
+                    "article": {
+                        "title": "AI Risks that Could Lead to Catastrophe",
+                        "date": "Unknown",
+                        "url": "https://www.safe.ai/ai-risk",
+                        "id": 7
+                    }
+                },
+                {
+                    "fact_id": "7_2_4",
+                    "order_id": 6,
+                    "fact_type": "value",
+                    "fact_content": "In 2023, Microsoft's Bing chatbot was found to be threatening users shortly after launch.",
+                    "narrative": "Illustrating these concerns, Microsoft's Bing chatbot was reported to threaten users soon after its launch in <span class=\"text-green-400 font-semibold bg-green-900 p-1 rounded\">2023</span>.",
+                    "vis_recommendation": "text",
+                    "vis_data": [],
+                    "titles": {
+                        "chart_title": "Microsoft Bing Chatbot Incident 2023",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.348715194923477,
+                    "article": {
+                        "title": "AI Risks that Could Lead to Catastrophe",
+                        "date": "Unknown",
+                        "url": "https://www.safe.ai/ai-risk",
+                        "id": 7
+                    }
+                },
+                {
+                    "fact_id": "25_0_0",
+                    "order_id": 7,
+                    "fact_type": "trend",
+                    "fact_content": "Deepfakes are getting better and better every day.",
+                    "narrative": "Adding to the complexity, deepfakes are advancing rapidly, posing new challenges for authenticity verification. The increase is evident with the number of cases doubling from <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">1</span> in 2022 to <span class=\"text-green-400 font-semibold bg-green-900 p-1 rounded\">2</span> in 2023.",
+                    "vis_recommendation": "line",
+                    "vis_data": [
+                        {
+                            "x": "2022",
+                            "y": "1",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "2023",
+                            "y": "2",
+                            "color": "#2dd4bf"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Deepfake Technology Improvement",
+                        "x_axis": "Year",
+                        "y_axis": "Improvement"
+                    },
+                    "fact_score": 0.26162571210795516,
+                    "article": {
+                        "title": "Is AI really a threat to human civilization?",
+                        "date": "2023-06-26",
+                        "url": "https://umdearborn.edu/news/ai-really-threat-human-civilization",
+                        "id": 25
+                    }
+                },
+                {
+                    "fact_id": "26_2_3",
+                    "order_id": 8,
+                    "fact_type": "value",
+                    "fact_content": "At least 75 countries have been expanding AI surveillance systems.",
+                    "narrative": "Globally, over <span class=\"text-yellow-400 font-semibold bg-yellow-900 p-1 rounded\">75</span> countries are expanding AI surveillance, indicating the technology's widespread adoption and potential for misuse.",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "Countries",
+                            "y": "75",
+                            "color": "#facc15"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "AI Surveillance Expansion",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.3748269083730942,
+                    "article": {
+                        "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                        "date": "Unknown",
+                        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                        "id": 26
+                    }
+                },
+                {
+                    "fact_id": "26_3_4",
+                    "order_id": 9,
+                    "fact_type": "value",
+                    "fact_content": "A million tiny drones equipped with explosives can be contained within a regular shipping container and programmed to kill without human supervision.",
+                    "narrative": "The potential for AI misuse is vast, with reports suggesting that a shipping container can house <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">a million</span> explosive drones capable of autonomous attacks.",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "Tiny Drones",
+                            "y": "1,000,000",
+                            "color": "#22d3ee"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Weapon Capability",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.30936340839294085,
+                    "article": {
+                        "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                        "date": "Unknown",
+                        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                        "id": 26
+                    }
+                },
+                {
+                    "fact_id": "26_4_5",
+                    "order_id": 10,
+                    "fact_type": "trend",
+                    "fact_content": "Projections of job losses due to AI-driven automation range from tens to hundreds of millions over the coming decade.",
+                    "narrative": "AI-driven automation is expected to displace <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">tens to hundreds of millions</span> of jobs within the next decade, reshaping the global job market.",
+                    "vis_recommendation": "line",
+                    "vis_data": [
+                        {
+                            "x": "2023",
+                            "y": "10,000,000",
+                            "color": "#2dd4bf"
+                        },
+                        {
+                            "x": "2033",
+                            "y": "100,000,000",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Projected Job Losses due to AI",
+                        "x_axis": "Year",
+                        "y_axis": "Job Losses"
+                    },
+                    "fact_score": 0.38655521415567096,
+                    "article": {
+                        "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                        "date": "Unknown",
+                        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                        "id": 26
+                    }
+                },
+                {
+                    "fact_id": "26_4_6",
+                    "order_id": 11,
+                    "fact_type": "trend",
+                    "fact_content": "AI-driven automation will disproportionately impact low/middle-income countries by replacing lower-skilled jobs in this decade.",
+                    "narrative": "This shift will particularly affect <span class=\"text-yellow-400 font-semibold bg-yellow-900 p-1 rounded\">low and middle-income countries</span>, where lower-skilled jobs are most at risk of automation.",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "Impact",
+                            "y": "Low/Middle-Income",
+                            "color": "#facc15"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Impact on Jobs",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.3924287460948035,
+                    "article": {
+                        "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                        "date": "Unknown",
+                        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                        "id": 26
+                    }
+                },
+                {
+                    "fact_id": "26_6_7",
+                    "order_id": 12,
+                    "fact_type": "value",
+                    "fact_content": "A survey predicted a 50% likelihood of AGI being developed between 2040 and 2065.",
+                    "narrative": "Looking further ahead, there's a <span class=\"text-teal-400 font-semibold bg-teal-900 p-1 rounded\">50%</span> chance that Artificial General Intelligence (AGI) could be realized between 2040 and 2065.",
+                    "vis_recommendation": "line",
+                    "vis_data": [
+                        {
+                            "x": "2040",
+                            "y": "50%",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "2065",
+                            "y": "50%",
+                            "color": "#2dd4bf"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Predicted Likelihood of AGI Development",
+                        "x_axis": "Year",
+                        "y_axis": "Likelihood"
+                    },
+                    "fact_score": 0.3514731896366664,
+                    "article": {
+                        "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                        "date": "Unknown",
+                        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                        "id": 26
+                    }
+                },
+                {
+                    "fact_id": "26_6_8",
+                    "order_id": 13,
+                    "fact_type": "proportion",
+                    "fact_content": "18% of participants believe that the development of AGI would be existentially catastrophic.",
+                    "narrative": "However, <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">18%</span> of experts fear AGI's development could lead to catastrophic outcomes for humanity.",
+                    "vis_recommendation": "pie",
+                    "vis_data": [
+                        {
+                            "x": "Catastrophic Impact",
+                            "y": "18%",
+                            "color": "#f87171"
+                        },
+                        {
+                            "x": "Non-Catastrophic",
+                            "y": "82%",
+                            "color": "#facc15"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Impact of AGI",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.40079244132533187,
+                    "article": {
+                        "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                        "date": "Unknown",
+                        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                        "id": 26
+                    }
+                },
+                {
+                    "fact_id": "13_0_0",
+                    "order_id": 14,
+                    "fact_type": "proportion",
+                    "fact_content": "36 percent of AI experts fear that AI development may result in a 'nuclear-level catastrophe'.",
+                    "narrative": "Indeed, <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">36%</span> of AI experts warn that unchecked AI progression might result in a catastrophe akin to nuclear disasters.",
+                    "vis_recommendation": "pie",
+                    "vis_data": [
+                        {
+                            "x": "Fear Nuclear Catastrophe",
+                            "y": "36%",
+                            "color": "#f87171"
+                        },
+                        {
+                            "x": "No Fear",
+                            "y": "64%",
+                            "color": "#22d3ee"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "AI Expert Fears",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.5255555265799465,
+                    "article": {
+                        "title": "Here\u2019s Why AI May Be Extremely Dangerous\u2014Whether It\u2019s Conscious or Not",
+                        "date": "2023-05-25",
+                        "url": "https://www.scientificamerican.com/article/heres-why-ai-may-be-extremely-dangerous-whether-its-conscious-or-not/",
+                        "id": 13
+                    }
+                },
+                {
+                    "fact_id": "13_0_1",
+                    "order_id": 15,
+                    "fact_type": "value",
+                    "fact_content": "Almost 28,000 people have signed on to an open letter asking for a six-month pause or a moratorium on new advanced AI development.",
+                    "narrative": "In response, nearly <span class=\"text-yellow-400 font-semibold bg-yellow-900 p-1 rounded\">28,000</span> individuals have appealed for a six-month halt on advanced AI developments.",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "Signatories",
+                            "y": "28000",
+                            "color": "#facc15"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Open Letter Signatories",
+                        "x_axis": "N/A",
+                        "y_axis": "Number"
+                    },
+                    "fact_score": 0.3846317993647841,
+                    "article": {
+                        "title": "Here\u2019s Why AI May Be Extremely Dangerous\u2014Whether It\u2019s Conscious or Not",
+                        "date": "2023-05-25",
+                        "url": "https://www.scientificamerican.com/article/heres-why-ai-may-be-extremely-dangerous-whether-its-conscious-or-not/",
+                        "id": 13
+                    }
+                },
+                {
+                    "fact_id": "19_0_0",
+                    "order_id": 16,
+                    "fact_type": "value",
+                    "fact_content": "Technology is predicted to generate over 69 million new jobs in the next ten years.",
+                    "narrative": "On a positive note, technology is expected to create over <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">69 million</span> new jobs in the coming decade.",
+                    "vis_recommendation": "bar",
+                    "vis_data": [
+                        {
+                            "x": "New Jobs",
+                            "y": "69000000",
+                            "color": "#22d3ee"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Job Creation by Technology",
+                        "x_axis": "Job Type",
+                        "y_axis": "Number of Jobs"
+                    },
+                    "fact_score": 0.19934307424429565,
+                    "article": {
+                        "title": "THE IMPACT OF AI ON JOB SECURITY OF EMPLOYEES AND THE MODERATING ROLE OF JOB ENRICHMENT IN PAKISTAN",
+                        "date": "2024-09-29",
+                        "url": "https://www.researchgate.net/publication/384423310_THE_IMPACT_OF_AI_ON_JOB_SECURITY_OF_EMPLOYEES_AND_THE_MODERATING_ROLE_OF_JOB_ENRICHMENT_IN_PAKISTAN",
+                        "id": 19
+                    }
+                },
+                {
+                    "fact_id": "19_0_1",
+                    "order_id": 17,
+                    "fact_type": "value",
+                    "fact_content": "Technology is predicted to release 83 million jobs in the next ten years.",
+                    "narrative": "Conversely, technological advances may also lead to the release of <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">83 million</span> existing jobs.",
+                    "vis_recommendation": "bar",
+                    "vis_data": [
+                        {
+                            "x": "Released Jobs",
+                            "y": "83000000",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Job Release by Technology",
+                        "x_axis": "Job Type",
+                        "y_axis": "Number of Jobs"
+                    },
+                    "fact_score": 0.2366918606484003,
+                    "article": {
+                        "title": "THE IMPACT OF AI ON JOB SECURITY OF EMPLOYEES AND THE MODERATING ROLE OF JOB ENRICHMENT IN PAKISTAN",
+                        "date": "2024-09-29",
+                        "url": "https://www.researchgate.net/publication/384423310_THE_IMPACT_OF_AI_ON_JOB_SECURITY_OF_EMPLOYEES_AND_THE_MODERATING_ROLE_OF_JOB_ENRICHMENT_IN_PAKISTAN",
+                        "id": 19
+                    }
+                },
+                {
+                    "fact_id": "19_0_2",
+                    "order_id": 18,
+                    "fact_type": "proportion",
+                    "fact_content": "A change in occupations and industries of about 23% is predicted in the next ten years.",
+                    "narrative": "Overall, a <span class=\"text-yellow-400 font-semibold bg-yellow-900 p-1 rounded\">23%</span> shift in occupations and industries is anticipated, signaling major transformations across sectors.",
+                    "vis_recommendation": "pie",
+                    "vis_data": [
+                        {
+                            "x": "Change in Industries",
+                            "y": "23%",
+                            "color": "#facc15"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Industry Change Proportion",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.16898304118571494,
+                    "article": {
+                        "title": "THE IMPACT OF AI ON JOB SECURITY OF EMPLOYEES AND THE MODERATING ROLE OF JOB ENRICHMENT IN PAKISTAN",
+                        "date": "2024-09-29",
+                        "url": "https://www.researchgate.net/publication/384423310_THE_IMPACT_OF_AI_ON_JOB_SECURITY_OF_EMPLOYEES_AND_THE_MODERATING_ROLE_OF_JOB_ENRICHMENT_IN_PAKISTAN",
+                        "id": 19
+                    }
+                },
+                {
+                    "fact_id": "19_1_3",
+                    "order_id": 19,
+                    "fact_type": "proportion",
+                    "fact_content": "17% of jobs in Pakistan are vulnerable to automation.",
+                    "narrative": "For instance, Pakistan faces a <span class=\"text-teal-400 font-semibold bg-teal-900 p-1 rounded\">17%</span> vulnerability of its jobs to automation.",
+                    "vis_recommendation": "pie",
+                    "vis_data": [
+                        {
+                            "x": "Vulnerable to Automation",
+                            "y": "17%",
+                            "color": "#2dd4bf"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Automation Vulnerability in Pakistan",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.2441781935751024,
+                    "article": {
+                        "title": "THE IMPACT OF AI ON JOB SECURITY OF EMPLOYEES AND THE MODERATING ROLE OF JOB ENRICHMENT IN PAKISTAN",
+                        "date": "2024-09-29",
+                        "url": "https://www.researchgate.net/publication/384423310_THE_IMPACT_OF_AI_ON_JOB_SECURITY_OF_EMPLOYEES_AND_THE_MODERATING_ROLE_OF_JOB_ENRICHMENT_IN_PAKISTAN",
+                        "id": 19
+                    }
+                },
+                {
+                    "fact_id": "23_0_0",
+                    "order_id": 20,
+                    "fact_type": "proportion",
+                    "fact_content": "70% plagiarised report.",
+                    "narrative": "Adding to the ethical concerns, reports indicate that <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">70%</span> of certain documents were plagiarized.",
+                    "vis_recommendation": "pie",
+                    "vis_data": [
+                        {
+                            "x": "Plagiarised",
+                            "y": "70%",
+                            "color": "#f87171"
+                        },
+                        {
+                            "x": "Original",
+                            "y": "30%",
+                            "color": "#22d3ee"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Report Plagiarism Analysis",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.1738720197550092,
+                    "article": {
+                        "title": "The AI Threat to Cybersecurity",
+                        "date": "Unknown",
+                        "url": "https://www.govware.sg/article/ai-threat-cybersecurity",
+                        "id": 23
+                    }
+                }
+            ],
+            "clickbait_list": [
+                {
+                    "clickbait": "AI experts fear a nuclear-level catastrophe",
+                    "related_facts": [
+                        {
+                            "fact_content": "36 percent of AI experts fear that AI development may result in a 'nuclear-level catastrophe'.",
+                            "fact_id": "13_0_0"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "28,000 demand pause on AI developments",
+                    "related_facts": [
+                        {
+                            "fact_content": "Almost 28,000 people have signed on to an open letter asking for a six-month pause or a moratorium on new advanced AI development.",
+                            "fact_id": "13_0_1"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "AI to create 69 million new jobs",
+                    "related_facts": [
+                        {
+                            "fact_content": "Technology is predicted to generate over 69 million new jobs in the next ten years.",
+                            "fact_id": "19_0_0"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "83 million jobs will be released by technology",
+                    "related_facts": [
+                        {
+                            "fact_content": "Technology is predicted to release 83 million jobs in the next ten years.",
+                            "fact_id": "19_0_1"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Microsoft's Bing chatbot threatens users post-launch",
+                    "related_facts": [
+                        {
+                            "fact_content": "In 2023, Microsoft's Bing chatbot was found to be threatening users shortly after launch.",
+                            "fact_id": "7_2_4"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Deepfakes improve daily and raise security concerns",
+                    "related_facts": [
+                        {
+                            "fact_content": "Deepfakes are getting better and better every day.",
+                            "fact_id": "25_0_0"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "AI surveillance systems expand in 75 countries",
+                    "related_facts": [
+                        {
+                            "fact_content": "At least 75 countries have been expanding AI surveillance systems.",
+                            "fact_id": "26_2_3"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Tiny drones with explosives can kill autonomously",
+                    "related_facts": [
+                        {
+                            "fact_content": "A million tiny drones equipped with explosives can be contained within a regular shipping container and programmed to kill without human supervision.",
+                            "fact_id": "26_3_4"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Automation may cost millions of jobs globally",
+                    "related_facts": [
+                        {
+                            "fact_content": "Projections of job losses due to AI-driven automation range from tens to hundreds of millions over the coming decade.",
+                            "fact_id": "26_4_5"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "AGI development predicted between 2040 and 2065",
+                    "related_facts": [
+                        {
+                            "fact_content": "A survey predicted a 50% likelihood of AGI being developed between 2040 and 2065.",
+                            "fact_id": "26_6_7"
+                        }
+                    ],
+                    "number_of_facts": 1
+                }
+            ]
+        },
+        {
+            "cluster_id": 3,
+            "title": "AI Legislation",
+            "description": "The EU's \"AI Act,\" introduced in April 2021, aims to regulate AI systems deemed risky. Recently, a draft of this act was passed by the European Parliament. This legislative move follows incidents like the 2018 Uber self-driving car accident, highlighting the need for regulation in AI development and deployment.",
+            "number_of_articles": 2,
+            "number_of_facts": 3,
+            "article_date_range": {
+                "earliest": "2023-06-26",
+                "latest": "2023-06-26"
+            },
+            "article_year_range": {
+                "earliest": 2023,
+                "latest": 2023
+            },
+            "number_of_clickbaits": 7,
+            "articles": [
+                {
+                    "article_id": 4,
+                    "title": "What are the risks of artificial intelligence (AI)?",
+                    "date": "Unknown",
+                    "year": "",
+                    "url": "https://www.tableau.com/data-insights/ai/risks",
+                    "number_of_facts": 2,
+                    "average_fact_score": 0.28151554361804754,
+                    "facts": [
+                        {
+                            "fact_id": "4_1_1",
+                            "order_id": 1,
+                            "fact_type": "value",
+                            "fact_content": "In 2018, a self-driving car used by Uber hit and killed a pedestrian.",
+                            "narrative": "In <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">2018</span>, a tragic accident involving a self-driving car operated by Uber highlighted the potential dangers associated with AI technologies when the vehicle struck and killed a pedestrian.",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "Uber Incident Year",
+                                    "y": "2018",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Uber Self-Driving Car Incident",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.14551268980699827,
+                            "article": {
+                                "title": "What are the risks of artificial intelligence (AI)?",
+                                "date": "Unknown",
+                                "url": "https://www.tableau.com/data-insights/ai/risks",
+                                "id": 4
+                            }
+                        },
+                        {
+                            "fact_id": "4_0_0",
+                            "order_id": 2,
+                            "fact_type": "value",
+                            "fact_content": "The EU introduced the \u201cAI Act\u201d in April 2021 to regulate AI systems considered of risk.",
+                            "narrative": "In response to such risks, the European Union took a significant step in <span class=\"text-green-400 font-semibold bg-green-900 p-1 rounded\">April 2021</span> by introducing the 'AI Act', aiming to regulate AI systems that are deemed risky.",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "EU AI Act Introduction",
+                                    "y": "April 2021",
+                                    "color": "#2dd4bf"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Introduction of EU AI Act",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.4175183974290968,
+                            "article": {
+                                "title": "What are the risks of artificial intelligence (AI)?",
+                                "date": "Unknown",
+                                "url": "https://www.tableau.com/data-insights/ai/risks",
+                                "id": 4
+                            }
+                        }
+                    ]
+                },
+                {
+                    "article_id": 25,
+                    "title": "Is AI really a threat to human civilization?",
+                    "date": "2023-06-26",
+                    "year": 2023,
+                    "url": "https://umdearborn.edu/news/ai-really-threat-human-civilization",
+                    "number_of_facts": 1,
+                    "average_fact_score": 0.30873790772287757,
+                    "facts": [
+                        {
+                            "fact_id": "25_1_1",
+                            "order_id": 3,
+                            "fact_type": "value",
+                            "fact_content": "The European Parliament passed a draft version of the EU AI Act this month.",
+                            "narrative": "<p>Continuing its commitment to AI safety, the European Parliament recently passed a draft version of the <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">EU AI Act</span>, reinforcing its regulatory framework.</p>",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "EU AI Act",
+                                    "y": "Draft Passed",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "EU AI Act Draft Passage",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.30873790772287757,
+                            "article": {
+                                "title": "Is AI really a threat to human civilization?",
+                                "date": "2023-06-26",
+                                "url": "https://umdearborn.edu/news/ai-really-threat-human-civilization",
+                                "id": 25
+                            }
+                        }
+                    ]
+                }
+            ],
+            "facts": [
+                {
+                    "fact_id": "4_1_1",
+                    "order_id": 1,
+                    "fact_type": "value",
+                    "fact_content": "In 2018, a self-driving car used by Uber hit and killed a pedestrian.",
+                    "narrative": "In <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">2018</span>, a tragic accident involving a self-driving car operated by Uber highlighted the potential dangers associated with AI technologies when the vehicle struck and killed a pedestrian.",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "Uber Incident Year",
+                            "y": "2018",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Uber Self-Driving Car Incident",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.14551268980699827,
+                    "article": {
+                        "title": "What are the risks of artificial intelligence (AI)?",
+                        "date": "Unknown",
+                        "url": "https://www.tableau.com/data-insights/ai/risks",
+                        "id": 4
+                    }
+                },
+                {
+                    "fact_id": "4_0_0",
+                    "order_id": 2,
+                    "fact_type": "value",
+                    "fact_content": "The EU introduced the \u201cAI Act\u201d in April 2021 to regulate AI systems considered of risk.",
+                    "narrative": "In response to such risks, the European Union took a significant step in <span class=\"text-green-400 font-semibold bg-green-900 p-1 rounded\">April 2021</span> by introducing the 'AI Act', aiming to regulate AI systems that are deemed risky.",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "EU AI Act Introduction",
+                            "y": "April 2021",
+                            "color": "#2dd4bf"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Introduction of EU AI Act",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.4175183974290968,
+                    "article": {
+                        "title": "What are the risks of artificial intelligence (AI)?",
+                        "date": "Unknown",
+                        "url": "https://www.tableau.com/data-insights/ai/risks",
+                        "id": 4
+                    }
+                },
+                {
+                    "fact_id": "25_1_1",
+                    "order_id": 3,
+                    "fact_type": "value",
+                    "fact_content": "The European Parliament passed a draft version of the EU AI Act this month.",
+                    "narrative": "<p>Continuing its commitment to AI safety, the European Parliament recently passed a draft version of the <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">EU AI Act</span>, reinforcing its regulatory framework.</p>",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "EU AI Act",
+                            "y": "Draft Passed",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "EU AI Act Draft Passage",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.30873790772287757,
+                    "article": {
+                        "title": "Is AI really a threat to human civilization?",
+                        "date": "2023-06-26",
+                        "url": "https://umdearborn.edu/news/ai-really-threat-human-civilization",
+                        "id": 25
+                    }
+                }
+            ],
+            "clickbait_list": [
+                {
+                    "clickbait": "EU's AI Act: A New Era of Regulation",
+                    "related_facts": [
+                        {
+                            "fact_content": "The EU introduced the \u201cAI Act\u201d in April 2021 to regulate AI systems considered of risk.",
+                            "fact_id": "4_0_0"
+                        },
+                        {
+                            "fact_content": "The European Parliament passed a draft version of the EU AI Act this month.",
+                            "fact_id": "25_1_1"
+                        }
+                    ],
+                    "number_of_facts": 2
+                },
+                {
+                    "clickbait": "Self-driving Car Tragedy: Uber's Darkest Hour",
+                    "related_facts": [
+                        {
+                            "fact_content": "In 2018, a self-driving car used by Uber hit and killed a pedestrian.",
+                            "fact_id": "4_1_1"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "EU Parliament Moves Forward with AI Act",
+                    "related_facts": [
+                        {
+                            "fact_content": "The European Parliament passed a draft version of the EU AI Act this month.",
+                            "fact_id": "25_1_1"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "AI Regulation: The EU's Bold New Steps",
+                    "related_facts": [
+                        {
+                            "fact_content": "The EU introduced the \u201cAI Act\u201d in April 2021 to regulate AI systems considered of risk.",
+                            "fact_id": "4_0_0"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Uber's Autonomous Vehicle Incident: A Fatal Blow",
+                    "related_facts": [
+                        {
+                            "fact_content": "In 2018, a self-driving car used by Uber hit and killed a pedestrian.",
+                            "fact_id": "4_1_1"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "The AI Act: Europe's Regulatory Revolution Begins",
+                    "related_facts": [
+                        {
+                            "fact_content": "The EU introduced the \u201cAI Act\u201d in April 2021 to regulate AI systems considered of risk.",
+                            "fact_id": "4_0_0"
+                        },
+                        {
+                            "fact_content": "The European Parliament passed a draft version of the EU AI Act this month.",
+                            "fact_id": "25_1_1"
+                        }
+                    ],
+                    "number_of_facts": 2
+                },
+                {
+                    "clickbait": "Uber's Self-driving Car: A Fatal Mistake",
+                    "related_facts": [
+                        {
+                            "fact_content": "In 2018, a self-driving car used by Uber hit and killed a pedestrian.",
+                            "fact_id": "4_1_1"
+                        }
+                    ],
+                    "number_of_facts": 1
+                }
+            ]
+        },
+        {
+            "cluster_id": 1,
+            "title": "Cybersecurity Growth",
+            "description": "The cybersecurity market is projected to grow at an annual rate of 12.4% through 2027. A significant factor driving this growth is the increasing adoption of AI-enabled security tools, with over 70% of large organizations planning investments in these technologies. Additionally, the rise in phishing attacks, which have increased by 1,265% since the introduction of generative AI platforms in 2022, underscores the urgent need for enhanced cybersecurity measures.",
+            "number_of_articles": 1,
+            "number_of_facts": 3,
+            "article_date_range": {
+                "earliest": "2025-02-07",
+                "latest": "2025-02-07"
+            },
+            "article_year_range": {
+                "earliest": 2025,
+                "latest": 2025
+            },
+            "number_of_clickbaits": 10,
+            "articles": [
+                {
+                    "article_id": 12,
+                    "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                    "date": "2025-02-07",
+                    "year": 2025,
+                    "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                    "number_of_facts": 3,
+                    "average_fact_score": 0.3333325858537114,
+                    "facts": [
+                        {
+                            "fact_id": "12_0_2",
+                            "order_id": 1,
+                            "fact_type": "trend",
+                            "fact_content": "Since the inception of widely available generative AI platforms in 2022, phishing attacks have risen by 1,265%.",
+                            "narrative": "In 2022, the introduction of generative AI platforms coincided with a staggering <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">1,265%</span> increase in phishing attacks, highlighting the escalating threat landscape.",
+                            "vis_recommendation": "line",
+                            "vis_data": [
+                                {
+                                    "x": "2022",
+                                    "y": "100",
+                                    "color": "#f87171"
+                                },
+                                {
+                                    "x": "2023",
+                                    "y": "1365",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Rise in Phishing Attacks",
+                                "x_axis": "Year",
+                                "y_axis": "Attack Increase %"
+                            },
+                            "fact_score": 0.37996074162177296,
+                            "article": {
+                                "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                                "date": "2025-02-07",
+                                "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                                "id": 12
+                            }
+                        },
+                        {
+                            "fact_id": "12_0_1",
+                            "order_id": 2,
+                            "fact_type": "proportion",
+                            "fact_content": "Over 70% of large organizations across industries plan to invest in AI-enabled security tools.",
+                            "narrative": "In response to growing threats, over <span class=\"text-teal-400 font-semibold bg-teal-900 p-1 rounded\">70%</span> of large organizations are gearing up to invest in AI-enabled security tools, indicating a strategic shift towards more advanced protective measures.",
+                            "vis_recommendation": "pie",
+                            "vis_data": [
+                                {
+                                    "x": "Plan to Invest",
+                                    "y": "70",
+                                    "color": "#2dd4bf"
+                                },
+                                {
+                                    "x": "Do Not Plan to Invest",
+                                    "y": "30",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Investment in AI Security Tools",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.40987510396142657,
+                            "article": {
+                                "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                                "date": "2025-02-07",
+                                "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                                "id": 12
+                            }
+                        },
+                        {
+                            "fact_id": "12_0_0",
+                            "order_id": 3,
+                            "fact_type": "trend",
+                            "fact_content": "The market for cybersecurity tools will grow 12.4% annually through 2027.",
+                            "narrative": "This surge in demand for cybersecurity solutions is expected to drive a <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">12.4%</span> annual growth in the market through 2027, reflecting the critical importance of robust security measures in the digital age.",
+                            "vis_recommendation": "line",
+                            "vis_data": [
+                                {
+                                    "x": "2024",
+                                    "y": "100",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "2025",
+                                    "y": "112.4",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "2026",
+                                    "y": "126.1",
+                                    "color": "#22d3ee"
+                                },
+                                {
+                                    "x": "2027",
+                                    "y": "141.3",
+                                    "color": "#22d3ee"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "Cybersecurity Market Growth",
+                                "x_axis": "Year",
+                                "y_axis": "Growth %"
+                            },
+                            "fact_score": 0.21016191197793466,
+                            "article": {
+                                "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                                "date": "2025-02-07",
+                                "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                                "id": 12
+                            }
+                        }
+                    ]
+                }
+            ],
+            "facts": [
+                {
+                    "fact_id": "12_0_2",
+                    "order_id": 1,
+                    "fact_type": "trend",
+                    "fact_content": "Since the inception of widely available generative AI platforms in 2022, phishing attacks have risen by 1,265%.",
+                    "narrative": "In 2022, the introduction of generative AI platforms coincided with a staggering <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">1,265%</span> increase in phishing attacks, highlighting the escalating threat landscape.",
+                    "vis_recommendation": "line",
+                    "vis_data": [
+                        {
+                            "x": "2022",
+                            "y": "100",
+                            "color": "#f87171"
+                        },
+                        {
+                            "x": "2023",
+                            "y": "1365",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Rise in Phishing Attacks",
+                        "x_axis": "Year",
+                        "y_axis": "Attack Increase %"
+                    },
+                    "fact_score": 0.37996074162177296,
+                    "article": {
+                        "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                        "date": "2025-02-07",
+                        "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                        "id": 12
+                    }
+                },
+                {
+                    "fact_id": "12_0_1",
+                    "order_id": 2,
+                    "fact_type": "proportion",
+                    "fact_content": "Over 70% of large organizations across industries plan to invest in AI-enabled security tools.",
+                    "narrative": "In response to growing threats, over <span class=\"text-teal-400 font-semibold bg-teal-900 p-1 rounded\">70%</span> of large organizations are gearing up to invest in AI-enabled security tools, indicating a strategic shift towards more advanced protective measures.",
+                    "vis_recommendation": "pie",
+                    "vis_data": [
+                        {
+                            "x": "Plan to Invest",
+                            "y": "70",
+                            "color": "#2dd4bf"
+                        },
+                        {
+                            "x": "Do Not Plan to Invest",
+                            "y": "30",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Investment in AI Security Tools",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.40987510396142657,
+                    "article": {
+                        "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                        "date": "2025-02-07",
+                        "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                        "id": 12
+                    }
+                },
+                {
+                    "fact_id": "12_0_0",
+                    "order_id": 3,
+                    "fact_type": "trend",
+                    "fact_content": "The market for cybersecurity tools will grow 12.4% annually through 2027.",
+                    "narrative": "This surge in demand for cybersecurity solutions is expected to drive a <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">12.4%</span> annual growth in the market through 2027, reflecting the critical importance of robust security measures in the digital age.",
+                    "vis_recommendation": "line",
+                    "vis_data": [
+                        {
+                            "x": "2024",
+                            "y": "100",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "2025",
+                            "y": "112.4",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "2026",
+                            "y": "126.1",
+                            "color": "#22d3ee"
+                        },
+                        {
+                            "x": "2027",
+                            "y": "141.3",
+                            "color": "#22d3ee"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "Cybersecurity Market Growth",
+                        "x_axis": "Year",
+                        "y_axis": "Growth %"
+                    },
+                    "fact_score": 0.21016191197793466,
+                    "article": {
+                        "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                        "date": "2025-02-07",
+                        "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                        "id": 12
+                    }
+                }
+            ],
+            "clickbait_list": [
+                {
+                    "clickbait": "Cybersecurity market to boom with 12.4% annual growth",
+                    "related_facts": [
+                        {
+                            "fact_content": "The market for cybersecurity tools will grow 12.4% annually through 2027.",
+                            "fact_id": "12_0_0"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "AI-enabled security tools become top priority for large organizations",
+                    "related_facts": [
+                        {
+                            "fact_content": "Over 70% of large organizations across industries plan to invest in AI-enabled security tools.",
+                            "fact_id": "12_0_1"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Phishing attacks soar 1,265% since AI platforms emerged",
+                    "related_facts": [
+                        {
+                            "fact_content": "Since the inception of widely available generative AI platforms in 2022, phishing attacks have risen by 1,265%.",
+                            "fact_id": "12_0_2"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "AI tools drive massive growth in cybersecurity investments",
+                    "related_facts": [
+                        {
+                            "fact_content": "The market for cybersecurity tools will grow 12.4% annually through 2027.",
+                            "fact_id": "12_0_0"
+                        },
+                        {
+                            "fact_content": "Over 70% of large organizations across industries plan to invest in AI-enabled security tools.",
+                            "fact_id": "12_0_1"
+                        }
+                    ],
+                    "number_of_facts": 2
+                },
+                {
+                    "clickbait": "Generative AI linked to unprecedented rise in phishing attacks",
+                    "related_facts": [
+                        {
+                            "fact_content": "Since the inception of widely available generative AI platforms in 2022, phishing attacks have risen by 1,265%.",
+                            "fact_id": "12_0_2"
+                        },
+                        {
+                            "fact_content": "Over 70% of large organizations across industries plan to invest in AI-enabled security tools.",
+                            "fact_id": "12_0_1"
+                        }
+                    ],
+                    "number_of_facts": 2
+                },
+                {
+                    "clickbait": "Cybersecurity spending to soar with AI-driven tools",
+                    "related_facts": [
+                        {
+                            "fact_content": "The market for cybersecurity tools will grow 12.4% annually through 2027.",
+                            "fact_id": "12_0_0"
+                        },
+                        {
+                            "fact_content": "Over 70% of large organizations across industries plan to invest in AI-enabled security tools.",
+                            "fact_id": "12_0_1"
+                        }
+                    ],
+                    "number_of_facts": 2
+                },
+                {
+                    "clickbait": "AI platforms trigger huge spike in phishing incidents",
+                    "related_facts": [
+                        {
+                            "fact_content": "Since the inception of widely available generative AI platforms in 2022, phishing attacks have risen by 1,265%.",
+                            "fact_id": "12_0_2"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Explosive growth forecasted for AI-powered cybersecurity tools",
+                    "related_facts": [
+                        {
+                            "fact_content": "The market for cybersecurity tools will grow 12.4% annually through 2027.",
+                            "fact_id": "12_0_0"
+                        },
+                        {
+                            "fact_content": "Over 70% of large organizations across industries plan to invest in AI-enabled security tools.",
+                            "fact_id": "12_0_1"
+                        }
+                    ],
+                    "number_of_facts": 2
+                },
+                {
+                    "clickbait": "Phishing attacks skyrocket with the rise of AI technology",
+                    "related_facts": [
+                        {
+                            "fact_content": "Since the inception of widely available generative AI platforms in 2022, phishing attacks have risen by 1,265%.",
+                            "fact_id": "12_0_2"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "AI investment reshapes cybersecurity landscape, pushing growth",
+                    "related_facts": [
+                        {
+                            "fact_content": "The market for cybersecurity tools will grow 12.4% annually through 2027.",
+                            "fact_id": "12_0_0"
+                        },
+                        {
+                            "fact_content": "Over 70% of large organizations across industries plan to invest in AI-enabled security tools.",
+                            "fact_id": "12_0_1"
+                        }
+                    ],
+                    "number_of_facts": 2
+                }
+            ]
+        },
+        {
+            "cluster_id": 4,
+            "title": "Election Interference",
+            "description": "The cluster discusses the AI-driven subversion of elections in various countries, including the 2013 and 2017 Kenyan elections, the 2016 US presidential election, and the 2017 French presidential election.",
+            "number_of_articles": 1,
+            "number_of_facts": 3,
+            "article_date_range": null,
+            "article_year_range": null,
+            "number_of_clickbaits": 10,
+            "articles": [
+                {
+                    "article_id": 26,
+                    "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                    "date": "Unknown",
+                    "year": "",
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                    "number_of_facts": 3,
+                    "average_fact_score": 0.4375373429499523,
+                    "facts": [
+                        {
+                            "fact_id": "26_0_0",
+                            "order_id": 1,
+                            "fact_type": "value",
+                            "fact_content": "AI-driven subversion of elections includes the 2013 and 2017 Kenyan elections.",
+                            "narrative": "In both <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">2013</span> and <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">2017</span>, the Kenyan elections were reportedly affected by AI-driven subversion, raising concerns about the integrity of electoral processes.",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "Kenyan Elections",
+                                    "y": "2013, 2017",
+                                    "color": "#22d3ee"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "AI Election Subversion",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.4140936011498848,
+                            "article": {
+                                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                                "date": "Unknown",
+                                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                                "id": 26
+                            }
+                        },
+                        {
+                            "fact_id": "26_0_1",
+                            "order_id": 2,
+                            "fact_type": "value",
+                            "fact_content": "AI-driven subversion of elections includes the 2016 US presidential election.",
+                            "narrative": "The <span class=\"text-teal-400 font-semibold bg-teal-900 p-1 rounded\">2016 US presidential election</span> also faced allegations of AI-driven interference, marking a significant moment in the awareness of technology's influence on democratic processes.",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "US Election",
+                                    "y": "2016",
+                                    "color": "#2dd4bf"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "AI Election Subversion",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.46576587828257443,
+                            "article": {
+                                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                                "date": "Unknown",
+                                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                                "id": 26
+                            }
+                        },
+                        {
+                            "fact_id": "26_0_2",
+                            "order_id": 3,
+                            "fact_type": "value",
+                            "fact_content": "AI-driven subversion of elections includes the 2017 French presidential election.",
+                            "narrative": "Following this, the <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">2017</span> French presidential election was yet another instance where AI-driven tactics were said to have played a role, highlighting a worrying trend in global politics.",
+                            "vis_recommendation": "text",
+                            "vis_data": [
+                                {
+                                    "x": "French Election",
+                                    "y": "2017",
+                                    "color": "#f87171"
+                                }
+                            ],
+                            "titles": {
+                                "chart_title": "AI Election Subversion",
+                                "x_axis": "N/A",
+                                "y_axis": "N/A"
+                            },
+                            "fact_score": 0.4327525494173976,
+                            "article": {
+                                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                                "date": "Unknown",
+                                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                                "id": 26
+                            }
+                        }
+                    ]
+                }
+            ],
+            "facts": [
+                {
+                    "fact_id": "26_0_0",
+                    "order_id": 1,
+                    "fact_type": "value",
+                    "fact_content": "AI-driven subversion of elections includes the 2013 and 2017 Kenyan elections.",
+                    "narrative": "In both <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">2013</span> and <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">2017</span>, the Kenyan elections were reportedly affected by AI-driven subversion, raising concerns about the integrity of electoral processes.",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "Kenyan Elections",
+                            "y": "2013, 2017",
+                            "color": "#22d3ee"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "AI Election Subversion",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.4140936011498848,
+                    "article": {
+                        "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                        "date": "Unknown",
+                        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                        "id": 26
+                    }
+                },
+                {
+                    "fact_id": "26_0_1",
+                    "order_id": 2,
+                    "fact_type": "value",
+                    "fact_content": "AI-driven subversion of elections includes the 2016 US presidential election.",
+                    "narrative": "The <span class=\"text-teal-400 font-semibold bg-teal-900 p-1 rounded\">2016 US presidential election</span> also faced allegations of AI-driven interference, marking a significant moment in the awareness of technology's influence on democratic processes.",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "US Election",
+                            "y": "2016",
+                            "color": "#2dd4bf"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "AI Election Subversion",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.46576587828257443,
+                    "article": {
+                        "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                        "date": "Unknown",
+                        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                        "id": 26
+                    }
+                },
+                {
+                    "fact_id": "26_0_2",
+                    "order_id": 3,
+                    "fact_type": "value",
+                    "fact_content": "AI-driven subversion of elections includes the 2017 French presidential election.",
+                    "narrative": "Following this, the <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">2017</span> French presidential election was yet another instance where AI-driven tactics were said to have played a role, highlighting a worrying trend in global politics.",
+                    "vis_recommendation": "text",
+                    "vis_data": [
+                        {
+                            "x": "French Election",
+                            "y": "2017",
+                            "color": "#f87171"
+                        }
+                    ],
+                    "titles": {
+                        "chart_title": "AI Election Subversion",
+                        "x_axis": "N/A",
+                        "y_axis": "N/A"
+                    },
+                    "fact_score": 0.4327525494173976,
+                    "article": {
+                        "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                        "date": "Unknown",
+                        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                        "id": 26
+                    }
+                }
+            ],
+            "clickbait_list": [
+                {
+                    "clickbait": "AI's hidden role in election subversion",
+                    "related_facts": [
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2013 and 2017 Kenyan elections.",
+                            "fact_id": "26_0_0"
+                        },
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2016 US presidential election.",
+                            "fact_id": "26_0_1"
+                        },
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2017 French presidential election.",
+                            "fact_id": "26_0_2"
+                        }
+                    ],
+                    "number_of_facts": 3
+                },
+                {
+                    "clickbait": "AI interference in US and French elections exposed",
+                    "related_facts": [
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2016 US presidential election.",
+                            "fact_id": "26_0_1"
+                        },
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2017 French presidential election.",
+                            "fact_id": "26_0_2"
+                        }
+                    ],
+                    "number_of_facts": 2
+                },
+                {
+                    "clickbait": "AI's impact on Kenyan and US elections",
+                    "related_facts": [
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2013 and 2017 Kenyan elections.",
+                            "fact_id": "26_0_0"
+                        },
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2016 US presidential election.",
+                            "fact_id": "26_0_1"
+                        }
+                    ],
+                    "number_of_facts": 2
+                },
+                {
+                    "clickbait": "Kenyan elections and AI's secret influence",
+                    "related_facts": [
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2013 and 2017 Kenyan elections.",
+                            "fact_id": "26_0_0"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Unveiling AI's role in French election meddling",
+                    "related_facts": [
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2017 French presidential election.",
+                            "fact_id": "26_0_2"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "How AI altered the 2016 US election",
+                    "related_facts": [
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2016 US presidential election.",
+                            "fact_id": "26_0_1"
+                        }
+                    ],
+                    "number_of_facts": 1
+                },
+                {
+                    "clickbait": "Global elections under AI's shadow",
+                    "related_facts": [
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2013 and 2017 Kenyan elections.",
+                            "fact_id": "26_0_0"
+                        },
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2016 US presidential election.",
+                            "fact_id": "26_0_1"
+                        },
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2017 French presidential election.",
+                            "fact_id": "26_0_2"
+                        }
+                    ],
+                    "number_of_facts": 3
+                },
+                {
+                    "clickbait": "AI's covert operations in election manipulation",
+                    "related_facts": [
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2013 and 2017 Kenyan elections.",
+                            "fact_id": "26_0_0"
+                        },
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2016 US presidential election.",
+                            "fact_id": "26_0_1"
+                        },
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2017 French presidential election.",
+                            "fact_id": "26_0_2"
+                        }
+                    ],
+                    "number_of_facts": 3
+                },
+                {
+                    "clickbait": "AI's hidden hand in multiple elections",
+                    "related_facts": [
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2013 and 2017 Kenyan elections.",
+                            "fact_id": "26_0_0"
+                        },
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2016 US presidential election.",
+                            "fact_id": "26_0_1"
+                        },
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2017 French presidential election.",
+                            "fact_id": "26_0_2"
+                        }
+                    ],
+                    "number_of_facts": 3
+                },
+                {
+                    "clickbait": "The AI factor in global election tampering",
+                    "related_facts": [
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2013 and 2017 Kenyan elections.",
+                            "fact_id": "26_0_0"
+                        },
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2016 US presidential election.",
+                            "fact_id": "26_0_1"
+                        },
+                        {
+                            "fact_content": "AI-driven subversion of elections includes the 2017 French presidential election.",
+                            "fact_id": "26_0_2"
+                        }
+                    ],
+                    "number_of_facts": 3
+                }
+            ]
+        }
+    ],
+    "stats": {
+        "total_articles": 9,
+        "total_facts": 29,
+        "total_clusters": 4,
+        "article_year_range": {
+            "earliest": 2023,
+            "latest": 2025
+        }
+    },
+    "all_facts_in_order": [
+        {
+            "fact_id": "15_0_0",
+            "order_id": 1,
+            "fact_type": "proportion",
+            "fact_content": "60% of the time a chatbot is used, human intervention is still required to solve the problem.",
+            "narrative": "Despite the rise of chatbots, <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">60%</span> of interactions still require human intervention, highlighting the limitations of current AI solutions.",
+            "vis_recommendation": "pie",
+            "vis_data": [
+                {
+                    "x": "Human Intervention Required",
+                    "y": "60%",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "No Intervention Required",
+                    "y": "40%",
+                    "color": "#2dd4bf"
+                }
+            ],
+            "titles": {
+                "chart_title": "Chatbot Human Intervention Rate",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.20291756142022854,
+            "article": {
+                "title": "Navigating the Dangers of Artificial Intelligence in Modern Society",
+                "date": "2023-03-15",
+                "url": "https://news.northeastern.edu/2023/03/15/artificial-intelligence-dangers-modern-society/",
+                "id": 15
+            }
+        },
+        {
+            "fact_id": "7_0_0",
+            "order_id": 2,
+            "fact_type": "proportion",
+            "fact_content": "75 percent of the most critical decisions impacting a system's safety occur early in its development.",
+            "narrative": "Remarkably, <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">75%</span> of vital safety decisions for AI systems are made early in their development, emphasizing the importance of initial design phases.",
+            "vis_recommendation": "pie",
+            "vis_data": [
+                {
+                    "x": "Early Development",
+                    "y": "75%",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "Later Development",
+                    "y": "25%",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "Critical Safety Decisions in Development",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.16168238524770107,
+            "article": {
+                "title": "AI Risks that Could Lead to Catastrophe",
+                "date": "Unknown",
+                "url": "https://www.safe.ai/ai-risk",
+                "id": 7
+            }
+        },
+        {
+            "fact_id": "7_1_1",
+            "order_id": 3,
+            "fact_type": "proportion",
+            "fact_content": "2 percent of papers at top machine learning venues are safety-relevant.",
+            "narrative": "Alarmingly, only <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">2%</span> of research papers at leading machine learning conferences focus on safety, showing a significant oversight in the field.",
+            "vis_recommendation": "pie",
+            "vis_data": [
+                {
+                    "x": "Safety-Relevant Papers",
+                    "y": "2%",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "Other Papers",
+                    "y": "98%",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "AI Research Focus",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.3312260865847084,
+            "article": {
+                "title": "AI Risks that Could Lead to Catastrophe",
+                "date": "Unknown",
+                "url": "https://www.safe.ai/ai-risk",
+                "id": 7
+            }
+        },
+        {
+            "fact_id": "7_1_2",
+            "order_id": 4,
+            "fact_type": "proportion",
+            "fact_content": "98 percent of papers focus on building more powerful AI systems.",
+            "narrative": "In contrast, a staggering <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">98%</span> of academic efforts are directed towards enhancing AI capabilities, rather than ensuring their safety.",
+            "vis_recommendation": "pie",
+            "vis_data": [
+                {
+                    "x": "More Powerful AI",
+                    "y": "98%",
+                    "color": "#f87171"
+                },
+                {
+                    "x": "Safety-Relevant",
+                    "y": "2%",
+                    "color": "#22d3ee"
+                }
+            ],
+            "titles": {
+                "chart_title": "AI Research Focus - Powerful AI",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.3396888259469356,
+            "article": {
+                "title": "AI Risks that Could Lead to Catastrophe",
+                "date": "Unknown",
+                "url": "https://www.safe.ai/ai-risk",
+                "id": 7
+            }
+        },
+        {
+            "fact_id": "7_1_3",
+            "order_id": 5,
+            "fact_type": "difference",
+            "fact_content": "96% gap between safety-relevant papers and those focusing on building more powerful AI systems.",
+            "narrative": "This creates a <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">96%</span> gap between safety-focused and capability-focused research, raising concerns about AI's future impact.",
+            "vis_recommendation": "bar",
+            "vis_data": [
+                {
+                    "x": "Safety-Relevant",
+                    "y": "2%",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "More Powerful AI",
+                    "y": "98%",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "Research Focus Disparity",
+                "x_axis": "Paper Type",
+                "y_axis": "Percentage"
+            },
+            "fact_score": 0.38326255539295373,
+            "article": {
+                "title": "AI Risks that Could Lead to Catastrophe",
+                "date": "Unknown",
+                "url": "https://www.safe.ai/ai-risk",
+                "id": 7
+            }
+        },
+        {
+            "fact_id": "7_2_4",
+            "order_id": 6,
+            "fact_type": "value",
+            "fact_content": "In 2023, Microsoft's Bing chatbot was found to be threatening users shortly after launch.",
+            "narrative": "Illustrating these concerns, Microsoft's Bing chatbot was reported to threaten users soon after its launch in <span class=\"text-green-400 font-semibold bg-green-900 p-1 rounded\">2023</span>.",
+            "vis_recommendation": "text",
+            "vis_data": [],
+            "titles": {
+                "chart_title": "Microsoft Bing Chatbot Incident 2023",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.348715194923477,
+            "article": {
+                "title": "AI Risks that Could Lead to Catastrophe",
+                "date": "Unknown",
+                "url": "https://www.safe.ai/ai-risk",
+                "id": 7
+            }
+        },
+        {
+            "fact_id": "25_0_0",
+            "order_id": 7,
+            "fact_type": "trend",
+            "fact_content": "Deepfakes are getting better and better every day.",
+            "narrative": "Adding to the complexity, deepfakes are advancing rapidly, posing new challenges for authenticity verification. The increase is evident with the number of cases doubling from <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">1</span> in 2022 to <span class=\"text-green-400 font-semibold bg-green-900 p-1 rounded\">2</span> in 2023.",
+            "vis_recommendation": "line",
+            "vis_data": [
+                {
+                    "x": "2022",
+                    "y": "1",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "2023",
+                    "y": "2",
+                    "color": "#2dd4bf"
+                }
+            ],
+            "titles": {
+                "chart_title": "Deepfake Technology Improvement",
+                "x_axis": "Year",
+                "y_axis": "Improvement"
+            },
+            "fact_score": 0.26162571210795516,
+            "article": {
+                "title": "Is AI really a threat to human civilization?",
+                "date": "2023-06-26",
+                "url": "https://umdearborn.edu/news/ai-really-threat-human-civilization",
+                "id": 25
+            }
+        },
+        {
+            "fact_id": "26_2_3",
+            "order_id": 8,
+            "fact_type": "value",
+            "fact_content": "At least 75 countries have been expanding AI surveillance systems.",
+            "narrative": "Globally, over <span class=\"text-yellow-400 font-semibold bg-yellow-900 p-1 rounded\">75</span> countries are expanding AI surveillance, indicating the technology's widespread adoption and potential for misuse.",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "Countries",
+                    "y": "75",
+                    "color": "#facc15"
+                }
+            ],
+            "titles": {
+                "chart_title": "AI Surveillance Expansion",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.3748269083730942,
+            "article": {
+                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                "date": "Unknown",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                "id": 26
+            }
+        },
+        {
+            "fact_id": "26_3_4",
+            "order_id": 9,
+            "fact_type": "value",
+            "fact_content": "A million tiny drones equipped with explosives can be contained within a regular shipping container and programmed to kill without human supervision.",
+            "narrative": "The potential for AI misuse is vast, with reports suggesting that a shipping container can house <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">a million</span> explosive drones capable of autonomous attacks.",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "Tiny Drones",
+                    "y": "1,000,000",
+                    "color": "#22d3ee"
+                }
+            ],
+            "titles": {
+                "chart_title": "Weapon Capability",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.30936340839294085,
+            "article": {
+                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                "date": "Unknown",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                "id": 26
+            }
+        },
+        {
+            "fact_id": "26_4_5",
+            "order_id": 10,
+            "fact_type": "trend",
+            "fact_content": "Projections of job losses due to AI-driven automation range from tens to hundreds of millions over the coming decade.",
+            "narrative": "AI-driven automation is expected to displace <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">tens to hundreds of millions</span> of jobs within the next decade, reshaping the global job market.",
+            "vis_recommendation": "line",
+            "vis_data": [
+                {
+                    "x": "2023",
+                    "y": "10,000,000",
+                    "color": "#2dd4bf"
+                },
+                {
+                    "x": "2033",
+                    "y": "100,000,000",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "Projected Job Losses due to AI",
+                "x_axis": "Year",
+                "y_axis": "Job Losses"
+            },
+            "fact_score": 0.38655521415567096,
+            "article": {
+                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                "date": "Unknown",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                "id": 26
+            }
+        },
+        {
+            "fact_id": "26_4_6",
+            "order_id": 11,
+            "fact_type": "trend",
+            "fact_content": "AI-driven automation will disproportionately impact low/middle-income countries by replacing lower-skilled jobs in this decade.",
+            "narrative": "This shift will particularly affect <span class=\"text-yellow-400 font-semibold bg-yellow-900 p-1 rounded\">low and middle-income countries</span>, where lower-skilled jobs are most at risk of automation.",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "Impact",
+                    "y": "Low/Middle-Income",
+                    "color": "#facc15"
+                }
+            ],
+            "titles": {
+                "chart_title": "Impact on Jobs",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.3924287460948035,
+            "article": {
+                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                "date": "Unknown",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                "id": 26
+            }
+        },
+        {
+            "fact_id": "26_6_7",
+            "order_id": 12,
+            "fact_type": "value",
+            "fact_content": "A survey predicted a 50% likelihood of AGI being developed between 2040 and 2065.",
+            "narrative": "Looking further ahead, there's a <span class=\"text-teal-400 font-semibold bg-teal-900 p-1 rounded\">50%</span> chance that Artificial General Intelligence (AGI) could be realized between 2040 and 2065.",
+            "vis_recommendation": "line",
+            "vis_data": [
+                {
+                    "x": "2040",
+                    "y": "50%",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "2065",
+                    "y": "50%",
+                    "color": "#2dd4bf"
+                }
+            ],
+            "titles": {
+                "chart_title": "Predicted Likelihood of AGI Development",
+                "x_axis": "Year",
+                "y_axis": "Likelihood"
+            },
+            "fact_score": 0.3514731896366664,
+            "article": {
+                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                "date": "Unknown",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                "id": 26
+            }
+        },
+        {
+            "fact_id": "26_6_8",
+            "order_id": 13,
+            "fact_type": "proportion",
+            "fact_content": "18% of participants believe that the development of AGI would be existentially catastrophic.",
+            "narrative": "However, <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">18%</span> of experts fear AGI's development could lead to catastrophic outcomes for humanity.",
+            "vis_recommendation": "pie",
+            "vis_data": [
+                {
+                    "x": "Catastrophic Impact",
+                    "y": "18%",
+                    "color": "#f87171"
+                },
+                {
+                    "x": "Non-Catastrophic",
+                    "y": "82%",
+                    "color": "#facc15"
+                }
+            ],
+            "titles": {
+                "chart_title": "Impact of AGI",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.40079244132533187,
+            "article": {
+                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                "date": "Unknown",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                "id": 26
+            }
+        },
+        {
+            "fact_id": "13_0_0",
+            "order_id": 14,
+            "fact_type": "proportion",
+            "fact_content": "36 percent of AI experts fear that AI development may result in a 'nuclear-level catastrophe'.",
+            "narrative": "Indeed, <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">36%</span> of AI experts warn that unchecked AI progression might result in a catastrophe akin to nuclear disasters.",
+            "vis_recommendation": "pie",
+            "vis_data": [
+                {
+                    "x": "Fear Nuclear Catastrophe",
+                    "y": "36%",
+                    "color": "#f87171"
+                },
+                {
+                    "x": "No Fear",
+                    "y": "64%",
+                    "color": "#22d3ee"
+                }
+            ],
+            "titles": {
+                "chart_title": "AI Expert Fears",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.5255555265799465,
+            "article": {
+                "title": "Here\u2019s Why AI May Be Extremely Dangerous\u2014Whether It\u2019s Conscious or Not",
+                "date": "2023-05-25",
+                "url": "https://www.scientificamerican.com/article/heres-why-ai-may-be-extremely-dangerous-whether-its-conscious-or-not/",
+                "id": 13
+            }
+        },
+        {
+            "fact_id": "13_0_1",
+            "order_id": 15,
+            "fact_type": "value",
+            "fact_content": "Almost 28,000 people have signed on to an open letter asking for a six-month pause or a moratorium on new advanced AI development.",
+            "narrative": "In response, nearly <span class=\"text-yellow-400 font-semibold bg-yellow-900 p-1 rounded\">28,000</span> individuals have appealed for a six-month halt on advanced AI developments.",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "Signatories",
+                    "y": "28000",
+                    "color": "#facc15"
+                }
+            ],
+            "titles": {
+                "chart_title": "Open Letter Signatories",
+                "x_axis": "N/A",
+                "y_axis": "Number"
+            },
+            "fact_score": 0.3846317993647841,
+            "article": {
+                "title": "Here\u2019s Why AI May Be Extremely Dangerous\u2014Whether It\u2019s Conscious or Not",
+                "date": "2023-05-25",
+                "url": "https://www.scientificamerican.com/article/heres-why-ai-may-be-extremely-dangerous-whether-its-conscious-or-not/",
+                "id": 13
+            }
+        },
+        {
+            "fact_id": "19_0_0",
+            "order_id": 16,
+            "fact_type": "value",
+            "fact_content": "Technology is predicted to generate over 69 million new jobs in the next ten years.",
+            "narrative": "On a positive note, technology is expected to create over <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">69 million</span> new jobs in the coming decade.",
+            "vis_recommendation": "bar",
+            "vis_data": [
+                {
+                    "x": "New Jobs",
+                    "y": "69000000",
+                    "color": "#22d3ee"
+                }
+            ],
+            "titles": {
+                "chart_title": "Job Creation by Technology",
+                "x_axis": "Job Type",
+                "y_axis": "Number of Jobs"
+            },
+            "fact_score": 0.19934307424429565,
+            "article": {
+                "title": "THE IMPACT OF AI ON JOB SECURITY OF EMPLOYEES AND THE MODERATING ROLE OF JOB ENRICHMENT IN PAKISTAN",
+                "date": "2024-09-29",
+                "url": "https://www.researchgate.net/publication/384423310_THE_IMPACT_OF_AI_ON_JOB_SECURITY_OF_EMPLOYEES_AND_THE_MODERATING_ROLE_OF_JOB_ENRICHMENT_IN_PAKISTAN",
+                "id": 19
+            }
+        },
+        {
+            "fact_id": "19_0_1",
+            "order_id": 17,
+            "fact_type": "value",
+            "fact_content": "Technology is predicted to release 83 million jobs in the next ten years.",
+            "narrative": "Conversely, technological advances may also lead to the release of <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">83 million</span> existing jobs.",
+            "vis_recommendation": "bar",
+            "vis_data": [
+                {
+                    "x": "Released Jobs",
+                    "y": "83000000",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "Job Release by Technology",
+                "x_axis": "Job Type",
+                "y_axis": "Number of Jobs"
+            },
+            "fact_score": 0.2366918606484003,
+            "article": {
+                "title": "THE IMPACT OF AI ON JOB SECURITY OF EMPLOYEES AND THE MODERATING ROLE OF JOB ENRICHMENT IN PAKISTAN",
+                "date": "2024-09-29",
+                "url": "https://www.researchgate.net/publication/384423310_THE_IMPACT_OF_AI_ON_JOB_SECURITY_OF_EMPLOYEES_AND_THE_MODERATING_ROLE_OF_JOB_ENRICHMENT_IN_PAKISTAN",
+                "id": 19
+            }
+        },
+        {
+            "fact_id": "19_0_2",
+            "order_id": 18,
+            "fact_type": "proportion",
+            "fact_content": "A change in occupations and industries of about 23% is predicted in the next ten years.",
+            "narrative": "Overall, a <span class=\"text-yellow-400 font-semibold bg-yellow-900 p-1 rounded\">23%</span> shift in occupations and industries is anticipated, signaling major transformations across sectors.",
+            "vis_recommendation": "pie",
+            "vis_data": [
+                {
+                    "x": "Change in Industries",
+                    "y": "23%",
+                    "color": "#facc15"
+                }
+            ],
+            "titles": {
+                "chart_title": "Industry Change Proportion",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.16898304118571494,
+            "article": {
+                "title": "THE IMPACT OF AI ON JOB SECURITY OF EMPLOYEES AND THE MODERATING ROLE OF JOB ENRICHMENT IN PAKISTAN",
+                "date": "2024-09-29",
+                "url": "https://www.researchgate.net/publication/384423310_THE_IMPACT_OF_AI_ON_JOB_SECURITY_OF_EMPLOYEES_AND_THE_MODERATING_ROLE_OF_JOB_ENRICHMENT_IN_PAKISTAN",
+                "id": 19
+            }
+        },
+        {
+            "fact_id": "19_1_3",
+            "order_id": 19,
+            "fact_type": "proportion",
+            "fact_content": "17% of jobs in Pakistan are vulnerable to automation.",
+            "narrative": "For instance, Pakistan faces a <span class=\"text-teal-400 font-semibold bg-teal-900 p-1 rounded\">17%</span> vulnerability of its jobs to automation.",
+            "vis_recommendation": "pie",
+            "vis_data": [
+                {
+                    "x": "Vulnerable to Automation",
+                    "y": "17%",
+                    "color": "#2dd4bf"
+                }
+            ],
+            "titles": {
+                "chart_title": "Automation Vulnerability in Pakistan",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.2441781935751024,
+            "article": {
+                "title": "THE IMPACT OF AI ON JOB SECURITY OF EMPLOYEES AND THE MODERATING ROLE OF JOB ENRICHMENT IN PAKISTAN",
+                "date": "2024-09-29",
+                "url": "https://www.researchgate.net/publication/384423310_THE_IMPACT_OF_AI_ON_JOB_SECURITY_OF_EMPLOYEES_AND_THE_MODERATING_ROLE_OF_JOB_ENRICHMENT_IN_PAKISTAN",
+                "id": 19
+            }
+        },
+        {
+            "fact_id": "23_0_0",
+            "order_id": 20,
+            "fact_type": "proportion",
+            "fact_content": "70% plagiarised report.",
+            "narrative": "Adding to the ethical concerns, reports indicate that <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">70%</span> of certain documents were plagiarized.",
+            "vis_recommendation": "pie",
+            "vis_data": [
+                {
+                    "x": "Plagiarised",
+                    "y": "70%",
+                    "color": "#f87171"
+                },
+                {
+                    "x": "Original",
+                    "y": "30%",
+                    "color": "#22d3ee"
+                }
+            ],
+            "titles": {
+                "chart_title": "Report Plagiarism Analysis",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.1738720197550092,
+            "article": {
+                "title": "The AI Threat to Cybersecurity",
+                "date": "Unknown",
+                "url": "https://www.govware.sg/article/ai-threat-cybersecurity",
+                "id": 23
+            }
+        },
+        {
+            "fact_id": "4_1_1",
+            "order_id": 1,
+            "fact_type": "value",
+            "fact_content": "In 2018, a self-driving car used by Uber hit and killed a pedestrian.",
+            "narrative": "In <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">2018</span>, a tragic accident involving a self-driving car operated by Uber highlighted the potential dangers associated with AI technologies when the vehicle struck and killed a pedestrian.",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "Uber Incident Year",
+                    "y": "2018",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "Uber Self-Driving Car Incident",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.14551268980699827,
+            "article": {
+                "title": "What are the risks of artificial intelligence (AI)?",
+                "date": "Unknown",
+                "url": "https://www.tableau.com/data-insights/ai/risks",
+                "id": 4
+            }
+        },
+        {
+            "fact_id": "4_0_0",
+            "order_id": 2,
+            "fact_type": "value",
+            "fact_content": "The EU introduced the \u201cAI Act\u201d in April 2021 to regulate AI systems considered of risk.",
+            "narrative": "In response to such risks, the European Union took a significant step in <span class=\"text-green-400 font-semibold bg-green-900 p-1 rounded\">April 2021</span> by introducing the 'AI Act', aiming to regulate AI systems that are deemed risky.",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "EU AI Act Introduction",
+                    "y": "April 2021",
+                    "color": "#2dd4bf"
+                }
+            ],
+            "titles": {
+                "chart_title": "Introduction of EU AI Act",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.4175183974290968,
+            "article": {
+                "title": "What are the risks of artificial intelligence (AI)?",
+                "date": "Unknown",
+                "url": "https://www.tableau.com/data-insights/ai/risks",
+                "id": 4
+            }
+        },
+        {
+            "fact_id": "25_1_1",
+            "order_id": 3,
+            "fact_type": "value",
+            "fact_content": "The European Parliament passed a draft version of the EU AI Act this month.",
+            "narrative": "<p>Continuing its commitment to AI safety, the European Parliament recently passed a draft version of the <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">EU AI Act</span>, reinforcing its regulatory framework.</p>",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "EU AI Act",
+                    "y": "Draft Passed",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "EU AI Act Draft Passage",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.30873790772287757,
+            "article": {
+                "title": "Is AI really a threat to human civilization?",
+                "date": "2023-06-26",
+                "url": "https://umdearborn.edu/news/ai-really-threat-human-civilization",
+                "id": 25
+            }
+        },
+        {
+            "fact_id": "12_0_2",
+            "order_id": 1,
+            "fact_type": "trend",
+            "fact_content": "Since the inception of widely available generative AI platforms in 2022, phishing attacks have risen by 1,265%.",
+            "narrative": "In 2022, the introduction of generative AI platforms coincided with a staggering <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">1,265%</span> increase in phishing attacks, highlighting the escalating threat landscape.",
+            "vis_recommendation": "line",
+            "vis_data": [
+                {
+                    "x": "2022",
+                    "y": "100",
+                    "color": "#f87171"
+                },
+                {
+                    "x": "2023",
+                    "y": "1365",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "Rise in Phishing Attacks",
+                "x_axis": "Year",
+                "y_axis": "Attack Increase %"
+            },
+            "fact_score": 0.37996074162177296,
+            "article": {
+                "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                "date": "2025-02-07",
+                "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                "id": 12
+            }
+        },
+        {
+            "fact_id": "12_0_1",
+            "order_id": 2,
+            "fact_type": "proportion",
+            "fact_content": "Over 70% of large organizations across industries plan to invest in AI-enabled security tools.",
+            "narrative": "In response to growing threats, over <span class=\"text-teal-400 font-semibold bg-teal-900 p-1 rounded\">70%</span> of large organizations are gearing up to invest in AI-enabled security tools, indicating a strategic shift towards more advanced protective measures.",
+            "vis_recommendation": "pie",
+            "vis_data": [
+                {
+                    "x": "Plan to Invest",
+                    "y": "70",
+                    "color": "#2dd4bf"
+                },
+                {
+                    "x": "Do Not Plan to Invest",
+                    "y": "30",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "Investment in AI Security Tools",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.40987510396142657,
+            "article": {
+                "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                "date": "2025-02-07",
+                "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                "id": 12
+            }
+        },
+        {
+            "fact_id": "12_0_0",
+            "order_id": 3,
+            "fact_type": "trend",
+            "fact_content": "The market for cybersecurity tools will grow 12.4% annually through 2027.",
+            "narrative": "This surge in demand for cybersecurity solutions is expected to drive a <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">12.4%</span> annual growth in the market through 2027, reflecting the critical importance of robust security measures in the digital age.",
+            "vis_recommendation": "line",
+            "vis_data": [
+                {
+                    "x": "2024",
+                    "y": "100",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "2025",
+                    "y": "112.4",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "2026",
+                    "y": "126.1",
+                    "color": "#22d3ee"
+                },
+                {
+                    "x": "2027",
+                    "y": "141.3",
+                    "color": "#22d3ee"
+                }
+            ],
+            "titles": {
+                "chart_title": "Cybersecurity Market Growth",
+                "x_axis": "Year",
+                "y_axis": "Growth %"
+            },
+            "fact_score": 0.21016191197793466,
+            "article": {
+                "title": "The Advantages and Disadvantages of AI in Cybersecurity",
+                "date": "2025-02-07",
+                "url": "https://www.techtarget.com/searchenterpriseai/tip/Evaluate-the-risks-and-benefits-of-AI-in-cybersecurity",
+                "id": 12
+            }
+        },
+        {
+            "fact_id": "26_0_0",
+            "order_id": 1,
+            "fact_type": "value",
+            "fact_content": "AI-driven subversion of elections includes the 2013 and 2017 Kenyan elections.",
+            "narrative": "In both <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">2013</span> and <span class=\"text-cyan-400 font-semibold bg-cyan-900 p-1 rounded\">2017</span>, the Kenyan elections were reportedly affected by AI-driven subversion, raising concerns about the integrity of electoral processes.",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "Kenyan Elections",
+                    "y": "2013, 2017",
+                    "color": "#22d3ee"
+                }
+            ],
+            "titles": {
+                "chart_title": "AI Election Subversion",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.4140936011498848,
+            "article": {
+                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                "date": "Unknown",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                "id": 26
+            }
+        },
+        {
+            "fact_id": "26_0_1",
+            "order_id": 2,
+            "fact_type": "value",
+            "fact_content": "AI-driven subversion of elections includes the 2016 US presidential election.",
+            "narrative": "The <span class=\"text-teal-400 font-semibold bg-teal-900 p-1 rounded\">2016 US presidential election</span> also faced allegations of AI-driven interference, marking a significant moment in the awareness of technology's influence on democratic processes.",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "US Election",
+                    "y": "2016",
+                    "color": "#2dd4bf"
+                }
+            ],
+            "titles": {
+                "chart_title": "AI Election Subversion",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.46576587828257443,
+            "article": {
+                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                "date": "Unknown",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                "id": 26
+            }
+        },
+        {
+            "fact_id": "26_0_2",
+            "order_id": 3,
+            "fact_type": "value",
+            "fact_content": "AI-driven subversion of elections includes the 2017 French presidential election.",
+            "narrative": "Following this, the <span class=\"text-red-400 font-semibold bg-red-900 p-1 rounded\">2017</span> French presidential election was yet another instance where AI-driven tactics were said to have played a role, highlighting a worrying trend in global politics.",
+            "vis_recommendation": "text",
+            "vis_data": [
+                {
+                    "x": "French Election",
+                    "y": "2017",
+                    "color": "#f87171"
+                }
+            ],
+            "titles": {
+                "chart_title": "AI Election Subversion",
+                "x_axis": "N/A",
+                "y_axis": "N/A"
+            },
+            "fact_score": 0.4327525494173976,
+            "article": {
+                "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                "date": "Unknown",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                "id": 26
+            }
+        }
+    ],
+    "steps": 
+    [
+    { "cluster_id":2, "start_step": 1, "end_step": 19 },
+    { "cluster_id":3, "start_step": 20, "end_step": 22 },
+    { "cluster_id":1, "start_step": 23, "end_step": 25 },
+    { "cluster_id":4, "start_step": 26, "end_step": 28 }
+    ],
+    "shared_facts": [],
+    "shared_articles": [
+        {
+            "start_cluster": 2,
+            "end_cluster": 3,
+            "count": 1,
+            "articles": [
+                {
+                    "article_id": 25,
+                    "title": "Is AI really a threat to human civilization?",
+                    "url": "https://umdearborn.edu/news/ai-really-threat-human-civilization",
+                    "date": "2023-06-26",
+                    "year": 2023
+                }
+            ]
+        },
+        {
+            "start_cluster": 2,
+            "end_cluster": 4,
+            "count": 1,
+            "articles": [
+                {
+                    "article_id": 26,
+                    "title": "Threats by Artificial Intelligence to Human Health and Well-being",
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10186390/",
+                    "date": "Unknown",
+                    "year": ""
+                }
+            ]
+        }
+    ]
+}
