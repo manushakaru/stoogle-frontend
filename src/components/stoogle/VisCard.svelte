@@ -14,8 +14,9 @@
   let axisXTitle = titles.x_axis || "";
   let axisYTitle = titles.y_axis || "";
   let narrative = fact.narrative || "";
-  let merged_articles = fact.merged_articles?.sort((a, b) => Number(a.id) - Number(b.id)) || [];
-  
+  let merged_articles =
+    fact.merged_articles?.sort((a, b) => Number(a.id) - Number(b.id)) || [];
+
   // Visualization state
   let visRecommendation = "text";
   let visData = [];
@@ -23,8 +24,12 @@
 
   // Main reactive processing
   $: {
-    const initialRecommendation = fact.vis_data?.length > 1 ? fact.vis_recommendation : "text";
-    const processed = processVisualizationData(fact.vis_data || [], initialRecommendation);
+    const initialRecommendation =
+      fact.vis_data?.length > 1 ? fact.vis_recommendation : "text";
+    const processed = processVisualizationData(
+      fact.vis_data || [],
+      initialRecommendation
+    );
     visRecommendation = processed.recommendation;
     visData = processed.filteredData;
     dataValue = visData[0] || {};
@@ -41,28 +46,35 @@
 
     // Single data point handling
     if (filteredData.length === 1) {
-      const isIsotype = filteredData[0].type === "isotype" || 
-                       ["%", "percentage"].includes(filteredData[0]?.unit?.toLowerCase());
+      const isPercentage =
+        ["%", "percentage"].includes(filteredData[0]?.unit?.toLowerCase()) &&
+        filteredData[0]?.value <= 100;
+
+      const isIsotype = filteredData[0].type === "isotype" || isPercentage;
       return {
         recommendation: isIsotype ? "isotype" : "text",
-        filteredData
+        filteredData,
       };
     }
 
     // Pie chart validation
     if (newRecommendation === "pie") {
-      const units = filteredData.map(d => d.unit?.toLowerCase() || "");
+      const units = filteredData.map((d) => d.unit?.toLowerCase() || "");
       const uniqueUnits = [...new Set(units)];
-      
-      if (uniqueUnits.length !== 1 || !["%", "percentage"].includes(uniqueUnits[0])) {
+
+      if (
+        uniqueUnits.length !== 1 ||
+        !["%", "percentage"].includes(uniqueUnits[0])
+      ) {
         newRecommendation = "bar";
       } else {
         const total = filteredData.reduce((sum, item) => {
           const value = parseFloat(item.value) || 0;
           return sum + value;
         }, 0);
-        
-        if (Math.abs(total - 100) > 0.001) { // Allow for floating point precision
+
+        if (Math.abs(total - 100) > 0.001) {
+          // Allow for floating point precision
           newRecommendation = "bar";
         }
       }
@@ -70,53 +82,57 @@
 
     // Bar chart unit consolidation
     if (newRecommendation === "bar") {
-  const unitCounts = filteredData.reduce((acc, { unit }) => {
-    const key = unit || "undefined";
-    acc[key] = (acc[key] || 0) + 1;
-    return acc;
-  }, {});
+      const unitCounts = filteredData.reduce((acc, { unit }) => {
+        const key = unit || "undefined";
+        acc[key] = (acc[key] || 0) + 1;
+        return acc;
+      }, {});
 
-  if (Object.keys(unitCounts).length > 1) {
-    const maxCount = Math.max(...Object.values(unitCounts));
-    
-    // Get all units with max count
-    const candidateUnits = Object.keys(unitCounts).filter(
-      unit => unitCounts[unit] === maxCount
-    );
+      if (Object.keys(unitCounts).length > 1) {
+        const maxCount = Math.max(...Object.values(unitCounts));
 
-    // Prioritization logic
-    let majorityUnit;
-    if (candidateUnits.length > 1) {
-      // Check for percentage units first
-      const percentageUnits = candidateUnits.filter(unit => 
-        ['%', 'percentage'].includes(unit.toLowerCase())
-      );
-      
-      majorityUnit = percentageUnits.length > 0 
-        ? percentageUnits[0] // Take first percentage unit
-        : candidateUnits[0]; // Fallback to first candidate
-    } else {
-      majorityUnit = candidateUnits[0];
+        // Get all units with max count
+        const candidateUnits = Object.keys(unitCounts).filter(
+          (unit) => unitCounts[unit] === maxCount
+        );
+
+        // Prioritization logic
+        let majorityUnit;
+        if (candidateUnits.length > 1) {
+          // Check for percentage units first
+          const percentageUnits = candidateUnits.filter((unit) =>
+            ["%", "percentage"].includes(unit.toLowerCase())
+          );
+
+          majorityUnit =
+            percentageUnits.length > 0
+              ? percentageUnits[0] // Take first percentage unit
+              : candidateUnits[0]; // Fallback to first candidate
+        } else {
+          majorityUnit = candidateUnits[0];
+        }
+
+        filteredData = filteredData.filter((d) => d.unit === majorityUnit);
+      }
     }
 
-    filteredData = filteredData.filter(d => d.unit === majorityUnit);
-  }
-}
-
-        // Single data point handling
+    // Single data point handling
     if (filteredData.length === 1) {
-      const isIsotype = filteredData[0].type === "isotype" || 
-                       ["%", "percentage"].includes(filteredData[0]?.unit?.toLowerCase());
+      const isPercentage =
+        ["%", "percentage"].includes(filteredData[0]?.unit?.toLowerCase()) &&
+        filteredData[0]?.value <= 100;
+
+      const isIsotype = filteredData[0].type === "isotype" || isPercentage;
       return {
         recommendation: isIsotype ? "isotype" : "text",
-        filteredData
+        filteredData,
       };
     }
 
     // Fallback to text if no valid data remains
-    return { 
+    return {
       recommendation: filteredData.length > 0 ? newRecommendation : "text",
-      filteredData 
+      filteredData,
     };
   }
 </script>
@@ -129,11 +145,11 @@
   >
     {chartTitle}
   </div>
-  
+
   <div class="flex items-center justify-center bottom-2 w-full">
     <div class="w-1/2">
-      <div 
-        class="chart-wrapper flex items-center justify-center" 
+      <div
+        class="chart-wrapper flex items-center justify-center"
         style="width: 350px; height: 300px;"
       >
         {#if visRecommendation === "pie"}
@@ -147,9 +163,11 @@
         {:else if visRecommendation === "range"}
           <Scatter inputData={visData} {axisXTitle} {axisYTitle} />
         {:else}
-          <div class="flex flex-col items-center w-full max-w-[300px] justify-center h-full">
+          <div
+            class="flex flex-col items-center w-full max-w-[300px] justify-center h-full"
+          >
             {#if dataValue}
-              <p 
+              <p
                 class="text-5xl sm:text-2xl md:text-5xl text-center w-full font-bold text-[{dataValue.color}d1] max-w-[300px] pl-7"
               >
                 {dataValue.value}
@@ -164,7 +182,9 @@
     </div>
 
     <div class="w-1/2 pl-4 cursor-default pt-4">
-      <p class="text-lg inline pb-3 text-[var(--card-narrative-text)] dark:text-[var(--card-narrative-text-dark)]">
+      <p
+        class="text-lg inline pb-3 text-[var(--card-narrative-text)] dark:text-[var(--card-narrative-text-dark)]"
+      >
         {@html narrative}
       </p>
       {#each merged_articles as article}
