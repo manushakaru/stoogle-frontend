@@ -70,7 +70,7 @@
             </span>
           </a>
           <span
-            class="year-box ml-2 text-xs font-medium bg-[#f7fafc] dark:bg-[#2d4050]"
+            class="year-box ml-2 text-xs font-medium bg-[#424243c7] dark:bg-[#2d4050]"
             style="color:{getColor(article.year)};"
           >
             {article.year}

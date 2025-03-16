@@ -67,24 +67,24 @@
 >
   <div class="mt-1 text-sm">
     <p
-      class="mb-1 text-gray-400 font-semibold dark:text-[rgba(255,255,255,0.6)] flex justify-between"
+      class="mb-1 text-[#6b717b] font-semibold dark:text-[rgba(255,255,255,0.6)] flex justify-between"
     >
       Total Articles: <span
-        class="font-bold text-[var(--color-progress-arc-article)] dark:text-[var(--color-progress-arc-article)] pl-4"
+        class="font-bold text-[var(--color-progress-arc-article-text)] dark:text-[var(--color-progress-arc-article-text-dark)] pl-4"
         >{totalArticles}</span
       >
     </p>
     <p
-      class="m-0 text-gray-400 font-semibold dark:text-[rgba(255,255,255,0.6)] flex justify-between"
+      class="m-0 text-[#6b717b] font-semibold dark:text-[rgba(255,255,255,0.6)] flex justify-between"
     >
       Total Facts: <span
-        class="font-bold text-[var(--color-progress-arc-fact)] dark:text-[var(--color-progress-arc-fact)]"
+        class="font-bold text-[var(--color-progress-arc-fact-text)] dark:text-[var(--color-progress-arc-fact-text-dark)]"
         >{totalFacts}</span
       >
     </p>
 
     <div
-      class="mt-5 pb-2 text-gray-500 font-semibold dark:text-[rgba(255,255,255,0.6)]"
+      class="mt-5 pb-2 text-[#6b717b] font-semibold dark:text-[rgba(255,255,255,0.6)]"
     >
       Published Years
     </div>

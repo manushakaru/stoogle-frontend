@@ -162,7 +162,7 @@
     tippy(node, {
       content: `
       <div class="tooltip-content">
-        <div class="tooltip-topic" style="color:var(--color-progress-arc-article)">Related Articles: ${
+        <div class="tooltip-topic" style="color:var(--color-progress-arc-article-text)">Related Articles: ${
           articles.length
         }/${stats.total_articles}</div>
          ${articles
@@ -183,7 +183,7 @@
             <span class="text-xs text-gray-400 truncate block">${
               articlesDict[article.id].source
             }</span>
-            <span class="fact-count_" style="color:${getColor(
+            <span class="fact-count_" style="background-color:#424243c7; color:${getColor(
               article.year
             )};">${article.year}</span>
           </div>
@@ -214,7 +214,7 @@
     tippy(node, {
       content: `
       <div class="tooltip-content">
-        <div class="tooltip-topic" style="color:var(--color-progress-arc-fact)">Related Facts: ${
+        <div class="tooltip-topic" style="color:var(--color-progress-arc-fact-text)">Related Facts: ${
           numFacts
         }/${totalFacts}</div>`
         ,
