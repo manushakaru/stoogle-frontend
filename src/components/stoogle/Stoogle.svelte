@@ -8,6 +8,7 @@
   import analysisData2 from "$data/samples/Americans_and_tiktok.json";
   import analysisData3 from "$data/samples/pros_cons_homeschooling_2.json";
   import analysisData4 from "$data/samples/pros_cons_homeschooling_2.json";
+  import tiktokTrends from "$data/samples/Tiktok_trends_worldwide.json";
   import Section from "$components/stoogle/Section.svelte";
   import Country from "$components/stoogle/Country.svelte";
 
@@ -48,9 +49,13 @@
       data: analysisData6,
     },
     {
-      query: "Americans and TikTok",
-      data: analysisData2,
+      query: "Tiktok trends worldwide",
+      data: tiktokTrends,
     },
+    // {
+    //   query: "Americans and TikTok",
+    //   data: analysisData2,
+    // },
 
     // {
     //   query: "Trends and stats on tiktok worldwide",
