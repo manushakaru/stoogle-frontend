@@ -7,7 +7,6 @@
   export let height;
   export let shared_articles;
   export let yearColors;
-  export let sorted_article_ids;
   export let articlesDict;
   export let curMergedId;
 

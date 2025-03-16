@@ -1,12 +1,10 @@
 <script>
   import VisCard from "$components/stoogle/VisCard.svelte";
-  import TextCard from "$components/stoogle/TextCard.svelte";
   import Scrolly from "$components/helpers/Scrolly.svelte";
   export let facts;
   export let value = 0;
   export let onFactChange;
   export let items = [];
-  export let sorted_article_ids;
   export let articlesDict;
 
   $: value, onFactChange(value);
@@ -24,11 +22,7 @@
       class:last
       class:first
     >
-      <!-- {#if fact.vis_recommendation === "text"}
-        <TextCard  fact={fact} sorted_article_ids={sorted_article_ids} />
-      {:else} -->
-      <VisCard {fact} {sorted_article_ids} {articlesDict}></VisCard>
-      <!-- {/if} -->
+      <VisCard {fact} {articlesDict}></VisCard>
     </div>
   {/each}
 </Scrolly>
