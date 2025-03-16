@@ -2,7 +2,6 @@
   let isOpen = false;
 
   export let articles;
-  export let sorted_article_ids;
   export let yearColors;
 
   const togglePanel = () => {

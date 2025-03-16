@@ -13,7 +13,6 @@
   export let curMergedId;
   export let value;
   export let items = [];
-  export let sorted_article_ids;
 
   let showButton = false;
   let years = data.stats.article_year_range;
@@ -35,7 +34,6 @@
   let simulation;
 
   const boundaryForce = (alpha) => {
-    console.log("boundaryForce", width, height);
     circles.forEach((d) => {
       // const xMin = 0 + d.radius + 300;
       // const xMax = width - d.radius - 400;
@@ -246,7 +244,6 @@
       {circles}
       {shared_articles}
       {yearColors}
-      {sorted_article_ids}
       {curMergedId}
       {articlesDict}
     />
@@ -259,7 +256,6 @@
         {stats}
         {yearColors}
         action={circleAction}
-        {sorted_article_ids}
         {curMergedId}
         {articlesDict}
       />
@@ -279,4 +275,4 @@
   </button>
 </div>
 
-<Articles {articles} {sorted_article_ids} {yearColors} />
+<Articles {articles} {yearColors} />

@@ -16,7 +16,6 @@
   export let height;
   export let yearColors;
   export let action;
-  export let sorted_article_ids;
   export let curMergedId;
   export let articlesDict;
 
@@ -160,7 +159,6 @@
 
   function tooltip(node, articles) {
     articles = d3.sort(articles, (a, b) => d3.ascending(a.year, b.year));
-    console.log("articlesData", articlesDict);
     tippy(node, {
       content: `
       <div class="tooltip-content">
@@ -255,7 +253,6 @@
         {yearColors}
         {width}
         {height}
-        {sorted_article_ids}
         {curMergedId}
         {articlesDict}
       />

@@ -7,7 +7,6 @@
   export let radius;
   export let yearColors;
   export let width, height;
-  export let sorted_article_ids;
   export let curMergedId;
   export let articlesDict;
 
