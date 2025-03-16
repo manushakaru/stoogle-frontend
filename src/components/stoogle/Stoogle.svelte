@@ -162,7 +162,7 @@
 <div class={isSticky ? "" : "mainPage"}>
   <form on:submit={handleSearch} class="bg-white dark:bg-[#1a2e3c] {isSticky ? "stickyForm" : "form"}">
     <img
-      src="/assets/stoogle/Stoogle.svg"
+      src="/assets/stoogle/compendia-2.svg"
       class={isSticky ? "stickyLogo" : "logo"}
       alt="Stoogle logo"
     />
@@ -250,7 +250,7 @@
 <footer
   class="fixed bottom-0 w-full text-black bg-white dark:bg-[var(--footer-bg)] dark:text-[var(--footer-text)] text-center py-2 text-sm cursor-none"
 >
-  Stoogle can make mistakes. Check important info.
+  Compendia can make mistakes. Check important info.
 </footer>
 
 <style>
@@ -266,7 +266,7 @@
   }
 
   .logo {
-    height: 6em;
+    height: 8em;
     padding: 1.5em;
     will-change: filter;
     transition: filter 300ms;
