@@ -164,11 +164,12 @@
           <Scatter inputData={visData} {axisXTitle} {axisYTitle} />
         {:else}
           <div
-            class="flex flex-col items-center w-full max-w-[300px] justify-center h-full"
+            class="flex items-center justify-center w-full max-w-[300px] h-full"
           >
             {#if dataValue}
               <p
-                class="text-5xl sm:text-2xl md:text-5xl text-center w-full font-bold text-[{dataValue.color}d1] max-w-[300px] pl-7"
+                class="text-center w-full font-bold break-words"
+                style="font-size: calc(min(70vw, 70vh) * 0.1); color: {dataValue.color};"
               >
                 {dataValue.value}
                 {dataValue.unit}
