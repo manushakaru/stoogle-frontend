@@ -47,8 +47,6 @@
           width: widthScale(articleCount[year] || 0),
         });
       }
-
-      console.log("yearColors", yearColors);
     }
   }
 

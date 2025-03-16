@@ -11,7 +11,6 @@
       );
       const data = await response.json();
       countryCode = data.countryCode.toLowerCase();
-      console.log("countryCode", countryCode);
     } catch (err) {
       console.error(err);
     }
