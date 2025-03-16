@@ -7,7 +7,7 @@
   const getCountryCode = async () => {
     try {
       const response = await fetch(
-        "http://ip-api.com/json/?fields=countryCode"
+        "https://ip-api.com/json/?fields=countryCode"
       );
       const data = await response.json();
       countryCode = data.countryCode.toLowerCase();
