@@ -9,6 +9,8 @@
   import analysisData3 from "$data/samples/pros_cons_homeschooling_2.json";
   import analysisData4 from "$data/samples/pros_cons_homeschooling_2.json";
   import tiktokTrends from "$data/samples/Tiktok_trends_worldwide.json";
+  import cancer from "$data/samples/Prevelance.json";
+  import tourism from "$data/samples/tourism.json";
   import Section from "$components/stoogle/Section.svelte";
   import Country from "$components/stoogle/Country.svelte";
 
@@ -52,6 +54,14 @@
       query: "Tiktok trends worldwide",
       data: tiktokTrends,
     },
+    // {
+    //   query: "Cancer",
+    //   data: cancer,
+    // },
+    // {
+    //   query: "tourism",
+    //   data: tourism,
+    // },
     // {
     //   query: "Americans and TikTok",
     //   data: analysisData2,

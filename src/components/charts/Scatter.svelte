@@ -109,7 +109,7 @@
         const item1 = data[i];
         const item2 = data[i + 1];
         combinedData.push({
-          label: `${item1.label} - ${item2.label}`,
+          label: item1.label,
           value: [parseFloat(item1.value), parseFloat(item2.value)],
           unit: item1.unit,
           color: [item1.color, item2.color]
