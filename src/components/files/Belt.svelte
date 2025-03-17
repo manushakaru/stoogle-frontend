@@ -122,7 +122,7 @@
       startCluster !== activeClusterId &&
       endCluster !== activeClusterId}
     d={curve({ source: start, target: end })}
-    class="fill-none stroke-[var(--belt-stroke)] dark:stroke-[var(--belt-stroke-dark)] cursoe-pointer"
+    class="fill-none stroke-[var(--belt-stroke)] dark:stroke-[var(--belt-stroke-dark)] cursoe-pointer  hover:stroke-[#9f9f9f] dark:hover:stroke-[#698496] transition-colors"
     stroke-width={Math.max(beltWidth, 1)}
     use:tooltip={articles}
     stroke-linecap="butt"
@@ -133,7 +133,13 @@
   path {
     transition: all 0.2s ease-out;
     stroke-linecap: butt;
+    cursor: pointer;
   }
+
+  path:hover {
+  isolation: isolate; /* Creates new stacking context */
+  stroke-opacity: 1 !important;
+}
 
   path.inactive {
     opacity: 0.2;
