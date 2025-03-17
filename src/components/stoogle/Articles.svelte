@@ -41,6 +41,7 @@
   <!-- Panel Content -->
   <div
     class="absolute right-0 bottom-5 top-1/2 transform -translate-y-1/2 bg-white/80 dark:bg-gray-800/50 backdrop-blur-lg p-4 rounded-xl shadow-md w-80 h-full overflow-y-auto z-10 border border-gray-200 dark:border-gray-700"
+    style="width:300px"
   >
     {#each articles as article}
       <div
@@ -64,13 +65,13 @@
           </a>
           <a href={article.url} target="_blank" style="color: transparent;">
             <span
-              class="text-xs text-gray-600 dark:text-gray-300 truncate max-w-[150px] block"
+              class="text-xs text-gray-600 dark:text-gray-300 truncate max-w-[140px] block"
             >
               {article.source}
             </span>
           </a>
           <span
-            class="year-box ml-2 text-xs font-medium bg-[#424243c7] dark:bg-[#2d4050]"
+            class="year-box ml-2 text-xs font-medium bg-[#e2e2e2c7] dark:bg-[#2d4050]"
             style="color:{getColor(article.year)};"
           >
             {article.year}

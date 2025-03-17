@@ -140,7 +140,7 @@
           <span class="text-xs text-gray-400 truncate max-w-[110px] pt-1 block">${
             articlesDict[articleID].source
           }</span>
-          <span class="fact-count_" style="background-color:#424243c7; color:${getColor(
+          <span class="fact-count_" style="background-color:#e2e2e2c7; color:${getColor(
             fact.article.year
           )};">${fact.article.year}</span>
         </div>

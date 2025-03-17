@@ -5,6 +5,7 @@
   import analysisData5 from "$data/samples/AI_is_a_threat_or_not.json";
   import analysisData6 from "$data/samples/Is_homeschooling_preferred_by_people.json";
   import homeschool2 from "$data/samples/Is_homeschooling_preferred_by_people-2.json";
+  import toktokTrends from "$data/samples/Tiktok_trends_worldwide-2.json";
   import analysisData1 from "$data/samples/pros_cons_homeschooling_2.json";
   import analysisData2 from "$data/samples/Americans_and_tiktok.json";
   import analysisData3 from "$data/samples/pros_cons_homeschooling_2.json";
@@ -55,6 +56,11 @@
       query: "Is homeschooling preferred by people?",
       data: homeschool2,
     },
+    {
+      query: "Tiktok trends worldwide",
+      data: toktokTrends,
+    },
+
     // {
     //   query: "Tiktok trends worldwide",
     //   data: tiktokTrends,

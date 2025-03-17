@@ -93,7 +93,7 @@
             <span class="text-xs text-gray-400 truncate block">${
               articlesDict[article.article_id].source
             }</span>
-            <span class="fact-count_" style="background-color:#424243c7; color:${getColor(
+            <span class="fact-count_" style="background-color:#e2e2e2c7; color:${getColor(
               article.year
             )};">${article.year}</span>
           </div>
