@@ -47,7 +47,7 @@
         class="bg-gray-100 dark:bg-white/20 p-3 rounded-lg shadow-sm mb-3 last:mb-0 backdrop-blur-md border border-gray-200 dark:border-gray-700"
       >
         <h3
-          class="text-sm font-semibold mt-0 text-gray-900 dark:text-white line-clamp-3"
+          class="text-sm font-semibold mt-0 text-[#111827c2] dark:[#fffc] line-clamp-3"
         >
           {article.result_title}
         </h3>
