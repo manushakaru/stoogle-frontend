@@ -3,7 +3,7 @@
   import Popup from "$components/stoogle/Popup.svelte";
   import analysisData from "$data/samples/AI_is_a_threat_or_not_2.json";
   import analysisData5 from "$data/samples/AI_is_a_threat_or_not.json";
-  import analysisData6 from "$data/samples/Is_homeschooling_preferred_by_people.json";
+  import analysisData6 from "$data/samples/Is_homeschooling_preferred_by_people-3.json";
   import homeschool2 from "$data/samples/Is_homeschooling_preferred_by_people-2.json";
   import toktokTrends from "$data/samples/Tiktok_trends_worldwide-2.json";
   import analysisData1 from "$data/samples/pros_cons_homeschooling_2.json";
@@ -11,7 +11,7 @@
   import analysisData3 from "$data/samples/pros_cons_homeschooling_2.json";
   import analysisData4 from "$data/samples/pros_cons_homeschooling_2.json";
   import tiktokTrends from "$data/samples/Tiktok_trends_worldwide.json";
-  import cancer from "$data/samples/Prevelance.json";
+  import cancer from "$data/samples/Global_cancer_patients_burden.json";
   import tourism from "$data/samples/tourism.json";
   import Section from "$components/stoogle/Section.svelte";
   import Country from "$components/stoogle/Country.svelte";
@@ -36,10 +36,7 @@
   let countryCode;
 
   const exampleQueries = [
-    // {
-    //   query: "AI is a threat or not",
-    //   data: analysisData,
-    // },
+  
     // {
     //   query: "AI is a threat or not -2",
     //   data: analysisData5,
@@ -56,9 +53,21 @@
       query: "Is homeschooling preferred by people?",
       data: homeschool2,
     },
+    // {
+    //   query: "Is homeschooling preferred by people?-2",
+    //   data: analysisData6,
+    // },
     {
       query: "Tiktok trends worldwide",
       data: toktokTrends,
+    },
+    {
+      query: "Global cancer patients burden",
+      data: cancer,
+    },
+    {
+      query: "AI is a threat or not",
+      data: analysisData,
     },
 
     // {
