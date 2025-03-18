@@ -35,7 +35,7 @@
         on:click={() => handlePopupSubmit(web, pageCount)} 
         class="px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-600 transition-colors"
       >
-        Submit
+        Save
       </button>
       <button 
         on:click={togglePopup} 
