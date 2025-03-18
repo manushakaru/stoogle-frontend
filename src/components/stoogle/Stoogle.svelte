@@ -12,6 +12,8 @@
   import analysisData4 from "$data/samples/pros_cons_homeschooling_2.json";
   import tiktokTrends from "$data/samples/Tiktok_trends_worldwide.json";
   import cancer from "$data/samples/Global_cancer_patients_burden.json";
+  import stockprice from "$data/samples/Stock_market_price_fluctuation.json";
+  import AIjobs from "$data/samples/Does_AI_leading_to_new_jobs_or_job_displacements.json";
   import tourism from "$data/samples/tourism.json";
   import Section from "$components/stoogle/Section.svelte";
   import Country from "$components/stoogle/Country.svelte";
@@ -65,10 +67,19 @@
       query: "Global cancer patients burden",
       data: cancer,
     },
+    
     {
-      query: "AI is a threat or not",
-      data: analysisData,
+      query: "Stock market price fluctuation",
+      data: stockprice,
     },
+    {
+      query: "Does AI leading to new jobs or job displacements?",
+      data: AIjobs,
+    },
+    // {
+    //   query: "AI is a threat or not",
+    //   data: analysisData,
+    // },
 
     // {
     //   query: "Tiktok trends worldwide",

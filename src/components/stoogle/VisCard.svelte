@@ -169,7 +169,7 @@
             {#if dataValue}
               <p
                 class="text-center w-full font-bold break-words"
-                style="font-size: calc(min(60vw, 60vh) * 0.1); color: {dataValue.color};"
+                style="font-size: calc(min(50vw, 50vh) * 0.1); color: {dataValue.color};"
               >
                 {dataValue.value}
                 {dataValue.unit}
