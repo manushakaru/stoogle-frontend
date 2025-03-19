@@ -14,6 +14,8 @@
   import cancer from "$data/samples/Global_cancer_patients_burden.json";
   import stockprice from "$data/samples/Stock_market_price_fluctuation.json";
   import AIjobs from "$data/samples/Does_AI_leading_to_new_jobs_or_job_displacements.json";
+  import InflationAmerica from "$data/samples/Inflation_crisis_in_America.json";
+  import globalWarming from "$data/samples/Global_warming_concerns.json";
   import tourism from "$data/samples/tourism.json";
   import Section from "$components/stoogle/Section.svelte";
   import Country from "$components/stoogle/Country.svelte";
@@ -75,6 +77,14 @@
     {
       query: "Does AI leading to new jobs or job displacements?",
       data: AIjobs,
+    },
+    {
+      query: "Inflation crisis in America",
+      data: InflationAmerica,
+    },
+    {
+      query: "Global warming concerns",
+      data: globalWarming,
     },
     // {
     //   query: "AI is a threat or not",
