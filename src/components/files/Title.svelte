@@ -3,7 +3,7 @@
   export let radius;
 
   let textLength = cluster?.title.length || 0;
-  let rectWidth = textLength * 7 + 20;
+  let rectWidth = textLength * 7.5 + 30;
 </script>
 
 {#if radius && cluster}
@@ -21,7 +21,6 @@
     x={0}
     y={-radius - 45}
     text-anchor="middle"
-    font-size="14px"
     class="fill-[var(--cluster-title-text)] dark:fill-[var(--cluster-title-text-dark)]"
   >
     {cluster.title}
@@ -34,6 +33,8 @@
   }
 
   text {
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
+    font-size: 16px;
+    font-weight: 500;
   }
 </style>

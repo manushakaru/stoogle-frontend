@@ -1,24 +1,22 @@
 <script>
   import { onMount } from "svelte";
   import { fade, fly } from "svelte/transition";
-
   export let radius;
   export let text;
-
   const lineHeight = 18;
   let lines;
-
+  
   function createWords(text) {
     const words = text.split(/\s+/g).filter((d) => d);
     return words;
   }
-
+  
   function measureWidth(text) {
     const ctx = document.createElement("canvas").getContext("2d");
-    ctx.font = "15px Droid Sans Mono";
+    ctx.font = "15px Arial, sans-serif";  // Changed font to Arial, sans-serif
     return ctx.measureText(text).width;
   }
-
+  
   function createLines(words, targetWidth) {
     let line;
     let lineWidth0 = Infinity;
@@ -26,7 +24,6 @@
     for (let i = 0, n = words.length; i < n; ++i) {
       let lineText1 = (line ? line.text + " " : "") + words[i];
       let lineWidth1 = measureWidth(lineText1);
-
       if ((lineWidth0 + lineWidth1) / 2 < targetWidth) {
         line.width = lineWidth0 = lineWidth1;
         line.text = lineText1;
@@ -38,7 +35,7 @@
     }
     return lines;
   }
-
+  
   function textRadius(lines, lineHeight) {
     let radius = 0;
     for (let i = 0, n = lines.length; i < n; ++i) {
@@ -48,18 +45,18 @@
     }
     return radius;
   }
-
+  
   function isNumber(word) {
     return /^[-$]?\d+(\.\d+)?%?$/.test(word);
   }
-
+  
   onMount(() => {
     radius = radius - 2;
     const words = createWords(text);
     const targetWidth = Math.sqrt(measureWidth(text.trim()) * lineHeight);
     lines = createLines(words, targetWidth);
   });
-
+  
   $: if (text && radius) {
     // Recalculate lines when text or radius changes
     radius = radius - 2;
@@ -70,7 +67,7 @@
 </script>
 
 <g
-  style="font: 10px; font-family:Droid Sans Mono; cursor:pointer;"
+  style="font: 10px; font-family: Arial, sans-serif; cursor: pointer;"
   class="fill-[var(--circle-text-fill)] dark:fill-[var(--circle-text-fill-dark)]"
   text-anchor="middle"
   in:fly={{ y: 10, duration: 300 }}

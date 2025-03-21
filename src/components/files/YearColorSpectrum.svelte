@@ -120,7 +120,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
   }
 
   .years {
